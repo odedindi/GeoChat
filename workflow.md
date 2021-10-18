@@ -15,9 +15,14 @@ Geo Chat App:
         general chat (like a forum's board) with all other available users in the relevant distance and a list of potential users to chat with more privately.
         map of potential users to chat with and their location on the map.
     - private chat page
-    - user profile page: see and edit personal data, app data, groups, chats etc.
-    - settings page
     
+    
+    - home, 2 options:
+        1. general chat (like a forum's board) with all other available users in the relevant distance and a list of potential users to chat with more privately.
+        2. map of potential users to chat with and their location on the map.
+    - private chat page
+    - user profile page: see and edit personal data, app data, groups, chats etc.
+    - settings page  
     
 so after few hours of internet wandering I set the stack as:
 
@@ -33,7 +38,7 @@ frontend:
   - React-Leaflet for mapping (awesome open source library i like for mapping) 
   - styled-components for styling
   - 
-    ========================================================================================================================================================
+    =======================================================================================================
  #### side and not imprtant note
 *I know i said we gonna use Next and Ionic can be used with Next but a downside with Next is that the app must be able to run purely client-side 
 and use Next.js's Export command, which means no SSR in Ionic codebase. There is likely a way to SSR and a fully static Next.js app
@@ -41,7 +46,7 @@ in tandem but it requires a Babel plugin or would involve a more elaborate setup
 Additionally, Next routing is not really used much in this app beyond a catch-all route to render the native app shell and engage the Ionic React Router, 
 primarily because Next routing is not set up to enable native-style transitions and history state management like the kind Ionic uses.
 
-    ========================================================================================================================================================
+    =======================================================================================================
 
 #### backend = Markus
 #### frontend = Oded
@@ -137,4 +142,4 @@ app.get("/getChannels", (req, res) => {
 also I have created a basic app with couple of tabs and an ugly chat page cause i wanted to have a better feeling on how to implement real time communication using Ionic but the code is too dirty and have different aspects I experimented with so it will be better to just start from scratch 
 
 let me know what are your thoughts and so we could start implementing it.
-    ========================================================================================================================================================
+    =======================================================================================================
