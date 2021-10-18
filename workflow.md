@@ -1,15 +1,6 @@
 18.10
 init of the project,
 
-
-#### backend = Markus
-#### frontend = Oded
-
-
-
-after a bit of exploring and experimenting and as I know that your backend work is done using node and express frameworks, 
-i have taken the liberty to create a super basic server using express and socket.io and to initiate a continues feed.
-
 what are we going to build:
 Geo Chat App:
   Main features:
@@ -48,3 +39,100 @@ and use Next.js's Export command, which means no SSR in Ionic codebase. There is
 in tandem but it requires a Babel plugin or would involve a more elaborate setup with code sharing that is "out of our scope" right now.
 Additionally, Next routing is not really used much in this app beyond a catch-all route to render the native app shell and engage the Ionic React Router, 
 primarily because Next routing is not set up to enable native-style transitions and history state management like the kind Ionic uses.
+
+
+
+#### backend = Markus
+#### frontend = Oded
+
+
+
+after a bit of exploring and experimenting and as I know that your backend work is done using node and express frameworks, 
+I have taken the liberty to create a super basic server using express and socket.io and to initiate a continues feed.
+
+probably you won't use it but here is the server
+```
+const express = require("express");
+const cors = require("cors");
+const app = express();
+
+const corsOptions = {
+  origin: "*",
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
+const http = require("http");
+const server = http.createServer(app);
+const PORT = 8080;
+
+const io = require("socket.io")(server, {
+  cors: { origin: "*", methods: ["GET", "POST"] },
+});
+const STATIC_CHANNELS = [
+  {
+    id: "global_notifications",
+    name: "Global Notifications",
+    participants: 0,
+    sockets: [],
+  },
+  { id: "global_chat", name: "Global Chat", participants: 0, sockets: [] },
+];
+
+server.listen(PORT, () => {
+  console.log(`listening on *:${PORT}`);
+});
+
+io.on("connection", (socket) => {
+  console.log("new client connected");
+  socket.emit("connection", null);
+
+  socket.on("channel-join", (id) => {
+    console.log("channel-join", id);
+    STATIC_CHANNELS.forEach((c) => {
+      const index = c.sockets.indexOf(socket.id);
+      if (c.id === id) {
+        if (index === -1) {
+          c.sockets.push(socket.id);
+          c.participants++;
+          io.emit("channel", c);
+        }
+      } else {
+        if (index !== -1) {
+          c.sockets.splice(index, 1);
+          c.participants--;
+          io.emit("channel", c);
+        }
+      }
+    });
+
+    return id;
+  });
+
+  socket.on("send-message", (message) => {
+    io.emit("message", message);
+  });
+
+  socket.on("disconnect", () => {
+    STATIC_CHANNELS.forEach((c) => {
+      const index = c.sockets.indexOf(socket.id);
+      if (index !== -1) {
+        c.sockets.splice(index, 1);
+        c.participants--;
+        io.emit("channel", c);
+      }
+    });
+  });
+});
+
+app.get("/getChannels", (req, res) => {
+  res.json({
+    channels: STATIC_CHANNELS,
+  });
+});
+
+```
+
+also I have created a basic app with couple of tabs and an ugly chat page cause i wanted to have a better feeling on how to implement real time communication using Ionic but the code is too dirty and have different aspects I experimented with so it will be better to just start from scratch 
+
+let me know what are your thoughts and so we could start implementing it.
