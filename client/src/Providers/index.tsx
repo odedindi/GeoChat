@@ -1,7 +1,11 @@
-import { SocketProvider } from './Socket';
+import { SocketProvider } from '../Socket';
+import { StoreProvider } from '../Store';
+
 const Providers: React.FC = ({ children }) => (
 	<>
-		<SocketProvider>{children}</SocketProvider>
+		<StoreProvider>
+			<SocketProvider>{children}</SocketProvider>
+		</StoreProvider>
 	</>
 );
 

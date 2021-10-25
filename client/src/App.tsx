@@ -36,6 +36,7 @@ import UnAuthed from './routes/UnAuthed';
 import Login from './pages/Auth/Login';
 import RestorePassword from './pages/Auth/RestorePassword';
 import Signup from './pages/Auth/Signup';
+import ChatApp from './pages/Chat';
 
 const App: React.FC = () => (
 	<IonApp>
@@ -53,6 +54,7 @@ const App: React.FC = () => (
 						<Route exact path="/">
 							<Redirect to="/home" />
 						</Route>
+						<UnAuthed path="/chat/:roomname/:username" component={ChatApp} />
 					</Providers>
 				</IonRouterOutlet>
 				<IonTabBar slot="bottom">
