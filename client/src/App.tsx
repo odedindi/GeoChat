@@ -35,8 +35,8 @@ import * as I from 'ionicons/icons';
 import UnAuthed from './routes/UnAuthed';
 import Login from './pages/Auth/Login';
 import RestorePassword from './pages/Auth/RestorePassword';
-import Signup from './pages/Auth/Signup';
 import ChatApp from './pages/Chat';
+import Signup from './pages/Auth/Signup';
 
 const App: React.FC = () => (
 	<IonApp>
