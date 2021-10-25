@@ -1,7 +1,7 @@
 import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
+import Providers from './Providers';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -22,17 +22,54 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+import {
+	IonApp,
+	IonIcon,
+	IonLabel,
+	IonRouterOutlet,
+	IonTabBar,
+	IonTabButton,
+	IonTabs,
+} from '@ionic/react';
+import * as I from 'ionicons/icons';
+import UnAuthed from './routes/UnAuthed';
+import Login from './pages/Auth/Login';
+import RestorePassword from './pages/Auth/RestorePassword';
+import Signup from './pages/Auth/Signup';
+
 const App: React.FC = () => (
 	<IonApp>
 		<IonReactRouter>
-			<IonRouterOutlet>
-				<Route exact path="/home">
-					<Home />
-				</Route>
-				<Route exact path="/">
-					<Redirect to="/home" />
-				</Route>
-			</IonRouterOutlet>
+			<IonTabs>
+				<IonRouterOutlet>
+					<Providers>
+						<UnAuthed path="/home" component={Home} />
+						<UnAuthed path="/auth/login" component={Login} />
+						<UnAuthed path="/auth/signup" component={Signup} />
+						<UnAuthed
+							path="/auth/restorepassword"
+							component={RestorePassword}
+						/>
+						<Route exact path="/">
+							<Redirect to="/home" />
+						</Route>
+					</Providers>
+				</IonRouterOutlet>
+				<IonTabBar slot="bottom">
+					<IonTabButton tab="tab1" href="/">
+						<IonIcon icon={I.logoWechat} />
+						<IonLabel>Home</IonLabel>
+					</IonTabButton>
+					<IonTabButton tab="tab2" href="/map">
+						<IonIcon icon={I.mapOutline} />
+						<IonLabel>Map</IonLabel>
+					</IonTabButton>
+					<IonTabButton tab="tab3" href="/settings">
+						<IonIcon icon={I.settingsOutline} />
+						<IonLabel>Settings</IonLabel>
+					</IonTabButton>
+				</IonTabBar>
+			</IonTabs>
 		</IonReactRouter>
 	</IonApp>
 );

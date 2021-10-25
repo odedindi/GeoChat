@@ -20,6 +20,9 @@
 		"react-router": "^5.2.0",
 		"react-router-dom": "^5.2.0",
 		"react-scripts": "4.0.2",
+		"socket.io": "^4.3.1",
+		"socket.io-client": "^4.3.2",
+		"styled-components": "^5.3.3",
 		"typescript": "^4.1.3",
 		"web-vitals": "^0.2.4",
 		"workbox-background-sync": "^5.1.4",
@@ -68,6 +71,7 @@
 	},
 	"description": "GeoChat prototype",
 	"devDependencies": {
+		"@types/styled-components": "^5.1.15",
 		"eslint-config-prettier": "^8.3.0",
 		"husky": "^7.0.4",
 		"prettier": "^2.4.1",

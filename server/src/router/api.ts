@@ -4,6 +4,7 @@ import * as API from "../controllers/api";
 
 const router = express.Router();
 
+
 router.post("/generate-token", (req, res) => {
   const body = JSON.parse(req.body);
   console.log(colors.rainbow("/api/generate-token req.body: "), body);

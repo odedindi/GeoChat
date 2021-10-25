@@ -138,6 +138,13 @@
   dependencies:
     socket.io "*"
 
+"@types/socketio-jwt@^4.6.2":
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/@types/socketio-jwt/-/socketio-jwt-4.6.2.tgz#b71646653d3245b3a4dc06ba1081eb4fddfa1bfe"
+  integrity sha512-r4P9eW57klN8PNn6CzQfGaVxiNFOt90sxm79kEm/xQMlC49F/H6zxCGT+qyLVYHWh6CcHMn1yGSLfVgDKMDlOA==
+  dependencies:
+    socketio-jwt "*"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -1432,7 +1439,7 @@ socket.io@*, socket.io@^4.3.1:
     socket.io-adapter "~2.3.2"
     socket.io-parser "~4.0.4"
 
-socketio-jwt@^4.6.2:
+socketio-jwt@*, socketio-jwt@^4.6.2:
   version "4.6.2"
   resolved "https://registry.yarnpkg.com/socketio-jwt/-/socketio-jwt-4.6.2.tgz#ee06a9d40f68ccccdece427ed80dc31a80d692c6"
   integrity sha512-bcCnit/cCvqtC921Gwuqor+LpLKrpREmPACVgLfdbFBL95w2nPF7lOxsOxyeRrhc5Kot/1jUSW5+kLo23zJIMA==
