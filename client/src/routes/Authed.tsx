@@ -1,6 +1,10 @@
 import { Redirect, Route } from 'react-router-dom';
 
-const Authed: React.FC<RouteProps> = ({ component: Component, loading, path }) => {
+const Authed: React.FC<RouteProps> = ({
+	component: Component,
+	loading,
+	path,
+}) => {
 	const isAuthed = Boolean(localStorage.getItem('token'));
 	return (
 		<Route

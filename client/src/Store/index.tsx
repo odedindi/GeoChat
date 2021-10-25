@@ -7,10 +7,7 @@ const StoreContext = React.createContext<StoreContext>(undefined!);
 const { Provider }: { Provider: React.Provider<StoreContext> } = StoreContext;
 
 const StoreProvider: React.FC = ({ children }) => {
-	const [storeState, storeDispatch] = React.useReducer(
-		reducer,
-		initState,
-	);
+	const [storeState, storeDispatch] = React.useReducer(reducer, initState);
 	return <Provider value={{ storeState, storeDispatch }}>{children}</Provider>;
 };
 

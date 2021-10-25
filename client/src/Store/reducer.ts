@@ -14,10 +14,7 @@ export const initState: StoreState = {
 	},
 };
 
-export const reducer = (
-	state = initState,
-	action: any,
-): StoreState => {
+export const reducer = (state = initState, action: any): StoreState => {
 	const { payload, type } = action;
 	switch (type) {
 		case 'ADDUSER':

@@ -16,7 +16,7 @@ const SocketProvider: React.FC = ({ children }) => {
 	const ServerUrl = process.env.REACT_APP_SERVER_URL as string;
 
 	const [socket] = React.useState(() => socketClient(ServerUrl));
-    
+
 	console.log('sockerProvider: ', socket);
 	return <Provider value={{ socket }}>{children}</Provider>;
 };
