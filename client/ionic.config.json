@@ -1,7 +1,5 @@
 {
-	"name": "geochating",
-	"integrations": {
-		"capacitor": {}
-	},
+	"name": "client",
+	"integrations": {},
 	"type": "react"
 }

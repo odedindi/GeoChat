@@ -1,14 +1,8 @@
 {
-	"name": "geochating",
+	"name": "client",
 	"version": "0.0.1",
 	"private": true,
 	"dependencies": {
-		"@capacitor/app": "1.0.5",
-		"@capacitor/core": "3.2.5",
-		"@capacitor/haptics": "1.1.2",
-		"@capacitor/keyboard": "1.1.2",
-		"@capacitor/status-bar": "1.0.5",
-		"@ionic/eslint-config": "^0.3.0",
 		"@ionic/react": "^5.5.0",
 		"@ionic/react-router": "^5.5.0",
 		"@testing-library/jest-dom": "^5.11.9",
@@ -46,20 +40,18 @@
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
+		"format": "prettier --write .",
 		"check:format": "prettier --check .",
 		"check:lint": "eslint . --ext .ts",
 		"check:types": "tsc --pretty --noEmit",
-		"format": "prettier --write .",
-		"test-quick": "yarn check:lint && yarn check:format && yarn check:types",
-		"test-all": "yarn test-quick && yarn build",
+		"check:quick": "yarn check:lint && yarn check:format && yarn check:types",
+		"check:all": "yarn test-quick && yarn build",
 		"prepare": "cd .. && husky install client/.husky"
 	},
 	"eslintConfig": {
 		"extends": [
 			"react-app",
-			"react-app/jest",
-			"@ionic/eslint-config/recommended",
-			"prettier"
+			"react-app/jest"
 		]
 	},
 	"browserslist": {
@@ -74,18 +66,11 @@
 			"last 1 safari version"
 		]
 	},
+	"description": "GeoChat prototype",
 	"devDependencies": {
-		"@capacitor/cli": "3.2.5",
-		"eslint": "7.32.0",
-		"eslint-config-prettier": "8.3.0",
-		"husky": "^7.0.2",
+		"eslint-config-prettier": "^8.3.0",
+		"husky": "^7.0.4",
 		"prettier": "^2.4.1",
 		"pretty-quick": "^3.1.1"
-	},
-	"description": "An GeoChating project",
-	"husky": {
-		"hooks": {
-			"pre-commit": "yarn test-quick"
-		}
 	}
 }
