@@ -34,7 +34,7 @@ import Providers from './Providers';
 import Login from './pages/Auth/Login';
 import RestorePassword from './pages/Auth/RestorePassword';
 import Signup from './pages/Auth/Signup';
-import ChatApp from './pages/Chat';
+import GeneralChat from './pages/GeneralChat';
 import Home from './pages/Home';
 import UnAuthed from './routes/UnAuthed';
 
@@ -51,22 +51,26 @@ const App: React.FC = () => (
 							path="/auth/restorepassword"
 							component={RestorePassword}
 						/>
+						<UnAuthed path="/chat" component={GeneralChat} />
 						<Route exact path="/">
 							<Redirect to="/home" />
 						</Route>
-						<UnAuthed path="/chat/:roomname/:username" component={ChatApp} />
 					</Providers>
 				</IonRouterOutlet>
 				<IonTabBar slot="bottom">
 					<IonTabButton tab="tab1" href="/">
-						<IonIcon icon={I.logoWechat} />
+						<IonIcon icon={I.home} />
 						<IonLabel>Home</IonLabel>
 					</IonTabButton>
-					<IonTabButton tab="tab2" href="/map">
+					<IonTabButton tab="tab2" href="/chat">
+						<IonIcon icon={I.logoWechat} />
+						<IonLabel>chat</IonLabel>
+					</IonTabButton>
+					<IonTabButton tab="tab3" href="/map">
 						<IonIcon icon={I.mapOutline} />
 						<IonLabel>Map</IonLabel>
 					</IonTabButton>
-					<IonTabButton tab="tab3" href="/settings">
+					<IonTabButton tab="tab4" href="/settings">
 						<IonIcon icon={I.settingsOutline} />
 						<IonLabel>Settings</IonLabel>
 					</IonTabButton>

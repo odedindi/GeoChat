@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useKeyboardListener } from 'src/hooks/useKeyboardListener';
 
 import * as S from './styles';
 
@@ -35,6 +36,8 @@ const RestorePassword: React.FC = () => {
 
 		setLoading(false);
 	};
+
+	useKeyboardListener(initStream);
 
 	const inputChangeHandler = ({ name, value }: HTMLInputElement) =>
 		setInput((prev) => ({ ...prev, [name]: value }));

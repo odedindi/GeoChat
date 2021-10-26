@@ -26,9 +26,9 @@ const express_1 = __importDefault(require("express"));
 const colors_1 = __importDefault(require("colors"));
 const API = __importStar(require("../controllers/api"));
 const router = express_1.default.Router();
-router.post("/generate-token", (req, res) => {
+router.post('/generate-token', (req, res) => {
     const body = JSON.parse(req.body);
-    console.log(colors_1.default.rainbow("/api/generate-token req.body: "), body);
+    console.log(colors_1.default.rainbow('/api/generate-token req.body: '), body);
     if (!body.name) {
         return res.send({ status: false });
     }
@@ -37,8 +37,13 @@ router.post("/generate-token", (req, res) => {
             id: API.generateRandomId(),
             name: body.name,
             username: body.username ? body.username : body.name,
-            roomname: "",
+            currentRoomname: '',
+            roomHistory: [],
             avatar: API.generateRandomAvatar(),
+            geo: {
+                lat: '',
+                lng: '',
+            },
         };
         return res.send({ status: true, jwt: API.createToken(user) });
     }

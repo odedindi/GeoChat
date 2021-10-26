@@ -1,1 +1,1 @@
-export const secret = "bestGeoChatAppEverMade!";
+export const secret = 'bestGeoChatAppEverMade!';

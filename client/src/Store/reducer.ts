@@ -2,28 +2,32 @@ import { ActionTypes as T } from './actionTypes';
 
 export const initState: StoreState = {
 	user: {
-		id: 0,
-		name: '',
-		avatar: '',
-		coordinates: [0, 0],
-	},
-	process: {
-		encrypt: '',
-		text: '',
-		cypher: '',
+		id: 'sdq123',
+		name: 'bob',
+		username: 'bob',
+		currentRoomname: '',
+		roomHistory: [] as string[],
+		avatar: 'https://robohash.org/d0DGHght2Orol2FZ6GB',
+		geo: {
+			lat: '',
+			lng: '',
+		},
 	},
 };
 
-export const reducer = (state = initState, action: any): StoreState => {
+export const reducer = (
+	state: StoreState,
+	action: ReducerActionArgument,
+): StoreState => {
 	const { payload, type } = action;
 	switch (type) {
-		case 'ADDUSER':
+		case T.ADDUSER:
+			// eslint-disable-next-line no-case-declarations
+			const user = payload as User;
 			return {
 				...state,
-				user: payload,
+				user: user,
 			};
-		case T.PROCESS:
-			return { ...state, process: { ...payload } };
 		default:
 			return state;
 	}

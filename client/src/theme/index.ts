@@ -36,7 +36,8 @@ export const MainButton = styled.button<{ disabled?: boolean }>`
 	width: 50%;
 	padding: 14px 10px;
 
-	background-color: ${theme.colors.yellow};
+	background-color: ${({ disabled }) =>
+		disabled ? 'gray' : theme.colors.yellow};
 
 	border: none;
 	border-radius: 5px;
@@ -44,8 +45,9 @@ export const MainButton = styled.button<{ disabled?: boolean }>`
 
 	line-height: 1.4em;
 	font-size: 1rem;
+	min-width: 7.5rem;
 
 	&:hover {
-		cursor: pointer;
+		cursor: ${({ disabled }) => (disabled ? 'auto' : 'pointer')};
 	}
 `;

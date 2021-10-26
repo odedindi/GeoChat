@@ -1,4 +1,4 @@
-type User = {
+type ChatUser = {
 	avatar?: string;
 	currentRoomname?: string;
 	email?: string;
@@ -11,10 +11,9 @@ type User = {
 	roomHistory?: string[];
 	username?: string;
 };
-
-type Message = {
+type Msg = {
 	createdAt: number;
-	from: User;
+	from: ChatUser;
 	id: string;
 	text: string;
 };

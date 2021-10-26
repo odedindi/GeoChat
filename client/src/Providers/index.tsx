@@ -1,5 +1,5 @@
-import { SocketProvider } from '../Socket';
-import { StoreProvider } from '../Store';
+import { SocketProvider } from 'src/Socket';
+import { StoreProvider } from 'src/Store';
 
 const Providers: React.FC = ({ children }) => (
 	<>

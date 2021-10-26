@@ -1,3 +1,4 @@
+import { IonButton } from '@ionic/react';
 import styled from 'styled-components';
 
 import { MainButton, MainInput } from '../../theme';
@@ -31,9 +32,9 @@ export const CardTitle = styled.h4`
 `;
 export const Input = styled(MainInput)``;
 
-export const Button = styled(MainButton)`
-	min-width: 7.5rem;
-	&:hover {
-		cursor: ${({ disabled }) => (disabled ? 'auto' : 'pointer')};
-	}
+export const Button = styled(MainButton)``;
+export const ShowUnshowButton = styled(IonButton)`
+	position: relative;
+	bottom: 5.25rem;
+	right: -32.5%;
 `;

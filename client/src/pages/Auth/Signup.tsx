@@ -1,5 +1,14 @@
+import {
+	IonContent,
+	IonFooter,
+	IonHeader,
+	IonIcon,
+	IonPage,
+} from '@ionic/react';
+import * as I from 'ionicons/icons';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
+import { useKeyboardListener } from 'src/hooks/useKeyboardListener';
 
 import * as S from './styles';
 
@@ -11,6 +20,9 @@ const Signup: React.FC = () => {
 		password: '',
 		passwordRepeat: '',
 	});
+	const [showPassword, setShowPassword] = React.useState(false);
+	const showUnshowPassword = () => setShowPassword(!showPassword);
+
 	const [errorMsg, setErrorMsg] = React.useState<string | null>(null);
 	const [preventSubmit, setPreventSubmit] = React.useState(true);
 
@@ -39,14 +51,14 @@ const Signup: React.FC = () => {
 		}
 	}, [userInput]);
 
-	const initStream = async () => {
+	const initStream = React.useCallback(async () => {
 		setLoading(true);
-
+		const { name, email, password } = userInput;
 		const url = '';
 		const body = {
-			name: userInput.name,
-			email: userInput.email,
-			password: userInput.password,
+			name: name,
+			email: email,
+			password: password,
 		};
 		const config = {
 			method: 'POST',
@@ -62,50 +74,77 @@ const Signup: React.FC = () => {
 		console.log(data);
 
 		setLoading(false);
-	};
+	}, [userInput]);
+
+	useKeyboardListener(initStream);
 
 	const inputChangeHandler = ({ name, value }: HTMLInputElement) =>
 		setInput((prev) => ({ ...prev, [name]: value }));
 
 	return (
-		<S.CardWrapper>
-			<S.CardHeader>
-				<h6>Already got an account?</h6>
-				<Link to="/auth/login">Login</Link>
-			</S.CardHeader>
-			<S.Card>
-				<S.CardTitle>GeoChating Signup</S.CardTitle>
-				<S.Input
-					type="text"
-					placeholder="Name"
-					name="name"
-					onChange={({ target }) => inputChangeHandler(target)}
-				/>
-				<S.Input
-					type="email"
-					placeholder="Email"
-					name="email"
-					onChange={({ target }) => inputChangeHandler(target)}
-				/>
-				<S.Input
-					type="password"
-					placeholder="Password"
-					name="password"
-					onChange={({ target }) => inputChangeHandler(target)}
-				/>
-				<S.Input
-					type="password"
-					placeholder="Password"
-					name="passwordRepeat"
-					disabled={!userInput.password.length}
-					onChange={({ target }) => inputChangeHandler(target)}
-				/>
-				{errorMsg && <S.CardTitle>{errorMsg}</S.CardTitle>}
+		<IonPage>
+			<IonHeader>
+				<S.CardHeader>
+					<h6>Already got an account?</h6>
+					<Link to="/auth/login">Login</Link>
+				</S.CardHeader>
+			</IonHeader>
+			<IonContent fullscreen={true} scrollEvents={true}>
+				<S.CardWrapper>
+					<S.CardTitle>GeoChating Signup</S.CardTitle>
+					<S.Card>
+						<S.Input
+							type="text"
+							placeholder="Full Name"
+							name="name"
+							value={userInput.name}
+							onChange={({ target }) => inputChangeHandler(target)}
+						/>
+						<S.Input
+							type="email"
+							placeholder="E-mail"
+							name="email"
+							value={userInput.email}
+							onChange={({ target }) => inputChangeHandler(target)}
+						/>
+						<S.Input
+							type={showPassword ? 'text' : 'password'}
+							placeholder="Password"
+							name="password"
+							value={userInput.password}
+							onChange={({ target }) => inputChangeHandler(target)}
+						/>
+						<S.Input
+							type={showPassword ? 'text' : 'password'}
+							placeholder="Password Repeat"
+							name="passwordRepeat"
+							disabled={!userInput.password.length}
+							onChange={({ target }) => inputChangeHandler(target)}
+						/>
+						<S.ShowUnshowButton
+							onClick={showUnshowPassword}
+							fill="clear"
+							slot="icon-only"
+							shape="round"
+							color="dark"
+							size="large"
+						>
+							{!showPassword ? (
+								<IonIcon icon={I.eye} />
+							) : (
+								<IonIcon icon={I.eyeOff} />
+							)}
+						</S.ShowUnshowButton>
+						{errorMsg && <S.CardTitle>{errorMsg}</S.CardTitle>}
+					</S.Card>
+				</S.CardWrapper>
+			</IonContent>
+			<IonFooter>
 				<S.Button disabled={preventSubmit} onClick={initStream}>
 					Submit
 				</S.Button>
-			</S.Card>
-		</S.CardWrapper>
+			</IonFooter>
+		</IonPage>
 	);
 };
 

@@ -11,6 +11,6 @@ const StoreProvider: React.FC = ({ children }) => {
 	return <Provider value={{ storeState, storeDispatch }}>{children}</Provider>;
 };
 
-const useStore = (): any => React.useContext(StoreContext);
+const useStore = (): StoreContext => React.useContext(StoreContext);
 
 export { StoreProvider, useStore };
