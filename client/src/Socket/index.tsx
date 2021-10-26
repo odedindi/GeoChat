@@ -13,11 +13,11 @@ const { Provider }: { Provider: React.Provider<SocketContextType> } =
 	SocketContext;
 
 const SocketProvider: React.FC = ({ children }) => {
-	const ServerUrl = process.env.REACT_APP_SERVER_URL as string;
-
-	const [socket] = React.useState(() => socketClient(ServerUrl));
-
-	console.log('sockerProvider: ', socket);
+	const serverUrl = process.env.REACT_APP_SERVER_URL as string;
+	const [socket] = React.useState(() => socketClient(serverUrl));
+	if (process.env.NODE_ENV !== 'production') {
+		console.log('sockerProvider: ', socket);
+	}
 	return <Provider value={{ socket }}>{children}</Provider>;
 };
 const useSocket = (): SocketContextType => React.useContext(SocketContext);

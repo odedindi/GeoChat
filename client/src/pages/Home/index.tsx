@@ -1,3 +1,6 @@
+import * as React from 'react';
+import { useHistory, Link } from 'react-router-dom';
+import * as S from './styles';
 import {
 	IonContent,
 	IonHeader,
@@ -5,12 +8,10 @@ import {
 	IonTitle,
 	IonToolbar,
 } from '@ionic/react';
-import './Home.css';
-import { Link } from 'react-router-dom';
-import * as React from 'react';
+
 import { useSocket } from 'src/Socket';
-import * as S from './styles';
 const Home: React.FC = () => {
+	const history = useHistory();
 	const { socket } = useSocket();
 	const [username, setUsername] = React.useState('');
 	const [roomname, setRoomname] = React.useState('');
@@ -19,20 +20,37 @@ const Home: React.FC = () => {
 	React.useEffect(() => {
 		username.length && roomname.length ? setCanApply(true) : setCanApply(false);
 	}, [roomname.length, username.length]);
-	const sendData = () => {
+
+	const sendData = React.useCallback(() => {
 		if (canApply) {
-			if (socket) socket.emit('joinRoom', { username, roomname });
-		} else {
-			alert('username and roomname are must !');
-			window.location.reload();
+			if (socket) {
+				socket.emit('joinRoom', { username, roomname });
+				history.push(`/chat/${roomname}/${username}`);
+			} else {
+				alert('username and roomname are must !');
+				window.location.reload();
+			}
 		}
-	};
+	}, [canApply, history, roomname, socket, username]);
+
+	React.useEffect(() => {
+		const keyboardListener = ({ code }: KeyboardEvent) => {
+			if (code === 'Enter' || code === 'NumpadEnter') sendData();
+		};
+		document.addEventListener('keydown', keyboardListener);
+		return () => {
+			document.removeEventListener('keydown', keyboardListener);
+		};
+	}, [sendData]);
 
 	return (
 		<IonPage>
 			<IonHeader>
 				<IonToolbar>
 					<IonTitle>Welcome to geochat</IonTitle>
+					<Link to="/auth/login">Login</Link>
+					<br />
+					<Link to="/auth/signup">Signup</Link>
 				</IonToolbar>
 			</IonHeader>
 			<IonContent fullscreen>
@@ -41,11 +59,6 @@ const Home: React.FC = () => {
 						<IonTitle size="large">Welcome to geochat</IonTitle>
 					</IonToolbar>
 				</IonHeader>
-				<Link to="/auth/login">Login</Link>
-				<br />
-				<Link to="/auth/signup">Signup</Link>
-				<br />
-				<Link to="/auth/restorepassword">Restore password</Link>
 				<S.Wrapper>
 					<h1>GeoChatting</h1>
 					<S.Input
@@ -58,9 +71,9 @@ const Home: React.FC = () => {
 						value={roomname}
 						onChange={({ target: { value } }) => setRoomname(value)}
 					/>
-					<Link to={`/chat/${roomname}/${username}`}>
-						<S.Button onClick={sendData}>Join</S.Button>
-					</Link>
+					<S.Button disabled={!canApply} onClick={sendData}>
+						Join
+					</S.Button>
 				</S.Wrapper>
 			</IonContent>
 		</IonPage>
