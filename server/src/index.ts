@@ -9,6 +9,8 @@ import * as socketio from 'socket.io';
 import router from './router/api';
 // import * as C from './config/constants';
 import * as API from './controllers/api';
+import logger, { logInfo } from './logger';
+import * as W from 'winston';
 
 dotenv.config();
 const PORT = process.env.SERVER_PORT;
@@ -79,9 +81,10 @@ const chatRooms = [
 		] as Message[],
 	},
 ];
+
 // initializing the socket io connection
 io.on('connection', (socket: socketio.Socket) => {
-	console.log(colors.green('new socket connected'));
+	logInfo('new socket connected!');
 
 	socket.on('setUsername', (user: User) => {
 		const newUser: User = {
@@ -102,6 +105,7 @@ io.on('connection', (socket: socketio.Socket) => {
 		socket.data.user = newUser;
 		io.emit('userChange', { user: socket.data.user, event: 'enter' });
 		socket.join(newUser.currentRoomname);
+		logInfo('user connected and joined to the public chat');
 	});
 
 	socket.on('sendMessage', (msg) => {
@@ -112,9 +116,11 @@ io.on('connection', (socket: socketio.Socket) => {
 			createdAt: Date.now(),
 			id: API.generateRandomId(),
 		};
+		logInfo(`message was sent, messageId: ${message.id}`);
 		io.emit('message', message);
 	});
 	socket.on('disconnect', () => {
+		logInfo('user disconnected');
 		io.emit('userChange', { user: socket.data.user, event: 'exit' });
 	});
 

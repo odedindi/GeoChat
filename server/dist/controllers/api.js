@@ -33,7 +33,7 @@ const generateRandomNumberFrom1ToNumber = (num) => Math.floor(Math.random() * nu
 exports.generateRandomNumberFrom1ToNumber = generateRandomNumberFrom1ToNumber;
 const generateRandomString = () => {
     let result;
-    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     for (let index = 0; index < (0, exports.generateRandomNumberFrom1ToNumber)(100); index++) {
         result += characters.charAt((0, exports.generateRandomNumberFrom1ToNumber)(characters.length));
     }

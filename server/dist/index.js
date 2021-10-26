@@ -33,6 +33,7 @@ const socketio = __importStar(require("socket.io"));
 const api_1 = __importDefault(require("./router/api"));
 // import * as C from './config/constants';
 const API = __importStar(require("./controllers/api"));
+const logger_1 = require("./logger");
 dotenv_1.default.config();
 const PORT = process.env.SERVER_PORT;
 const app = (0, express_1.default)();
@@ -100,7 +101,7 @@ const chatRooms = [
 ];
 // initializing the socket io connection
 io.on('connection', (socket) => {
-    console.log(colors_1.default.green('new socket connected'));
+    (0, logger_1.logInfo)('new socket connected!');
     socket.on('setUsername', (user) => {
         const newUser = {
             id: socket.id,
@@ -120,6 +121,7 @@ io.on('connection', (socket) => {
         socket.data.user = newUser;
         io.emit('userChange', { user: socket.data.user, event: 'enter' });
         socket.join(newUser.currentRoomname);
+        (0, logger_1.logInfo)('user connected and joined to the public chat');
     });
     socket.on('sendMessage', (msg) => {
         console.log(socket.data);
@@ -129,9 +131,11 @@ io.on('connection', (socket) => {
             createdAt: Date.now(),
             id: API.generateRandomId(),
         };
+        (0, logger_1.logInfo)(`message was sent, messageId: ${message.id}`);
         io.emit('message', message);
     });
     socket.on('disconnect', () => {
+        (0, logger_1.logInfo)('user disconnected');
         io.emit('userChange', { user: socket.data.user, event: 'exit' });
     });
     // socket.on('joinGeneralChatRoom', ({ username }: User) => {

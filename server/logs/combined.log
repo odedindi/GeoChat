@@ -1,0 +1,63 @@
+// without prettyPrint
+{"level":"info","message":"Hello distributed log files!","service":"GeoChating server logger","timestamp":"27-10-2021 00:26:12"}
+// with prettyPrint
+{
+  level: 'info',
+  message: 'Hello distributed log files!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 00:35:07'
+}
+{
+  level: 'info',
+  message: 'Hello distributed log files!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 00:37:14'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 00:46:30'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 00:46:31'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 00:50:39'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 00:50:40'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 00:51:29'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 00:51:30'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 00:52:31'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 00:52:34'
+}
