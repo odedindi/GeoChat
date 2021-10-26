@@ -1,5 +1,4 @@
 import { MainButton, MainInput } from 'src/theme';
-
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`

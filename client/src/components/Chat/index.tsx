@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useSocket } from 'src/Socket';
 
 import { useStore } from '../../Store';
 import { process } from '../../Store/action';
@@ -12,7 +13,9 @@ type Message = {
 	username: string;
 	text: string;
 };
-const Chat: React.FC<ChatProps> = ({ username, roomname, socket }) => {
+const Chat: React.FC<ChatProps> = ({ username, roomname }) => {
+	const { socket } = useSocket();
+
 	const [text, setText] = React.useState('');
 	const [messages, setMessages] = React.useState<Message[]>([]);
 

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 // This optional code is used to register a service worker.
 // register() is not called by default.
 
@@ -80,7 +81,7 @@ function registerValidSW(swUrl: string, config?: Config) {
 							);
 
 							// Execute callback
-							if (config && config.onUpdate) {
+							if (config?.onUpdate) {
 								config.onUpdate(registration);
 							}
 						} else {
@@ -90,7 +91,7 @@ function registerValidSW(swUrl: string, config?: Config) {
 							console.log('Content is cached for offline use.');
 
 							// Execute callback
-							if (config && config.onSuccess) {
+							if (config?.onSuccess) {
 								config.onSuccess(registration);
 							}
 						}

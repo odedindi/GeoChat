@@ -1,6 +1,6 @@
-import { MainButton, MainInput } from '../../theme';
-
 import styled from 'styled-components';
+
+import { MainButton, MainInput } from '../../theme';
 
 export const CardWrapper = styled.div`
 	text-align: center;

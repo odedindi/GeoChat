@@ -14,7 +14,7 @@
 		"@testing-library/jest-dom": "^5.11.9",
 		"@testing-library/react": "^11.2.5",
 		"@testing-library/user-event": "^12.6.3",
-		"@types/jest": "^26.0.20",
+		"@types/jest": "^27.0.2",
 		"@types/node": "^12.19.15",
 		"@types/react": "^16.14.3",
 		"@types/react-dom": "^16.9.10",
@@ -82,6 +82,7 @@
 	"devDependencies": {
 		"@capacitor/cli": "3.2.5",
 		"@ionic/eslint-plugin": "^0.0.1",
+		"@types/mocha": "^9.0.0",
 		"@types/styled-components": "^5.1.15",
 		"eslint": "7.32.0",
 		"eslint-config-prettier": "^8.3.0",

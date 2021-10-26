@@ -1,6 +1,3 @@
-import * as React from 'react';
-import { useHistory, Link } from 'react-router-dom';
-import * as S from './styles';
 import {
 	IonContent,
 	IonHeader,
@@ -8,8 +5,12 @@ import {
 	IonTitle,
 	IonToolbar,
 } from '@ionic/react';
-
+import * as React from 'react';
+import { useHistory, Link } from 'react-router-dom';
 import { useSocket } from 'src/Socket';
+
+import * as S from './styles';
+
 const Home: React.FC = () => {
 	const history = useHistory();
 	const { socket } = useSocket();

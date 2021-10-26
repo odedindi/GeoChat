@@ -1,5 +1,4 @@
 import * as React from 'react';
-
 import type { Socket } from 'socket.io-client';
 import socketClient from 'socket.io-client';
 

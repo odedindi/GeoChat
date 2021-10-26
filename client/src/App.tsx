@@ -1,8 +1,3 @@
-import { Redirect, Route } from 'react-router-dom';
-import { IonReactRouter } from '@ionic/react-router';
-import Home from './pages/Home';
-import Providers from './Providers';
-
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -31,12 +26,17 @@ import {
 	IonTabButton,
 	IonTabs,
 } from '@ionic/react';
+import { IonReactRouter } from '@ionic/react-router';
 import * as I from 'ionicons/icons';
-import UnAuthed from './routes/UnAuthed';
+import { Redirect, Route } from 'react-router-dom';
+
+import Providers from './Providers';
 import Login from './pages/Auth/Login';
 import RestorePassword from './pages/Auth/RestorePassword';
-import ChatApp from './pages/Chat';
 import Signup from './pages/Auth/Signup';
+import ChatApp from './pages/Chat';
+import Home from './pages/Home';
+import UnAuthed from './routes/UnAuthed';
 
 const App: React.FC = () => (
 	<IonApp>
