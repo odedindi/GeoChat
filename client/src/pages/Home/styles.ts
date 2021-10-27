@@ -1,21 +1,45 @@
-import { MainButton, MainInput } from 'src/theme';
+import { IonAvatar, IonCardTitle, IonGrid } from '@ionic/react';
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
-	width: 100%;
-	height: 100%;
-	padding: 2rem;
-	background-color: #2d343e;
+export const Banner = styled(IonGrid)`
 	display: flex;
-	justify-content: space-evenly;
 	flex-direction: column;
-	border-radius: 5px;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	background-color: var(--ion-color-success-tint);
+	color: white;
+	margin-bottom: 5rem;
 `;
 
-export const Input = styled(MainInput)`
-	&:focus {
-		outline: none;
+export const Avatar = styled(IonAvatar)`
+	padding: 0.25rem;
+	width: 7rem;
+	height: 7rem;
+	border: 5px solid rgba(218, 223, 208, 0.4);
+`;
+
+export const AvatarUpload = styled.div`
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background-color: #fff;
+	border: 3px solid rgba(218, 223, 208, 0.4);
+	color: #505050;
+	position: absolute;
+	padding: 0.3rem;
+	font-size: 1.1rem;
+	border-radius: 500px;
+	margin-top: -2.2rem;
+	margin-left: 5rem;
+
+	&:hover {
+		cursor: pointer;
 	}
 `;
 
-export const Button = styled(MainButton)``;
+export const ProfileTitle = styled(IonCardTitle)`
+	padding: 1rem;
+	color: white;
+	font-size: 1.5rem;
+`;

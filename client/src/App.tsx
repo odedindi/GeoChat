@@ -28,6 +28,7 @@ import {
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import * as I from 'ionicons/icons';
+import * as React from 'react';
 import { Redirect, Route } from 'react-router-dom';
 
 import Providers from './Providers';
@@ -36,6 +37,7 @@ import RestorePassword from './pages/Auth/RestorePassword';
 import Signup from './pages/Auth/Signup';
 import GeneralChat from './pages/GeneralChat';
 import Home from './pages/Home';
+import ProfilePage from './pages/Profile';
 import UnAuthed from './routes/UnAuthed';
 
 const App: React.FC = () => (
@@ -45,6 +47,7 @@ const App: React.FC = () => (
 				<IonRouterOutlet>
 					<Providers>
 						<UnAuthed path="/home" component={Home} />
+						<UnAuthed path="/settings" component={ProfilePage} />
 						<UnAuthed path="/auth/login" component={Login} />
 						<UnAuthed path="/auth/signup" component={Signup} />
 						<UnAuthed

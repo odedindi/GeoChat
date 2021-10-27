@@ -1201,10 +1201,20 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@capacitor/android@^3.2.5":
+  version "3.2.5"
+  resolved "https://registry.yarnpkg.com/@capacitor/android/-/android-3.2.5.tgz#fd16b60a03bf15c9c59e118daf5068b93c39438c"
+  integrity sha512-eq9luSS8Bivyp3F46BaUgmPXxMzuUTdZO/bToHIUBu66Ufh4ou/TDg0opMXjuKIYJgjAsddxkPBeREj8KabbSQ==
+
 "@capacitor/app@1.0.5":
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/@capacitor/app/-/app-1.0.5.tgz#9512235d0b686edf2f32d75b32abecbe383aa633"
   integrity sha512-U0dAw1CAjKyguSRxKDabszsQ4dj679RnxaUZrSHDR5Jnt5x308oQuKXFP++wnMBbw72D02iqjG0a+/Ujye7C9g==
+
+"@capacitor/camera@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@capacitor/camera/-/camera-1.1.2.tgz#2c945749f602f81d038ec227808ee9b5a22d1785"
+  integrity sha512-aBLtq4lbKLt3CTF0ZtgLKoMIhA78oRB3pvNOwQHU6MFmkD7DMZFU0jObfPYdw6Tpwn8zA6fRWCJg0dru77/AwQ==
 
 "@capacitor/cli@3.2.5":
   version "3.2.5"
@@ -1235,6 +1245,11 @@
   dependencies:
     tslib "^2.1.0"
 
+"@capacitor/filesystem@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@capacitor/filesystem/-/filesystem-1.0.5.tgz#74a87219ca0b815c5093bcce768868195b2a2e1a"
+  integrity sha512-NQNSCgSu6vXsStt+rcJlaLUGYSFH3zow3pAJR5T75uoSN1WhLV7M2FhsjHdWbk21mhokzF1b7foKLvTDfgH2mg==
+
 "@capacitor/haptics@1.1.2":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@capacitor/haptics/-/haptics-1.1.2.tgz#abd26a2b148740ad3e2af1a9ee61c08bfa67a6ab"
@@ -1249,6 +1264,11 @@
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/@capacitor/status-bar/-/status-bar-1.0.5.tgz#a3b2a00944b70ab8ef167a5ff33e3f90c021bb28"
   integrity sha512-SZuxjaN5Nr8FKUVlkVH3l0X2JWey0yVMfMhyE3RG7ryUSAesgs3bvkAEXSfjphsHOpt4A/rEeCJb2ZbeCBwroA==
+
+"@capacitor/storage@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@capacitor/storage/-/storage-1.2.2.tgz#00c1c18c698afd8e2f9ad0741f80b674c97023eb"
+  integrity sha512-IHx/HcC2UFCWIUUTn/Q0dn6m1iyvdxa9dt410EYS5W0DZPevlGxp2yYDgnqkqbrppxbEA8P1wEK1KoI0xwLvKA==
 
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"

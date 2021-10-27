@@ -119,8 +119,11 @@ io.on('connection', (socket) => {
         };
         chatRooms[0].users.push(newUser);
         socket.data.user = newUser;
-        io.emit('userChange', { user: socket.data.user, event: 'enter' });
         socket.join(newUser.currentRoomname);
+        io.to(newUser.currentRoomname).emit('userChange', {
+            user: socket.data.user,
+            event: 'enter',
+        });
         (0, logger_1.logInfo)('user connected and joined to the public chat');
     });
     socket.on('sendMessage', (msg) => {

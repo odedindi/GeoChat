@@ -61,3 +61,5427 @@
   service: 'GeoChating server logger',
   timestamp: '27-10-2021 00:52:34'
 }
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 12:45:17'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 12:45:18'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 12:45:30'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 12:45:30'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 13:22:35'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 13:22:35'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 13:28:05'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 13:28:05'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 13:28:07'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 13:28:07'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 13:30:08'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 13:30:08'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 13:30:09'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 13:30:09'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 13:30:11'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 13:30:11'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 13:34:44'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 13:34:44'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 13:34:48'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 13:34:48'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 13:43:04'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 13:43:04'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 13:43:06'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 13:43:06'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 14:33:50'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 14:33:50'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 14:36:48'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 14:36:48'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:08:43'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:08:43'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:08:43'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:08:43'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:12:16'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:12:16'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:12:17'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:12:17'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:12:18'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:12:18'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:12:18'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:12:18'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:12:37'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:12:37'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:12:38'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:12:38'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:15:35'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:15:35'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:15:35'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:15:35'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:15:35'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:15:35'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:15:35'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:15:35'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:15:35'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:15:35'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:15:36'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:15:36'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:15:48'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:15:48'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:15:48'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:15:48'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:15:48'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:15:49'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:15:55'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:15:55'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:15:55'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:15:55'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:15:55'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:15:55'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:18:55'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:18:55'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:18:55'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:18:55'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:18:55'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:18:55'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:18:55'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:18:56'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:19:04'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:19:04'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:19:04'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:19:04'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:19:04'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:19:04'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:19:05'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:19:05'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:25:56'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:25:56'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:25:56'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:25:56'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:26:59'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:26:59'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:26:59'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:26:59'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:27:00'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:27:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:28:02'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:28:02'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:28:03'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:28:03'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:28:09'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:28:09'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:28:10'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:28:10'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:28:52'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:28:52'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:28:52'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:28:52'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:36:22'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:36:22'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:37:33'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:37:33'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:37:34'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:37:34'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:47:10'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:47:10'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:47:11'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:47:11'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:50:15'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:50:15'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:50:16'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:50:16'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:58:36'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:58:36'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:58:36'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:58:36'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:58:41'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:58:41'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:58:41'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:58:41'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:58:41'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:58:41'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:58:41'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:58:41'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:58:41'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:58:41'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:58:41'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:58:41'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:58:42'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:58:42'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:58:54'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:58:54'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:58:54'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:58:54'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:58:56'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:58:56'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:58:56'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:58:56'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:58:57'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:58:57'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:59:28'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:59:28'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:59:28'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 20:59:28'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:00:36'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:00:36'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:00:36'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:00:36'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:00:37'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:00:37'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:04:13'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:04:13'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:04:14'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:04:14'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:04:18'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:04:18'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:04:18'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:04:18'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:04:22'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:04:22'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:04:22'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:04:22'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:04:22'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:04:22'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:04:23'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:04:23'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:04:43'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:04:43'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:04:43'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:04:43'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:08'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:08'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:08'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:08'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:08'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:08'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:09'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:09'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:09'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:09'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:11'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:11'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:15'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:15'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:35'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:35'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:35'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:35'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:35'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:35'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:36'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:36'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:36'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:36'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:37'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:37'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:42'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:42'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:43'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:43'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:46'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:46'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:46'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:46'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:53'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:53'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:55'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:05:55'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:14:44'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:14:44'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:27:24'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:27:24'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:27:25'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:27:25'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:27:26'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:27:26'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:27:29'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:27:29'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:27:30'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:27:30'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:27:30'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:27:30'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:37:44'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:37:44'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:37:44'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:37:44'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:37:59'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:37:59'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:37:59'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:37:59'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:38:06'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:38:06'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:38:06'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:38:06'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:38:16'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:38:16'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:38:16'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:38:16'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:38:44'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:38:44'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:38:45'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:38:45'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:38:50'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:38:50'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:38:50'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:38:50'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:38:53'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:38:53'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:38:53'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:38:53'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:38:58'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:38:58'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:38:58'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:38:58'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:05'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:05'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:05'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:05'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:05'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:05'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:05'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:05'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:06'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:06'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:06'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:06'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:06'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:06'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:06'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:06'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:06'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:06'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:06'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:06'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:06'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:06'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:06'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:06'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:06'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:06'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:06'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:06'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:06'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:06'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:06'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:06'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:07'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:07'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:14'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:14'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:15'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:15'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:23'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:23'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:24'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:24'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:55'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:55'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:55'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:55'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:56'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:39:56'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:40:24'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:40:24'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:40:25'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:40:25'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:45:27'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:45:27'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:45:28'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:45:28'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:45:28'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:45:28'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:45:43'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:45:43'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:45:44'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:45:44'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:45:47'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:45:47'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:45:48'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:45:48'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:46:52'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:46:52'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:46:52'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:46:52'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:46:52'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:46:52'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:46:52'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:46:52'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:46:52'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:46:52'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:46:54'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:46:54'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:49:28'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:49:28'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:49:28'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:49:28'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:49:30'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:49:30'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:49:30'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:49:30'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:49:33'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:49:33'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:49:35'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:49:35'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:50:19'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:50:19'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:50:20'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:50:20'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:50:27'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:50:27'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:50:28'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:50:28'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:50:31'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:50:31'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:50:33'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:50:33'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:50:41'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:50:41'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:50:41'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:50:41'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:51:31'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:51:31'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:51:31'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:51:31'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:51:31'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:51:31'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:51:31'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:51:31'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:51:31'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:51:31'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:51:31'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:51:31'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:51:31'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:51:31'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:51:31'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:51:31'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:51:31'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:51:31'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:51:33'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:51:33'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:51:38'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:51:38'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:51:40'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:51:41'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:52:30'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:52:30'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:52:32'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 21:52:32'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:11:17'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:11:17'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:11:17'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:11:17'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:11:21'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:11:21'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:11:22'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:11:22'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:11:26'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:11:26'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:11:27'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:11:27'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:11:32'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:11:32'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:11:32'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:11:32'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:11:37'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:11:37'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:11:38'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:11:38'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:11:42'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:11:42'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:11:42'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:11:42'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:11:51'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:11:51'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:11:51'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:11:51'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:12:00'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:12:00'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:12:00'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:12:00'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:12:17'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:12:17'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:12:17'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:12:17'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:14:24'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:14:25'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:14:25'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:14:25'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:14:26'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:14:26'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:14:26'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:14:26'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:15:45'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:15:45'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:15:45'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:15:45'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:15:45'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:15:45'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:15:45'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:15:45'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:15:45'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:15:45'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:15:45'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:15:45'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:15:45'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:15:45'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:15:45'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:15:45'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:15:45'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:15:45'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:15:45'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:15:45'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:15:45'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:15:45'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:15:45'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:15:45'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:15:47'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:15:47'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:16:01'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:16:01'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:16:01'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:16:01'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:16:13'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:16:13'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:16:13'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:16:13'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:16:14'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:16:14'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:16:14'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:16:14'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:16:14'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:16:14'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:16:18'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:16:18'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:16:21'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:16:21'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:16:22'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:16:22'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:17:31'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:17:32'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:17:33'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:17:33'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:17:33'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:17:33'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:17:51'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:17:51'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:17:51'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:17:51'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:17:53'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:17:53'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:23:02'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:23:02'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:24:47'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:24:47'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:24:47'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:24:47'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:24:51'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:24:51'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:29:09'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:29:09'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:29:09'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:29:09'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:29:09'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:29:09'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:29:09'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:29:09'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:29:12'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:29:12'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:29:17'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:29:17'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:29:19'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:29:19'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:32:50'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:32:50'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:32:51'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:32:51'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:32:51'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:32:51'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:32:55'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:32:55'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:33:21'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:33:21'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:33:24'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:33:24'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:33:34'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:33:34'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:40:04'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:40:05'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:40:06'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:40:06'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:40:13'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:40:13'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:40:13'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:40:13'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:40:15'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:40:15'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:40:15'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:40:15'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:40:15'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:40:15'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:40:18'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:40:18'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:40:22'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:40:22'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:40:24'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:40:24'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:41:57'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:41:57'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:41:58'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:41:58'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:42:26'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:42:27'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:42:27'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:42:27'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:43:22'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:43:22'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:43:22'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:43:22'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:43:22'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:43:22'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:43:24'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:43:24'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:44:45'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:44:45'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:44:48'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:44:48'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:45:11'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:45:11'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:45:13'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:45:13'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:52:11'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:52:11'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:52:11'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 22:52:11'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:01:28'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:01:28'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:01:28'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:01:28'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:03:10'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:03:10'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:03:11'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:03:11'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:03:27'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:03:27'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:03:28'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:03:28'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:04:26'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:04:26'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:04:26'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:04:26'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:04:28'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:04:28'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:04:34'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:04:34'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:04:36'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:04:36'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:04:51'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:04:51'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:04:52'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:04:52'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:04:54'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:04:54'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:04:56'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:04:56'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:05:30'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:05:30'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:05:33'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:05:33'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:08:06'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:08:06'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:08:08'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:08:08'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:18:30'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:18:30'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:20:06'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:20:06'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:20:06'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:20:06'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:20:08'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:20:08'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:23:11'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:23:11'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:23:12'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:23:12'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:23:14'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:23:14'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:23:21'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:23:21'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:23:22'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:23:25'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:23:26'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:23:27'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:23:31'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:23:31'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:23:32'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:23:32'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:23:34'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:23:34'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:23:37'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:23:37'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:23:39'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:23:39'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:24:05'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:24:05'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:24:09'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:24:09'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:25:45'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:25:45'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:25:46'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:25:47'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:25:52'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:25:52'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:25:57'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:25:57'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:26:02'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:26:02'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:26:04'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:26:04'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:26:05'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:26:05'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:26:08'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:26:08'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:26:10'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:26:10'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:26:11'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:26:11'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:26:14'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:26:14'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:26:17'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:26:17'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:26:19'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:26:19'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:26:21'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:26:23'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:27:06'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:27:09'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:27:09'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:27:09'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:27:31'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:27:31'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:27:35'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:27:35'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:27:55'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:28:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:28:19'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:28:24'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:28:24'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:28:24'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:28:24'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:28:24'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:28:24'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:28:24'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:28:24'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:28:44'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:28:44'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:28:49'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:28:49'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:28:49'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:28:49'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:28:49'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:28:49'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:04'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:04'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:04'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:04'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:04'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:04'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:05'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:05'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:05'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:09'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:09'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:29'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:29'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:29'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:29'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:29'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:29'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:29'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:29'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:29'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:29'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:29'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:29'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:29'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:29'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:29'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:29'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:30'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:30'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:49'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:49'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:49'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:49'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:49'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:49'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:49'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:54'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:54'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:54'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:54'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:54'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:54'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:29:54'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:14'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:14'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:14'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:14'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:14'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:14'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:14'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:14'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:14'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:14'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:14'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:14'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:19'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:19'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:19'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:19'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:34'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:34'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:34'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:34'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:34'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:34'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:34'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:34'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:34'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:34'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:35'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:59'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:59'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:59'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:59'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:59'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:59'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:59'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:59'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:59'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:59'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:59'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:59'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:59'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:59'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:59'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:59'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:59'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:59'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:59'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:59'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:59'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:30:59'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:00'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:01'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:01'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:01'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:01'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:01'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:01'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:02'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:04'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:04'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:05'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:05'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:05'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:20'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:20'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:20'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:20'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:20'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:20'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:20'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:20'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:20'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:20'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:21'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:31:47'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:35:48'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:35:48'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:35:52'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:35:53'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:35:54'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:35:56'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:35:59'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:35:59'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:36:49'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:36:49'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:37:14'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:37:14'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:40:30'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:40:30'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:40:30'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:40:30'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:40:30'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:40:30'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:40:30'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:40:30'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:40:30'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:40:30'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:40:30'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:40:30'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:40:30'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:40:30'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:40:32'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:40:32'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:42:42'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:42:42'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:42:44'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:42:44'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:45:10'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:45:11'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:45:11'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:45:11'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:45:16'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:45:16'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:45:16'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:45:16'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:45:16'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:45:16'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:45:18'
+}
+{
+  level: 'info',
+  message: 'new socket connected!',
+  service: 'GeoChating server logger',
+  timestamp: '27-10-2021 23:45:18'
+}

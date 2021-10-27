@@ -14,10 +14,9 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { useSocket } from 'src/Socket';
 import { useStore } from 'src/Store';
+import ChatMessage from 'src/components/ChatMessage';
 import { useKeyboardListener } from 'src/hooks/useKeyboardListener';
 
-import CurrentUserMsg from './CurrentUserMsg';
-import OtherUsersMsg from './OtherUsersMsg';
 import * as S from './styles';
 
 const GeneralChat: React.FC = () => {
@@ -107,9 +106,9 @@ const GeneralChat: React.FC = () => {
 					<IonRow>
 						{messages.map((msg) =>
 							msg.from.username === user.username ? (
-								<CurrentUserMsg key={msg.id} msg={msg} />
+								<ChatMessage key={msg.id} type="CurrentUser" msg={msg} />
 							) : (
-								<OtherUsersMsg key={msg.id} msg={msg} />
+								<ChatMessage key={msg.id} type="OtherUsers" msg={msg} />
 							),
 						)}
 					</IonRow>

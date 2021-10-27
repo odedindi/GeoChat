@@ -1,4 +1,5 @@
 # Ignore artifacts:
+android
 build
 node_modules
 

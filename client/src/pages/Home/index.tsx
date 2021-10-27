@@ -1,11 +1,10 @@
 import {
+	IonButton,
+	IonCardSubtitle,
 	IonCol,
 	IonContent,
 	IonHeader,
 	IonIcon,
-	IonInput,
-	IonItem,
-	IonLabel,
 	IonPage,
 	IonRow,
 	IonTitle,
@@ -15,39 +14,71 @@ import * as I from 'ionicons/icons';
 import * as React from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import { useSocket } from 'src/Socket';
+import { useStore } from 'src/Store';
+import * as Action from 'src/Store/action';
+import InputField from 'src/components/InputField';
 import { useKeyboardListener } from 'src/hooks/useKeyboardListener';
+import useUploadNewAvatar from 'src/hooks/useUploadNewAvatar';
+import { MainButton } from 'src/theme';
+import { generateRandomAvatar } from 'src/utils/generateRandomAvatar';
+import { generateRandomId } from 'src/utils/generateRandomId';
 
 import * as S from './styles';
 
-// /home/odedindi/Desktop/coding/my_portfolio/GeoChat/GeoChat/client/node_modules/@ionic/core/dist/types/interface.d.ts
 const Home: React.FC = () => {
 	const history = useHistory();
+
 	const { socket } = useSocket();
-	const [canApply, setCanApply] = React.useState(false);
-	const [userInput, setInput] = React.useState({
-		username: '',
-		email: '',
-	});
+
+	const { storeDispatch } = useStore();
 
 	React.useEffect(() => {
-		const { username } = userInput;
-		username.length ? setCanApply(true) : setCanApply(false);
-	}, [userInput]);
+		const user = localStorage.getItem('GeoChatUserDetails');
+		if (user) {
+			storeDispatch(Action.addUser(JSON.parse(user) as User));
+		} else {
+			history.push('/settings');
+		}
+	}, [history, storeDispatch]);
 
-	const sendData = React.useCallback(() => {
-		if (canApply && socket) {
-			socket.emit('joinGeneralChatRoom', userInput.username);
+	const [currentUser, setCurrentUser] = React.useState<User | null>(null);
+
+	const { newAvatar, uploadNewAvatar } = useUploadNewAvatar();
+
+	const updateAvatar = (path: string) =>
+		setCurrentUser((prev) => {
+			if (!prev) return { id: generateRandomId(), avatar: path };
+			else return { ...prev, avatar: path };
+		});
+
+	React.useEffect(() => {
+		if (newAvatar) {
+			updateAvatar(newAvatar.webviewPath as string);
+		}
+	}, [newAvatar]);
+
+	const inputChangeHandler = ({ id, value }: HTMLIonInputElement) =>
+		setCurrentUser((prev) => {
+			if (!prev) return { id: generateRandomId(), [id]: value };
+			else return { ...prev, [id]: value };
+		});
+
+	const [disableSubmitButton, setDisableSubmitButton] = React.useState(true);
+
+	React.useEffect(() => {
+		if (currentUser?.username) setDisableSubmitButton(false);
+		else setDisableSubmitButton(true);
+	}, [currentUser]);
+
+	const submitHandler = React.useCallback(() => {
+		if (!disableSubmitButton && socket) {
+			socket.emit('setUsername', currentUser);
+			localStorage.setItem('GeoChatUserDetails', JSON.stringify(currentUser));
 			history.push('/chat');
 		}
-	}, [canApply, history, socket, userInput]);
-	useKeyboardListener(sendData);
+	}, [currentUser, disableSubmitButton, history, socket]);
 
-	const inputChangeHandler = ({ id, value }: any) =>
-		setInput((prev) => ({ ...prev, [id]: value }));
-
-	React.useEffect(() => {
-		console.log(userInput);
-	}, [userInput]);
+	useKeyboardListener(submitHandler);
 
 	return (
 		<IonPage>
@@ -62,39 +93,65 @@ const Home: React.FC = () => {
 			<IonContent fullscreen>
 				<IonHeader>
 					<IonToolbar>
-						<IonTitle size="large">Create New User</IonTitle>
+						<IonTitle size="large">Welcome please enter username</IonTitle>
 					</IonToolbar>
 				</IonHeader>
-				<S.Wrapper>
+				<S.Banner>
 					<IonRow>
-						<IonCol>
-							<IonIcon style={{ fontSize: '70px' }} icon={I.personCircle} />
-						</IonCol>
-					</IonRow>
-					<IonRow>
-						<IonCol>
-							<IonItem>
-								<IonLabel position="floating"> Email</IonLabel>
-								<IonInput
-									type="email"
-									value={userInput.email}
-									id="email"
-									onIonChange={({ target }) => inputChangeHandler(target)}
+						<IonCol size="12">
+							<S.Avatar>
+								<IonIcon
+									icon={I.personCircleOutline}
+									style={{ fontSize: '6rem' }}
 								/>
-							</IonItem>
+							</S.Avatar>
+							<S.AvatarUpload onClick={uploadNewAvatar}>
+								<IonIcon icon={I.cameraOutline} />
+							</S.AvatarUpload>
 						</IonCol>
 					</IonRow>
 
-					{/* <S.Input
-						placeholder="Username"
-						value={userInput.username}
-						name="username"
-						onChange={({ target }) => inputChangeHandler(target)}
-					/> */}
-					<S.Button disabled={!canApply} onClick={sendData}>
-						Join
-					</S.Button>
-				</S.Wrapper>
+					<IonRow>
+						<IonCol size="12" className="ion-text-center">
+							<S.ProfileTitle>
+								{currentUser?.username ? currentUser.username : ''}
+							</S.ProfileTitle>
+						</IonCol>
+					</IonRow>
+
+					<IonRow>
+						<IonCol size="12" className="ion-text-center">
+							<IonCardSubtitle>
+								{currentUser?.name ? currentUser.name : ''}
+							</IonCardSubtitle>
+						</IonCol>
+						<IonCol size="12" className="ion-text-center">
+							<IonCardSubtitle>
+								{currentUser?.email ? currentUser.email : ''}
+							</IonCardSubtitle>
+						</IonCol>
+					</IonRow>
+				</S.Banner>
+				<IonRow>
+					<IonButton
+						onClick={() => updateAvatar(generateRandomAvatar())}
+						size="small"
+					>
+						Generate avatar
+					</IonButton>
+				</IonRow>
+
+				<InputField
+					changeHandler={inputChangeHandler}
+					id="username"
+					type="text"
+				/>
+
+				<IonRow style={{ justifyContent: 'center', paddingTop: '2rem' }}>
+					<MainButton disabled={disableSubmitButton} onClick={submitHandler}>
+						Submit
+					</MainButton>
+				</IonRow>
 			</IonContent>
 		</IonPage>
 	);
