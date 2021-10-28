@@ -14,9 +14,7 @@ const { Provider }: { Provider: React.Provider<SocketContextType> } =
 const SocketProvider: React.FC = ({ children }) => {
 	const serverUrl = process.env.REACT_APP_SERVER_URL as string;
 	const [socket] = React.useState(() => socketClient(serverUrl));
-	if (process.env.NODE_ENV !== 'production') {
-		console.log('sockerProvider: ', socket);
-	}
+
 	return <Provider value={{ socket }}>{children}</Provider>;
 };
 const useSocket = (): SocketContextType => React.useContext(SocketContext);

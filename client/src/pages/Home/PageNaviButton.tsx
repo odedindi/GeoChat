@@ -1,4 +1,4 @@
-import { IonButton, IonCol } from '@ionic/react';
+import { IonButton } from '@ionic/react';
 
 type PageNaviButtonProps = {
 	clickHandler: () => void;
@@ -8,10 +8,8 @@ const PageNaviButton: React.FC<PageNaviButtonProps> = ({
 	clickHandler,
 	title,
 }) => (
-	<IonCol size="2">
-		<IonButton onClick={clickHandler} size="small">
-			{title}
-		</IonButton>
-	</IonCol>
+	<IonButton onClick={clickHandler} size="small">
+		{title}
+	</IonButton>
 );
 export default PageNaviButton;

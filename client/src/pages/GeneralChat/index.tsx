@@ -11,10 +11,12 @@ import {
 	IonButton,
 } from '@ionic/react';
 import * as I from 'ionicons/icons';
+import Mentions from 'rc-mentions';
 import * as React from 'react';
 import { useHistory } from 'react-router-dom';
 import { useSocket } from 'src/Socket';
 import { useStore } from 'src/Store';
+import * as Action from 'src/Store/action';
 import ChatMessage from 'src/components/ChatMessage';
 import Loading from 'src/components/Spinner/Loading';
 import useDidMount from 'src/hooks/useDidMount';
@@ -28,20 +30,38 @@ const log = getLogger('Chat Page');
 const GeneralChat: React.FC = () => {
 	const { didMount } = useDidMount();
 
+	const { Option } = Mentions;
+
 	const history = useHistory();
 	const { socket } = useSocket();
 	const {
 		storeState: { user },
+		storeDispatch,
 	} = useStore();
 
-	React.useEffect(() => {
-		if (!user) {
-			log('no user found, pushing to home page');
-			history.push('/home');
-		}
-	}, [history, user]);
+	const [currentUser, setCurrentUser] = React.useState<User | null>(() => user);
 
+	React.useEffect(() => {
+		if (!currentUser) {
+			const userFromStorage = localStorage.getItem('GeoChatUserDetails');
+			if (!userFromStorage) {
+				log('no user found, pushing to home page');
+				history.push('/home');
+			} else {
+				setCurrentUser(JSON.parse(userFromStorage) as User);
+				storeDispatch(Action.addUser(JSON.parse(userFromStorage) as User));
+				log('found user in storage, data dispatched to store');
+			}
+		}
+	}, [currentUser, history, storeDispatch, user]);
 	const [userInput, setUserInput] = React.useState('');
+	const [roomDetails, setRoomDetails] = React.useState<{
+		messages: Msg[];
+		users: User[];
+	}>({
+		messages: [],
+		users: [],
+	});
 	const [messages, setMessages] = React.useState<Msg[]>([
 		{
 			from: {
@@ -68,33 +88,45 @@ const GeneralChat: React.FC = () => {
 	});
 
 	React.useEffect(() => {
-		console.log(user);
-	}, [user]);
-	React.useEffect(() => {
-		console.log(socket);
-		socket.emit('setUsername', user);
-		socket.on(
-			'userChange',
-			({ user, event }: { user: User; event: 'enter' | 'exit' }) => {
-				event === 'enter'
-					? setToastState({
-							show: true,
-							msg: `${user.username} Enter`,
-					  })
-					: setToastState({
-							show: true,
-							msg: `${user.username} Exit`,
-					  });
-			},
-		);
+		if (currentUser) {
+			socket.emit('setUsername', currentUser);
+			socket.on(
+				'userChange',
+				({ user, event }: { user: User; event: 'enter' | 'exit' }) => {
+					log('userChange');
+					if (user) {
+						event === 'enter'
+							? setToastState({
+									show: true,
+									msg: `${user.username} Enter`,
+							  })
+							: setToastState({
+									show: true,
+									msg: `${user.username} Exit`,
+							  });
+					}
+				},
+			);
 
-		socket.on('message', (msg: Msg) => {
-			setMessages((prev) => [...prev, msg]);
-		});
-	}, [socket, user]);
+			socket.on(
+				'updateRoomDetails',
+				({ users, messages }: { users: User[]; messages: Msg[] }) => {
+					log('update room details');
+					setMessages(messages);
+					setRoomDetails({ messages: messages, users: users });
+				},
+			);
+
+			socket.on('message', (msg: Msg) => {
+				log('update messages');
+				setMessages((prev) => [...prev, msg]);
+			});
+		}
+	}, [currentUser, socket]);
 
 	const sendMsgHandler = () => {
 		if (userInput.length) {
+			log('sendMessage');
 			socket.emit('sendMessage', { text: userInput });
 			setToastState({
 				show: true,
@@ -106,11 +138,13 @@ const GeneralChat: React.FC = () => {
 	useKeyboardListener(sendMsgHandler);
 
 	const disconnectHandler = () => {
+		log('disconnect');
 		localStorage.removeItem('GeoChatUserDetails');
 		history.push('/');
 	};
 
-	if (!didMount) return <Loading open={!didMount} />;
+	if (!didMount || !currentUser)
+		return <Loading open={!didMount || !currentUser} />;
 	return (
 		<IonPage>
 			<IonToast
@@ -129,10 +163,12 @@ const GeneralChat: React.FC = () => {
 			</IonHeader>
 			<IonContent fullscreen>
 				<IonGrid>
-					<S.ChatTitle>You joined the chat as {user?.username}</S.ChatTitle>
+					<S.ChatTitle>
+						You joined the chat as {currentUser?.username}
+					</S.ChatTitle>
 					<IonRow>
 						{messages.map((msg) =>
-							msg.from.username === user?.username ? (
+							msg.from.id === currentUser?.id ? (
 								<ChatMessage key={msg.id} type="CurrentUser" msg={msg} />
 							) : (
 								<ChatMessage key={msg.id} type="OtherUsers" msg={msg} />

@@ -14,7 +14,7 @@ export const Banner = styled(IonGrid)`
 	align-content: center;
 	background-color: var(--ion-color-success-tint);
 	color: white;
-	margin-bottom: 5rem;
+	margin-bottom: 2rem;
 `;
 
 export const Avatar = styled(IonAvatar)`

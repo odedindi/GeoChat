@@ -22,6 +22,7 @@ import useUploadNewAvatar from 'src/hooks/useUploadNewAvatar';
 import { MainButton } from 'src/theme';
 import { generateRandomAvatar } from 'src/utils/generateRandomAvatar';
 import { generateRandomId } from 'src/utils/generateRandomId';
+import { newUserTemplate } from 'src/utils/newUserTemplate';
 
 import * as S from './styles';
 
@@ -35,7 +36,7 @@ const ProfilePage: React.FC = () => {
 	const updateAvatar = (path: string) =>
 		setCurrentUser((prev) =>
 			!prev
-				? { id: generateRandomId(), avatar: path }
+				? { ...newUserTemplate, id: generateRandomId(), avatar: path }
 				: { ...prev, avatar: path },
 		);
 	React.useEffect(() => {
@@ -53,7 +54,7 @@ const ProfilePage: React.FC = () => {
 	const inputChangeHandler = ({ id, value }: HTMLIonInputElement) =>
 		setCurrentUser((prev) =>
 			!prev
-				? { id: generateRandomId(), [id]: value }
+				? { ...newUserTemplate, id: generateRandomId(), [id]: value }
 				: { ...prev, [id]: value },
 		);
 
@@ -64,8 +65,10 @@ const ProfilePage: React.FC = () => {
 	}, [currentUser, storeState.user]);
 	const [submiting, setSubmiting] = React.useState(false);
 	const submitHandler = () => {
+		setSubmiting(true);
 		storeDispatch(Action.addUser(currentUser as User));
 		localStorage.setItem('GeoChatUserDetails', JSON.stringify(currentUser));
+		setSubmiting(false);
 	};
 
 	if (!didMount) return <Loading open={!didMount} />;

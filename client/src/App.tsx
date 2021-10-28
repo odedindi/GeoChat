@@ -74,20 +74,20 @@ const App: React.FC = () => {
 
 					<IonTabBar slot="bottom">
 						<IonTabButton tab="tab1" href={paths.home}>
-							<IonIcon icon={I.home} color="medium" />
-							<IonLabel color="medium">Home</IonLabel>
+							<IonIcon icon={I.home} />
+							<IonLabel>Home</IonLabel>
 						</IonTabButton>
 						<IonTabButton tab="tab2" href={paths.chat}>
-							<IonIcon icon={I.logoWechat} color="medium" />
-							<IonLabel color="medium">chat</IonLabel>
+							<IonIcon icon={I.logoWechat} />
+							<IonLabel>chat</IonLabel>
 						</IonTabButton>
 						<IonTabButton tab="tab3" href={paths.map}>
-							<IonIcon icon={I.mapOutline} color="medium" />
-							<IonLabel color="medium">Map</IonLabel>
+							<IonIcon icon={I.map} />
+							<IonLabel>Map</IonLabel>
 						</IonTabButton>
 						<IonTabButton tab="tab4" href={paths.settings}>
-							<IonIcon icon={I.settingsOutline} color="medium" />
-							<IonLabel color="medium">Settings</IonLabel>
+							<IonIcon icon={I.settings} />
+							<IonLabel>Settings</IonLabel>
 						</IonTabButton>
 					</IonTabBar>
 				</IonTabs>

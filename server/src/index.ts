@@ -84,43 +84,48 @@ const chatRooms = [
 
 // initializing the socket io connection
 io.on('connection', (socket: socketio.Socket) => {
-	logInfo('new socket connected!');
+	logInfo(`new socket connected! socket id: ${socket.id})`);
 
 	socket.on('setUsername', (user: User) => {
 		const newUser: User = {
-			id: socket.id,
-			name: user.name,
-			username: user.username,
+			...user,
 			currentRoomname: 'publicChat',
-			roomHistory: user.roomHistory ? user.roomHistory : [],
+			roomHistory: user?.roomHistory?.length
+				? user.roomHistory.concat(['publicChat'])
+				: ['publicChat'],
 			avatar: user.avatar ? user.avatar : API.generateRandomAvatar(),
-			geo: user.geo
-				? user.geo
-				: {
-						lat: '',
-						lng: '',
-				  },
 		};
+		socket.join(newUser.currentRoomname);
 		chatRooms[0].users.push(newUser);
 		socket.data.user = newUser;
-		socket.join(newUser.currentRoomname);
 		io.to(newUser.currentRoomname).emit('userChange', {
 			user: socket.data.user,
 			event: 'enter',
 		});
-
-		logInfo('user connected and joined to the public chat');
+		io.emit('updateRoomDetails', {
+			messages: chatRooms[0].messages,
+			users: chatRooms[0].users,
+		});
+		logInfo(`user (id: ${user.id}) connected and joined to the public chat`);
 	});
 
 	socket.on('sendMessage', (msg) => {
-		console.log(socket.data);
+		const {
+			data: { user },
+		} = socket;
 		const message: Message = {
 			text: msg.text,
-			from: socket.data.user,
+			from: user,
 			createdAt: Date.now(),
 			id: API.generateRandomId(),
 		};
-		logInfo(`message was sent, messageId: ${message.id}`);
+
+		const currentRoomIndex = chatRooms.findIndex(
+			(room) => room.roomname === user.currentRoomname,
+		);
+		chatRooms[currentRoomIndex].messages.push(message);
+
+		logInfo(`message (id: ${message.id}) was sent`);
 		io.emit('message', message);
 	});
 	socket.on('disconnect', () => {

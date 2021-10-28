@@ -21,6 +21,7 @@ import { MainButton } from 'src/theme';
 import { generateRandomAvatar } from 'src/utils/generateRandomAvatar';
 import { generateRandomId } from 'src/utils/generateRandomId';
 import { getLogger } from 'src/utils/logger';
+import { newUserTemplate } from 'src/utils/newUserTemplate';
 
 import Banner from './Banner';
 import PageNaviButton from './PageNaviButton';
@@ -46,7 +47,7 @@ const Home: React.FC = () => {
 	const updateAvatar = (path: string) =>
 		setCurrentUser((prev) =>
 			!prev
-				? { id: generateRandomId(), avatar: path }
+				? { ...newUserTemplate, id: generateRandomId(), avatar: path }
 				: { ...prev, avatar: path },
 		);
 	const generateAvatarHandler = () => updateAvatar(generateRandomAvatar());
@@ -69,7 +70,7 @@ const Home: React.FC = () => {
 			setGeoLocError(null);
 			setCurrentUser((prev) =>
 				!prev
-					? { id: generateRandomId(), geo: geoLocation }
+					? { ...newUserTemplate, id: generateRandomId(), geo: geoLocation }
 					: { ...prev, geo: geoLocation },
 			);
 			log(`getLocation successful`);
@@ -90,13 +91,14 @@ const Home: React.FC = () => {
 	const inputChangeHandler = ({ id, value }: HTMLIonInputElement) =>
 		setCurrentUser((prev) =>
 			!prev
-				? { id: generateRandomId(), [id]: value }
+				? { ...newUserTemplate, id: generateRandomId(), [id]: value }
 				: { ...prev, [id]: value },
 		);
 
 	const [disableSubmitButton, setDisableSubmitButton] = React.useState(true);
 	React.useEffect(() => {
-		if (currentUser?.username) setDisableSubmitButton(false);
+		if (currentUser?.username && currentUser?.name)
+			setDisableSubmitButton(false);
 		else setDisableSubmitButton(true);
 	}, [currentUser]);
 
@@ -127,28 +129,31 @@ const Home: React.FC = () => {
 				</IonToolbar>
 			</IonHeader>
 			<IonContent fullscreen>
-				<IonHeader>
-					<IonToolbar>
-						<IonTitle size="large">Please enter username</IonTitle>
-					</IonToolbar>
-				</IonHeader>
 				<Loading open={submiting} />
 				<Banner user={currentUser} uploadNewAvatar={uploadNewAvatar} />
-				<IonRow>
-					{pageNaviButtons.map((btn) => (
-						<PageNaviButton
-							key={btn.title}
-							clickHandler={btn.clickHandler}
-							title={btn.title}
-						/>
-					))}
-				</IonRow>
+				{pageNaviButtons.map((btn) => (
+					<IonRow key={btn.title}>
+						<PageNaviButton clickHandler={btn.clickHandler} title={btn.title} />
+					</IonRow>
+				))}
 				{geoLocError && <S.GeoLocError>error</S.GeoLocError>}
 
 				<InputField
 					changeHandler={inputChangeHandler}
 					id="username"
 					type="text"
+					required={true}
+				/>
+				<InputField
+					changeHandler={inputChangeHandler}
+					id="name"
+					type="text"
+					required={true}
+				/>
+				<InputField
+					changeHandler={inputChangeHandler}
+					id="email"
+					type="email"
 				/>
 
 				<IonRow style={{ justifyContent: 'center', paddingTop: '2rem' }}>
