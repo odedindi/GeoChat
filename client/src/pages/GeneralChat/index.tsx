@@ -8,10 +8,11 @@ import {
 	IonGrid,
 	IonToast,
 	IonFooter,
+	IonButton,
 } from '@ionic/react';
 import * as I from 'ionicons/icons';
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { useSocket } from 'src/Socket';
 import { useStore } from 'src/Store';
 import ChatMessage from 'src/components/ChatMessage';
@@ -20,6 +21,7 @@ import { useKeyboardListener } from 'src/hooks/useKeyboardListener';
 import * as S from './styles';
 
 const GeneralChat: React.FC = () => {
+	const history = useHistory();
 	const { socket } = useSocket();
 	const {
 		storeState: { user },
@@ -84,6 +86,11 @@ const GeneralChat: React.FC = () => {
 		}
 	};
 	useKeyboardListener(sendMsgHandler);
+
+	const disconnectHandler = () => {
+		localStorage.removeItem('GeoChatUserDetails');
+		history.push('/');
+	};
 	return (
 		<IonPage>
 			<IonToast
@@ -94,10 +101,10 @@ const GeneralChat: React.FC = () => {
 			/>
 			<IonHeader>
 				<IonToolbar>
-					<IonTitle>Welcome to geochat</IonTitle>
-					<Link to="/auth/login">Login</Link>
-					<br />
-					<Link to="/auth/signup">Signup</Link>
+					<IonRow>
+						<IonTitle>Welcome to geochat</IonTitle>
+						<IonButton onClick={disconnectHandler}>Disconnect</IonButton>
+					</IonRow>
 				</IonToolbar>
 			</IonHeader>
 			<IonContent fullscreen>

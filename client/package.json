@@ -13,6 +13,7 @@
 		"@capacitor/status-bar": "1.0.5",
 		"@capacitor/storage": "^1.2.2",
 		"@ionic/eslint-config": "^0.3.0",
+		"@ionic/pwa-elements": "^3.0.2",
 		"@ionic/react": "^5.5.0",
 		"@ionic/react-router": "^5.5.0",
 		"@testing-library/jest-dom": "^5.11.9",
