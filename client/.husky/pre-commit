@@ -28,7 +28,6 @@ yarn check:types ||
     false;
 )
 
-# If everything passes... Now we can commit
 echo '🤔🤔🤔🤔 ... Code looks good ... Trying to build ... 🤔🤔🤔🤔'
 
 yarn build ||

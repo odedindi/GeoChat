@@ -1,25 +1,20 @@
 import {
-	createAnimation,
-	IonButton,
-	IonCardSubtitle,
-	IonCol,
 	IonContent,
 	IonHeader,
-	IonIcon,
-	IonImg,
-	IonLoading,
 	IonPage,
 	IonRow,
 	IonTitle,
 	IonToolbar,
 } from '@ionic/react';
-import * as I from 'ionicons/icons';
 import * as React from 'react';
 import { useHistory } from 'react-router-dom';
 import { useSocket } from 'src/Socket';
 import { useStore } from 'src/Store';
 import * as Action from 'src/Store/action';
 import InputField from 'src/components/InputField';
+import Loading from 'src/components/Spinner/Loading';
+import useDidMount from 'src/hooks/useDidMount';
+import { useGeoLocation } from 'src/hooks/useGeoLocation';
 import { useKeyboardListener } from 'src/hooks/useKeyboardListener';
 import useUploadNewAvatar from 'src/hooks/useUploadNewAvatar';
 import { MainButton } from 'src/theme';
@@ -27,34 +22,34 @@ import { generateRandomAvatar } from 'src/utils/generateRandomAvatar';
 import { generateRandomId } from 'src/utils/generateRandomId';
 import { getLogger } from 'src/utils/logger';
 
+import Banner from './Banner';
+import PageNaviButton from './PageNaviButton';
 import * as S from './styles';
 
-const log = getLogger('Welcome');
+const log = getLogger('Welcome page');
 
 const Home: React.FC = () => {
+	const { didMount } = useDidMount();
 	const history = useHistory();
-
 	const { socket } = useSocket();
-
 	const { storeDispatch } = useStore();
-
-	React.useEffect(() => {
-		const user = localStorage.getItem('GeoChatUserDetails');
-		if (user) {
-			storeDispatch(Action.addUser(JSON.parse(user) as User));
-			history.push('/chat');
-		}
-	}, [history, storeDispatch]);
+	const { geoLocation, getGeoLocation } = useGeoLocation();
 
 	const [currentUser, setCurrentUser] = React.useState<User | null>(null);
+	React.useEffect(() => {
+		const user = localStorage.getItem('GeoChatUserDetails');
+		if (user) setCurrentUser(JSON.parse(user) as User);
+	}, []);
 
 	const { newAvatar, uploadNewAvatar } = useUploadNewAvatar();
 
 	const updateAvatar = (path: string) =>
-		setCurrentUser((prev) => {
-			if (!prev) return { id: generateRandomId(), avatar: path };
-			else return { ...prev, avatar: path };
-		});
+		setCurrentUser((prev) =>
+			!prev
+				? { id: generateRandomId(), avatar: path }
+				: { ...prev, avatar: path },
+		);
+	const generateAvatarHandler = () => updateAvatar(generateRandomAvatar());
 
 	React.useEffect(() => {
 		if (newAvatar) {
@@ -63,14 +58,43 @@ const Home: React.FC = () => {
 		}
 	}, [newAvatar]);
 
+	const getLocationHandler = () => getGeoLocation();
+	const [geoLocError, setGeoLocError] = React.useState<string | null>(null);
+	React.useEffect(() => {
+		if (!geoLocation) return;
+		else if (typeof geoLocation === 'string') {
+			setGeoLocError(geoLocation as string);
+			log(`error: ${geoLocation}`);
+		} else {
+			setGeoLocError(null);
+			setCurrentUser((prev) =>
+				!prev
+					? { id: generateRandomId(), geo: geoLocation }
+					: { ...prev, geo: geoLocation },
+			);
+			log(`getLocation successful`);
+		}
+	}, [geoLocation]);
+
+	const pageNaviButtons = [
+		{
+			clickHandler: generateAvatarHandler,
+			title: 'Generate Avatar',
+		},
+		{
+			clickHandler: getLocationHandler,
+			title: 'Get Location',
+		},
+	];
+
 	const inputChangeHandler = ({ id, value }: HTMLIonInputElement) =>
-		setCurrentUser((prev) => {
-			if (!prev) return { id: generateRandomId(), [id]: value };
-			else return { ...prev, [id]: value };
-		});
+		setCurrentUser((prev) =>
+			!prev
+				? { id: generateRandomId(), [id]: value }
+				: { ...prev, [id]: value },
+		);
 
 	const [disableSubmitButton, setDisableSubmitButton] = React.useState(true);
-
 	React.useEffect(() => {
 		if (currentUser?.username) setDisableSubmitButton(false);
 		else setDisableSubmitButton(true);
@@ -78,63 +102,23 @@ const Home: React.FC = () => {
 
 	const [submiting, setSubmiting] = React.useState(false);
 	const submitHandler = React.useCallback(() => {
-		log('hadnle setUsername');
+		log('handle setUsername');
 		setSubmiting(true);
 		if (!disableSubmitButton && socket) {
 			socket.emit('setUsername', currentUser);
 			localStorage.setItem('GeoChatUserDetails', JSON.stringify(currentUser));
+			storeDispatch(Action.addUser(currentUser as User));
 			log('hadnled setUsername successfully, pushing client to /chat');
-			history.push('/chat');
+			setTimeout(() => {
+				history.push('/chat');
+			}, 500);
 		} else {
 			setSubmiting(false);
 		}
-	}, [currentUser, disableSubmitButton, history, socket]);
-
+	}, [currentUser, disableSubmitButton, history, socket, storeDispatch]);
 	useKeyboardListener(submitHandler);
 
-	const enterAnimation = (baseEl: any) => {
-		const backdropAnimation = createAnimation()
-			.addElement(baseEl.querySelector('ion-backdrop')!)
-			.fromTo('opacity', '0.01', 'var(--backdrop-opacity)');
-
-		const wrapperAnimation = createAnimation()
-			.addElement(baseEl.querySelector('.modal-wrapper')!)
-			.keyframes([
-				{ offset: 0, opacity: '0', transform: 'scale(0)' },
-				{ offset: 1, opacity: '0.99', transform: 'scale(1)' },
-			]);
-
-		return createAnimation()
-			.addElement(baseEl)
-			.easing('ease-out')
-			.duration(500)
-			.addAnimation([backdropAnimation, wrapperAnimation]);
-	};
-
-	const leaveAnimation = (baseEl: any) => {
-		return enterAnimation(baseEl).direction('reverse');
-	};
-
-	const simpleAnimation = () => {
-		const el = document.querySelector('.square-a');
-		if (el) {
-			const animation = createAnimation()
-				.addElement(el)
-				.duration(1000)
-				.direction('alternate')
-				.iterations(Infinity)
-				.keyframes([
-					{ offset: 0, transform: 'scale(3)', opacity: '1' },
-					{
-						offset: 1,
-						transform: 'scale(1.5)',
-						opacity: '0.5',
-					},
-				]);
-			animation.play();
-		}
-	};
-
+	if (!didMount) return <Loading open={!didMount} />;
 	return (
 		<IonPage>
 			<IonHeader>
@@ -145,59 +129,21 @@ const Home: React.FC = () => {
 			<IonContent fullscreen>
 				<IonHeader>
 					<IonToolbar>
-						<IonTitle size="large" className={'square-a'}>
-							Welcome please enter username
-						</IonTitle>
+						<IonTitle size="large">Please enter username</IonTitle>
 					</IonToolbar>
 				</IonHeader>
-				<S.Banner>
-					<IonRow>
-						<IonCol size="12">
-							<S.Avatar>
-								{currentUser?.avatar ? (
-									<IonImg src={currentUser.avatar} alt="avatar" />
-								) : (
-									<IonIcon
-										icon={I.personCircleOutline}
-										style={{ fontSize: '6rem' }}
-									/>
-								)}
-							</S.Avatar>
-							<S.AvatarUpload onClick={uploadNewAvatar}>
-								<IonIcon icon={I.cameraOutline} />
-							</S.AvatarUpload>
-						</IonCol>
-					</IonRow>
-
-					<IonRow>
-						<IonCol size="12" className="ion-text-center">
-							<S.ProfileTitle>
-								{currentUser?.username ? currentUser.username : ''}
-							</S.ProfileTitle>
-						</IonCol>
-					</IonRow>
-
-					<IonRow>
-						<IonCol size="12" className="ion-text-center">
-							<IonCardSubtitle>
-								{currentUser?.name ? currentUser.name : ''}
-							</IonCardSubtitle>
-						</IonCol>
-						<IonCol size="12" className="ion-text-center">
-							<IonCardSubtitle>
-								{currentUser?.email ? currentUser.email : ''}
-							</IonCardSubtitle>
-						</IonCol>
-					</IonRow>
-				</S.Banner>
+				<Loading open={submiting} />
+				<Banner user={currentUser} uploadNewAvatar={uploadNewAvatar} />
 				<IonRow>
-					<IonButton
-						onClick={() => updateAvatar(generateRandomAvatar())}
-						size="small"
-					>
-						Generate avatar
-					</IonButton>
+					{pageNaviButtons.map((btn) => (
+						<PageNaviButton
+							key={btn.title}
+							clickHandler={btn.clickHandler}
+							title={btn.title}
+						/>
+					))}
 				</IonRow>
+				{geoLocError && <S.GeoLocError>error</S.GeoLocError>}
 
 				<InputField
 					changeHandler={inputChangeHandler}
@@ -210,7 +156,6 @@ const Home: React.FC = () => {
 						Submit
 					</MainButton>
 				</IonRow>
-				<IonLoading isOpen={submiting} />
 			</IonContent>
 		</IonPage>
 	);

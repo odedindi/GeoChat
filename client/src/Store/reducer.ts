@@ -1,18 +1,7 @@
 import { ActionTypes as T } from './actionTypes';
 
 export const initState: StoreState = {
-	user: {
-		id: 'sdq123',
-		name: 'bob',
-		username: 'bob',
-		currentRoomname: '',
-		roomHistory: [] as string[],
-		avatar: 'https://robohash.org/d0DGHght2Orol2FZ6GB',
-		geo: {
-			lat: '',
-			lng: '',
-		},
-	},
+	user: null,
 };
 
 export const reducer = (

@@ -16,20 +16,28 @@ import * as React from 'react';
 import { useStore } from 'src/Store';
 import * as Action from 'src/Store/action';
 import InputField from 'src/components/InputField';
+import Loading from 'src/components/Spinner/Loading';
+import useDidMount from 'src/hooks/useDidMount';
 import useUploadNewAvatar from 'src/hooks/useUploadNewAvatar';
 import { MainButton } from 'src/theme';
 import { generateRandomAvatar } from 'src/utils/generateRandomAvatar';
+import { generateRandomId } from 'src/utils/generateRandomId';
 
 import * as S from './styles';
 
 const ProfilePage: React.FC = () => {
+	const { didMount } = useDidMount();
 	const { storeState, storeDispatch } = useStore();
 	const { newAvatar, uploadNewAvatar } = useUploadNewAvatar();
 
 	const [currentUser, setCurrentUser] = React.useState(() => storeState.user);
 
 	const updateAvatar = (path: string) =>
-		setCurrentUser((prev) => ({ ...prev, avatar: path }));
+		setCurrentUser((prev) =>
+			!prev
+				? { id: generateRandomId(), avatar: path }
+				: { ...prev, avatar: path },
+		);
 	React.useEffect(() => {
 		if (newAvatar) {
 			updateAvatar(newAvatar.webviewPath as string);
@@ -43,18 +51,24 @@ const ProfilePage: React.FC = () => {
 	];
 
 	const inputChangeHandler = ({ id, value }: HTMLIonInputElement) =>
-		setCurrentUser((prev) => ({ ...prev, [id]: value }));
+		setCurrentUser((prev) =>
+			!prev
+				? { id: generateRandomId(), [id]: value }
+				: { ...prev, [id]: value },
+		);
 
 	const [disableSubmitButton, setDisableSubmitButton] = React.useState(true);
 	React.useEffect(() => {
 		if (storeState.user !== currentUser) setDisableSubmitButton(false);
 		else setDisableSubmitButton(true);
 	}, [currentUser, storeState.user]);
+	const [submiting, setSubmiting] = React.useState(false);
 	const submitHandler = () => {
-		storeDispatch(Action.addUser(currentUser));
+		storeDispatch(Action.addUser(currentUser as User));
 		localStorage.setItem('GeoChatUserDetails', JSON.stringify(currentUser));
 	};
 
+	if (!didMount) return <Loading open={!didMount} />;
 	return (
 		<IonPage>
 			<IonHeader>
@@ -68,12 +82,13 @@ const ProfilePage: React.FC = () => {
 						<IonTitle size="large">Profile</IonTitle>
 					</IonToolbar>
 				</IonHeader>
+				<Loading open={submiting} />
 
 				<S.Banner>
 					<IonRow>
 						<IonCol size="12">
 							<S.Avatar>
-								{currentUser.avatar ? (
+								{currentUser?.avatar ? (
 									<IonImg src={currentUser.avatar} alt="avatar" />
 								) : (
 									<IonIcon
@@ -91,7 +106,7 @@ const ProfilePage: React.FC = () => {
 					<IonRow>
 						<IonCol size="12" className="ion-text-center">
 							<S.ProfileTitle>
-								{currentUser.username ? currentUser.username : ''}
+								{currentUser?.username ? currentUser.username : ''}
 							</S.ProfileTitle>
 						</IonCol>
 					</IonRow>
@@ -99,12 +114,12 @@ const ProfilePage: React.FC = () => {
 					<IonRow>
 						<IonCol size="12" className="ion-text-center">
 							<IonCardSubtitle>
-								{currentUser.name ? currentUser.name : ''}
+								{currentUser?.name ? currentUser.name : ''}
 							</IonCardSubtitle>
 						</IonCol>
 						<IonCol size="12" className="ion-text-center">
 							<IonCardSubtitle>
-								{currentUser.email ? currentUser.email : ''}
+								{currentUser?.email ? currentUser.email : ''}
 							</IonCardSubtitle>
 						</IonCol>
 					</IonRow>

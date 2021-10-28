@@ -2,14 +2,6 @@ import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 import { Capacitor } from '@capacitor/core';
 import * as React from 'react';
 
-type UploadNewAvatar = { (): Promise<string> };
-type UseUploadNewAvatar = {
-	(): {
-		uploadNewAvatar: UploadNewAvatar;
-		newAvatar: UserPhoto | null;
-	};
-};
-
 const useUploadNewAvatar: UseUploadNewAvatar = () => {
 	const [newAvatar, setNewAvatar] = React.useState<UserPhoto | null>(null);
 

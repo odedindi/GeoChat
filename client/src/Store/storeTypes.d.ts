@@ -18,7 +18,7 @@ type StoreContext = {
 };
 
 type StoreState = {
-	user: User;
+	user: User | null;
 };
 
 interface AddUserActionArgument {

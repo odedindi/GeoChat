@@ -16,16 +16,31 @@ import { useHistory } from 'react-router-dom';
 import { useSocket } from 'src/Socket';
 import { useStore } from 'src/Store';
 import ChatMessage from 'src/components/ChatMessage';
+import Loading from 'src/components/Spinner/Loading';
+import useDidMount from 'src/hooks/useDidMount';
 import { useKeyboardListener } from 'src/hooks/useKeyboardListener';
+import { getLogger } from 'src/utils/logger';
 
 import * as S from './styles';
 
+const log = getLogger('Chat Page');
+
 const GeneralChat: React.FC = () => {
+	const { didMount } = useDidMount();
+
 	const history = useHistory();
 	const { socket } = useSocket();
 	const {
 		storeState: { user },
 	} = useStore();
+
+	React.useEffect(() => {
+		if (!user) {
+			log('no user found, pushing to home page');
+			history.push('/home');
+		}
+	}, [history, user]);
+
 	const [userInput, setUserInput] = React.useState('');
 	const [messages, setMessages] = React.useState<Msg[]>([
 		{
@@ -53,11 +68,14 @@ const GeneralChat: React.FC = () => {
 	});
 
 	React.useEffect(() => {
+		console.log(user);
+	}, [user]);
+	React.useEffect(() => {
 		console.log(socket);
 		socket.emit('setUsername', user);
 		socket.on(
 			'userChange',
-			({ user, event }: { user: ChatUser; event: 'enter' | 'exit' }) => {
+			({ user, event }: { user: User; event: 'enter' | 'exit' }) => {
 				event === 'enter'
 					? setToastState({
 							show: true,
@@ -91,6 +109,8 @@ const GeneralChat: React.FC = () => {
 		localStorage.removeItem('GeoChatUserDetails');
 		history.push('/');
 	};
+
+	if (!didMount) return <Loading open={!didMount} />;
 	return (
 		<IonPage>
 			<IonToast
@@ -109,10 +129,10 @@ const GeneralChat: React.FC = () => {
 			</IonHeader>
 			<IonContent fullscreen>
 				<IonGrid>
-					<S.ChatTitle>You joined the chat as {user.username}</S.ChatTitle>
+					<S.ChatTitle>You joined the chat as {user?.username}</S.ChatTitle>
 					<IonRow>
 						{messages.map((msg) =>
-							msg.from.username === user.username ? (
+							msg.from.username === user?.username ? (
 								<ChatMessage key={msg.id} type="CurrentUser" msg={msg} />
 							) : (
 								<ChatMessage key={msg.id} type="OtherUsers" msg={msg} />

@@ -1,5 +1,10 @@
-import { IonAvatar, IonCardTitle, IonGrid } from '@ionic/react';
+import { IonAvatar, IonCardTitle, IonGrid, IonRow } from '@ionic/react';
 import styled from 'styled-components';
+
+export const GeoLocError = styled(IonRow)`
+	justify-content: center;
+	color: var(--ion-color-danger);
+`;
 
 export const Banner = styled(IonGrid)`
 	display: flex;

@@ -40,47 +40,59 @@ import Home from './pages/Home';
 import ProfilePage from './pages/Profile';
 import UnAuthed from './routes/UnAuthed';
 
-const App: React.FC = () => (
-	<IonApp>
-		<IonReactRouter>
-			<IonTabs>
-				<IonRouterOutlet>
-					<Providers>
-						<UnAuthed path="/home" component={Home} />
-						<UnAuthed path="/settings" component={ProfilePage} />
-						<UnAuthed path="/auth/login" component={Login} />
-						<UnAuthed path="/auth/signup" component={Signup} />
-						<UnAuthed
-							path="/auth/restorepassword"
-							component={RestorePassword}
-						/>
-						<UnAuthed path="/chat" component={GeneralChat} />
-						<Route exact path="/">
-							<Redirect to="/home" />
-						</Route>
-					</Providers>
-				</IonRouterOutlet>
-				<IonTabBar slot="bottom">
-					<IonTabButton tab="tab1" href="/">
-						<IonIcon icon={I.home} />
-						<IonLabel>Home</IonLabel>
-					</IonTabButton>
-					<IonTabButton tab="tab2" href="/chat">
-						<IonIcon icon={I.logoWechat} />
-						<IonLabel>chat</IonLabel>
-					</IonTabButton>
-					<IonTabButton tab="tab3" href="/map">
-						<IonIcon icon={I.mapOutline} />
-						<IonLabel>Map</IonLabel>
-					</IonTabButton>
-					<IonTabButton tab="tab4" href="/settings">
-						<IonIcon icon={I.settingsOutline} />
-						<IonLabel>Settings</IonLabel>
-					</IonTabButton>
-				</IonTabBar>
-			</IonTabs>
-		</IonReactRouter>
-	</IonApp>
-);
+const App: React.FC = () => {
+	const paths = {
+		home: '/home',
+		chat: '/chat',
+		map: '/map',
+		settings: '/settings',
+		login: '/auth/login',
+		signup: '/auth/signup',
+		restorePassword: '/auth/restorepassword',
+	};
 
+	return (
+		<IonApp>
+			<IonReactRouter>
+				<IonTabs>
+					<IonRouterOutlet>
+						<Providers>
+							<UnAuthed path={paths.home} component={Home} />
+							<UnAuthed path={paths.settings} component={ProfilePage} />
+							<UnAuthed path={paths.login} component={Login} />
+							<UnAuthed path={paths.signup} component={Signup} />
+							<UnAuthed
+								path={paths.restorePassword}
+								component={RestorePassword}
+							/>
+							<UnAuthed path={paths.chat} component={GeneralChat} />
+							<Route exact path="/">
+								<Redirect to={paths.home} />
+							</Route>
+						</Providers>
+					</IonRouterOutlet>
+
+					<IonTabBar slot="bottom">
+						<IonTabButton tab="tab1" href={paths.home}>
+							<IonIcon icon={I.home} color="medium" />
+							<IonLabel color="medium">Home</IonLabel>
+						</IonTabButton>
+						<IonTabButton tab="tab2" href={paths.chat}>
+							<IonIcon icon={I.logoWechat} color="medium" />
+							<IonLabel color="medium">chat</IonLabel>
+						</IonTabButton>
+						<IonTabButton tab="tab3" href={paths.map}>
+							<IonIcon icon={I.mapOutline} color="medium" />
+							<IonLabel color="medium">Map</IonLabel>
+						</IonTabButton>
+						<IonTabButton tab="tab4" href={paths.settings}>
+							<IonIcon icon={I.settingsOutline} color="medium" />
+							<IonLabel color="medium">Settings</IonLabel>
+						</IonTabButton>
+					</IonTabBar>
+				</IonTabs>
+			</IonReactRouter>
+		</IonApp>
+	);
+};
 export default App;
