@@ -158,7 +158,7 @@ const Home: React.FC = () => {
 
 				<IonRow style={{ justifyContent: 'center', paddingTop: '2rem' }}>
 					<MainButton disabled={disableSubmitButton} onClick={submitHandler}>
-						Submit
+						Enter Chat
 					</MainButton>
 				</IonRow>
 			</IonContent>

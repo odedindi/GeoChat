@@ -11,13 +11,13 @@ import {
 	IonButton,
 } from '@ionic/react';
 import * as I from 'ionicons/icons';
-import Mentions from 'rc-mentions';
 import * as React from 'react';
 import { useHistory } from 'react-router-dom';
 import { useSocket } from 'src/Socket';
 import { useStore } from 'src/Store';
 import * as Action from 'src/Store/action';
 import ChatMessage from 'src/components/ChatMessage';
+import TextArea from 'src/components/ChatTextArea';
 import Loading from 'src/components/Spinner/Loading';
 import useDidMount from 'src/hooks/useDidMount';
 import { useKeyboardListener } from 'src/hooks/useKeyboardListener';
@@ -29,8 +29,6 @@ const log = getLogger('Chat Page');
 
 const GeneralChat: React.FC = () => {
 	const { didMount } = useDidMount();
-
-	const { Option } = Mentions;
 
 	const history = useHistory();
 	const { socket } = useSocket();
@@ -62,25 +60,6 @@ const GeneralChat: React.FC = () => {
 		messages: [],
 		users: [],
 	});
-	const [messages, setMessages] = React.useState<Msg[]>([
-		{
-			from: {
-				id: 'sdq123',
-				name: 'bob',
-				username: 'bob',
-				currentRoomname: '',
-				roomHistory: [] as string[],
-				avatar: 'https://robohash.org/d0DGHght2Orol2FZ6GB',
-				geo: {
-					lat: '',
-					lng: '',
-				},
-			},
-			text: 'hey guys',
-			createdAt: Date.now(),
-			id: Math.random().toString(),
-		},
-	]);
 
 	const [toastState, setToastState] = React.useState({
 		show: false,
@@ -112,14 +91,16 @@ const GeneralChat: React.FC = () => {
 				'updateRoomDetails',
 				({ users, messages }: { users: User[]; messages: Msg[] }) => {
 					log('update room details');
-					setMessages(messages);
 					setRoomDetails({ messages: messages, users: users });
 				},
 			);
 
 			socket.on('message', (msg: Msg) => {
 				log('update messages');
-				setMessages((prev) => [...prev, msg]);
+				setRoomDetails((prev) => ({
+					...prev,
+					messages: [...prev.messages, msg],
+				}));
 			});
 		}
 	}, [currentUser, socket]);
@@ -143,6 +124,9 @@ const GeneralChat: React.FC = () => {
 		history.push('/');
 	};
 
+	React.useEffect(() => {
+		console.log(roomDetails);
+	}, [roomDetails]);
 	if (!didMount || !currentUser)
 		return <Loading open={!didMount || !currentUser} />;
 	return (
@@ -167,7 +151,7 @@ const GeneralChat: React.FC = () => {
 						You joined the chat as {currentUser?.username}
 					</S.ChatTitle>
 					<IonRow>
-						{messages.map((msg) =>
+						{roomDetails.messages.map((msg) =>
 							msg.from.id === currentUser?.id ? (
 								<ChatMessage key={msg.id} type="CurrentUser" msg={msg} />
 							) : (
@@ -178,6 +162,9 @@ const GeneralChat: React.FC = () => {
 				</IonGrid>
 			</IonContent>
 			<IonFooter className="ion-no-border">
+				<IonRow>
+					<TextArea />
+				</IonRow>
 				<S.UserInputWrapper>
 					<S.ChatInputField
 						value={userInput}

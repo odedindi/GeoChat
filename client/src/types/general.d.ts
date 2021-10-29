@@ -16,7 +16,7 @@ type User = {
 
 type Msg = {
 	createdAt: number;
-	from: ChatUser;
+	from: User;
 	id: string;
 	text: string;
 };

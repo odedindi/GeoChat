@@ -4,7 +4,7 @@ import moment from 'moment';
 import * as S from './styles';
 
 const OtherUsersMsg: React.FC<{ msg: Msg }> = ({ msg }) => (
-	<S.OtherUsersMessage size="6.5" offset="5.5" key={msg.id}>
+	<S.OtherUsersMessage size="9" offset="3" key={msg.id}>
 		<S.MsgContentWrapper>
 			<S.AvatarWrapper>
 				<IonAvatar>
