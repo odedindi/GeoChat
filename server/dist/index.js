@@ -22,174 +22,29 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const colors_1 = __importDefault(require("colors"));
 const cors_1 = __importDefault(require("cors"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const express_1 = __importDefault(require("express"));
 const http = __importStar(require("http"));
-// import { getCurrentUser, userDisconnect, joinUserToChat } from './users';
 const socketio = __importStar(require("socket.io"));
-// import SocketIoJwt from 'socketio-jwt';
-const api_1 = __importDefault(require("./router/api"));
-// import * as C from './config/constants';
-const API = __importStar(require("./controllers/api"));
-const logger_1 = require("./logger");
+const log = __importStar(require("./logger"));
+const socket_1 = __importDefault(require("./controllers/socket"));
 dotenv_1.default.config();
 const PORT = process.env.SERVER_PORT;
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.get('/', (_req, res) => res.json('OK'));
-app.use('/api', api_1.default);
 const server = http.createServer(app);
 const io = new socketio.Server(server, {
     cors: { origin: '*', methods: ['GET', 'POST'] },
 });
-const chatRooms = [
-    {
-        roomname: 'publicChat',
-        users: [
-            {
-                id: 'sd1q11223',
-                name: 'gerry',
-                username: 'gerry',
-                currentRoomname: '',
-                roomHistory: [],
-                avatar: 'https://robohash.org/WoVJ0cd',
-                geo: {
-                    lat: '',
-                    lng: '',
-                },
-            },
-        ],
-        messages: [
-            {
-                from: {
-                    id: 'sdq123',
-                    name: 'bob',
-                    username: 'bob',
-                    currentRoomname: '',
-                    roomHistory: [],
-                    avatar: 'https://robohash.org/d0DGHght2Orol2FZ6GB',
-                    geo: {
-                        lat: '',
-                        lng: '',
-                    },
-                },
-                text: 'hey guys',
-                createdAt: Date.now(),
-                id: API.generateRandomId(),
-            },
-            {
-                from: {
-                    id: 'sd1q11223',
-                    name: 'gerry',
-                    username: 'gerry',
-                    currentRoomname: '',
-                    roomHistory: [],
-                    avatar: 'https://robohash.org/WoVJ0cd',
-                    geo: {
-                        lat: '',
-                        lng: '',
-                    },
-                },
-                text: 'hey bob',
-                createdAt: Date.now(),
-                id: API.generateRandomId(),
-            },
-        ],
-    },
-];
 // initializing the socket io connection
 io.on('connection', (socket) => {
-    (0, logger_1.logInfo)(`new socket connected! socket id: ${socket.id})`);
-    socket.on('setUsername', (user) => {
-        var _a;
-        const newUser = Object.assign(Object.assign({}, user), { currentRoomname: 'publicChat', roomHistory: ((_a = user === null || user === void 0 ? void 0 : user.roomHistory) === null || _a === void 0 ? void 0 : _a.length)
-                ? user.roomHistory.concat(['publicChat'])
-                : ['publicChat'], avatar: user.avatar ? user.avatar : API.generateRandomAvatar() });
-        socket.join(newUser.currentRoomname);
-        chatRooms[0].users.push(newUser);
-        socket.data.user = newUser;
-        io.to(newUser.currentRoomname).emit('userChange', {
-            user: socket.data.user,
-            event: 'enter',
-        });
-        io.emit('updateRoomMessages', chatRooms[0].messages);
-        (0, logger_1.logInfo)(`user (id: ${user.id}) connected and joined to the public chat`);
-    });
-    socket.on('sendMessage', (msg) => {
-        const { data: { user }, } = socket;
-        const message = {
-            text: msg.text,
-            from: user,
-            createdAt: Date.now(),
-            id: API.generateRandomId(),
-        };
-        const currentRoomIndex = chatRooms.findIndex((room) => room.roomname === user.currentRoomname);
-        chatRooms[currentRoomIndex].messages.push(message);
-        (0, logger_1.logInfo)(`message (id: ${message.id}) was sent`);
-        io.emit('message', message);
-    });
-    socket.on('disconnect', () => {
-        (0, logger_1.logInfo)('user disconnected');
-        io.emit('userChange', { user: socket.data.user, event: 'exit' });
-    });
-    // socket.on('joinGeneralChatRoom', ({ username }: User) => {
-    // 	const user = joinUserToChat(socket.id, username, 'generalChatRoom');
-    // 	console.log('JoinRoom, id: ', socket.id);
-    // 	socket.join(user.roomname);
-    // 	// display welcome message to the user
-    // 	socket.emit('message', {
-    // 		userId: user.id,
-    // 		username: user.username,
-    // 		text: `Welcome ${user.username}`,
-    // 	});
-    // 	// displays joined room message to all other users except that particular user
-    // 	socket.broadcast.to(user.roomname).emit('message', {
-    // 		userId: user.id,
-    // 		username: user.username,
-    // 		text: `${user.username} has joined the chat`,
-    // 	});
-    // });
-    // socket.on('joinRoom', ({ username, roomname }: User) => {
-    // 	const user = joinUserToChat(socket.id, username, roomname);
-    // 	console.log('JoinRoom, id: ', socket.id);
-    // 	socket.join(user.roomname);
-    // 	// display welcome message to the user
-    // 	socket.emit('message', {
-    // 		userId: user.id,
-    // 		username: user.username,
-    // 		text: `Welcome ${user.username}`,
-    // 	});
-    // 	// displays joined room message to all other users except that particular user
-    // 	socket.broadcast.to(user.roomname).emit('message', {
-    // 		userId: user.id,
-    // 		username: user.username,
-    // 		text: `${user.username} has joined the chat`,
-    // 	});
-    // });
-    // // user sending message
-    // socket.on('chat', (text: string) => {
-    // 	const user = getCurrentUser(socket.id);
-    // 	io.to(user.roomname).emit('message', {
-    // 		userId: user.id,
-    // 		username: user.username,
-    // 		text,
-    // 	});
-    // });
-    // socket.on('disconnect', () => {
-    // 	const user: User | undefined = userDisconnect(socket.id);
-    // 	if (user) {
-    // 		io.to(user.roomname).emit('message', {
-    // 			userId: user.id,
-    // 			username: user.username,
-    // 			text: `${user.username} has left the chat`,
-    // 		});
-    // 	}
-    // });
+    log.info(`new socket connected! socket id: ${socket.id})`);
+    (0, socket_1.default)(socket);
 });
 server.listen(PORT, () => {
     // tslint:disable-next-line:no-console
-    console.log(colors_1.default.green(`server started at http://localhost:${PORT}`));
+    log.info(`server started at http://localhost:${PORT}`);
 });
 //# sourceMappingURL=index.js.map

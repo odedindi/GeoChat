@@ -19,7 +19,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.logError = exports.logInfo = exports.logger = void 0;
+exports.error = exports.info = exports.logger = void 0;
 const W = __importStar(require("winston"));
 const { colorize, combine, errors, json, prettyPrint, simple, splat, timestamp, } = W.format;
 const errorsLog = new W.transports.File({
@@ -40,15 +40,15 @@ exports.logger = W.createLogger({
 });
 if (process.env.NODE_ENV !== 'production')
     exports.logger.add(consoleLog);
-const logInfo = (msg) => exports.logger.log({
+const info = (msg) => exports.logger.log({
     level: 'info',
     message: msg,
 });
-exports.logInfo = logInfo;
-const logError = (msg) => exports.logger.log({
+exports.info = info;
+const error = (msg) => exports.logger.log({
     level: 'error',
     message: msg,
 });
-exports.logError = logError;
+exports.error = error;
 exports.default = exports.logger;
 //# sourceMappingURL=index.js.map

@@ -18,21 +18,16 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.userDisconnect = exports.getCurrentUser = exports.joinUserToChat = void 0;
-const colors_1 = __importDefault(require("colors"));
-const lodash_1 = __importDefault(require("lodash"));
-const API = __importStar(require("./controllers/api"));
+exports.users = exports.activeUsers = void 0;
+const Generate = __importStar(require("../config/generators"));
 const users = [
     {
-        id: API.generateRandomId(),
+        id: 'fe51k85',
         name: 'Leanne Graham',
         username: 'Bret',
         email: 'Sincere@april.biz',
-        avatar: API.generateRandomAvatar(),
+        avatar: Generate.randomAvatar(),
         currentRoomname: '',
         geo: {
             lat: '-37.3159',
@@ -40,11 +35,11 @@ const users = [
         },
     },
     {
-        id: API.generateRandomId(),
+        id: 'fe5dk15',
         name: 'Ervin Howell',
         username: 'Antonette',
         email: 'Shanna@melissa.tv',
-        avatar: API.generateRandomAvatar(),
+        avatar: Generate.randomAvatar(),
         currentRoomname: '',
         geo: {
             lat: '-43.9509',
@@ -52,11 +47,11 @@ const users = [
         },
     },
     {
-        id: API.generateRandomId(),
+        id: 'fe51k2q',
         name: 'Clementine Bauch',
         username: 'Samantha',
         email: 'Nathan@yesenia.net',
-        avatar: API.generateRandomAvatar(),
+        avatar: Generate.randomAvatar(),
         currentRoomname: '',
         geo: {
             lat: '-68.6102',
@@ -64,11 +59,11 @@ const users = [
         },
     },
     {
-        id: API.generateRandomId(),
+        id: 'vew1281',
         name: 'Patricia Lebsack',
         username: 'Karianne',
         email: 'Julianne.OConner@kory.org',
-        avatar: API.generateRandomAvatar(),
+        avatar: Generate.randomAvatar(),
         currentRoomname: '',
         geo: {
             lat: '29.4572',
@@ -76,11 +71,11 @@ const users = [
         },
     },
     {
-        id: API.generateRandomId(),
+        id: 'aed1k11',
         name: 'Chelsey Dietrich',
         username: 'Kamren',
         email: 'Lucio_Hettinger@annie.ca',
-        avatar: API.generateRandomAvatar(),
+        avatar: Generate.randomAvatar(),
         currentRoomname: '',
         geo: {
             lat: '-31.8129',
@@ -88,11 +83,11 @@ const users = [
         },
     },
     {
-        id: API.generateRandomId(),
+        id: '12s1ka5',
         name: 'Mrs. Dennis Schulist',
         username: 'Leopoldo_Corkery',
         email: 'Karley_Dach@jasper.info',
-        avatar: API.generateRandomAvatar(),
+        avatar: Generate.randomAvatar(),
         currentRoomname: '',
         geo: {
             lat: '-71.4197',
@@ -100,11 +95,11 @@ const users = [
         },
     },
     {
-        id: API.generateRandomId(),
+        id: 're5bsa5',
         name: 'Kurtis Weissnat',
         username: 'Elwyn.Skiles',
         email: 'Telly.Hoeger@billy.biz',
-        avatar: API.generateRandomAvatar(),
+        avatar: Generate.randomAvatar(),
         currentRoomname: '',
         geo: {
             lat: '24.8918',
@@ -112,11 +107,11 @@ const users = [
         },
     },
     {
-        id: API.generateRandomId(),
+        id: 'ee51185',
         name: 'Nicholas Runolfsdottir V',
         username: 'Maxime_Nienow',
         email: 'Sherwood@rosamond.me',
-        avatar: API.generateRandomAvatar(),
+        avatar: Generate.randomAvatar(),
         currentRoomname: '',
         geo: {
             lat: '-14.3990',
@@ -124,11 +119,11 @@ const users = [
         },
     },
     {
-        id: API.generateRandomId(),
+        id: 'fx52kk5',
         name: 'Glenna Reichert',
         username: 'Delphine',
         email: 'Chaim_McDermott@dana.io',
-        avatar: API.generateRandomAvatar(),
+        avatar: Generate.randomAvatar(),
         currentRoomname: '',
         geo: {
             lat: '24.6463',
@@ -136,11 +131,11 @@ const users = [
         },
     },
     {
-        id: API.generateRandomId(),
+        id: '1ee1k25',
         name: 'Clementina DuBuque',
         username: 'Moriah.Stanton',
         email: 'Rey.Padberg@karina.biz',
-        avatar: API.generateRandomAvatar(),
+        avatar: Generate.randomAvatar(),
         currentRoomname: '',
         geo: {
             lat: '-38.2386',
@@ -148,59 +143,7 @@ const users = [
         },
     },
 ];
-const chatRooms = [
-    {
-        roomname: 'generalChatRoom',
-        users: [
-            {
-                id: API.generateRandomId(),
-                name: 'Glenna Reichert',
-                username: 'Delphine',
-                email: 'Chaim_McDermott@dana.io',
-                avatar: API.generateRandomAvatar(),
-                currentRoomname: '',
-                geo: {
-                    lat: '24.6463',
-                    lng: '-168.8889',
-                },
-            },
-            {
-                id: API.generateRandomId(),
-                name: 'Clementina DuBuque',
-                username: 'Moriah.Stanton',
-                email: 'Rey.Padberg@karina.biz',
-                avatar: API.generateRandomAvatar(),
-                currentRoomname: '',
-                geo: {
-                    lat: '-38.2386',
-                    lng: '57.2232',
-                },
-            },
-        ],
-        messages: [],
-    },
-];
-const joinUserToChat = (id, username, roomname) => {
-    const user = { id, username, roomname };
-    const roomIndex = chatRooms.findIndex((room) => room.roomname === roomname);
-    if (roomIndex === -1) {
-        chatRooms.push({ roomname, users: [user], messages: [] });
-    }
-    else {
-        chatRooms[roomIndex].users.push(user);
-    }
-    users.push(user);
-    return user;
-};
-exports.joinUserToChat = joinUserToChat;
-console.log(colors_1.default.magenta('user out'), users);
-const getCurrentUser = (id) => lodash_1.default.find(users, (user) => user.id === id);
-exports.getCurrentUser = getCurrentUser;
-// called when the user leaves the chat and its user object deleted from array
-const userDisconnect = (id) => {
-    const userIndex = lodash_1.default.findIndex(users, (user) => user.id === id);
-    if (userIndex !== -1)
-        return users.splice(userIndex, 1)[0];
-};
-exports.userDisconnect = userDisconnect;
+exports.users = users;
+const activeUsers = [];
+exports.activeUsers = activeUsers;
 //# sourceMappingURL=users.js.map

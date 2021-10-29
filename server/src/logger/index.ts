@@ -36,13 +36,13 @@ export const logger = W.createLogger({
 
 if (process.env.NODE_ENV !== 'production') logger.add(consoleLog);
 
-export const logInfo = (msg: string) =>
+export const info = (msg: string) =>
 	logger.log({
 		level: 'info',
 		message: msg,
 	});
 
-export const logError = (msg: string) =>
+export const error = (msg: string) =>
 	logger.log({
 		level: 'error',
 		message: msg,

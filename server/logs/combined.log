@@ -12301,3 +12301,5073 @@
   service: 'GeoChating server logger',
   timestamp: '28-10-2021 15:23:12'
 }
+{
+  level: 'info',
+  message: 'new socket connected! socket id: adczy19AnAABugbaAAAC)',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:30:29'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: KzSrjMf-isD6YntOAAAD)',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:30:29'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: GOUhDqEeiSYRwnGSAAAG)',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:39:12'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: HpnjNH-LuTGNDtiLAAAH)',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:39:12'
+}
+{
+  level: 'info',
+  message: 'user (id: fe51k85) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:40:19'
+}
+{
+  level: 'info',
+  message: 'user (id: fe51k85) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:40:19'
+}
+{
+  level: 'info',
+  message: 'user (id: fe51k85) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:42:23'
+}
+{
+  level: 'info',
+  message: 'user (id: fe51k85) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:42:25'
+}
+{
+  level: 'info',
+  message: 'user (id: fe51k85) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:43:01'
+}
+{
+  level: 'info',
+  message: 'user (id: fe51k85) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:43:53'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: Oou834wJQMdYv2hsAAAK)',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:44:06'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: EyCQv2quPhONIQ7UAAAL)',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:44:06'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: 23SHZ3qNgfYeVfgfAAAO)',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:44:15'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: vBepwN5-ytAS2oPgAAAP)',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:44:15'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: H9nin-DUpx9ShbWEAAAS)',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:45:39'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: slmfMB_pA4UECzqSAAAT)',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:45:39'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: n6_RSnraQMR2sfhlAAAW)',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:45:45'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: pVQYzuVSj3nkK0FzAAAX)',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:45:45'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: CJCHWZ-I3iJnlRIeAAAa)',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:45:45'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: RIXZ4F7UTl8f42pXAAAb)',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:45:45'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: 0Hp0zo__FF4BwWv5AAAe)',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:45:48'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: yLrLpZeA38eDPACuAAAf)',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:45:48'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: 7OWrKaV9LFnXIe4YAAAi)',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:45:49'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: fI4E8g5Pu9-zxGmBAAAj)',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:45:49'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: HSx4fn2i-ltNZJ79AAAm)',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:46:14'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: Tjfg0M-K8BIaBY8gAAAn)',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:46:15'
+}
+{
+  level: 'info',
+  message: 'user (id: fe51k85) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:46:15'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:46:20'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:46:20'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:46:20'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:46:20'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:46:20'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:46:20'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:46:20'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:46:20'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:46:20'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:46:20'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:46:20'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:46:20'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:46:20'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:46:20'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:46:20'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:46:20'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:46:21'
+}
+{
+  level: 'info',
+  message: 'user disconnected',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:46:21'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: L1px0FlwYaJ7izF-AAAq)',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:46:21'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: NvJUby64Fds1zd-GAAAr)',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:46:21'
+}
+{
+  level: 'info',
+  message: 'user (id: fe51k85) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:46:21'
+}
+{
+  level: 'info',
+  message: 'user (id: fe51k85) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:55:39'
+}
+{
+  level: 'info',
+  message: 'user (id: fe51k85) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:55:55'
+}
+{
+  level: 'info',
+  message: 'user (id: fe51k85) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:55:55'
+}
+{
+  level: 'info',
+  message: 'user (id: fe51k85) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:55:57'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: fbHm-U2qYkpRfcswAAAu)',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:56:02'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: 3nG5nC6kHx8LosJXAAAv)',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:56:02'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: 59FzmV7OBngUzodkAAAy)',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:56:02'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: lztSxnC9MHnN9itBAAAz)',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:56:02'
+}
+{
+  level: 'info',
+  message: 'user (id: fe51k85) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:56:02'
+}
+{
+  level: 'info',
+  message: 'user (id: fe51k85) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '28-10-2021 20:56:06'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: i_6zXzDIWLUC9y5CAAAG)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:11:51'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: PugV9Wb2G3sRgQ08AAAH)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:11:51'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: qiCErZz_OpC2j0nSAAAI)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:11:51'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: qjZXhtE9Fr_5j-KMAAAJ)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:11:51'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: iDg6URGUtSQeGSuHAAAK)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:11:51'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: trXIB5GQHcHRzONmAAAL)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:11:51'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: deTtuN5ekVMrpFQ9AAAN)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:11:52'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: O1MkVB6EUf2fkRThAAAP)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:11:55'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:12:13'
+}
+{
+  level: 'info',
+  message: 'new user: ne5aa87, add user to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:12:13'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:12:13'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:12:13'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:12:13'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:12:13'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:12:13'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:12:13'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:12:13'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:12:13'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:12:13'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:12:13'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:12:13'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:12:13'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:12:13'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:12:13'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:12:13'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:12:13'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:12:13'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:12:13'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:12:14'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:12:14'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:12:14'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:12:14'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:12:14'
+}
+{
+  level: 'info',
+  message: 'server started at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:16:04'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: 0ynPFf26L24frvzyAAAB)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:16:06'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: mMaO4R4Ly8Gg6qWGAAAD)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:16:07'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: y4NLmkpJiC8UBglOAAAF)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:16:07'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: Atx2kJzoMuFSyU5JAAAH)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:16:07'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: Mg09XB_Kj68BOL79AAAJ)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:16:08'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: e_0WqU3bo3oJpovzAAAL)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:16:08'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: EvtFVUI4qIjNIFXzAAAN)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:16:08'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: _1IYtVHq2jZtNhZHAAAP)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:16:09'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:16:09'
+}
+{
+  level: 'info',
+  message: 'server started at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:43'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: DIJTecgtr_QwwJSkAAAB)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:43'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:43'
+}
+{
+  level: 'info',
+  message: 'new user: ne5aa87, add user to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:43'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:43'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:43'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:43'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:43'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:43'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:43'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:43'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:43'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:43'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:43'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: Mkm5vXSnreAq9qDdAAAD)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:43'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: FoYA6Zrf7dyFGEqmAAAF)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:45'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:46'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: hL0hqj4l8ZK_nnDqAAAI)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:47'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: KQfyfh5rztuMHAF0AAAJ)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:47'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:47'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:47'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:47'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:47'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:47'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:47'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:47'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:47'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:47'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:47'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:47'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:47'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:47'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: 1khDwpAFKeZ0cSpmAAAL)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:17:47'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:18:28'
+}
+{
+  level: 'info',
+  message: 'removing user: ne5aa87 from users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:18:28'
+}
+{
+  level: 'info',
+  message: 'delete from socket: DIJTecgtr_QwwJSkAAAB all saved data ',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:18:28'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:18:32'
+}
+{
+  level: 'info',
+  message: 'delete from socket: KQfyfh5rztuMHAF0AAAJ all saved data ',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:18:32'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: DXE6xOSTXfs90jXAAAAN)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:18:33'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: o_B6TobcShgDZeqIAAAQ)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:25'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: 96LSNLwzQse81WFNAAAR)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:25'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:25'
+}
+{
+  level: 'info',
+  message: 'new user: ne5aa87, add user to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:25'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:25'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:25'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:25'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:25'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:25'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:25'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:25'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:25'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:25'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:25'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:29'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:29'
+}
+{
+  level: 'info',
+  message: 'removing user: ne5aa87 from users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:30'
+}
+{
+  level: 'info',
+  message: 'delete from socket: 96LSNLwzQse81WFNAAAR all saved data ',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:30'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:30'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:30'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: 9x89mxXGvIzutzJ_AAAU)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:31'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: 7ym4Z1-edTIilpGEAAAV)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:31'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:31'
+}
+{
+  level: 'info',
+  message: 'new user: ne5aa87, add user to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:31'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:31'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:31'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:31'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:31'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:31'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:31'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:31'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:31'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:31'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:20:31'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:21:15'
+}
+{
+  level: 'info',
+  message: 'removing user: ne5aa87 from users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:21:15'
+}
+{
+  level: 'info',
+  message: 'delete from socket: 7ym4Z1-edTIilpGEAAAV all saved data ',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:21:15'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: nSCxH90er1QDtbu-AAAX)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:21:17'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: uAcOi96e_AxpFenIAAAa)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:26:23'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: KJmckfWMMl2fZnlfAAAb)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:26:23'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:26:23'
+}
+{
+  level: 'info',
+  message: 'new user: ne5aa87, add user to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:26:23'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:26:23'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:26:23'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:26:23'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:26:23'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:26:23'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:26:23'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:26:23'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:26:23'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:26:23'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:26:23'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:27:08'
+}
+{
+  level: 'info',
+  message: 'removing user: ne5aa87 from users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:27:08'
+}
+{
+  level: 'info',
+  message: 'delete from socket: KJmckfWMMl2fZnlfAAAb all saved data ',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:27:08'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: 8Y12BxVXDNuS-aeuAAAd)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:27:09'
+}
+{
+  level: 'info',
+  message: 'server started at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:28:41'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: tdkhgxyvCJ_w2TfhAAAB)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:28:41'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: NoDRHKU-LXRntc6vAAAD)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:28:42'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: fhgok7GYhnbYfLr-AAAF)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:28:42'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: 8-9J7yNqRA38VKpBAAAH)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:28:43'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: xs3HLwuHcG_GlB1cAAAJ)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:28:44'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: Gw9SiGuUkXE8gs0VAAAL)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:28:44'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:28:46'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:28:46'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:28:46'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:28:46'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: k8t-ARf8t1ZGwUoQAAAO)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:28:47'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: n1rKrx41gwuy8l2KAAAP)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:28:47'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:28:47'
+}
+{
+  level: 'info',
+  message: 'new user: ne5aa87, add user to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:28:47'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:28:47'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:28:47'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:28:47'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:28:47'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:28:47'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:28:47'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:28:47'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:28:47'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:28:47'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:28:47'
+}
+{
+  level: 'info',
+  message: 'message (id: ma89h63) was sent',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:30:17'
+}
+{
+  level: 'info',
+  message: 'message (id: chmda57) was sent',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:30:50'
+}
+{
+  level: 'info',
+  message: 'server started at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:11'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: xWi1Tv1JY56PfkeSAAAB)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:11'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: 8qBfbT_i9IlQw9pvAAAD)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:14'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: k-SlQGqA_P9bKWgqAAAF)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:14'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:14'
+}
+{
+  level: 'info',
+  message: 'new user: ne5aa87, add user to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:14'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:14'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:14'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:14'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:14'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:14'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:14'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:14'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:14'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:14'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:14'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: uW_1w5Dfq7VbL0S9AAAH)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:14'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:16'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:16'
+}
+{
+  level: 'info',
+  message: 'removing user: ne5aa87 from users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:16'
+}
+{
+  level: 'info',
+  message: 'delete from socket: k-SlQGqA_P9bKWgqAAAF all saved data ',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:16'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: p1X_4TEy9eLf9M7DAAAK)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:17'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: O-KyV4LIZK9hYNYJAAAL)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:17'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:17'
+}
+{
+  level: 'info',
+  message: 'new user: ne5aa87, add user to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:17'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:17'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:17'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:17'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:17'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:17'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:17'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:17'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:17'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:17'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:17'
+}
+{
+  level: 'info',
+  message: 'message (id: 0.angihcebii74) was sent',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:34:33'
+}
+{
+  level: 'info',
+  message: 'message (id: 0.j90kff43gf3) was sent',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:35:01'
+}
+{
+  level: 'info',
+  message: 'server started at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:35:58'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: gf7MtE1z0wXoRcLoAAAB)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:35:58'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: W29BNfGNOXQf4PQ3AAAD)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:35:59'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: OF2AOFo-dOBFb10pAAAF)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:35:59'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: zfM6LgGufrVpXCYpAAAH)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:36:02'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:36:40'
+}
+{
+  level: 'info',
+  message: 'new user: ne5aa87, add user to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:36:40'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:36:40'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:36:40'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:36:40'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:36:40'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:36:40'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:36:40'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:36:40'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:36:40'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:36:40'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:36:40'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:03'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:03'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:03'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:03'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:03'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:03'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:03'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:03'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:03'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:03'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:03'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:03'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:03'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:08'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:08'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:08'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:08'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:08'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:08'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:08'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:08'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:08'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:08'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:08'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:08'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:08'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:15'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:15'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:15'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:15'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:15'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:15'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:15'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:15'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:15'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:15'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:15'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:15'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:15'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:32'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:32'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:32'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:32'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:32'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:32'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:32'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:32'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:32'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:32'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:32'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:32'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:32'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:32'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:32'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:32'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:32'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:32'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:32'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:32'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:32'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:32'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:32'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:32'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:32'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:37:32'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: vIfEeHJvhysBREvOAAAK)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:39:07'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: ryXgEqxwPu2s243HAAAL)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:39:07'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: z5lD-gdEmzrwwgizAAAO)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:39:09'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: 6eL0F2D9eYjvp_KEAAAP)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:39:09'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: IF4ihWW8zq9LObjAAAAS)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:40:52'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: Fq_A_DMkU02y66i4AAAT)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:40:53'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: Bl8s0h7lYhK-w8oCAAAW)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:40:53'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: EVZ3h7ZEQmMHlBybAAAX)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:40:53'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:40:54'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:40:54'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:40:54'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:40:54'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:40:54'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:40:54'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:40:54'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:40:54'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:40:54'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:40:54'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:40:54'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:40:54'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:40:54'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:08'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:08'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:08'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:08'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:08'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:08'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:08'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:08'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:08'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:08'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:08'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:08'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:08'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:29'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:29'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:29'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:29'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:29'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:29'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:29'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:29'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:29'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:29'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:29'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:29'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:29'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:30'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:30'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:30'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:30'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:30'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:30'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:30'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:30'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:30'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:30'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:30'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:30'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:30'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:36'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:36'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:36'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:36'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:36'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:36'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:36'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:36'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:36'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:36'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:36'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:36'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:36'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:43'
+}
+{
+  level: 'info',
+  message: 'removing user: ne5aa87 from users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:43'
+}
+{
+  level: 'info',
+  message: 'delete from socket: W29BNfGNOXQf4PQ3AAAD all saved data ',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:43'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:43'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:43'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:43'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:43'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:43'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:43'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:43'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:43'
+}
+{
+  level: 'info',
+  message: 'delete from socket: EVZ3h7ZEQmMHlBybAAAX all saved data ',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:43'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:43'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: asbkKXwsyRCRJ4nCAAAa)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:44'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: W6EnLEsdCiaf6Wl_AAAb)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:44'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:44'
+}
+{
+  level: 'info',
+  message: 'new user: ne5aa87, add user to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:44'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:44'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:44'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:44'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:44'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:44'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:44'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:44'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:44'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:44'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:41:44'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:01'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:01'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:01'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:01'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:01'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:01'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:01'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:01'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:01'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:01'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:01'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:01'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:01'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: sCVYoTzAQAG3SaeXAAAe)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:07'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: LOnAC4LBKpu1Mq_5AAAf)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:07'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: WAd7eBOD9CyDkd0nAAAi)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:42'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: WgVWJVjQx79AceelAAAj)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:42'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:42'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:42'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:42'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:42'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:42'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:42'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:42'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:42'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:42'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:42'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:42'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:42'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:42'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:42'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:42'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:42'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:42'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:42'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:42'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:42'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:42'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:42'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:42'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:42'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:42'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:42'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:44'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:44'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:44'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:44'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:44'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:44'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:44'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:44'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:44'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:44'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:44'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:44'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:45:44'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:46:24'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:46:24'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:46:24'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:46:24'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:46:24'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:46:24'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:46:24'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:46:24'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:46:24'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:46:24'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:46:24'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:46:24'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:46:24'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:04'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:04'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:04'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:04'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:04'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:04'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:04'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:04'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:04'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:04'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:04'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:04'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:04'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:04'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:04'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:04'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:04'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:04'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:04'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:04'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:04'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:04'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:04'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:04'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:04'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:04'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:27'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:27'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:27'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:27'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:27'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:27'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:27'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:27'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:27'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:27'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:27'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:27'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:27'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:31'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:31'
+}
+{
+  level: 'info',
+  message: 'removing user: ne5aa87 from users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:31'
+}
+{
+  level: 'info',
+  message: 'delete from socket: WgVWJVjQx79AceelAAAj all saved data ',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:31'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:31'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:31'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:31'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:31'
+}
+{
+  level: 'info',
+  message: 'delete from socket: W6EnLEsdCiaf6Wl_AAAb all saved data ',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:31'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: MKcP9StDbrDmrmi7AAAm)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:32'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: iHRRoHRnAMlH9R-AAAAn)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:32'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:32'
+}
+{
+  level: 'info',
+  message: 'new user: ne5aa87, add user to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:32'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:32'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:32'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:32'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:32'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:32'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:32'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:32'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:32'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:32'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:47:32'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:19'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:19'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:19'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:19'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:19'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:19'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:19'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:19'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:19'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:19'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:19'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:19'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:19'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:22'
+}
+{
+  level: 'info',
+  message: 'removing user: ne5aa87 from users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:22'
+}
+{
+  level: 'info',
+  message: 'delete from socket: iHRRoHRnAMlH9R-AAAAn all saved data ',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:22'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:22'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: 67si3nZR3v_VWHN4AAAq)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:23'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: Dr8pGZYP7OTZVapWAAAr)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:23'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:23'
+}
+{
+  level: 'info',
+  message: 'new user: ne5aa87, add user to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:23'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:23'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:23'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:23'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:23'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:23'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:23'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:23'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:23'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:23'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:48:23'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:19'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:19'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:19'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:19'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:19'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:19'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:19'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:19'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:19'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:19'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:19'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:19'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:19'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:22'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:22'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:22'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:22'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:22'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:22'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:22'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:22'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:22'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:22'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:22'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:22'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:22'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:28'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:28'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:28'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:28'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:28'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:28'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:28'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:28'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:28'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:28'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:28'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:28'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:28'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:56'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:56'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:56'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:56'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:56'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:56'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:56'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:56'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:56'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:56'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:56'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:56'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:49:56'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:50:11'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:50:11'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:50:11'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:50:11'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:50:11'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:50:11'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:50:11'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:50:11'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:50:11'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:50:11'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:50:11'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:50:11'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:50:11'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:27'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:27'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:27'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:27'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:27'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:27'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:27'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:27'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:27'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:27'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:27'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:27'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:27'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:28'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:28'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:28'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:28'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:28'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:28'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:28'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:28'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:28'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:28'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:28'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:28'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:28'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:32'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:32'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:32'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:32'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:32'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:32'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:32'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:32'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:32'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:32'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:33'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:33'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:33'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:42'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:42'
+}
+{
+  level: 'info',
+  message: 'removing user: ne5aa87 from users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:42'
+}
+{
+  level: 'info',
+  message: 'delete from socket: Dr8pGZYP7OTZVapWAAAr all saved data ',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:42'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: c5-so1hNbnbseaMYAAAu)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:43'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: HESUnWf2QMVY-VHIAAAv)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:43'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:43'
+}
+{
+  level: 'info',
+  message: 'new user: ne5aa87, add user to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:43'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:43'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:43'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:43'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:43'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:43'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:43'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:43'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:43'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:43'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:52:43'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:56:05'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:56:05'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:56:05'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:56:05'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:56:05'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:56:05'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:56:05'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:56:05'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:56:05'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:56:05'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:56:05'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:56:05'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 00:56:05'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:06:30'
+}
+{
+  level: 'info',
+  message: 'removing user: ne5aa87 from users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:06:30'
+}
+{
+  level: 'info',
+  message: 'delete from socket: HESUnWf2QMVY-VHIAAAv all saved data ',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:06:30'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:06:30'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: Veb8CNg4xuNRKYfMAAAy)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:06:31'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: 7KUY_i5uvqqVSV_FAAAz)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:06:31'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:06:31'
+}
+{
+  level: 'info',
+  message: 'new user: ne5aa87, add user to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:06:31'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:06:31'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:06:31'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:06:31'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:06:31'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:06:31'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:06:31'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:06:31'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:06:31'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:06:31'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:06:31'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:07:15'
+}
+{
+  level: 'info',
+  message: 'removing user: ne5aa87 from users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:07:15'
+}
+{
+  level: 'info',
+  message: 'delete from socket: 7KUY_i5uvqqVSV_FAAAz all saved data ',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:07:15'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:07:15'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: RmA_CzcATYzv5GtgAAA2)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:07:17'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: kjpISP3krz81ZDDhAAA3)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:07:17'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:07:17'
+}
+{
+  level: 'info',
+  message: 'new user: ne5aa87, add user to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:07:17'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:07:17'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:07:17'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:07:17'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:07:17'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:07:17'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:07:17'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:07:17'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:07:17'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:07:17'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:07:17'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:16:31'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:16:31'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:16:31'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:16:31'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:16:31'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:16:31'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:16:31'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:16:31'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:16:31'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:16:31'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:16:31'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:16:31'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:16:31'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: XI18aZ3pGoKcW9_pAAA6)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:26'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: G-cQmULQIranibQ3AAA7)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:26'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: -y25gg-_yZHNPdi2AAA-)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:29'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: alNVPELZah8MgH7kAAA_)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:29'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: uWYWKUDX8-ibZyMKAABC)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:33'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: rgXcjxw41MoRdkA3AABD)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:33'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:33'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:33'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:33'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:33'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:33'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:33'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:33'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:33'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:33'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:33'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:33'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:33'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:33'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:33'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:33'
+}
+{
+  level: 'info',
+  message: 'update user in users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:33'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:33'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:33'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:33'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:33'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:33'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:33'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:33'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:33'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:33'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:33'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:36'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:36'
+}
+{
+  level: 'info',
+  message: 'removing user: ne5aa87 from users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:36'
+}
+{
+  level: 'info',
+  message: 'delete from socket: rgXcjxw41MoRdkA3AABD all saved data ',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:36'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:36'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:36'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:36'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:36'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:36'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:36'
+}
+{
+  level: 'info',
+  message: 'delete from socket: kjpISP3krz81ZDDhAAA3 all saved data ',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:46:36'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: l0UGsSxDgQ9-NugwAABG)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:52:00'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: g2AMjM4ELRNvkkrqAABH)',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:52:00'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:52:00'
+}
+{
+  level: 'info',
+  message: 'new user: ne5aa87, add user to users list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:52:00'
+}
+{
+  level: 'info',
+  message: 'add user: ne5aa87 to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:52:00'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:52:00'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87 is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:52:00'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:52:00'
+}
+{
+  level: 'info',
+  message: 'update user in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:52:00'
+}
+{
+  level: 'info',
+  message: 'join the user to the room on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:52:00'
+}
+{
+  level: 'info',
+  message: 'update user data on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:52:00'
+}
+{
+  level: 'info',
+  message: 'user: ne5aa87) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:52:00'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:52:00'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '29-10-2021 01:52:00'
+}
