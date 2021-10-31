@@ -1,0 +1,16 @@
+{
+  "name": "GeoChat",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:odedindi/GeoChat.git",
+  "author": "Oded Winberger <odedindi@gmail.com>",
+  "scripts": {
+    "client": "cd client && ionic serve",
+    "server": "cd server && yarn dev",
+    "dev": "concurrently \"yarn server\" \"yarn client\""
+  },
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^6.3.0"
+  }
+}

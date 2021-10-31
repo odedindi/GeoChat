@@ -11,7 +11,7 @@ export const get = {
 		_.findIndex(chat.activeUsers, (user) => user.id === id),
 	userIndexInRoom: (id: string, roomname: string) => {
 		const roomIndex = get.roomIndex(roomname);
-		return _.findIndex(chat.rooms[roomIndex].users, (userID) => userID === id);
+		return _.findIndex(chat.rooms[roomIndex].users, (user) => user.id === id);
 	},
 };
 
@@ -21,7 +21,7 @@ const updateUserDetailsInUsersList = (user: User, userIndex: number) => {
 	chat.users[userIndex] = user;
 };
 
-export const addUserToUsersList = (user: User): void => {
+export const addUserToUsersList = (user: User) => {
 	const userIndex = get.userIndex(user.id);
 	if (userIndex === -1) {
 		log.info(`new user: ${user.id}, add user to users list`);
@@ -38,7 +38,7 @@ const updateUserDetailsInActiveUsersList = (user: User, userIndex: number) => {
 	chat.activeUsers[userIndex] = user;
 };
 
-export const addUserToActiveUsersList = (user: User): void => {
+export const addUserToActiveUsersList = (user: User) => {
 	const userIndex = get.userIndex(user.id);
 	if (userIndex === -1) {
 		log.info(`new user: ${user.id}, add user to activeUsers list`);
@@ -50,47 +50,47 @@ export const addUserToActiveUsersList = (user: User): void => {
 };
 
 // rooms list
-export const addUserToRoom = (userID: UserID, roomname: string): void => {
+export const addUserToRoom = (user: User, roomname: string) => {
 	const roomIndex = get.roomIndex(roomname);
 	if (roomIndex === -1) {
-		log.info(`add user: ${userID} to new room: ${roomname}`);
-		chat.rooms.push({ roomname, users: [userID], messages: [] });
+		log.info(`add user: ${user.id} to new room: ${roomname}`);
+		chat.rooms.push({ roomname, users: [user], messages: [] });
 	} else {
-		const userIndexInRoom = get.userIndexInRoom(userID, roomname);
+		const userIndexInRoom = get.userIndexInRoom(user.id, roomname);
 		if (userIndexInRoom === -1) {
-			log.info(`user: ${userID} is already in roomname: ${roomname}`);
+			log.info(`user: ${user.id} is already in roomname: ${roomname}`);
 		} else {
-			log.info(`add user: ${userID} to roomname: ${roomname}`);
-			chat.rooms[roomIndex].users.push(userID);
+			log.info(`add user: ${user.id} to roomname: ${roomname}`);
+			chat.rooms[roomIndex].users.push(user);
 		}
 	}
 };
 export const addUserToRoomAndActiveUsersList = (
 	user: User,
 	roomname: string,
-): User => {
+) => {
 	log.info(`new addUserToRoom request`);
 	const updatedUser: User = { ...user, currentRoomname: roomname };
-	addUserToRoom(updatedUser.id, roomname);
+	addUserToRoom(updatedUser, roomname);
 	addUserToActiveUsersList(updatedUser);
 	return updatedUser;
 };
 
-export const removeUserFromUsersList = (id: string): User => {
+export const removeUserFromUsersList = (id: string) => {
 	const userIndex = get.userIndex(id);
 	if (userIndex !== -1) {
 		log.info(`removing user: ${id} from users list`);
 		return chat.users.splice(userIndex, 1)[0];
 	}
 };
-export const removeUserFromActiveUsersList = (id: string): User => {
+export const removeUserFromActiveUsersList = (id: string) => {
 	const userIndex = get.userIndex(id);
 	if (userIndex !== -1) {
 		log.info(`removing user: ${id} from users list`);
 		return chat.activeUsers.splice(userIndex, 1)[0];
 	}
 };
-export const removeUserFromRoom = (id: string, roomname: string): UserID => {
+export const removeUserFromRoom = (id: string, roomname: string) => {
 	const userIndex = get.userIndexInRoom(id, roomname);
 	if (userIndex !== -1) {
 		const roomIndex = get.roomIndex(roomname);

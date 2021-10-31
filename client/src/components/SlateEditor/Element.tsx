@@ -1,8 +1,8 @@
-import type { RenderElementProps } from 'slate-react';
+import type { CustomTypes } from 'slate';
 
 import Mention from './Mention';
 
-const Element: React.FC<RenderElementProps> = ({
+const Element: React.FC<CustomTypes['RenderElementProps']> = ({
 	attributes,
 	children,
 	element,

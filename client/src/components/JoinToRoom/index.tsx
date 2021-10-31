@@ -38,7 +38,7 @@ const JoinToRoom: React.FC = () => {
 			}
 		}
 	}, [canApply, history, socket, userInput]);
-	useKeyboardListener(sendData);
+	useKeyboardListener(sendData, 'Enter');
 
 	const inputChangeHandler = ({ name, value }: HTMLInputElement) =>
 		setInput((prev) => ({ ...prev, [name]: value }));

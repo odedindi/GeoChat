@@ -23,6 +23,6 @@ type Message = {
 
 type Room = {
 	roomname: string;
-	users: UserID[];
+	users: User[];
 	messages: Message[];
 };

@@ -32,7 +32,7 @@ exports.get = {
     activeUserIndex: (id) => lodash_1.default.findIndex(chat.activeUsers, (user) => user.id === id),
     userIndexInRoom: (id, roomname) => {
         const roomIndex = exports.get.roomIndex(roomname);
-        return lodash_1.default.findIndex(chat.rooms[roomIndex].users, (userID) => userID === id);
+        return lodash_1.default.findIndex(chat.rooms[roomIndex].users, (user) => user.id === id);
     },
 };
 // users list
@@ -70,20 +70,20 @@ const addUserToActiveUsersList = (user) => {
 };
 exports.addUserToActiveUsersList = addUserToActiveUsersList;
 // rooms list
-const addUserToRoom = (userID, roomname) => {
+const addUserToRoom = (user, roomname) => {
     const roomIndex = exports.get.roomIndex(roomname);
     if (roomIndex === -1) {
-        log.info(`add user: ${userID} to new room: ${roomname}`);
-        chat.rooms.push({ roomname, users: [userID], messages: [] });
+        log.info(`add user: ${user.id} to new room: ${roomname}`);
+        chat.rooms.push({ roomname, users: [user], messages: [] });
     }
     else {
-        const userIndexInRoom = exports.get.userIndexInRoom(userID, roomname);
+        const userIndexInRoom = exports.get.userIndexInRoom(user.id, roomname);
         if (userIndexInRoom === -1) {
-            log.info(`user: ${userID} is already in roomname: ${roomname}`);
+            log.info(`user: ${user.id} is already in roomname: ${roomname}`);
         }
         else {
-            log.info(`add user: ${userID} to roomname: ${roomname}`);
-            chat.rooms[roomIndex].users.push(userID);
+            log.info(`add user: ${user.id} to roomname: ${roomname}`);
+            chat.rooms[roomIndex].users.push(user);
         }
     }
 };
@@ -91,7 +91,7 @@ exports.addUserToRoom = addUserToRoom;
 const addUserToRoomAndActiveUsersList = (user, roomname) => {
     log.info(`new addUserToRoom request`);
     const updatedUser = Object.assign(Object.assign({}, user), { currentRoomname: roomname });
-    (0, exports.addUserToRoom)(updatedUser.id, roomname);
+    (0, exports.addUserToRoom)(updatedUser, roomname);
     (0, exports.addUserToActiveUsersList)(updatedUser);
     return updatedUser;
 };

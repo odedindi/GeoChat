@@ -1,35 +1,51 @@
 /* eslint-disable no-case-declarations */
 import * as React from 'react';
-import type { Descendant } from 'slate';
+import type { CustomTypes } from 'slate';
 import { Editor, Transforms, createEditor, Range } from 'slate';
 import { withHistory } from 'slate-history';
-import { Slate, Editable, ReactEditor, withReact } from 'slate-react';
+import { Slate, ReactEditor, withReact } from 'slate-react';
 
-import Element from './Element';
-import Portal from './Portal';
-import * as config from './config';
+import * as SlateEditor from '../SlateEditor';
+
 import * as S from './styles';
 
-const TextArea: React.FC = () => {
+type TextAreaProps = {
+	mentionables: User[];
+	value: CustomTypes['ParagraphElement'][];
+	setValue: React.Dispatch<
+		React.SetStateAction<CustomTypes['ParagraphElement'][]>
+	>;
+};
+const TextArea: React.FC<TextAreaProps> = ({
+	mentionables,
+	value,
+	setValue,
+}) => {
 	// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 	const ref = React.useRef<HTMLDivElement | null>(undefined!);
-
-	const [value, setValue] = React.useState<Descendant[]>(config.initialValue);
 	const [target, setTarget] = React.useState<Range | null>(null);
 	const [index, setIndex] = React.useState(0);
 	const [search, setSearch] = React.useState('');
 	const renderElement = React.useCallback(
-		(props) => <Element {...props} />,
+		(props) => <SlateEditor.Element {...props} />,
 		[],
 	);
 	const editor = React.useMemo(
-		() => config.withMentions(withReact(withHistory(createEditor()))),
+		() =>
+			SlateEditor.config.withMentions(withReact(withHistory(createEditor()))),
 		[],
 	);
 
-	const mentionableUsers = config.mentionableUsers
-		.filter((c) => c.toLowerCase().startsWith(search.toLowerCase()))
-		.slice(0, 10);
+	const [mentionableUsers, setMentionableUsersState] = React.useState<string[]>(
+		[],
+	);
+	React.useEffect(() => {
+		if (mentionables.length) {
+			setMentionableUsersState(
+				() => mentionables.map((user) => user.username) as string[],
+			);
+		}
+	}, [mentionables]);
 
 	const onKeyDown = React.useCallback(
 		(event) => {
@@ -51,7 +67,7 @@ const TextArea: React.FC = () => {
 					case 'Enter':
 						event.preventDefault();
 						Transforms.select(editor, target);
-						config.insertMention(editor, mentionableUsers[index]);
+						SlateEditor.config.insertMention(editor, mentionableUsers[index]);
 						setTarget(null);
 						break;
 					case 'Escape':
@@ -81,7 +97,8 @@ const TextArea: React.FC = () => {
 			editor={editor}
 			value={value}
 			onChange={(value) => {
-				setValue(value);
+				const paragraph = value as CustomTypes['ParagraphElement'][];
+				setValue(paragraph);
 				const { selection } = editor;
 
 				if (selection && Range.isCollapsed(selection)) {
@@ -108,13 +125,40 @@ const TextArea: React.FC = () => {
 				setTarget(null);
 			}}
 		>
-			<Editable
+			<S.Editable
 				renderElement={renderElement}
 				onKeyDown={onKeyDown}
-				placeholder="Enter some text..."
+				placeholder="What is on your mind?"
+				onSelect={(e) => {
+					/**
+					 * Chrome doesn't scroll at bottom of the page. This fixes that.
+					 */
+					if (!(window as any).chrome) return;
+					if (editor.selection == null) return;
+					try {
+						/**
+						 * Need a try/catch because sometimes you get an error like:
+						 *
+						 * Error: Cannot resolve a DOM node from Slate node: {"type":"p","children":[{"text":"","by":-1,"at":-1}]}
+						 */
+						const domPoint = ReactEditor.toDOMPoint(
+							editor,
+							editor.selection.focus,
+						);
+						const node = domPoint[0];
+						if (node == null) return;
+						const element = node.parentElement;
+						if (element == null) return;
+						element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+					} catch (e) {
+						/**
+						 * Empty catch. Do nothing if there is an error.
+						 */
+					}
+				}}
 			/>
 			{target && mentionableUsers.length && (
-				<Portal>
+				<SlateEditor.Portal>
 					<S.MentionableUsersWrapper ref={ref} data-cy="mentions-portal">
 						{mentionableUsers.map((char, i) => (
 							<S.MentionableUsers key={char} transparent={i === index}>
@@ -122,7 +166,7 @@ const TextArea: React.FC = () => {
 							</S.MentionableUsers>
 						))}
 					</S.MentionableUsersWrapper>
-				</Portal>
+				</SlateEditor.Portal>
 			)}
 		</Slate>
 	);

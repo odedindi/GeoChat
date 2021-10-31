@@ -118,7 +118,7 @@ const Home: React.FC = () => {
 			setSubmiting(false);
 		}
 	}, [currentUser, disableSubmitButton, history, socket, storeDispatch]);
-	useKeyboardListener(submitHandler);
+	useKeyboardListener(submitHandler, 'Enter');
 
 	if (!didMount) return <Loading open={!didMount} />;
 	return (

@@ -48,7 +48,7 @@ const Login: React.FC = () => {
 		setLoading(false);
 	};
 
-	useKeyboardListener(initStream);
+	useKeyboardListener(initStream, 'Enter');
 
 	const inputChangeHandler = ({ name, value }: HTMLInputElement) =>
 		setInput((prev) => ({ ...prev, [name]: value }));

@@ -76,7 +76,7 @@ const Signup: React.FC = () => {
 		setLoading(false);
 	}, [userInput]);
 
-	useKeyboardListener(initStream);
+	useKeyboardListener(initStream, 'Enter');
 
 	const inputChangeHandler = ({ name, value }: HTMLInputElement) =>
 		setInput((prev) => ({ ...prev, [name]: value }));

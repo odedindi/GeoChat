@@ -13,6 +13,7 @@ import {
 import * as I from 'ionicons/icons';
 import * as React from 'react';
 import { useHistory } from 'react-router-dom';
+import type { CustomTypes } from 'slate';
 import { useSocket } from 'src/Socket';
 import { useStore } from 'src/Store';
 import * as Action from 'src/Store/action';
@@ -52,14 +53,27 @@ const GeneralChat: React.FC = () => {
 			}
 		}
 	}, [currentUser, history, storeDispatch, user]);
-	const [userInput, setUserInput] = React.useState('');
+	const [userInput, setUserInput] = React.useState<
+		CustomTypes['ParagraphElement'][]
+	>([
+		{
+			type: 'paragraph',
+			children: [
+				{
+					text: 'This example mentions rendering as inline elements inside the document.',
+				},
+			],
+		},
+	]);
 	const [roomDetails, setRoomDetails] = React.useState<{
 		messages: Msg[];
+		rendredMessages: Set<string>;
 		users: User[];
-	}>({
+	}>(() => ({
 		messages: [],
+		rendredMessages: new Set<string>(),
 		users: [],
-	});
+	}));
 
 	const [toastState, setToastState] = React.useState({
 		show: false,
@@ -91,7 +105,11 @@ const GeneralChat: React.FC = () => {
 				'updateRoomDetails',
 				({ users, messages }: { users: User[]; messages: Msg[] }) => {
 					log('update room details');
-					setRoomDetails({ messages: messages, users: users });
+					setRoomDetails((prev) => ({
+						...prev,
+						messages: messages,
+						users: users,
+					}));
 				},
 			);
 
@@ -106,17 +124,26 @@ const GeneralChat: React.FC = () => {
 	}, [currentUser, socket]);
 
 	const sendMsgHandler = () => {
-		if (userInput.length) {
-			log('sendMessage');
-			socket.emit('sendMessage', { text: userInput });
-			setToastState({
-				show: true,
-				msg: `msg sent`,
-			});
-			setUserInput('');
+		if (userInput.length === 1) {
+			// for the case the textArea is empty or contains only
+			// whitespaces (i.e. spaces, tabs or line breaks) stop this function
+			const inputChildren = userInput[0].children;
+			if (inputChildren.length === 1) {
+				const child = inputChildren[0] as CustomTypes['Text'];
+				if (!child.text.trim()) return;
+			}
 		}
+
+		// in case there is input
+		log('sendMessage');
+		socket.emit('sendMessage', { text: JSON.stringify(userInput) });
+		setToastState({
+			show: true,
+			msg: `msg sent`,
+		});
+		setUserInput([]);
 	};
-	useKeyboardListener(sendMsgHandler);
+	useKeyboardListener(sendMsgHandler, 'Enter', 'ctrlKey');
 
 	const disconnectHandler = () => {
 		log('disconnect');
@@ -124,9 +151,6 @@ const GeneralChat: React.FC = () => {
 		history.push('/');
 	};
 
-	React.useEffect(() => {
-		console.log(roomDetails);
-	}, [roomDetails]);
 	if (!didMount || !currentUser)
 		return <Loading open={!didMount || !currentUser} />;
 	return (
@@ -151,26 +175,28 @@ const GeneralChat: React.FC = () => {
 						You joined the chat as {currentUser?.username}
 					</S.ChatTitle>
 					<IonRow>
-						{roomDetails.messages.map((msg) =>
-							msg.from.id === currentUser?.id ? (
+						{roomDetails.messages.map((msg) => {
+							// if (roomDetails.rendredMessages.has(msg.id)) {
+							// 	console.log(roomDetails.rendredMessages.has(msg.id));
+							// 	return null;
+							// }
+
+							// roomDetails.rendredMessages.add(msg.id);
+							return msg.from.id === currentUser?.id ? (
 								<ChatMessage key={msg.id} type="CurrentUser" msg={msg} />
 							) : (
 								<ChatMessage key={msg.id} type="OtherUsers" msg={msg} />
-							),
-						)}
+							);
+						})}
 					</IonRow>
 				</IonGrid>
 			</IonContent>
 			<IonFooter className="ion-no-border">
-				<IonRow>
-					<TextArea />
-				</IonRow>
 				<S.UserInputWrapper>
-					<S.ChatInputField
+					<TextArea
+						mentionables={roomDetails.users}
 						value={userInput}
-						onIonChange={({ detail: { value } }) =>
-							setUserInput(value as string)
-						}
+						setValue={setUserInput}
 					/>
 					<S.SendButtun
 						fill="clear"
