@@ -25,7 +25,7 @@ const chat = __importStar(require("../chat"));
 const chatControl = __importStar(require("../controllers/chat"));
 const Generate = __importStar(require("../config/generators"));
 const socketController = (socket) => {
-    socket.on('setUsername', (user) => {
+    socket.on('setUser', (user) => {
         log.info(`add user: ${user.id} to users list`);
         chatControl.addUserToUsersList(user);
         log.info(`add user: ${user.id} to public room and activeUsers list`);
@@ -59,7 +59,7 @@ const socketController = (socket) => {
             text: `${updatedUser.username} has joined the chat`,
         });
     });
-    socket.on('sendMessage', (msg) => {
+    socket.on('sendMessageToServer', (msg) => {
         const { data: { user }, } = socket;
         const message = {
             createdAt: Date.now(),
@@ -71,6 +71,9 @@ const socketController = (socket) => {
         chat.rooms[currentRoomIndex].messages.push(message);
         log.info(`message (id: ${message.id}) was sent`);
         socket.emit('message', message);
+    });
+    socket.on('private message', (anotherSocketId, msg) => {
+        socket.to(anotherSocketId).emit('private message', socket.id, msg);
     });
     socket.on('disconnect', () => {
         log.info('user disconnected, remove user from data base');

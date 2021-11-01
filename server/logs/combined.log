@@ -108901,3 +108901,117 @@
   service: 'GeoChating server logger',
   timestamp: '01-11-2021 18:57:37'
 }
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '01-11-2021 21:43:55'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: mbwA4-G77fdY_DLzAAAC)',
+  service: 'GeoChating server logger',
+  timestamp: '01-11-2021 21:43:59'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: C4snWtvIoVPpyI9JAAAD)',
+  service: 'GeoChating server logger',
+  timestamp: '01-11-2021 21:43:59'
+}
+{
+  level: 'info',
+  message: 'add user: lm9543e to users list',
+  service: 'GeoChating server logger',
+  timestamp: '01-11-2021 21:44:11'
+}
+{
+  level: 'info',
+  message: 'new user: lm9543e, add user to users list',
+  service: 'GeoChating server logger',
+  timestamp: '01-11-2021 21:44:11'
+}
+{
+  level: 'info',
+  message: 'add user: lm9543e to public room and activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '01-11-2021 21:44:11'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request, by user: : lm9543e to room: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '01-11-2021 21:44:11'
+}
+{
+  level: 'info',
+  message: 'user: lm9543e is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '01-11-2021 21:44:11'
+}
+{
+  level: 'info',
+  message: 'update user: lm9543e in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '01-11-2021 21:44:11'
+}
+{
+  level: 'info',
+  message: 'update user: lm9543e in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '01-11-2021 21:44:11'
+}
+{
+  level: 'info',
+  message: 'join the user: lm9543e to room: publicRoom on the socket',
+  service: 'GeoChating server logger',
+  timestamp: '01-11-2021 21:44:12'
+}
+{
+  level: 'info',
+  message: 'update user: lm9543e data on the socket: C4snWtvIoVPpyI9JAAAD',
+  service: 'GeoChating server logger',
+  timestamp: '01-11-2021 21:44:12'
+}
+{
+  level: 'info',
+  message: 'user: lm9543e) connected and joined to the public chat',
+  service: 'GeoChating server logger',
+  timestamp: '01-11-2021 21:44:12'
+}
+{
+  level: 'info',
+  message: 'display welcome message to user: lm9543e',
+  service: 'GeoChating server logger',
+  timestamp: '01-11-2021 21:44:12'
+}
+{
+  level: 'info',
+  message: 'displays joined room message to all other users',
+  service: 'GeoChating server logger',
+  timestamp: '01-11-2021 21:44:12'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '01-11-2021 21:44:18'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '01-11-2021 21:44:18'
+}
+{
+  level: 'info',
+  message: 'removing user: lm9543e from users list',
+  service: 'GeoChating server logger',
+  timestamp: '01-11-2021 21:44:18'
+}
+{
+  level: 'info',
+  message: 'delete from socket: C4snWtvIoVPpyI9JAAAD all saved data ',
+  service: 'GeoChating server logger',
+  timestamp: '01-11-2021 21:44:18'
+}

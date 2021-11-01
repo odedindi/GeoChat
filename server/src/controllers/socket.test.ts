@@ -33,7 +33,9 @@ const testRooms: Room[] = [
 const testMessage = 'This is a test message';
 
 describe('Test Socket Controller ', () => {
-	let io: Server, serverSocket: Socket, clientSocket: Socket;
+	let io: Server;
+	let serverSocket: Socket;
+	let clientSocket: Socket;
 
 	beforeAll((done) => {
 		const httpServer = createServer();

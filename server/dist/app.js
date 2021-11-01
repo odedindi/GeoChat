@@ -22,22 +22,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const http = __importStar(require("http"));
-const socketio = __importStar(require("socket.io"));
-const app_1 = __importDefault(require("./app"));
-const log = __importStar(require("./logger"));
-const socket_1 = __importDefault(require("./controllers/socket"));
-const PORT = process.env.SERVER_PORT;
-const server = http.createServer(app_1.default);
-const io = new socketio.Server(server, {
-    cors: { origin: '*', methods: ['GET', 'POST'] },
-});
-// initializing the socket io connection
-io.on('connection', (socket) => {
-    log.info(`new socket connected! socket id: ${socket.id})`);
-    (0, socket_1.default)(socket);
-});
-server.listen(PORT, () => {
-    log.info(`Server is running at http://localhost:${PORT}`);
-});
-//# sourceMappingURL=index.js.map
+const cors_1 = __importDefault(require("cors"));
+const dotenv_1 = __importDefault(require("dotenv"));
+const express_1 = __importDefault(require("express"));
+const chat = __importStar(require("./chat"));
+dotenv_1.default.config();
+const app = (0, express_1.default)();
+app.use((0, cors_1.default)());
+app.get('/', (_req, res) => res.status(201).json({ message: 'OK' }));
+app.get('/getRooms', (_req, res) => res.status(200).json({ data: chat.rooms }));
+exports.default = app;
+//# sourceMappingURL=app.js.map
