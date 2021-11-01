@@ -30,9 +30,9 @@ const socketController = (socket) => {
         chatControl.addUserToUsersList(user);
         log.info(`add user: ${user.id} to public room and activeUsers list`);
         const updatedUser = chatControl.addUserToRoomAndActiveUsersList(user, chat.roomsnames.publicRoom);
-        log.info('join the user to the room on the socket');
+        log.info(`join the user: ${user.id} to room: ${updatedUser.currentRoomname} on the socket`);
         socket.join(updatedUser.currentRoomname);
-        log.info('update user data on the socket');
+        log.info(`update user: ${user.id} data on the socket: ${socket.id}`);
         socket.data.user = updatedUser;
         socket.to(updatedUser.currentRoomname).emit('userChange', {
             user: updatedUser,
@@ -44,7 +44,7 @@ const socketController = (socket) => {
             users: chat.rooms[roomIndex].users,
         });
         log.info(`user: ${updatedUser.id}) connected and joined to the public chat`);
-        log.info('display welcome message to user');
+        log.info(`display welcome message to user: ${user.id}`);
         socket.emit('welcomeMessage', {
             createdAt: Date.now(),
             from: 'server',
@@ -82,42 +82,6 @@ const socketController = (socket) => {
         }
         socket.emit('userChange', { user, event: 'exit' });
     });
-    // socket.on('joinRoom', ({ username, roomname }: User) => {
-    // 	const user = joinUserToChat(socket.id, username, roomname);
-    // 	console.log('JoinRoom, id: ', socket.id);
-    // 	socket.join(user.roomname);
-    // 	// display welcome message to the user
-    // 	socket.emit('message', {
-    // 		userId: user.id,
-    // 		username: user.username,
-    // 		text: `Welcome ${user.username}`,
-    // 	});
-    // 	// displays joined room message to all other users except that particular user
-    // 	socket.broadcast.to(user.roomname).emit('message', {
-    // 		userId: user.id,
-    // 		username: user.username,
-    // 		text: `${user.username} has joined the chat`,
-    // 	});
-    // });
-    // // user sending message
-    // socket.on('chat', (text: string) => {
-    // 	const user = getCurrentUser(socket.id);
-    // 	io.to(user.roomname).emit('message', {
-    // 		userId: user.id,
-    // 		username: user.username,
-    // 		text,
-    // 	});
-    // });
-    // socket.on('disconnect', () => {
-    // 	const user: User | undefined = userDisconnect(socket.id);
-    // 	if (user) {
-    // 		io.to(user.roomname).emit('message', {
-    // 			userId: user.id,
-    // 			username: user.username,
-    // 			text: `${user.username} has left the chat`,
-    // 		});
-    // 	}
-    // });
 };
 exports.socketController = socketController;
 exports.default = exports.socketController;

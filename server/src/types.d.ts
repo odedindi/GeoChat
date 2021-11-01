@@ -1,17 +1,20 @@
 type UserID = string;
 
+type GeoCoord = {
+	lat: string | number;
+	lng: string | number;
+};
+
 type User = {
 	avatar?: string;
 	currentRoomname?: string;
 	email?: string;
-	geo?: {
-		lat: string | number;
-		lng: string | number;
-	};
+	geo: { coord?: GeoCoord; preferedDistance: number };
+
 	id: UserID;
-	name?: string;
+	name: string;
 	roomHistory?: string[];
-	username?: string;
+	username: string;
 };
 
 type Message = {

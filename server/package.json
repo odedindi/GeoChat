@@ -9,7 +9,7 @@
 		"tsc": "tsc",
 		"build": "yarn clean && yarn lint && yarn tsc",
 		"dev:start": "yarn build && yarn start",
-		"dev": "nodemon --watch src -t ts --exec yarn dev:start",
+		"dev": "nodemon --watch ./src -e ts --exec yarn dev:start",
 		"start": "node .",
 		"format": "prettier --write .",
 		"check:format": "prettier --check .",

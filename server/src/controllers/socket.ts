@@ -4,6 +4,7 @@ import * as chat from '../chat';
 import * as chatControl from '../controllers/chat';
 import * as Generate from '../config/generators';
 
+
 export const socketController = (socket: socketio.Socket) => {
 	socket.on('setUsername', (user: User) => {
 		log.info(`add user: ${user.id} to users list`);
@@ -14,10 +15,12 @@ export const socketController = (socket: socketio.Socket) => {
 			user,
 			chat.roomsnames.publicRoom,
 		);
-		log.info('join the user to the room on the socket');
+		log.info(
+			`join the user: ${user.id} to room: ${updatedUser.currentRoomname} on the socket`,
+		);
 		socket.join(updatedUser.currentRoomname);
 
-		log.info('update user data on the socket');
+		log.info(`update user: ${user.id} data on the socket: ${socket.id}`);
 		socket.data.user = updatedUser;
 
 		socket.to(updatedUser.currentRoomname).emit('userChange', {
@@ -32,7 +35,7 @@ export const socketController = (socket: socketio.Socket) => {
 		log.info(
 			`user: ${updatedUser.id}) connected and joined to the public chat`,
 		);
-		log.info('display welcome message to user');
+		log.info(`display welcome message to user: ${user.id}`);
 		socket.emit('welcomeMessage', {
 			createdAt: Date.now(),
 			from: 'server',
@@ -48,6 +51,7 @@ export const socketController = (socket: socketio.Socket) => {
 			text: `${updatedUser.username} has joined the chat`,
 		});
 	});
+
 
 	socket.on('sendMessage', (msg) => {
 		const {
@@ -76,47 +80,6 @@ export const socketController = (socket: socketio.Socket) => {
 		}
 		socket.emit('userChange', { user, event: 'exit' });
 	});
-
-	// socket.on('joinRoom', ({ username, roomname }: User) => {
-	// 	const user = joinUserToChat(socket.id, username, roomname);
-	// 	console.log('JoinRoom, id: ', socket.id);
-	// 	socket.join(user.roomname);
-
-	// 	// display welcome message to the user
-	// 	socket.emit('message', {
-	// 		userId: user.id,
-	// 		username: user.username,
-	// 		text: `Welcome ${user.username}`,
-	// 	});
-
-	// 	// displays joined room message to all other users except that particular user
-	// 	socket.broadcast.to(user.roomname).emit('message', {
-	// 		userId: user.id,
-	// 		username: user.username,
-	// 		text: `${user.username} has joined the chat`,
-	// 	});
-	// });
-
-	// // user sending message
-	// socket.on('chat', (text: string) => {
-	// 	const user = getCurrentUser(socket.id);
-	// 	io.to(user.roomname).emit('message', {
-	// 		userId: user.id,
-	// 		username: user.username,
-	// 		text,
-	// 	});
-	// });
-
-	// socket.on('disconnect', () => {
-	// 	const user: User | undefined = userDisconnect(socket.id);
-	// 	if (user) {
-	// 		io.to(user.roomname).emit('message', {
-	// 			userId: user.id,
-	// 			username: user.username,
-	// 			text: `${user.username} has left the chat`,
-	// 		});
-	// 	}
-	// });
 };
 
 export default socketController;

@@ -1,5 +1,5 @@
 import * as Generate from '../config/generators';
-
+// seed
 const users: User[] = [
 	{
 		id: 'fe51k85',
@@ -9,8 +9,11 @@ const users: User[] = [
 		avatar: Generate.randomAvatar(),
 		currentRoomname: '',
 		geo: {
-			lat: '-37.3159',
-			lng: '81.1496',
+			coord: {
+				lat: '-37.3159',
+				lng: '81.1496',
+			},
+			preferedDistance: 40,
 		},
 	},
 	{
@@ -21,8 +24,11 @@ const users: User[] = [
 		avatar: Generate.randomAvatar(),
 		currentRoomname: '',
 		geo: {
-			lat: '-43.9509',
-			lng: '-34.4618',
+			coord: {
+				lat: '-43.9509',
+				lng: '-34.4618',
+			},
+			preferedDistance: 40,
 		},
 	},
 	{
@@ -33,8 +39,11 @@ const users: User[] = [
 		avatar: Generate.randomAvatar(),
 		currentRoomname: '',
 		geo: {
-			lat: '-68.6102',
-			lng: '-47.0653',
+			coord: {
+				lat: '-68.6102',
+				lng: '-47.0653',
+			},
+			preferedDistance: 40,
 		},
 	},
 	{
@@ -45,8 +54,11 @@ const users: User[] = [
 		avatar: Generate.randomAvatar(),
 		currentRoomname: '',
 		geo: {
-			lat: '29.4572',
-			lng: '-164.2990',
+			coord: {
+				lat: '29.4572',
+				lng: '-164.2990',
+			},
+			preferedDistance: 40,
 		},
 	},
 	{
@@ -57,8 +69,11 @@ const users: User[] = [
 		avatar: Generate.randomAvatar(),
 		currentRoomname: '',
 		geo: {
-			lat: '-31.8129',
-			lng: '62.5342',
+			coord: {
+				lat: '-31.8129',
+				lng: '62.5342',
+			},
+			preferedDistance: 40,
 		},
 	},
 	{
@@ -69,8 +84,11 @@ const users: User[] = [
 		avatar: Generate.randomAvatar(),
 		currentRoomname: '',
 		geo: {
-			lat: '-71.4197',
-			lng: '71.7478',
+			coord: {
+				lat: '-71.4197',
+				lng: '71.7478',
+			},
+			preferedDistance: 40,
 		},
 	},
 	{
@@ -81,8 +99,11 @@ const users: User[] = [
 		avatar: Generate.randomAvatar(),
 		currentRoomname: '',
 		geo: {
-			lat: '24.8918',
-			lng: '21.8984',
+			coord: {
+				lat: '24.8918',
+				lng: '21.8984',
+			},
+			preferedDistance: 40,
 		},
 	},
 	{
@@ -93,8 +114,11 @@ const users: User[] = [
 		avatar: Generate.randomAvatar(),
 		currentRoomname: '',
 		geo: {
-			lat: '-14.3990',
-			lng: '-120.7677',
+			coord: {
+				lat: '-14.3990',
+				lng: '-120.7677',
+			},
+			preferedDistance: 40,
 		},
 	},
 	{
@@ -105,8 +129,11 @@ const users: User[] = [
 		avatar: Generate.randomAvatar(),
 		currentRoomname: '',
 		geo: {
-			lat: '24.6463',
-			lng: '-168.8889',
+			coord: {
+				lat: '24.6463',
+				lng: '-168.8889',
+			},
+			preferedDistance: 40,
 		},
 	},
 	{
@@ -117,8 +144,11 @@ const users: User[] = [
 		avatar: Generate.randomAvatar(),
 		currentRoomname: '',
 		geo: {
-			lat: '-38.2386',
-			lng: '57.2232',
+			coord: {
+				lat: '-38.2386',
+				lng: '57.2232',
+			},
+			preferedDistance: 40,
 		},
 	},
 ];

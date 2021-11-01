@@ -37,7 +37,7 @@ exports.get = {
 };
 // users list
 const updateUserDetailsInUsersList = (user, userIndex) => {
-    log.info('update user in users list');
+    log.info(`update user: ${user.id} in users list`);
     chat.users[userIndex] = user;
 };
 const addUserToUsersList = (user) => {
@@ -47,14 +47,14 @@ const addUserToUsersList = (user) => {
         chat.users.push(user);
     }
     else {
-        log.info('update user in users list');
+        log.info(`update user: ${user.id} in users list`);
         updateUserDetailsInUsersList(user, userIndex);
     }
 };
 exports.addUserToUsersList = addUserToUsersList;
 // activeUsers list
 const updateUserDetailsInActiveUsersList = (user, userIndex) => {
-    log.info('update user in activeUsers list');
+    log.info(`update user: ${user.id} in activeUsers list`);
     chat.activeUsers[userIndex] = user;
 };
 const addUserToActiveUsersList = (user) => {
@@ -64,7 +64,7 @@ const addUserToActiveUsersList = (user) => {
         chat.activeUsers.push(user);
     }
     else {
-        log.info('update user in activeUsers list');
+        log.info(`update user: ${user.id} in activeUsers list`);
         updateUserDetailsInActiveUsersList(user, userIndex);
     }
 };
@@ -89,7 +89,7 @@ const addUserToRoom = (user, roomname) => {
 };
 exports.addUserToRoom = addUserToRoom;
 const addUserToRoomAndActiveUsersList = (user, roomname) => {
-    log.info(`new addUserToRoom request`);
+    log.info(`new addUserToRoom request, by user: : ${user.id} to room: ${roomname}`);
     const updatedUser = Object.assign(Object.assign({}, user), { currentRoomname: roomname });
     (0, exports.addUserToRoom)(updatedUser, roomname);
     (0, exports.addUserToActiveUsersList)(updatedUser);

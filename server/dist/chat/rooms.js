@@ -37,8 +37,8 @@ const rooms = [
                 avatar: Generate.randomAvatar(),
                 currentRoomname: '',
                 geo: {
-                    lat: '-37.3159',
-                    lng: '81.1496',
+                    coord: { lat: '-37.3159', lng: '81.1496' },
+                    preferedDistance: 40,
                 },
             },
             {
@@ -49,8 +49,8 @@ const rooms = [
                 avatar: Generate.randomAvatar(),
                 currentRoomname: '',
                 geo: {
-                    lat: '-43.9509',
-                    lng: '-34.4618',
+                    coord: { lat: '-43.9509', lng: '-34.4618' },
+                    preferedDistance: 50,
                 },
             },
         ],
@@ -64,8 +64,8 @@ const rooms = [
                     avatar: Generate.randomAvatar(),
                     currentRoomname: '',
                     geo: {
-                        lat: '-43.9509',
-                        lng: '-34.4618',
+                        coord: { lat: '-43.9509', lng: '-34.4618' },
+                        preferedDistance: 50,
                     },
                 },
                 text: '[{"type":"paragraph","children":[{"text":"hey guys"}]}]',
@@ -81,8 +81,8 @@ const rooms = [
                     avatar: Generate.randomAvatar(),
                     currentRoomname: '',
                     geo: {
-                        lat: '-37.3159',
-                        lng: '81.1496',
+                        coord: { lat: '-37.3159', lng: '81.1496' },
+                        preferedDistance: 40,
                     },
                 },
                 text: '[{"type":"paragraph","children":[{"text":"hey "},{"type":"mention","character":"Bret","children":[{"text":""}]},{"text":""}]}]',

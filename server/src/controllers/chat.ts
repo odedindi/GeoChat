@@ -17,7 +17,7 @@ export const get = {
 
 // users list
 const updateUserDetailsInUsersList = (user: User, userIndex: number) => {
-	log.info('update user in users list');
+	log.info(`update user: ${user.id} in users list`);
 	chat.users[userIndex] = user;
 };
 
@@ -27,14 +27,14 @@ export const addUserToUsersList = (user: User) => {
 		log.info(`new user: ${user.id}, add user to users list`);
 		chat.users.push(user);
 	} else {
-		log.info('update user in users list');
+		log.info(`update user: ${user.id} in users list`);
 		updateUserDetailsInUsersList(user, userIndex);
 	}
 };
 
 // activeUsers list
 const updateUserDetailsInActiveUsersList = (user: User, userIndex: number) => {
-	log.info('update user in activeUsers list');
+	log.info(`update user: ${user.id} in activeUsers list`);
 	chat.activeUsers[userIndex] = user;
 };
 
@@ -44,7 +44,7 @@ export const addUserToActiveUsersList = (user: User) => {
 		log.info(`new user: ${user.id}, add user to activeUsers list`);
 		chat.activeUsers.push(user);
 	} else {
-		log.info('update user in activeUsers list');
+		log.info(`update user: ${user.id} in activeUsers list`);
 		updateUserDetailsInActiveUsersList(user, userIndex);
 	}
 };
@@ -69,7 +69,7 @@ export const addUserToRoomAndActiveUsersList = (
 	user: User,
 	roomname: string,
 ) => {
-	log.info(`new addUserToRoom request`);
+	log.info(`new addUserToRoom request, by user: : ${user.id} to room: ${roomname}`);
 	const updatedUser: User = { ...user, currentRoomname: roomname };
 	addUserToRoom(updatedUser, roomname);
 	addUserToActiveUsersList(updatedUser);
