@@ -22,6 +22,7 @@ import TextArea from 'src/components/ChatTextArea';
 import Loading from 'src/components/Spinner/Loading';
 import useDidMount from 'src/hooks/useDidMount';
 import { useKeyboardListener } from 'src/hooks/useKeyboardListener';
+import useStorage from 'src/hooks/useStorage';
 import { getLogger } from 'src/utils/logger';
 
 import * as S from './styles';
@@ -33,26 +34,32 @@ const GeneralChat: React.FC = () => {
 
 	const history = useHistory();
 	const { socket } = useSocket();
+	const { storage } = useStorage();
+
 	const {
 		storeState: { user },
 		storeDispatch,
 	} = useStore();
-
 	const [currentUser, setCurrentUser] = React.useState<User | null>(() => user);
 
 	React.useEffect(() => {
-		if (!currentUser) {
-			const userFromStorage = localStorage.getItem('GeoChatUserDetails');
-			if (!userFromStorage) {
+		const getUserFromStorage = async () => {
+			const { value } = (await storage.getItem('GeoChatUserDetails')) as {
+				value: string;
+			};
+			if (!value) {
 				log('no user found, pushing to home page');
 				history.push('/home');
 			} else {
-				setCurrentUser(JSON.parse(userFromStorage) as User);
-				storeDispatch(Action.addUser(JSON.parse(userFromStorage) as User));
+				setCurrentUser(JSON.parse(value) as User);
+				storeDispatch(Action.addUser(JSON.parse(value) as User));
 				log('found user in storage, data dispatched to store');
 			}
-		}
-	}, [currentUser, history, storeDispatch, user]);
+		};
+
+		getUserFromStorage();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 	const [userInput, setUserInput] = React.useState<
 		CustomTypes['ParagraphElement'][]
 	>([
@@ -60,7 +67,7 @@ const GeneralChat: React.FC = () => {
 			type: 'paragraph',
 			children: [
 				{
-					text: 'This example mentions rendering as inline elements inside the document.',
+					text: '',
 				},
 			],
 		},
@@ -82,7 +89,7 @@ const GeneralChat: React.FC = () => {
 
 	React.useEffect(() => {
 		if (currentUser) {
-			socket.emit('setUsername', currentUser);
+			socket.emit('setUser', currentUser);
 			socket.on(
 				'userChange',
 				({ user, event }: { user: User; event: 'enter' | 'exit' }) => {
@@ -135,8 +142,8 @@ const GeneralChat: React.FC = () => {
 		}
 
 		// in case there is input
-		log('sendMessage');
-		socket.emit('sendMessage', { text: JSON.stringify(userInput) });
+		log('sendMessageToServer');
+		socket.emit('sendMessageToServer', { text: JSON.stringify(userInput) });
 		setToastState({
 			show: true,
 			msg: `msg sent`,
@@ -147,7 +154,7 @@ const GeneralChat: React.FC = () => {
 
 	const disconnectHandler = () => {
 		log('disconnect');
-		localStorage.removeItem('GeoChatUserDetails');
+		storage.removeItem('GeoChatUserDetails');
 		history.push('/');
 	};
 
@@ -175,19 +182,13 @@ const GeneralChat: React.FC = () => {
 						You joined the chat as {currentUser?.username}
 					</S.ChatTitle>
 					<IonRow>
-						{roomDetails.messages.map((msg) => {
-							// if (roomDetails.rendredMessages.has(msg.id)) {
-							// 	console.log(roomDetails.rendredMessages.has(msg.id));
-							// 	return null;
-							// }
-
-							// roomDetails.rendredMessages.add(msg.id);
-							return msg.from.id === currentUser?.id ? (
+						{roomDetails.messages.map((msg) =>
+							msg.from.id === currentUser?.id ? (
 								<ChatMessage key={msg.id} type="CurrentUser" msg={msg} />
 							) : (
 								<ChatMessage key={msg.id} type="OtherUsers" msg={msg} />
-							);
-						})}
+							),
+						)}
 					</IonRow>
 				</IonGrid>
 			</IonContent>
@@ -197,6 +198,7 @@ const GeneralChat: React.FC = () => {
 						mentionables={roomDetails.users}
 						value={userInput}
 						setValue={setUserInput}
+						placeholder="What is on your mind?"
 					/>
 					<S.SendButtun
 						fill="clear"

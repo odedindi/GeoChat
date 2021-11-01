@@ -4,22 +4,27 @@ import type { CustomTypes } from 'slate';
 import { Editor, Transforms, createEditor, Range } from 'slate';
 import { withHistory } from 'slate-history';
 import { Slate, ReactEditor, withReact } from 'slate-react';
+import { getLogger } from 'src/utils/logger';
 
 import * as SlateEditor from '../SlateEditor';
 
 import * as S from './styles';
 
+const log = getLogger('TextArea Component');
+
 type TextAreaProps = {
 	mentionables: User[];
-	value: CustomTypes['ParagraphElement'][];
+	placeholder: string;
 	setValue: React.Dispatch<
 		React.SetStateAction<CustomTypes['ParagraphElement'][]>
 	>;
+	value: CustomTypes['ParagraphElement'][];
 };
 const TextArea: React.FC<TextAreaProps> = ({
 	mentionables,
-	value,
+	placeholder,
 	setValue,
+	value,
 }) => {
 	// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 	const ref = React.useRef<HTMLDivElement | null>(undefined!);
@@ -128,19 +133,15 @@ const TextArea: React.FC<TextAreaProps> = ({
 			<S.Editable
 				renderElement={renderElement}
 				onKeyDown={onKeyDown}
-				placeholder="What is on your mind?"
+				placeholder={placeholder}
 				onSelect={(e) => {
-					/**
-					 * Chrome doesn't scroll at bottom of the page. This fixes that.
-					 */
+					// Chrome doesn't scroll at bottom of the page. This fixes that.
 					if (!(window as any).chrome) return;
 					if (editor.selection == null) return;
 					try {
-						/**
-						 * Need a try/catch because sometimes you get an error like:
-						 *
-						 * Error: Cannot resolve a DOM node from Slate node: {"type":"p","children":[{"text":"","by":-1,"at":-1}]}
-						 */
+						// Need a try/catch because sometimes you get an error like:
+						// Error: Cannot resolve a DOM node from Slate node: {"type":"p","children":[{"text":"","by":-1,"at":-1}]}
+
 						const domPoint = ReactEditor.toDOMPoint(
 							editor,
 							editor.selection.focus,
@@ -151,9 +152,7 @@ const TextArea: React.FC<TextAreaProps> = ({
 						if (element == null) return;
 						element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 					} catch (e) {
-						/**
-						 * Empty catch. Do nothing if there is an error.
-						 */
+						log(`Error: ${e}`);
 					}
 				}}
 			/>

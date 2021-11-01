@@ -11,16 +11,18 @@ const Mention: React.FC<CustomTypes['RenderElementProps']> = ({
 	const selected = useSelected();
 	const focused = useFocused();
 	return (
-		<S.Mention
-			{...attributes}
-			contentEditable={false}
-			data-cy={`mention-${element.character.replace(' ', '-')}`}
-			selected={selected}
-			focused={focused}
-		>
-			@{element.character}
-			{children}
-		</S.Mention>
+		<>
+			<S.Mention
+				{...attributes}
+				contentEditable={false}
+				data-cy={`mention-${element.character.replace(' ', '-')}`}
+				selected={selected}
+				focused={focused}
+			>
+				@{element.character}
+				{children}
+			</S.Mention>
+		</>
 	);
 };
 

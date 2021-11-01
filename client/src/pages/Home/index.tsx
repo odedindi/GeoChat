@@ -16,6 +16,7 @@ import Loading from 'src/components/Spinner/Loading';
 import useDidMount from 'src/hooks/useDidMount';
 import { useGeoLocation } from 'src/hooks/useGeoLocation';
 import { useKeyboardListener } from 'src/hooks/useKeyboardListener';
+import useStorage from 'src/hooks/useStorage';
 import useUploadNewAvatar from 'src/hooks/useUploadNewAvatar';
 import { MainButton } from 'src/theme';
 import { generateRandomAvatar } from 'src/utils/generateRandomAvatar';
@@ -35,11 +36,21 @@ const Home: React.FC = () => {
 	const { socket } = useSocket();
 	const { storeDispatch } = useStore();
 	const { geoLocation, getGeoLocation } = useGeoLocation();
+	const { storage } = useStorage();
 
 	const [currentUser, setCurrentUser] = React.useState<User | null>(null);
 	React.useEffect(() => {
 		const user = localStorage.getItem('GeoChatUserDetails');
 		if (user) setCurrentUser(JSON.parse(user) as User);
+
+		const get = async () => {
+			const { value } = (await storage.getItem('GeoChatUserDetails')) as {
+				value: string;
+			};
+			if (value) setCurrentUser(JSON.parse(value) as User);
+		};
+		get();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	const { newAvatar, uploadNewAvatar } = useUploadNewAvatar();
@@ -70,8 +81,12 @@ const Home: React.FC = () => {
 			setGeoLocError(null);
 			setCurrentUser((prev) =>
 				!prev
-					? { ...newUserTemplate, id: generateRandomId(), geo: geoLocation }
-					: { ...prev, geo: geoLocation },
+					? {
+							...newUserTemplate,
+							id: generateRandomId(),
+							geo: { ...newUserTemplate.geo, coord: geoLocation },
+					  }
+					: { ...prev, geo: { ...prev.geo, coord: geoLocation } },
 			);
 			log(`getLocation successful`);
 		}
@@ -108,7 +123,7 @@ const Home: React.FC = () => {
 		setSubmiting(true);
 		if (!disableSubmitButton && socket) {
 			socket.emit('setUsername', currentUser);
-			localStorage.setItem('GeoChatUserDetails', JSON.stringify(currentUser));
+			storage.setItem('GeoChatUserDetails', JSON.stringify(currentUser));
 			storeDispatch(Action.addUser(currentUser as User));
 			log('hadnled setUsername successfully, pushing client to /chat');
 			setTimeout(() => {
@@ -117,7 +132,14 @@ const Home: React.FC = () => {
 		} else {
 			setSubmiting(false);
 		}
-	}, [currentUser, disableSubmitButton, history, socket, storeDispatch]);
+	}, [
+		currentUser,
+		disableSubmitButton,
+		history,
+		socket,
+		storage,
+		storeDispatch,
+	]);
 	useKeyboardListener(submitHandler, 'Enter');
 
 	if (!didMount) return <Loading open={!didMount} />;

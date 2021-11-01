@@ -1,20 +1,12 @@
-type User = {
-	avatar?: string;
-	currentRoomname?: string;
-	email?: string;
-	geo?: {
-		lat: string | number;
-		lng: string | number;
-	};
-	id: string;
-	name?: string;
-	roomHistory?: string[];
-	username?: string;
-};
-
 type StoreContext = {
 	storeState: StoreState;
 	storeDispatch: React.Dispatch<ReducerActionArgument>;
+	mapMarking: {
+		useMarkings: LeafletGeometryElement[];
+		setUserMarkings: React.Dispatch<
+			React.SetStateAction<LeafletGeometryElement[]>
+		>;
+	};
 };
 
 type StoreState = {
@@ -29,7 +21,17 @@ type AddUserAction = {
 	(payload: User): AddUserActionArgument;
 };
 
-type ReducerActionArgument = AddUserActionArgument;
+interface SetPreferedDistanceActionArgument {
+	type: 'SETPREFEREDDISTANCE';
+	payload: number;
+}
+type SetPreferedDistanceAction = {
+	(payload: number): SetPreferedDistanceActionArgument;
+};
+
+type ReducerActionArgument =
+	| AddUserActionArgument
+	| SetPreferedDistanceActionArgument;
 
 type StoreReducer = {
 	(state: StoreState, action: ReducerActionArgument): StoreState;

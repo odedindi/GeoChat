@@ -27,9 +27,15 @@
 		"@types/react-router-dom": "^5.1.7",
 		"emotion": "^11.0.0",
 		"ionicons": "^5.4.0",
+		"leaflet": "^1.7.1",
+		"leaflet-defaulticon-compatibility": "^0.1.1",
+		"leaflet-draw": "^1.0.4",
+		"leaflet-easybutton": "^2.4.0",
 		"moment": "^2.29.1",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1",
+		"react-leaflet": "^3.2.2",
+		"react-leaflet-draw": "^0.19.8",
 		"react-router": "^5.2.0",
 		"react-router-dom": "^5.2.0",
 		"react-scripts": "4.0.2",
@@ -76,24 +82,20 @@
 			"prettier"
 		]
 	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
-	},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not op_mini all"
+	],
 	"description": "GeoChat prototype",
 	"devDependencies": {
 		"@capacitor/cli": "3.2.5",
 		"@ionic/eslint-plugin": "^0.0.1",
 		"@types/jest": "^27.0.2",
+		"@types/leaflet": "^1.7.5",
+		"@types/leaflet-draw": "^1.0.5",
 		"@types/mocha": "^9.0.0",
+		"@types/react-leaflet": "^2.8.2",
 		"@types/slate-plain-serializer": "^0.7.1",
 		"@types/styled-components": "^5.1.15",
 		"eslint": "7.32.0",

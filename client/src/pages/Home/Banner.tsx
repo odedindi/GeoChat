@@ -1,4 +1,4 @@
-import { IonCol, IonIcon, IonImg, IonRow } from '@ionic/react';
+import { IonCol, IonIcon, IonImg, IonRange, IonRow } from '@ionic/react';
 import * as I from 'ionicons/icons';
 import * as React from 'react';
 
@@ -9,6 +9,13 @@ type BannerProps = {
 	uploadNewAvatar: UploadNewAvatar;
 };
 const Banner: React.FC<BannerProps> = ({ uploadNewAvatar, user }) => {
+	const [preferedDistanceValue, setPreferedDistanceValue] = React.useState(0);
+
+	const [rangeValue, setRangeValue] = React.useState<{
+		lower: number;
+		upper: number;
+	}>({ lower: 0, upper: 0 });
+
 	return (
 		<S.Banner>
 			<IonRow>
@@ -35,7 +42,21 @@ const Banner: React.FC<BannerProps> = ({ uploadNewAvatar, user }) => {
 				</IonCol>
 				<IonCol size="12" className="ion-text-center">
 					<S.ProfileTitle>
-						{user?.geo ? `Coord: [${user.geo.lat}, ${user.geo.lng}]` : ''}
+						{user?.geo.coord
+							? `Coord: [${user.geo.coord.lat}, ${user.geo.coord.lng}]`
+							: ''}
+					</S.ProfileTitle>
+					<S.ProfileTitle>
+						{user ? `preferedDistance: ${user.geo.preferedDistance}` : ''}
+						<IonRange
+							dualKnobs={true}
+							pin={true}
+							min={40}
+							max={200}
+							step={10}
+							snaps={true}
+							onIonChange={(e) => setRangeValue(e.detail.value as any)}
+						/>
 					</S.ProfileTitle>
 				</IonCol>
 			</IonRow>

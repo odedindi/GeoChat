@@ -17,6 +17,19 @@ export const reducer = (
 				...state,
 				user: user,
 			};
+		// case T.SETPREFEREDDISTANCE:
+		// 	// eslint-disable-next-line no-case-declarations
+		// 	const preferedDistance = payload as number;
+		// 	return {
+		// 		...state,
+		// 		user: {
+		// 			...state.user,
+		// 			geo: {
+		// 				...state.user?.geo,
+		// 				preferedDistance: preferedDistance
+		// 			}
+		// 		}
+		// 	}
 		default:
 			return state;
 	}

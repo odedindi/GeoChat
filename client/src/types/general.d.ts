@@ -7,11 +7,11 @@ type User = {
 	avatar?: string;
 	currentRoomname?: string;
 	email?: string;
-	geo?: GeoCoord;
+	geo: { coord?: GeoCoord; preferedDistance: number };
 	id: string;
-	name?: string;
+	name: string;
 	roomHistory?: string[];
-	username?: string;
+	username: string;
 };
 
 type Msg = {
@@ -20,3 +20,5 @@ type Msg = {
 	id: string;
 	text: string;
 };
+
+type LeafletGeometryElement = { id: number; latlngs: GeoCoord[] };

@@ -1,3 +1,4 @@
 export enum ActionTypes {
 	ADDUSER = 'ADDUSER',
+	SETPREFEREDDISTANCE = 'SETPREFEREDDISTANCE',
 }

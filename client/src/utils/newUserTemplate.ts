@@ -3,8 +3,8 @@ export const newUserTemplate: User = {
 	currentRoomname: '',
 	email: '',
 	geo: {
-		lat: '',
-		lng: '',
+		coord: { lat: '', lng: '' },
+		preferedDistance: 40,
 	},
 	id: '',
 	name: '',
