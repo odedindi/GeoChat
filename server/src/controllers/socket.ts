@@ -4,9 +4,8 @@ import * as chat from '../chat';
 import * as chatControl from '../controllers/chat';
 import * as Generate from '../config/generators';
 
-
 export const socketController = (socket: socketio.Socket) => {
-	socket.on('setUsername', (user: User) => {
+	socket.on('setUser', (user: User) => {
 		log.info(`add user: ${user.id} to users list`);
 		chatControl.addUserToUsersList(user);
 
@@ -52,8 +51,7 @@ export const socketController = (socket: socketio.Socket) => {
 		});
 	});
 
-
-	socket.on('sendMessage', (msg) => {
+	socket.on('sendMessageToServer', (msg) => {
 		const {
 			data: { user },
 		}: { data: { user: User } } = socket;
@@ -70,6 +68,11 @@ export const socketController = (socket: socketio.Socket) => {
 		log.info(`message (id: ${message.id}) was sent`);
 		socket.emit('message', message);
 	});
+
+	socket.on('private message', (anotherSocketId, msg) => {
+		socket.to(anotherSocketId).emit('private message', socket.id, msg);
+	});
+
 	socket.on('disconnect', () => {
 		log.info('user disconnected, remove user from data base');
 		const { user }: { user: User } = socket.data;

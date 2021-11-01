@@ -69,7 +69,9 @@ export const addUserToRoomAndActiveUsersList = (
 	user: User,
 	roomname: string,
 ) => {
-	log.info(`new addUserToRoom request, by user: : ${user.id} to room: ${roomname}`);
+	log.info(
+		`new addUserToRoom request, by user: : ${user.id} to room: ${roomname}`,
+	);
 	const updatedUser: User = { ...user, currentRoomname: roomname };
 	addUserToRoom(updatedUser, roomname);
 	addUserToActiveUsersList(updatedUser);

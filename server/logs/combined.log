@@ -108841,3 +108841,63 @@
   service: 'GeoChating server logger',
   timestamp: '01-11-2021 16:35:09'
 }
+{
+  level: 'info',
+  message: 'new user: undefined, add user to users list',
+  service: 'GeoChating server logger',
+  timestamp: '01-11-2021 17:53:08'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request, by user: : undefined to room: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '01-11-2021 17:53:08'
+}
+{
+  level: 'info',
+  message: 'user: undefined is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '01-11-2021 17:53:08'
+}
+{
+  level: 'info',
+  message: 'update user: undefined in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '01-11-2021 17:53:08'
+}
+{
+  level: 'info',
+  message: 'update user: undefined in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '01-11-2021 17:53:08'
+}
+{
+  level: 'info',
+  message: 'new user: undefined, add user to users list',
+  service: 'GeoChating server logger',
+  timestamp: '01-11-2021 18:57:37'
+}
+{
+  level: 'info',
+  message: 'new addUserToRoom request, by user: : undefined to room: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '01-11-2021 18:57:37'
+}
+{
+  level: 'info',
+  message: 'user: undefined is already in roomname: publicRoom',
+  service: 'GeoChating server logger',
+  timestamp: '01-11-2021 18:57:37'
+}
+{
+  level: 'info',
+  message: 'update user: undefined in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '01-11-2021 18:57:37'
+}
+{
+  level: 'info',
+  message: 'update user: undefined in activeUsers list',
+  service: 'GeoChating server logger',
+  timestamp: '01-11-2021 18:57:37'
+}
