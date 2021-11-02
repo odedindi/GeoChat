@@ -1,7 +1,7 @@
 import * as http from 'http';
 import * as socketio from 'socket.io';
 import app from './app';
-import * as log from './logger';
+import { log } from './config';
 import socketController from './controllers/socket';
 
 const PORT = process.env.SERVER_PORT;

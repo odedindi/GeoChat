@@ -1,4 +1,4 @@
-import { generate } from '../config';
+import { generate } from '../utils';
 // seed
 const users: User[] = [
 	{

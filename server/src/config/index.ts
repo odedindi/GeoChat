@@ -1,3 +1,3 @@
-import * as generate from './generators';
+import * as log from './logger';
 
-export { generate };
+export { log };

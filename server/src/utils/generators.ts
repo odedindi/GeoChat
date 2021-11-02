@@ -1,4 +1,5 @@
-export const id = () => Math.random().toString(36);
+import { v4 as uuid } from 'uuid';
+export const id = () => uuid();
 
 export const randomNumberFrom1ToNumber = (num: number) =>
 	Math.floor(Math.random() * num) + 1;

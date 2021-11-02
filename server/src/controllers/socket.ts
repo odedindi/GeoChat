@@ -2,7 +2,7 @@ import * as socketio from 'socket.io';
 import * as log from '../logger';
 import * as chat from '../chat';
 import * as chatControl from '../controllers/chat';
-import { generate } from '../config';
+import { generate } from '../utils';
 
 export const socketController = (socket: socketio.Socket) => {
 	socket.on('setUser', (user: User) => {
