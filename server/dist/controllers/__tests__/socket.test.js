@@ -6,13 +6,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const http_1 = require("http");
 const socket_io_1 = require("socket.io");
 const socket_io_client_1 = __importDefault(require("socket.io-client"));
-const testUser = {
+const model_1 = require("src/repositories/model");
+const testUser = new model_1.User({
     id: 'fx52kk5',
     name: 'Glenna Reichert',
     username: 'Delphine',
     email: 'Chaim_McDermott@dana.io',
+    roomHistory: [],
     avatar: '',
-    currentRoomname: '',
     geo: {
         coord: {
             lat: '24.6463',
@@ -20,15 +21,14 @@ const testUser = {
         },
         preferedDistance: 40,
     },
-};
+});
 const testRoomName = 'testRoom';
-const testRooms = [
-    {
-        roomname: testRoomName,
-        users: [],
-        messages: [],
-    },
-];
+const testRoom = new model_1.Room({
+    roomname: testRoomName,
+    users: [],
+    messages: [],
+});
+const testRooms = [testRoom];
 const testMessage = 'This is a test message';
 describe('Test Socket Controller ', () => {
     let io;

@@ -19,7 +19,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.generate = void 0;
-const generate = __importStar(require("./generators"));
-exports.generate = generate;
+exports.log = void 0;
+const log = __importStar(require("./logger"));
+exports.log = log;
 //# sourceMappingURL=index.js.map

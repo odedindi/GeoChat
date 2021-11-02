@@ -1,35 +1,40 @@
 import * as socketio from 'socket.io';
-import * as log from '../logger';
-import * as chat from '../chat';
+import { log } from '../config';
 import * as chatControl from '../controllers/chat';
+import { chat } from '../repositories/seeds';
 import { generate } from '../utils';
 
 export const socketController = (socket: socketio.Socket) => {
-	socket.on('setUser', (user: User) => {
+	socket.on('setUser', (user: IUser) => {
 		log.info(`add user: ${user.id} to users list`);
 		chatControl.addUserToUsersList(user);
 
 		log.info(`add user: ${user.id} to public room and activeUsers list`);
-		const updatedUser = chatControl.addUserToRoomAndActiveUsersList(
+		const updatedUser = chatControl.addUserToRoom(
 			user,
 			chat.roomsnames.publicRoom,
 		);
 		log.info(
-			`join the user: ${user.id} to room: ${updatedUser.currentRoomname} on the socket`,
+			`join the user: ${user.id} to room: ${updatedUser.roomHistory[0]} on the socket`,
 		);
-		socket.join(updatedUser.currentRoomname);
+		socket.join(updatedUser.roomHistory[0]);
 
 		log.info(`update user: ${user.id} data on the socket: ${socket.id}`);
 		socket.data.user = updatedUser;
 
-		socket.to(updatedUser.currentRoomname).emit('userChange', {
+		socket.to(updatedUser.roomHistory[0]).emit('userChange', {
 			user: updatedUser,
 			event: 'enter',
 		});
-		const roomIndex = chatControl.get.roomIndex(updatedUser.currentRoomname);
 		socket.emit('updateRoomDetails', {
-			messages: chat.rooms[roomIndex].messages,
-			users: chat.rooms[roomIndex].users,
+			messages:
+				chat.roomsDict[
+					updatedUser.roomHistory[0] as keyof typeof chat.roomsDict
+				].messages,
+			users:
+				chat.roomsDict[
+					updatedUser.roomHistory[0] as keyof typeof chat.roomsDict
+				].users,
 		});
 		log.info(
 			`user: ${updatedUser.id}) connected and joined to the public chat`,
@@ -43,7 +48,7 @@ export const socketController = (socket: socketio.Socket) => {
 		});
 
 		log.info('displays joined room message to all other users');
-		socket.broadcast.to(updatedUser.currentRoomname).emit('welcomeMessage', {
+		socket.broadcast.to(updatedUser.roomHistory[0]).emit('welcomeMessage', {
 			createdAt: Date.now(),
 			from: 'server',
 			id: generate.id(),
@@ -52,18 +57,16 @@ export const socketController = (socket: socketio.Socket) => {
 	});
 
 	socket.on('sendMessageToServer', (msg) => {
-		const {
-			data: { user },
-		}: { data: { user: User } } = socket;
-		const message: Message = {
+		const message: IMessage = {
 			createdAt: Date.now(),
-			from: user,
+			from: socket.data.user,
 			id: generate.id(),
 			text: msg.text,
 		};
 
-		const currentRoomIndex = chatControl.get.roomIndex(user.currentRoomname);
-		chat.rooms[currentRoomIndex].messages.push(message);
+		chat.roomsDict[
+			socket.data.user.roomHistory[0] as keyof typeof chat.roomsDict
+		].messages.push(message);
 
 		log.info(`message (id: ${message.id}) was sent`);
 		socket.emit('message', message);
@@ -75,7 +78,7 @@ export const socketController = (socket: socketio.Socket) => {
 
 	socket.on('disconnect', () => {
 		log.info('user disconnected, remove user from data base');
-		const { user }: { user: User } = socket.data;
+		const { user }: { user: IUser } = socket.data;
 		if (user) {
 			chatControl.userDisconnected(user);
 			log.info(`delete from socket: ${socket.id} all saved data `);

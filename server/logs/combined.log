@@ -109021,3 +109021,21 @@
   service: 'GeoChating server logger',
   timestamp: '02-11-2021 13:20:09'
 }
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '02-11-2021 23:52:44'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '02-11-2021 23:53:38'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '02-11-2021 23:59:16'
+}

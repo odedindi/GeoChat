@@ -18,26 +18,8 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const http = __importStar(require("http"));
-const socketio = __importStar(require("socket.io"));
-const app_1 = __importDefault(require("./app"));
-const config_1 = require("./config");
-const socket_1 = __importDefault(require("./controllers/socket"));
-const PORT = process.env.SERVER_PORT;
-const server = http.createServer(app_1.default);
-const io = new socketio.Server(server, {
-    cors: { origin: '*', methods: ['GET', 'POST'] },
-});
-// initializing the socket io connection
-io.on('connection', (socket) => {
-    config_1.log.info(`new socket connected! socket id: ${socket.id})`);
-    (0, socket_1.default)(socket);
-});
-server.listen(PORT, () => {
-    config_1.log.info(`Server is running at http://localhost:${PORT}`);
-});
+exports.generate = void 0;
+const generate = __importStar(require("./generators"));
+exports.generate = generate;
 //# sourceMappingURL=index.js.map
