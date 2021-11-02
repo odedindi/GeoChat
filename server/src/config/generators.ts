@@ -1,4 +1,4 @@
-export const randomId = () => Math.random().toString(36);
+export const id = () => Math.random().toString(36);
 
 export const randomNumberFrom1ToNumber = (num: number) =>
 	Math.floor(Math.random() * num) + 1;
@@ -13,4 +13,4 @@ export const randomString = () => {
 	return result;
 };
 
-export const randomAvatar = () => `https://robohash.org/${randomString()}`;
+export const avatar = () => `https://robohash.org/${randomString()}`;

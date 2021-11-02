@@ -23,7 +23,7 @@ exports.socketController = void 0;
 const log = __importStar(require("../logger"));
 const chat = __importStar(require("../chat"));
 const chatControl = __importStar(require("../controllers/chat"));
-const Generate = __importStar(require("../config/generators"));
+const config_1 = require("../config");
 const socketController = (socket) => {
     socket.on('setUser', (user) => {
         log.info(`add user: ${user.id} to users list`);
@@ -48,14 +48,14 @@ const socketController = (socket) => {
         socket.emit('welcomeMessage', {
             createdAt: Date.now(),
             from: 'server',
-            id: Generate.randomId(),
+            id: config_1.generate.id(),
             text: `Welcome ${updatedUser.username}`,
         });
         log.info('displays joined room message to all other users');
         socket.broadcast.to(updatedUser.currentRoomname).emit('welcomeMessage', {
             createdAt: Date.now(),
             from: 'server',
-            id: Generate.randomId(),
+            id: config_1.generate.id(),
             text: `${updatedUser.username} has joined the chat`,
         });
     });
@@ -64,7 +64,7 @@ const socketController = (socket) => {
         const message = {
             createdAt: Date.now(),
             from: user,
-            id: Generate.randomId(),
+            id: config_1.generate.id(),
             text: msg.text,
         };
         const currentRoomIndex = chatControl.get.roomIndex(user.currentRoomname);

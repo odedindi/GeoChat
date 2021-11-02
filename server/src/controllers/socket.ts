@@ -2,7 +2,7 @@ import * as socketio from 'socket.io';
 import * as log from '../logger';
 import * as chat from '../chat';
 import * as chatControl from '../controllers/chat';
-import * as Generate from '../config/generators';
+import { generate } from '../config';
 
 export const socketController = (socket: socketio.Socket) => {
 	socket.on('setUser', (user: User) => {
@@ -38,7 +38,7 @@ export const socketController = (socket: socketio.Socket) => {
 		socket.emit('welcomeMessage', {
 			createdAt: Date.now(),
 			from: 'server',
-			id: Generate.randomId(),
+			id: generate.id(),
 			text: `Welcome ${updatedUser.username}`,
 		});
 
@@ -46,7 +46,7 @@ export const socketController = (socket: socketio.Socket) => {
 		socket.broadcast.to(updatedUser.currentRoomname).emit('welcomeMessage', {
 			createdAt: Date.now(),
 			from: 'server',
-			id: Generate.randomId(),
+			id: generate.id(),
 			text: `${updatedUser.username} has joined the chat`,
 		});
 	});
@@ -58,7 +58,7 @@ export const socketController = (socket: socketio.Socket) => {
 		const message: Message = {
 			createdAt: Date.now(),
 			from: user,
-			id: Generate.randomId(),
+			id: generate.id(),
 			text: msg.text,
 		};
 

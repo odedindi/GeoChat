@@ -1,15 +1,19 @@
+type StrOrNum = string | number;
+type SocketID = StrOrNum;
 type UserID = string;
 
 type GeoCoord = {
-	lat: string | number;
-	lng: string | number;
+	lat: StrOrNum;
+	lng: StrOrNum;
 };
+
+type UserGeoData = { coord?: GeoCoord; preferedDistance: number };
 
 type User = {
 	avatar?: string;
 	currentRoomname?: string;
 	email?: string;
-	geo: { coord?: GeoCoord; preferedDistance: number };
+	geo: UserGeoData;
 
 	id: UserID;
 	name: string;
