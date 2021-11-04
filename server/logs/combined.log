@@ -109039,3 +109039,51 @@
   service: 'GeoChating server logger',
   timestamp: '02-11-2021 23:59:16'
 }
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 14:58:51'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: gTPIv-r7Q38goyYDAAAC)',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 14:58:57'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: CTrjj586-_UlhsWPAAAD)',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 14:58:57'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 14:59:12'
+}
+{
+  level: 'info',
+  message: 'user disconnected, remove user from data base',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 14:59:12'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: Tc1aLiTMjFfjZz8uAAAG)',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 14:59:13'
+}
+{
+  level: 'info',
+  message: 'new socket connected! socket id: ZH59VLskWVZsodvbAAAH)',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 14:59:13'
+}
+{
+  level: 'info',
+  message: 'add user: b4b069b6-3c9c-4890-91a0-940f4979687c to users list',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 14:59:15'
+}

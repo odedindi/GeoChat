@@ -7,7 +7,7 @@ const roomsnames = {
 };
 exports.roomsnames = roomsnames;
 const publicRoom = new model_1.Room({
-    roomname: 'publicRoom'
+    roomname: 'publicRoom',
 });
 const roomsDict = {
     publicRoom,
