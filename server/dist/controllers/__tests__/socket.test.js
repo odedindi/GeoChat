@@ -9,9 +9,7 @@ const socket_io_client_1 = __importDefault(require("socket.io-client"));
 const model_1 = require("src/repositories/model");
 const testUser = new model_1.User({
     id: 'fx52kk5',
-    name: 'Glenna Reichert',
     username: 'Delphine',
-    email: 'Chaim_McDermott@dana.io',
     roomHistory: [],
     avatar: '',
     geo: {

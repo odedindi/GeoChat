@@ -10,33 +10,35 @@ export class Room {
 	users: IUser[];
 	messages: IMessage[];
 
-	constructor(roomModel: IRoom) {
+	constructor(roomModel: IRoom, users?: IUser[], messages?: IMessage[]) {
 		this._model = roomModel;
-		this.numUsers = 0;
+		this.numUsers = users ? users.length : 0;
+		this.users = users ? users : ([] as IUser[]);
+		this.messages = messages ? messages : ([] as IMessage[]);
 	}
 
 	get roomname(): string {
 		return this._model.roomname;
 	}
-	// get users(): User[] {
-	// 	return this._model.users;
-	// }
+
 	get numberOfUsers(): number {
 		return this.numUsers;
 	}
-	// get messages(): Message[] {
-	// 	return this._model.messages;
-	// }
 
-	findUserIndex = (id: string | number) => {
-		return _.findIndex(this.users, (user) => user.id === id);
-	};
+	findUserIndex = (userId: UserID) =>
+		_.findIndex(this.users, (user) => user.id === userId);
 
-	set newUser(user: User) {
+
+	newUser(user: User) {
 		if (this.findUserIndex(user.id) === -1) {
 			this.users.push(user);
 			this.numUsers++;
 		}
+	}
+
+	findUser(userId: UserID) {
+		const userIndex = this.findUserIndex(userId);
+		if (userIndex !== -1) return this.users[userIndex];
 	}
 
 	removeUser = (user: User) => {
@@ -51,7 +53,7 @@ export class Room {
 		return _.findIndex(this.messages, (msg) => msg.id === id);
 	};
 
-	set newMessage(message: IMessage) {
+	newMessage(message: IMessage) {
 		if (this.findMessageIndex(message.id) === -1) {
 			this.messages.push(message);
 			this.numMessages++;

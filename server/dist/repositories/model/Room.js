@@ -6,13 +6,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Room = void 0;
 const lodash_1 = __importDefault(require("lodash"));
 class Room {
-    constructor(roomModel) {
-        // get messages(): Message[] {
-        // 	return this._model.messages;
-        // }
-        this.findUserIndex = (id) => {
-            return lodash_1.default.findIndex(this.users, (user) => user.id === id);
-        };
+    constructor(roomModel, users, messages) {
+        this.findUserIndex = (userId) => lodash_1.default.findIndex(this.users, (user) => user.id === userId);
         this.removeUser = (user) => {
             const userIndex = this.findUserIndex(user.id);
             if (userIndex !== -1) {
@@ -31,24 +26,28 @@ class Room {
             }
         };
         this._model = roomModel;
-        this.numUsers = 0;
+        this.numUsers = users ? users.length : 0;
+        this.users = users ? users : [];
+        this.messages = messages ? messages : [];
     }
     get roomname() {
         return this._model.roomname;
     }
-    // get users(): User[] {
-    // 	return this._model.users;
-    // }
     get numberOfUsers() {
         return this.numUsers;
     }
-    set newUser(user) {
+    newUser(user) {
         if (this.findUserIndex(user.id) === -1) {
             this.users.push(user);
             this.numUsers++;
         }
     }
-    set newMessage(message) {
+    findUser(userId) {
+        const userIndex = this.findUserIndex(userId);
+        if (userIndex !== -1)
+            return this.users[userIndex];
+    }
+    newMessage(message) {
         if (this.findMessageIndex(message.id) === -1) {
             this.messages.push(message);
             this.numMessages++;

@@ -26,9 +26,6 @@ src
  |  |  └─ index.ts  => entry point
  |  └─ index.ts     => entry point
  |
- ├─ models
- |
- |
  ├─ utils
  |  ├─ generators.ts
  |  └─ index.ts     => entry point

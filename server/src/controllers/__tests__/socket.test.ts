@@ -2,13 +2,11 @@ import { createServer } from 'http';
 import { Server, Socket } from 'socket.io';
 import Client from 'socket.io-client';
 import { AddressInfo } from 'net';
-import { Room, User } from 'src/repositories/model';
+import { User, Room } from 'src/repositories/model';
 
 const testUser = new User({
 	id: 'fx52kk5',
-	name: 'Glenna Reichert',
 	username: 'Delphine',
-	email: 'Chaim_McDermott@dana.io',
 	roomHistory: [],
 	avatar: '',
 	geo: {

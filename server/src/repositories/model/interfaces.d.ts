@@ -7,10 +7,8 @@ interface IMessage {
 
 interface IUser {
 	avatar: string;
-	email: string;
 	geo: UserGeoData;
 	id: UserID;
-	name: string;
 	roomHistory: string[];
 	username: string;
 }
@@ -19,4 +17,10 @@ interface IRoom {
 	roomname: string;
 	users?: IUser[];
 	messages?: IMessage[];
+
+}
+
+interface IChatApp {
+	users: IUser[];
+	rooms: IRoom[];
 }

@@ -22,20 +22,30 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+require("module-alias/register");
 const http = __importStar(require("http"));
 const socketio = __importStar(require("socket.io"));
-const app_1 = __importDefault(require("./app"));
-const config_1 = require("./config");
-const socket_1 = __importDefault(require("./controllers/socket"));
+const app_1 = __importDefault(require("@src/app"));
+const config_1 = require("@src/config");
+const socket_1 = __importDefault(require("@src/controllers/socket"));
 const PORT = process.env.SERVER_PORT;
 const server = http.createServer(app_1.default);
 const io = new socketio.Server(server, {
     cors: { origin: '*', methods: ['GET', 'POST'] },
 });
 // initializing the socket io connection
+// io.use((socket, next) => {
+// 	const username = socket.handshake.auth.username;
+// 	if (!username) {
+// 		log.error(`Socket: ${socket.id} initializing failed, invalid username`);
+// 		return next(new Error('invalid username'));
+// 	}
+// 	socket.data.user.username = username;
+// 	next();
+// });
 io.on('connection', (socket) => {
     config_1.log.info(`new socket connected! socket id: ${socket.id})`);
-    (0, socket_1.default)(socket);
+    (0, socket_1.default)(socket, io);
 });
 server.listen(PORT, () => {
     config_1.log.info(`Server is running at http://localhost:${PORT}`);

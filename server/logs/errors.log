@@ -1,0 +1,396 @@
+{
+  level: 'error',
+  message: 'Socket: Wy3-7U3rOxTyxkibAAAC initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:05:28'
+}
+{
+  level: 'error',
+  message: 'Socket: xfUsuk_EOxPr39QLAAAD initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:05:28'
+}
+{
+  level: 'error',
+  message: 'Socket: SyD2Z0ilPSGkwnjWAAAG initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:05:34'
+}
+{
+  level: 'error',
+  message: 'Socket: ayqxFyDrMykcxD8WAAAH initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:05:34'
+}
+{
+  level: 'error',
+  message: 'Socket: paWNI2cJKL9y6a6_AAAK initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:06:16'
+}
+{
+  level: 'error',
+  message: 'Socket: XkigDBBf4eVnPw1oAAAL initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:06:16'
+}
+{
+  level: 'error',
+  message: 'Socket: y8bgCD3JWFMrBDNnAAAN initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:07:01'
+}
+{
+  level: 'error',
+  message: 'Socket: sr1ASRPfzT8LqScHAAAP initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:07:01'
+}
+{
+  level: 'error',
+  message: 'Socket: 1P7F-iBGBDtl64xzAAAB initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:07:41'
+}
+{
+  level: 'error',
+  message: 'Socket: k9xsgTckvrLar4E3AAAD initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:07:41'
+}
+{
+  level: 'error',
+  message: 'Socket: u3g1nlXUZY_M7FDHAAAB initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:10:19'
+}
+{
+  level: 'error',
+  message: 'Socket: j1khEE4WixCf8pL1AAAD initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:10:20'
+}
+{
+  level: 'error',
+  message: 'Socket: fhsz4IUxjFe8mSwUAAAB initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:11:48'
+}
+{
+  level: 'error',
+  message: 'Socket: Coj8OytmCdotP1iEAAAD initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:11:50'
+}
+{
+  level: 'error',
+  message: 'Socket: JqCq7tPIzHLc0jGCAAAF initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:12:34'
+}
+{
+  level: 'error',
+  message: 'Socket: ZxaRcpWzRWuteDqSAAAH initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:12:36'
+}
+{
+  level: 'error',
+  message: 'Socket: xu6oNCKOi3lS3_vjAAAJ initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:13:20'
+}
+{
+  level: 'error',
+  message: 'Socket: 3lABPFvJk3PIIMw-AAAL initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:13:21'
+}
+{
+  level: 'error',
+  message: 'Socket: 9XlDnvynKNgj5O_1AAAN initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:14:06'
+}
+{
+  level: 'error',
+  message: 'Socket: _gWE4ZpBpjpMxVhHAAAP initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:14:08'
+}
+{
+  level: 'error',
+  message: 'Socket: bFtTLqeBo6NohrCvAAAR initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:14:52'
+}
+{
+  level: 'error',
+  message: 'Socket: _gKspZjwd_e1a1xXAAAT initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:14:54'
+}
+{
+  level: 'error',
+  message: 'Socket: 6j9Rp5DjEfpJr-o9AAAV initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:15:38'
+}
+{
+  level: 'error',
+  message: 'Socket: XGBVHWXQ8yF2GnlzAAAX initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:15:40'
+}
+{
+  level: 'error',
+  message: 'Socket: Y_wXoUb2MbKLgjM2AAAB initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:20:11'
+}
+{
+  level: 'error',
+  message: 'Socket: qZavMyOzZ1asEIpVAAAD initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:20:13'
+}
+{
+  level: 'error',
+  message: 'Socket: bI6cm3VR83F5vIGAAAAB initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:26:12'
+}
+{
+  level: 'error',
+  message: 'Socket: Mun9AohtlNmPcRIpAAAD initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:26:13'
+}
+{
+  level: 'error',
+  message: 'Socket: P4JrEjcyfaPrtd0DAAAB initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:28:36'
+}
+{
+  level: 'error',
+  message: 'Socket: GyeAzM7IQUAGpI6GAAAD initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:28:36'
+}
+{
+  level: 'error',
+  message: 'Socket: s1RruAU80PC9xiAjAAAB initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:31:31'
+}
+{
+  level: 'error',
+  message: 'Socket: qISRkYkaaykTQF2kAAAD initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:31:33'
+}
+{
+  level: 'error',
+  message: 'Socket: O5jkkyUKcy2jvz3GAAAB initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:34:10'
+}
+{
+  level: 'error',
+  message: 'Socket: oqHDi5gbtDP_ggZxAAAD initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:34:10'
+}
+{
+  level: 'error',
+  message: 'Socket: odaqWiU-4Na01_GMAAAB initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:45:58'
+}
+{
+  level: 'error',
+  message: 'Socket: sAkE3Ogc5Z6vb3nbAAAD initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:46:01'
+}
+{
+  level: 'error',
+  message: 'Socket: kr57fBjkY1ZdrXx9AAAC initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:46:37'
+}
+{
+  level: 'error',
+  message: 'Socket: vRD7blZmncaTKkwtAAAD initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:46:37'
+}
+{
+  level: 'error',
+  message: 'Socket: flX322krm3dP5bShAAAB initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:47:23'
+}
+{
+  level: 'error',
+  message: 'Socket: XUtdzst8AWqOvGyfAAAD initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:47:24'
+}
+{
+  level: 'error',
+  message: 'Socket: D4E0-6XXvVtxOrbDAAAF initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:48:09'
+}
+{
+  level: 'error',
+  message: 'Socket: GstP8gbHdTntEtycAAAH initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:48:10'
+}
+{
+  level: 'error',
+  message: 'Socket: E08flJeXio9kCAu8AAAJ initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:48:55'
+}
+{
+  level: 'error',
+  message: 'Socket: 3dIXu8h7VBwUdjICAAAL initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:48:56'
+}
+{
+  level: 'error',
+  message: 'Socket: FCvLXnaL6vADXEz2AAAN initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:49:41'
+}
+{
+  level: 'error',
+  message: 'Socket: LVUelknvg0MD_HqrAAAP initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:49:43'
+}
+{
+  level: 'error',
+  message: 'Socket: iUsbrFvc3Wm346qZAAAR initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:50:27'
+}
+{
+  level: 'error',
+  message: 'Socket: KCfA5ydy_G3VLiOhAAAT initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:50:29'
+}
+{
+  level: 'error',
+  message: 'Socket: e-9O49KmdhOGPePDAAAV initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:51:13'
+}
+{
+  level: 'error',
+  message: 'Socket: 3ceUHriwKwaghnWqAAAX initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:51:15'
+}
+{
+  level: 'error',
+  message: 'Socket: 2XswFRuLjR9XyLXcAAAZ initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:51:58'
+}
+{
+  level: 'error',
+  message: 'Socket: 8drEJBJWPDSm19GbAAAb initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:52:01'
+}
+{
+  level: 'error',
+  message: 'Socket: hHm6SQBA2nmEUrNiAAAd initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:52:44'
+}
+{
+  level: 'error',
+  message: 'Socket: iVBCbHAdpdPf9XjOAAAf initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:52:47'
+}
+{
+  level: 'error',
+  message: 'Socket: jfXXf2PGcxSn2U2BAAAh initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:53:30'
+}
+{
+  level: 'error',
+  message: 'Socket: EP07PhcICp5HPUEFAAAj initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:53:33'
+}
+{
+  level: 'error',
+  message: 'Socket: yhvDhq1LalOBqOymAAAB initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:54:40'
+}
+{
+  level: 'error',
+  message: 'Socket: L8l3CgMarp6GoFAEAAAD initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:54:41'
+}
+{
+  level: 'error',
+  message: 'Socket: Y1dXJd3jvU2HeNLFAAAF initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:55:26'
+}
+{
+  level: 'error',
+  message: 'Socket: KbSEerovSaTm_cFUAAAH initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:55:27'
+}
+{
+  level: 'error',
+  message: 'Socket: PYFggi9RlhHT2nE4AAAB initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:56:26'
+}
+{
+  level: 'error',
+  message: 'Socket: 5oU5NQ2pjR4fJjBWAAAD initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:56:28'
+}
+{
+  level: 'error',
+  message: 'Socket: p2dyOEIhgGjYMkdlAAAB initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:57:30'
+}
+{
+  level: 'error',
+  message: 'Socket: 7Dpyrj5g7aLFLRPnAAAD initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:57:31'
+}
+{
+  level: 'error',
+  message: 'Socket: mSyC2gyI5PDQeZgSAAAB initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:58:23'
+}
+{
+  level: 'error',
+  message: 'Socket: eyORjSzpQGJsklf2AAAD initializing failed, invalid username',
+  service: 'GeoChating server logger',
+  timestamp: '04-11-2021 09:58:26'
+}
