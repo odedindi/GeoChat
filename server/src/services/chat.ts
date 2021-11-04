@@ -1,6 +1,13 @@
-import * as chat from '../chat';
-import * as log from '../logger';
+import * as chat from '../seed';
+import * as log from '../config/logger';
 import _ from 'lodash';
+import { UserRepository, userRepository } from 'src/repositories/user.repository';
+
+export class ChatService {
+	constructor(private readonly userRepository: UserRepository) {
+		
+	}
+}
 
 export const get = {
 	roomIndex: (roomname: string) =>
@@ -22,6 +29,7 @@ const updateUserDetailsInUsersList = (user: User, userIndex: number) => {
 };
 
 export const addUserToUsersList = (user: User) => {
+	userRepository.addUser(user)
 	const userIndex = get.userIndex(user.id);
 	if (userIndex === -1) {
 		log.info(`new user: ${user.id}, add user to users list`);

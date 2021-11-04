@@ -31,10 +31,10 @@ export const logger = W.createLogger({
 		prettyPrint(),
 	),
 	defaultMeta: { service: 'GeoChating server logger' },
-	transports: [errorsLog, combinedLog, consoleLog],
+	transports: [consoleLog],
 });
 
-if (process.env.NODE_ENV !== 'production') logger.add(consoleLog);
+// if (process.env.NODE_ENV !== 'production') logger.add(consoleLog);
 
 export const info = (msg: string) =>
 	logger.log({

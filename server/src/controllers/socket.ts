@@ -1,7 +1,7 @@
 import * as socketio from 'socket.io';
-import * as log from '../logger';
-import * as chat from '../chat';
-import * as chatControl from '../controllers/chat';
+import * as log from '../config/logger';
+import * as chat from '../seed';
+import * as chatControl from '../services/chat';
 import * as Generate from '../config/generators';
 
 export const socketController = (socket: socketio.Socket) => {

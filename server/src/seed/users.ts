@@ -1,4 +1,5 @@
 import * as Generate from '../config/generators';
+import {userRepository} from '../repositories/user.repository';
 
 const users: User[] = [
 	{
@@ -123,5 +124,7 @@ const users: User[] = [
 	},
 ];
 const activeUsers: User[] = [];
+
+users.forEach(user => userRepository.addUser(user))
 
 export { activeUsers, users };
