@@ -31,21 +31,22 @@ export const logger = W.createLogger({
 		prettyPrint(),
 	),
 	defaultMeta: { service: 'GeoChating server logger' },
-	transports: [errorsLog, combinedLog, consoleLog],
+	transports: [errorsLog, combinedLog],
 });
 
 if (process.env.NODE_ENV !== 'production') logger.add(consoleLog);
 
-export const info = (msg: string) =>
+const info = (msg: string) =>
 	logger.log({
 		level: 'info',
 		message: msg,
 	});
 
-export const error = (msg: string) =>
+const error = (msg: string) =>
 	logger.log({
 		level: 'error',
 		message: msg,
 	});
+const log = { info, error };
 
-export default logger;
+export default log;

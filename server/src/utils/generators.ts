@@ -1,10 +1,11 @@
 import { v4 as uuid } from 'uuid';
-export const id = () => uuid();
 
-export const randomNumberFrom1ToNumber = (num: number) =>
+const id = () => uuid();
+
+const randomNumberFrom1ToNumber = (num: number) =>
 	Math.floor(Math.random() * num) + 1;
 
-export const randomString = () => {
+const randomString = () => {
 	let result: string;
 	const characters =
 		'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -14,4 +15,6 @@ export const randomString = () => {
 	return result;
 };
 
-export const avatar = () => `https://robohash.org/${randomString()}`;
+const avatar = () => `https://robohash.org/${randomString()}`;
+
+export const generate = { id, randomNumberFrom1ToNumber, randomString, avatar };
