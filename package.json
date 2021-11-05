@@ -5,6 +5,7 @@
   "repository": "git@github.com:odedindi/GeoChat.git",
   "author": "Oded Winberger <odedindi@gmail.com>",
   "scripts": {
+    "build:client": "cd client && yarn build",
     "install:client": "cd client && yarn install",
     "install:server": "cd server && yarn install",
     "start:client": "cd client && ionic serve",
