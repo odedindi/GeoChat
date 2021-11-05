@@ -1,6 +1,9 @@
 type StrOrNum = string | number;
-type SocketID = StrOrNum;
-type UserID = string;
+type ID = string;
+type SocketID = ID;
+
+type UserID = ID;
+type MessageID = ID;
 
 type GeoCoord = {
 	lat: StrOrNum;
@@ -9,27 +12,25 @@ type GeoCoord = {
 
 type UserGeoData = { coord?: GeoCoord; preferedDistance: number };
 
-// type User = {
-// 	avatar?: string;
-// 	currentRoomname?: string;
-// 	email?: string;
-// 	geo: UserGeoData;
+type User = {
+	id: UserID;
+	username: string;
+	avatar: string;
+	geo: UserGeoData;
+	connected: boolean;
+	messages: Message[];
+};
 
-// 	id: UserID;
-// 	name: string;
-// 	roomHistory?: string[];
-// 	username: string;
-// };
+type Message = {
+	id: MessageID;
+	from: User;
+	to?: User;
+	text: string;
+	createdAt: number;
+};
 
-// type Message = {
-// 	createdAt: number;
-// 	from: User;
-// 	id: string;
-// 	text: string;
-// };
-
-// type Room = {
-// 	roomname: string;
-// 	users: User[];
-// 	messages: Message[];
-// };
+type Room = {
+	messages: Message[];
+	roomname: string;
+	users: User[];
+};
