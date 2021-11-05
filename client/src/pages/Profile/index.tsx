@@ -113,19 +113,6 @@ const ProfilePage: React.FC = () => {
 							</S.ProfileTitle>
 						</IonCol>
 					</IonRow>
-
-					<IonRow>
-						<IonCol size="12" className="ion-text-center">
-							<IonCardSubtitle>
-								{currentUser?.name ? currentUser.name : ''}
-							</IonCardSubtitle>
-						</IonCol>
-						<IonCol size="12" className="ion-text-center">
-							<IonCardSubtitle>
-								{currentUser?.email ? currentUser.email : ''}
-							</IonCardSubtitle>
-						</IonCol>
-					</IonRow>
 				</S.Banner>
 				<IonRow>
 					<IonButton

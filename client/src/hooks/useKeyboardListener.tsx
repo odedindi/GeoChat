@@ -23,3 +23,5 @@ export const useKeyboardListener = (
 		};
 	}, [btnCode, fn, withCtrlKey]);
 };
+
+export default useKeyboardListener;

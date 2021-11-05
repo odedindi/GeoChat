@@ -6,7 +6,7 @@ import { ReadOnlySlate } from '../SlateEditor';
 
 import * as S from './styles';
 
-const OtherUsersMsg: React.FC<{ msg: Msg }> = ({ msg }) => (
+const OtherUsersMsg: React.FC<{ msg: Message }> = ({ msg }) => (
 	<S.OtherUsersMessage size="9" offset="3" key={msg.id}>
 		<S.MsgContentWrapper>
 			<S.AvatarWrapper>

@@ -112,8 +112,7 @@ const Home: React.FC = () => {
 
 	const [disableSubmitButton, setDisableSubmitButton] = React.useState(true);
 	React.useEffect(() => {
-		if (currentUser?.username && currentUser?.name)
-			setDisableSubmitButton(false);
+		if (currentUser?.username) setDisableSubmitButton(false);
 		else setDisableSubmitButton(true);
 	}, [currentUser]);
 
@@ -166,18 +165,6 @@ const Home: React.FC = () => {
 					type="text"
 					required={true}
 				/>
-				<InputField
-					changeHandler={inputChangeHandler}
-					id="name"
-					type="text"
-					required={true}
-				/>
-				<InputField
-					changeHandler={inputChangeHandler}
-					id="email"
-					type="email"
-				/>
-
 				<IonRow style={{ justifyContent: 'center', paddingTop: '2rem' }}>
 					<MainButton disabled={disableSubmitButton} onClick={submitHandler}>
 						Enter Chat

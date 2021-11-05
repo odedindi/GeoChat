@@ -10,3 +10,5 @@ export const useMapCenter = (): {
 
 	return { mapCenter, setMapCenter };
 };
+
+export default useMapCenter;

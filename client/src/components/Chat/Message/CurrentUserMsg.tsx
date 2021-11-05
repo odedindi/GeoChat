@@ -7,7 +7,7 @@ import { ReadOnlySlate } from '../../SlateEditor';
 
 import * as S from './styles';
 
-const CurrentUserMsg: React.FC<{ msg: Msg }> = ({ msg }) => (
+const CurrentUserMsg: React.FC<{ msg: Message }> = ({ msg }) => (
 	<S.CurrentUserMessage size="9">
 		<S.MsgContentWrapper>
 			<S.AvatarWrapper>

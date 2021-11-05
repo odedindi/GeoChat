@@ -20,9 +20,12 @@ import * as Action from 'src/Store/action';
 import ChatMessage from 'src/components/ChatMessage';
 import TextArea from 'src/components/ChatTextArea';
 import Loading from 'src/components/Spinner/Loading';
-import useDidMount from 'src/hooks/useDidMount';
-import { useKeyboardListener } from 'src/hooks/useKeyboardListener';
-import useStorage from 'src/hooks/useStorage';
+import {
+	useDidMount,
+	useKeyboardListener,
+	useToast,
+	useStorage,
+} from 'src/hooks';
 import { getLogger } from 'src/utils/logger';
 
 import * as S from './styles';
@@ -31,7 +34,7 @@ const log = getLogger('Chat Page');
 
 const GeneralChat: React.FC = () => {
 	const { didMount } = useDidMount();
-
+	const { Toast, toastHandler } = useToast();
 	const history = useHistory();
 	const { socket } = useSocket();
 	const { storage } = useStorage();
@@ -72,20 +75,14 @@ const GeneralChat: React.FC = () => {
 			],
 		},
 	]);
-	const [roomDetails, setRoomDetails] = React.useState<{
-		messages: Msg[];
-		rendredMessages: Set<string>;
+	type RoomDetails = {
+		messages: Message[];
 		users: User[];
-	}>(() => ({
+	};
+	const [roomDetails, setRoomDetails] = React.useState<RoomDetails>(() => ({
 		messages: [],
-		rendredMessages: new Set<string>(),
 		users: [],
 	}));
-
-	const [toastState, setToastState] = React.useState({
-		show: false,
-		msg: '',
-	});
 
 	React.useEffect(() => {
 		if (currentUser) {
@@ -96,21 +93,15 @@ const GeneralChat: React.FC = () => {
 					log('userChange');
 					if (user) {
 						event === 'enter'
-							? setToastState({
-									show: true,
-									msg: `${user.username} Enter`,
-							  })
-							: setToastState({
-									show: true,
-									msg: `${user.username} Exit`,
-							  });
+							? toastHandler(`${user.username} Enter`)
+							: toastHandler(`${user.username} Exit`);
 					}
 				},
 			);
 
 			socket.on(
 				'updateRoomDetails',
-				({ users, messages }: { users: User[]; messages: Msg[] }) => {
+				({ users, messages }: { users: User[]; messages: Message[] }) => {
 					log('update room details');
 					setRoomDetails((prev) => ({
 						...prev,
@@ -120,7 +111,7 @@ const GeneralChat: React.FC = () => {
 				},
 			);
 
-			socket.on('message', (msg: Msg) => {
+			socket.on('message', (msg: Message) => {
 				log('update messages');
 				setRoomDetails((prev) => ({
 					...prev,
@@ -128,7 +119,7 @@ const GeneralChat: React.FC = () => {
 				}));
 			});
 		}
-	}, [currentUser, socket]);
+	}, [currentUser, socket, toastHandler]);
 
 	const sendMsgHandler = () => {
 		if (userInput.length === 1) {
@@ -144,10 +135,7 @@ const GeneralChat: React.FC = () => {
 		// in case there is input
 		log('sendMessageToServer');
 		socket.emit('sendMessageToServer', { text: JSON.stringify(userInput) });
-		setToastState({
-			show: true,
-			msg: `msg sent`,
-		});
+		toastHandler(`msg sent`);
 		setUserInput([]);
 	};
 	useKeyboardListener(sendMsgHandler, 'Enter', 'ctrlKey');
@@ -162,12 +150,7 @@ const GeneralChat: React.FC = () => {
 		return <Loading open={!didMount || !currentUser} />;
 	return (
 		<IonPage>
-			<IonToast
-				isOpen={toastState.show}
-				onDidDismiss={() => setToastState({ show: false, msg: '' })}
-				message={toastState.msg}
-				duration={2500}
-			/>
+			<Toast />
 			<IonHeader>
 				<IonToolbar>
 					<IonRow>

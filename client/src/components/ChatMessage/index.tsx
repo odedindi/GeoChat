@@ -3,7 +3,7 @@ import OtherUsersMsg from './OtherUsersMsg';
 
 type ChatMessageProps = {
 	type: 'CurrentUser' | 'OtherUsers';
-	msg: Msg;
+	msg: Message;
 };
 
 const ChatMessage: React.FC<ChatMessageProps> = ({ msg, type }) => {
