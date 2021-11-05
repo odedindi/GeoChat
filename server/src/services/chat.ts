@@ -64,44 +64,34 @@ io.on('connection', (socket: socketio.Socket) => {
 	});
 	socketController.onConnection(socket, userRepository.getAllUsers());
 
-	log.info('forward private message to recipient');
-	socket.on(
-		'private message',
-		({
+	socket.on('typing', () => socketController.onUserTyping(socket));
+
+	socket.on('stop typing', () => socketController.onUserStopTyping(socket));
+
+	socket.on('private message', ({ text, to }: Message) => {
+		const toUser = to.id
+			? userRepository.getUser({ id: to.id })
+			: userRepository.getUser({ username: to.username });
+
+		const message: Message = {
+			id: uuid(),
+			createdAt: Date.now(),
 			text,
-			to,
-		}: {
-			text: string;
-			to: { id?: UserID; username?: string };
-		}) => {
-			const toUser = to.id
-				? userRepository.getUser({ id: to.id })
-				: userRepository.getUser({ username: to.username });
+			from: socket.data.user,
+			to: toUser,
+		};
 
-			const message: Message = {
-				id: uuid(),
-				createdAt: Date.now(),
-				text,
-				from: socket.data.user,
-				to: toUser,
-			};
+		messageRepository.saveMessage(message);
+		socketController.onPrivateMessage(socket, message, toUser);
+	});
 
-			messageRepository.saveMessage(message);
-			socketController.onPrivateMessage(socket, message, toUser);
-		},
-	);
-
-	log.info(`notify users that user: ${socket.data.user.id} disconnect`);
 	socket.on('disconnect', async () => {
 		const matchingSockets = await io.in(socket.data.user.id).allSockets();
 		const isDisconnected = matchingSockets.size === 0;
 		if (isDisconnected) {
-			log.info(
-				`update the connection status of session: ${socket.data.sessionID}`,
-			);
+			log.info(`update session: ${socket.data.sessionID} connection status`);
 			sessionRepository.newSession(socket.data.sessionID, {
 				user: socket.data.user,
-
 				connected: false,
 			});
 			socketController.onDisconnection(socket);

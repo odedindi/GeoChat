@@ -532,3 +532,105 @@
   service: 'GeoChating server logger',
   timestamp: '05-11-2021 01:20:46'
 }
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '05-11-2021 12:57:41'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '05-11-2021 13:01:04'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '05-11-2021 13:02:53'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '05-11-2021 13:03:37'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '05-11-2021 13:04:44'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '05-11-2021 13:07:05'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '05-11-2021 13:07:40'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '05-11-2021 13:08:41'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '05-11-2021 13:08:57'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '05-11-2021 13:09:58'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '05-11-2021 13:10:33'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '05-11-2021 13:11:02'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '05-11-2021 13:12:53'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '05-11-2021 13:13:38'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '05-11-2021 13:14:58'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '05-11-2021 13:15:21'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '05-11-2021 13:17:48'
+}
