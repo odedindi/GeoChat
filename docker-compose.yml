@@ -2,8 +2,7 @@ version: "3"
 
 services:
   server:
-    build: ./server
-    command: yarn build
+    build: .
     env_file:
       - ./server/.env
     volumes:
