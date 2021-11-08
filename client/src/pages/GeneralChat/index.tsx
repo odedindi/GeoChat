@@ -3,12 +3,8 @@ import {
 	IonHeader,
 	IonPage,
 	IonRow,
-	IonTitle,
-	IonToolbar,
 	IonGrid,
-	IonToast,
 	IonFooter,
-	IonButton,
 } from '@ionic/react';
 import * as I from 'ionicons/icons';
 import * as React from 'react';
@@ -17,8 +13,8 @@ import type { CustomTypes } from 'slate';
 import { useSocket } from 'src/Socket';
 import { useStore } from 'src/Store';
 import * as Action from 'src/Store/action';
-import ChatMessage from 'src/components/ChatMessage';
-import TextArea from 'src/components/ChatTextArea';
+import ChatMessage from 'src/components/Chat/Message';
+import TextArea from 'src/components/Chat/TextArea';
 import Loading from 'src/components/Spinner/Loading';
 import {
 	useDidMount,
@@ -28,6 +24,7 @@ import {
 } from 'src/hooks';
 import { getLogger } from 'src/utils/logger';
 
+import Toolbar from './Toolbar';
 import * as S from './styles';
 
 const log = getLogger('Chat Page');
@@ -86,6 +83,7 @@ const GeneralChat: React.FC = () => {
 
 	React.useEffect(() => {
 		if (currentUser) {
+			socket.on('session', (data) => console.log(data));
 			socket.emit('setUser', currentUser);
 			socket.on(
 				'userChange',
@@ -135,16 +133,19 @@ const GeneralChat: React.FC = () => {
 		// in case there is input
 		log('sendMessageToServer');
 		socket.emit('sendMessageToServer', { text: JSON.stringify(userInput) });
+		setUserInput([
+			{
+				type: 'paragraph',
+				children: [
+					{
+						text: '',
+					},
+				],
+			},
+		]);
 		toastHandler(`msg sent`);
-		setUserInput([]);
 	};
 	useKeyboardListener(sendMsgHandler, 'Enter', 'ctrlKey');
-
-	const disconnectHandler = () => {
-		log('disconnect');
-		storage.removeItem('GeoChatUserDetails');
-		history.push('/');
-	};
 
 	if (!didMount || !currentUser)
 		return <Loading open={!didMount || !currentUser} />;
@@ -152,47 +153,34 @@ const GeneralChat: React.FC = () => {
 		<IonPage>
 			<Toast />
 			<IonHeader>
-				<IonToolbar>
-					<IonRow>
-						<IonTitle>Welcome to geochat</IonTitle>
-						<IonButton onClick={disconnectHandler}>Disconnect</IonButton>
-					</IonRow>
-				</IonToolbar>
+				<Toolbar user={currentUser} />
 			</IonHeader>
-			<IonContent fullscreen>
+			<S.ChatWindow>
 				<IonGrid>
 					<S.ChatTitle>
 						You joined the chat as {currentUser?.username}
 					</S.ChatTitle>
-					<IonRow>
-						{roomDetails.messages.map((msg) =>
-							msg.from.id === currentUser?.id ? (
-								<ChatMessage key={msg.id} type="CurrentUser" msg={msg} />
-							) : (
-								<ChatMessage key={msg.id} type="OtherUsers" msg={msg} />
-							),
-						)}
-					</IonRow>
 				</IonGrid>
-			</IonContent>
-			<IonFooter className="ion-no-border">
-				<S.UserInputWrapper>
-					<TextArea
-						mentionables={roomDetails.users}
-						value={userInput}
-						setValue={setUserInput}
-						placeholder="What is on your mind?"
-					/>
-					<S.SendButtun
-						fill="clear"
-						color={userInput.length ? 'primary' : 'medium'}
-						disabled={userInput.length ? false : true}
-						onClick={sendMsgHandler}
-					>
-						<S.SendIcon icon={I.send} />
-					</S.SendButtun>
-				</S.UserInputWrapper>
-			</IonFooter>
+
+				<IonFooter className="ion-no-border">
+					<S.UserInputWrapper>
+						<TextArea
+							mentionables={roomDetails.users}
+							value={userInput}
+							setValue={setUserInput}
+							placeholder="What is on your mind?"
+						/>
+						<S.SendButtun
+							fill="clear"
+							color={userInput.length ? 'primary' : 'medium'}
+							disabled={userInput.length ? false : true}
+							onClick={sendMsgHandler}
+						>
+							<S.SendIcon icon={I.send} />
+						</S.SendButtun>
+					</S.UserInputWrapper>
+				</IonFooter>
+			</S.ChatWindow>
 		</IonPage>
 	);
 };

@@ -12,9 +12,10 @@ export const Banner = styled(IonGrid)`
 	justify-content: center;
 	align-items: center;
 	align-content: center;
-	background-color: var(--ion-color-success-tint);
+	/* background-color: var(--ion-color-success-tint);
+	color: white; */
+	background-color: #282c34;
 	color: white;
-	margin-bottom: 2rem;
 `;
 
 export const Avatar = styled(IonAvatar)`

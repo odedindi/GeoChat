@@ -1,73 +1,35 @@
-import _ from 'lodash';
-import log from 'src/config/logger';
-
-export const users: User[] = [];
+const users = new Map<string, User>();
 
 export interface UserRepository {
-	findIndexById: (id: UserID) => number;
-	findIndexByUsername: (username: string) => number;
-	addOrUpdateUser: (user: User) => void;
-	newGeoLocation: (id: UserID, geoLocation: GeoCoord) => void;
-	newPreferedDistance: (id: UserID, distance: number) => void;
-	newMessage: (message: Message) => void;
+	addUser: (socketID: ID, user: User) => void;
+	removeUser: (sockerID: ID) => void;
 	getAllUsers: () => User[];
+	getUserBySocketID: (socketID: ID) => User;
+	getUsersByRoom: (room: string) => User[];
+	getUserByUserID: (userID: ID) => User;
 }
 
 export class InMemoryUserRepository implements UserRepository {
-	findIndexById = (id: UserID) => _.findIndex(users, (user) => id === user.id);
-	findIndexByUsername = (username: string) =>
-		_.findIndex(users, (user) => username === user.username);
-	addOrUpdateUser = (user: User) => {
-		const match = this.findIndexById(user.id);
-		if (match === -1) {
-			log.info(`new user: ${user.id}`);
-			users.push(user);
-		} else {
-			log.info('update user in users list');
-			users[match] = user;
-		}
+	addUser = (socketID: ID, user: User) => users.set(socketID, user);
+	removeUser = (socketID: ID) => users.delete(socketID);
+	getAllUsers = () => {
+		const usersList: User[] = [];
+		users.forEach((user) => usersList.push(user));
+		return usersList;
 	};
-
-	newGeoLocation = (id: UserID, geoLocation: GeoCoord) => {
-		const match = this.findIndexById(id);
-		if (match === -1) {
-			log.error(`newGeoLocation, user: ${id} not found`);
-		} else {
-			log.info(`update user: ${id} geoLocation`);
-			users[match].geo.coord = geoLocation;
-		}
+	getUserBySocketID = (socketID: ID) => users.get(socketID);
+	getUsersByRoom = (room: string) => {
+		const roomUsers: User[] = [];
+		users.forEach((user) => {
+			if (user.room === room) roomUsers.push(user);
+		});
+		return roomUsers;
 	};
-
-	newPreferedDistance = (id: UserID, distance: number) => {
-		const match = this.findIndexById(id);
-		if (match === -1) {
-			log.error(`newPreferedDistance, user: ${id} not found`);
-		} else {
-			log.info(`update user: ${id} preferedDistance`);
-			users[match].geo.preferedDistance = distance;
-		}
-	};
-
-	newMessage = (message: Message) => {
-		const userID = message.from.id;
-		const match = this.findIndexById(userID);
-		if (match === -1) {
-			log.error(`newMessage, user: ${userID} not found`);
-		} else {
-			if (users[match].messages.includes(message)) {
-				log.error(`message: ${message.id} already exist`);
-			} else {
-				log.info(`newMessage, message: ${message.id}, from: ${userID}`);
-				users[match].messages.push(message);
-			}
-		}
-	};
-
-	getAllUsers = () => users;
-	getUser = ({ id, username }: { id?: UserID; username?: string }) => {
-		const match = id
-			? this.findIndexById(id)
-			: this.findIndexByUsername(username);
-		return users[match];
+	getUserByUserID = (userID: ID) => {
+		let match: User;
+		users.forEach((user) => {
+			if (user.id === userID) match = user;
+		});
+		return match;
 	};
 }

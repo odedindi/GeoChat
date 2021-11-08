@@ -5,14 +5,14 @@ export const rooms: Room[] = [];
 
 export interface RoomRepository {
 	findIndexById: (roomname: string) => number;
-	findUserIndexInRoomByUserId: (id: UserID, roomUsers: User[]) => number;
+	findUserIndexInRoomByUserId: (id: ID, roomUsers: User[]) => number;
 	findMessageIndexInRoomByMessageId: (
-		id: MessageID,
+		id: ID,
 		roomMessages: Message[],
 	) => number;
 	createRoom: (roomname: string) => void;
 	joinUserToRoom: (user: User, roomname: string) => void;
-	removeUserFromRoom: (id: UserID, roomname: string) => void;
+	removeUserFromRoom: (id: ID, roomname: string) => void;
 	getRoomUsers: (roomname: string) => User[];
 	addMessageToRoom: (message: Message, roomname: string) => void;
 	getRoomMessages: (roomname: string) => Message[];
@@ -22,13 +22,11 @@ export class InMemoryRoomRepository implements RoomRepository {
 	findIndexById = (roomname: string) =>
 		_.findIndex(rooms, (room) => room.roomname === roomname);
 
-	findUserIndexInRoomByUserId = (id: UserID, roomUsers: User[]) =>
+	findUserIndexInRoomByUserId = (id: ID, roomUsers: User[]) =>
 		_.findIndex(roomUsers, (user) => user.id === id);
 
-	findMessageIndexInRoomByMessageId = (
-		id: MessageID,
-		roomMessages: Message[],
-	) => _.findIndex(roomMessages, (msg) => msg.id === id);
+	findMessageIndexInRoomByMessageId = (id: ID, roomMessages: Message[]) =>
+		_.findIndex(roomMessages, (msg) => msg.id === id);
 
 	createRoom = (roomname: string) => {
 		const match = this.findIndexById(roomname);
@@ -61,7 +59,7 @@ export class InMemoryRoomRepository implements RoomRepository {
 				);
 		}
 	};
-	removeUserFromRoom = (id: UserID, roomname: string) => {
+	removeUserFromRoom = (id: ID, roomname: string) => {
 		const match = this.findIndexById(roomname);
 		if (match === -1) {
 			log.error(
@@ -93,7 +91,11 @@ export class InMemoryRoomRepository implements RoomRepository {
 		if (match === -1) {
 			log.error(
 				`joinUserToRoom, room: ${roomname} that was
-                requested by user: ${message.from.id} not found`,
+                requested by user: ${
+									typeof message.from === 'string'
+										? message.from
+										: message.from.id
+								} not found`,
 			);
 		} else {
 			const messageIndex = this.findMessageIndexInRoomByMessageId(

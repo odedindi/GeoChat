@@ -1,0 +1,81 @@
+{
+  level: 'error',
+  message: 'joinUserToRoom, room: generalRoom that was\n' +
+    '                requested by user: Y9DK5nBv_pGX9nZzAAAB not found',
+  service: 'GeoChating server logger',
+  timestamp: '07-11-2021 21:01:42'
+}
+{
+  level: 'error',
+  message: 'joinUserToRoom, room: generalRoom that was\n' +
+    '                requested by user: Jj4p09YJ3RYQicbHAAAD not found',
+  service: 'GeoChating server logger',
+  timestamp: '07-11-2021 21:01:42'
+}
+{
+  level: 'error',
+  message: 'joinUserToRoom, room: generalRoom that was\n' +
+    '                requested by user: SglVbwFWTe6ciLPZAAAF not found',
+  service: 'GeoChating server logger',
+  timestamp: '07-11-2021 21:02:27'
+}
+{
+  level: 'error',
+  message: 'joinUserToRoom, room: generalRoom that was\n' +
+    '                requested by user: KUAvOyTGbWfynl1cAAAI not found',
+  service: 'GeoChating server logger',
+  timestamp: '07-11-2021 21:06:12'
+}
+{
+  level: 'error',
+  message: 'joinUserToRoom, room: generalRoom that was\n' +
+    '                requested by user: STrnF4u4z5BB-JDQAAAJ not found',
+  service: 'GeoChating server logger',
+  timestamp: '07-11-2021 21:06:12'
+}
+{
+  level: 'error',
+  message: 'joinUserToRoom, room: generalRoom that was\n' +
+    '                requested by user: qxVPAlQ3KS8n9RWnAAAN not found',
+  service: 'GeoChating server logger',
+  timestamp: '07-11-2021 21:08:20'
+}
+{
+  level: 'error',
+  message: 'joinUserToRoom, room: generalRoom that was\n' +
+    '                requested by user: Iz-OC6f7mKaUFKHMAAAM not found',
+  service: 'GeoChating server logger',
+  timestamp: '07-11-2021 21:08:20'
+}
+{
+  level: 'error',
+  message: 'joinUserToRoom, room: generalRoom that was\n' +
+    '                requested by user: 1k0wxd68wL5QtcQ2AAAR not found',
+  service: 'GeoChating server logger',
+  timestamp: '07-11-2021 21:08:24'
+}
+{
+  level: 'error',
+  message: 'joinUserToRoom, room: generalRoom that was\n' +
+    '                requested by user: f8SAbmsT1ZB8dr6gAAAQ not found',
+  service: 'GeoChating server logger',
+  timestamp: '07-11-2021 21:08:24'
+}
+{
+  level: 'error',
+  message: 'Error: Error: getaddrinfo EAI_AGAIN postgres',
+  service: 'GeoChating server logger',
+  timestamp: '08-11-2021 20:04:19'
+}
+{
+  level: 'error',
+  message: 'db queries getAllUsers error: Error: Connection terminated',
+  service: 'GeoChating server logger',
+  timestamp: '08-11-2021 22:13:54'
+}
+{
+  level: 'error',
+  message: 'db queries getAllUsers error: Error: Connection terminated',
+  service: 'GeoChating server logger',
+  timestamp: '08-11-2021 22:14:44'
+}

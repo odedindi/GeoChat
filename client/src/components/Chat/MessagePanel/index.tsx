@@ -28,7 +28,7 @@ const MessagePanel: React.FC<MessagePanelProps> = ({ user }) => {
 				<StatusIcon connected={status} />
 			</S.Header>
 			<S.Messages>
-				{user?.messages.map((message: any, index: number) => (
+				{user?.messages?.map((message: any, index: number) => (
 					<S.Message key={index}>
 						<S.Sender>{message.fromSelf ? 'You' : user.username}</S.Sender>
 						{message.text}

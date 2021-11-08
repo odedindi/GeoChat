@@ -34,6 +34,13 @@ export const mapTiles: MapTile[] = [
 			'&copy <a href="https://about.google/brand-resource-center/products-and-services/geo-guidelines/#google-earth">GoogleMaps</a> Data 2021',
 		url: 'http://mt0.google.com/vt/lyrs=s&hl=en&x={x}&y={y}&z={z}',
 	},
+	{
+		id: 5,
+		name: 'Swiss Topo',
+		attribution:
+			'&copy <a href="https://api3.geo.admin.ch">api3.geo.admin.ch</a> Data 2021',
+		url: 'https://wmts20.geo.admin.ch/1.0.0/ch.swisstopo.pixelkarte-farbe/default/current/3857/{z}/{x}/{y}.jpeg',
+	},
 ];
 
 const Tiles: React.FC<{ allowLayers: boolean }> = ({ allowLayers }) => (

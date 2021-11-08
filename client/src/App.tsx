@@ -36,58 +36,48 @@ import Login from './pages/Auth/Login';
 import RestorePassword from './pages/Auth/RestorePassword';
 import Signup from './pages/Auth/Signup';
 import GeneralChat from './pages/GeneralChat';
+import Chat from './pages/GeneralChat/SimplifiedChat';
 import Home from './pages/Home';
 import MapPage from './pages/Map';
-import ProfilePage from './pages/Profile';
 import UnAuthed from './routes/UnAuthed';
+import routes from './routes/routes';
 
 const App: React.FC = () => {
-	const paths = {
-		home: '/home',
-		chat: '/chat',
-		map: '/map',
-		settings: '/settings',
-		login: '/auth/login',
-		signup: '/auth/signup',
-		restorePassword: '/auth/restorepassword',
-	};
-
 	return (
 		<IonApp>
 			<IonReactRouter>
 				<IonTabs>
 					<IonRouterOutlet>
 						<Providers>
-							<UnAuthed path={paths.home} component={Home} />
-							<UnAuthed path={paths.settings} component={ProfilePage} />
-							<UnAuthed path={paths.chat} component={GeneralChat} />
-							<UnAuthed path={paths.map} component={MapPage} />
-							<UnAuthed path={paths.login} component={Login} />
-							<UnAuthed path={paths.signup} component={Signup} />
+							<UnAuthed path={routes.home} component={Home} />
+							<UnAuthed path={routes.chat} component={Chat} />
+							<UnAuthed path={routes.map} component={MapPage} />
+							<UnAuthed path={routes.login} component={Login} />
+							<UnAuthed path={routes.signup} component={Signup} />
 							<UnAuthed
-								path={paths.restorePassword}
+								path={routes.restorePassword}
 								component={RestorePassword}
 							/>
 							<Route exact path="/">
-								<Redirect to={paths.home} />
+								<Redirect to={routes.home} />
 							</Route>
 						</Providers>
 					</IonRouterOutlet>
 
 					<IonTabBar slot="bottom">
-						<IonTabButton tab="tab1" href={paths.home}>
+						<IonTabButton tab="tab1" href={routes.home}>
 							<IonIcon icon={I.home} />
 							<IonLabel>Home</IonLabel>
 						</IonTabButton>
-						<IonTabButton tab="tab2" href={paths.chat}>
+						<IonTabButton tab="tab2" href={routes.chat}>
 							<IonIcon icon={I.logoWechat} />
 							<IonLabel>chat</IonLabel>
 						</IonTabButton>
-						<IonTabButton tab="tab3" href={paths.map}>
+						<IonTabButton tab="tab3" href={routes.map}>
 							<IonIcon icon={I.map} />
 							<IonLabel>Map</IonLabel>
 						</IonTabButton>
-						<IonTabButton tab="tab4" href={paths.settings}>
+						<IonTabButton tab="tab4" href={routes.settings}>
 							<IonIcon icon={I.settings} />
 							<IonLabel>Settings</IonLabel>
 						</IonTabButton>

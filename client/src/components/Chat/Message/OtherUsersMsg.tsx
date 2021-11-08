@@ -8,22 +8,24 @@ import * as S from './styles';
 
 const OtherUsersMsg: React.FC<{ msg: Message }> = ({ msg }) => (
 	<S.OtherUsersMessage size="9" offset="3" key={msg.id}>
-		<S.MsgContentWrapper>
+		{/* <S.MsgContentWrapper>
 			<S.AvatarWrapper>
-				<IonAvatar>
-					<img src={msg.from.avatar} alt="user's avatar" />
-				</IonAvatar>
+				{msg?.from?.avatar && (
+					<IonAvatar>
+						<img src={msg.from.avatar as string} alt="user's avatar" />
+					</IonAvatar>
+				)}
 				<IonLabel>
-					<b>{msg.from.username}: </b>
+					<b>{msg?.from?.username}: </b>
 				</IonLabel>
 			</S.AvatarWrapper>
 			<ReadOnlySlate
-				value={JSON.parse(msg.text) as CustomTypes['ParagraphElement'][]}
+				value={JSON.parse(msg?.text) as CustomTypes['ParagraphElement'][]}
 			/>
 		</S.MsgContentWrapper>
 		<S.MessageTime>
-			{moment(msg.createdAt).format('DD MMM YY hh:mm')}
-		</S.MessageTime>
+			{moment(msg?.createdAt).format('DD MMM YY hh:mm')}
+		</S.MessageTime> */}
 	</S.OtherUsersMessage>
 );
 

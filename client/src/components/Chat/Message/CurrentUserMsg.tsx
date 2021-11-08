@@ -9,13 +9,15 @@ import * as S from './styles';
 
 const CurrentUserMsg: React.FC<{ msg: Message }> = ({ msg }) => (
 	<S.CurrentUserMessage size="9">
-		<S.MsgContentWrapper>
+		{/* <S.MsgContentWrapper>
 			<S.AvatarWrapper>
-				<IonAvatar>
-					<img src={msg.from.avatar} alt="user's avatar" />
-				</IonAvatar>
+				{msg?.from?.avatar && (
+					<IonAvatar>
+						<img src={msg.from.avatar as string} alt="user's avatar" />
+					</IonAvatar>
+				)}
 				<IonLabel>
-					<b>{msg.from.username}: </b>
+					<b>{msg?.from?.username}: </b>
 				</IonLabel>
 			</S.AvatarWrapper>
 			<ReadOnlySlate
@@ -23,8 +25,8 @@ const CurrentUserMsg: React.FC<{ msg: Message }> = ({ msg }) => (
 			/>
 		</S.MsgContentWrapper>
 		<S.MessageTime>
-			{moment(msg.createdAt).format('DD MMM YY hh:mm')}
-		</S.MessageTime>
+			{moment(msg?.createdAt as number).format('DD MMM YY hh:mm')}
+		</S.MessageTime> */}
 	</S.CurrentUserMessage>
 );
 export default CurrentUserMsg;

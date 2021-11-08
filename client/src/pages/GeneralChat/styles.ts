@@ -21,3 +21,17 @@ export const UserInputWrapper = styled(IonRow)`
 	flex-direction: row;
 	justify-content: space-around;
 `;
+
+export const SideBar = styled.div`
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 17rem;
+	overflow-x: hidden;
+	background-color: #3f0e40;
+	color: white;
+`;
+export const ChatWindow = styled.div`
+	margin-right: 17rem;
+`;
