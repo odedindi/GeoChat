@@ -1,1 +1,1 @@
-export const roomnames = ['publicRoom'];
+export const roomnames: string[] = ['publicRoom'];

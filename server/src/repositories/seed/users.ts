@@ -2,7 +2,7 @@ import { generate } from 'src/utils/generators';
 
 export const users: User[] = [
 	{
-		id: 'fe51k85',
+		userID: 'fe51k85',
 		username: 'Bret',
 		avatar: generate.avatar(),
 		geo: {
@@ -16,7 +16,7 @@ export const users: User[] = [
 		room: '',
 	},
 	{
-		id: 'fe5dk15',
+		userID: 'fe5dk15',
 		username: 'Antonette',
 		avatar: generate.avatar(),
 		geo: {
@@ -30,7 +30,7 @@ export const users: User[] = [
 		room: '',
 	},
 	{
-		id: 'fe51k2q',
+		userID: 'fe51k2q',
 		username: 'Samantha',
 		avatar: generate.avatar(),
 		geo: {
@@ -44,7 +44,7 @@ export const users: User[] = [
 		room: '',
 	},
 	{
-		id: 'vew1281',
+		userID: 'vew1281',
 		username: 'Karianne',
 		avatar: generate.avatar(),
 		geo: {
@@ -58,7 +58,7 @@ export const users: User[] = [
 		room: '',
 	},
 	{
-		id: 'aed1k11',
+		userID: 'aed1k11',
 		username: 'Kamren',
 		avatar: generate.avatar(),
 		geo: {
@@ -72,7 +72,7 @@ export const users: User[] = [
 		room: '',
 	},
 	{
-		id: '12s1ka5',
+		userID: '12s1ka5',
 		username: 'Leopoldo_Corkery',
 		avatar: generate.avatar(),
 		geo: {
@@ -86,7 +86,7 @@ export const users: User[] = [
 		room: '',
 	},
 	{
-		id: 're5bsa5',
+		userID: 're5bsa5',
 		username: 'Elwyn.Skiles',
 		avatar: generate.avatar(),
 		geo: {
@@ -100,7 +100,7 @@ export const users: User[] = [
 		room: '',
 	},
 	{
-		id: 'ee51185',
+		userID: 'ee51185',
 		username: 'Maxime_Nienow',
 		avatar: generate.avatar(),
 		geo: {
@@ -114,7 +114,7 @@ export const users: User[] = [
 		room: '',
 	},
 	{
-		id: 'fx52kk5',
+		userID: 'fx52kk5',
 		username: 'Delphine',
 		avatar: generate.avatar(),
 		geo: {
@@ -128,7 +128,7 @@ export const users: User[] = [
 		room: '',
 	},
 	{
-		id: '1ee1k25',
+		userID: '1ee1k25',
 		username: 'Moriah.Stanton',
 		avatar: generate.avatar(),
 		geo: {

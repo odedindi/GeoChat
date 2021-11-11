@@ -11,7 +11,7 @@ type UserGeoData = { coord?: GeoCoord; preferedDistance: number };
 
 type User = {
 	avatar: string;
-	id: ID;
+	userID: ID;
 	socketID: ID;
 	username: string;
 	room: string;
@@ -19,11 +19,10 @@ type User = {
 };
 
 type Message = {
-	id: ID;
-	from: User | string;
-	to?: User;
-	text: string;
-	createdAt: number;
+	messageid: ID;
+	fromuser: string;
+	content: string;
+	createdat: number;
 };
 
 type Room = {

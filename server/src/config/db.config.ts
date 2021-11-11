@@ -1,13 +1,16 @@
-import { Client } from 'pg';
+import { Pool } from 'pg';
 
-const dbConfig = {
-	user: 'pg',
-	host: 'localhost',
-	database: 'geochatapi',
-	password: 'password',
-	port: 5432,
-};
+const createPool = () =>
+	new Pool({
+		user: 'pg',
+		host: 'localhost',
+		database: 'geochatapi',
+		password: 'password',
+		port: 5432,
+		max: 20,
+		idleTimeoutMillis: 30000,
+		connectionTimeoutMillis: 2000,
+	});
 
-const dbClient = new Client(dbConfig);
-
-export default dbClient;
+const db = createPool();
+export default db;

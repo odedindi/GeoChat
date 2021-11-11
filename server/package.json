@@ -11,7 +11,7 @@
 		"lint": "tslint -c tslint.json -p tsconfig.json --fix",
 		"tsc": "tsc",
 		"build": "yarn clean && yarn lint && yarn tsc",
-		"dev:start": "yarn lint && yarn ts-node --files ./src/server.ts",
+		"dev:start": "yarn build && yarn ts-node --files ./src/server.ts",
 		"dev": "nodemon --watch ./src -e ts --exec yarn dev:start",
 		"start": "node .",
 		"format": "prettier --write .",

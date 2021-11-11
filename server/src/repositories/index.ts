@@ -1,9 +1,7 @@
-import { InMemoryUserRepository } from './user.repository';
-import { InMemoryRoomRepository } from './room.repository';
-import { InMemoryMessageRepository } from './message.repository';
+import { DBUserRepository } from './postgresDB/db.user.queries';
+import { DBMessageRepository } from './postgresDB/db.message.queries';
 
-const roomRepository = new InMemoryRoomRepository();
-const userRepository = new InMemoryUserRepository();
-const messageRepository = new InMemoryMessageRepository();
+const userRepository = new DBUserRepository();
+const messageRepository = new DBMessageRepository();
 
-export { roomRepository, userRepository, messageRepository };
+export { userRepository, messageRepository };

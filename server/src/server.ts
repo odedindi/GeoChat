@@ -3,7 +3,7 @@ import app from './app';
 import * as socketio from 'socket.io';
 import log from './config/logger';
 import chat from './services/chat';
-import { normalizePort } from './utils/nirmalizePort';
+import { normalizePort } from './utils/normalizePort';
 
 const PORT = normalizePort(process.env.SERVER_PORT || 4000);
 

@@ -1,11 +1,16 @@
 import * as socketio from 'socket.io';
 import log from 'src/config/logger';
-import ChatController from 'src/controllers/chat.controller';
+import SocketController from 'src/controllers/socket.controller';
+import { messageRepository, userRepository } from 'src/repositories';
+
+const socketController = new SocketController(
+	userRepository,
+	messageRepository,
+);
 
 const chat = (io: socketio.Server) => {
 	io.on('connection', (socket) => {
-		/* tslint:disable-next-line */
-		new ChatController(socket);
+		socketController.initConnection(socket);
 		log.info(`socket: ${socket.id} connected`);
 	});
 };
