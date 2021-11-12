@@ -29,8 +29,8 @@ class SocketController {
 	userJoin = async (socketID: ID, user: User, room: string) => {
 		const updatedUser: User = { ...user, socketID, room };
 
-		// ==== InMemoryUsersRepository ====
-		log.info(`updatedUser: ${updatedUser.userID} in InMemoryUsersRepository`);
+		// ==== InMemoryUserRepository ====
+		log.info(`updatedUser: ${updatedUser.userID} in InMemoryUserRepository`);
 		this.userRepository.addUser(updatedUser);
 
 		// ==== pg Database users table ====

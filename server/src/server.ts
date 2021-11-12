@@ -13,6 +13,7 @@ const io = new socketio.Server(httpServer, {
 });
 
 chat(io);
+
 httpServer.listen(PORT, () => {
 	log.info(`Server is running at http://localhost:${PORT}`);
 });

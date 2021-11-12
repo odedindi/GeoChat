@@ -35583,3 +35583,209 @@
   service: 'GeoChating server logger',
   timestamp: '11-11-2021 15:15:09'
 }
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '11-11-2021 16:26:12'
+}
+{
+  level: 'error',
+  message: 'prisma.controller main() Error:  Error: \n' +
+    'Invalid `prisma.user.findMany()` invocation in\n' +
+    '/home/odedindi/Desktop/coding/my_portfolio/GeoChat/GeoChat/server/src/controllers/prisma.controller.ts:8:37\n' +
+    '\n' +
+    '   5 \n' +
+    '   6 export const main = async () => {\n' +
+    '   7 \t// ... you will write your Prisma Client queries here\n' +
+    '→  8     const users = await prisma.user.findMany(\n' +
+    '  The table `public.User` does not exist in the current database.',
+  service: 'GeoChating server logger',
+  timestamp: '11-11-2021 16:26:12'
+}
+{
+  level: 'error',
+  message: 'prisma.controller main() Error:  Error: \n' +
+    'Invalid `prisma.user.findMany()` invocation in\n' +
+    '/home/odedindi/Desktop/coding/my_portfolio/GeoChat/GeoChat/server/src/controllers/prisma.controller.ts:8:37\n' +
+    '\n' +
+    '   5 \n' +
+    '   6 export const main = async () => {\n' +
+    '   7 \t// ... you will write your Prisma Client queries here\n' +
+    '→  8     const users = await prisma.user.findMany(\n' +
+    '  The table `public.User` does not exist in the current database.',
+  service: 'GeoChating server logger',
+  timestamp: '11-11-2021 16:26:12'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '11-11-2021 16:26:53'
+}
+{
+  level: 'error',
+  message: 'prisma.controller main() Error:  Error: \n' +
+    'Invalid `prisma.user.findMany()` invocation in\n' +
+    '/home/odedindi/Desktop/coding/my_portfolio/GeoChat/GeoChat/server/src/controllers/prisma.controller.ts:8:37\n' +
+    '\n' +
+    '   5 \n' +
+    '   6 export const main = async () => {\n' +
+    '   7 \t// ... you will write your Prisma Client queries here\n' +
+    '→  8     const users = await prisma.user.findMany(\n' +
+    '  The table `public.User` does not exist in the current database.',
+  service: 'GeoChating server logger',
+  timestamp: '11-11-2021 16:26:53'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '11-11-2021 16:30:45'
+}
+{
+  level: 'error',
+  message: 'prisma.controller main() Error:  Error: \n' +
+    'Invalid `prisma.user.findMany()` invocation in\n' +
+    '/home/odedindi/Desktop/coding/my_portfolio/GeoChat/GeoChat/server/src/controllers/prisma.controller.ts:8:37\n' +
+    '\n' +
+    '   5 \n' +
+    '   6 export const main = async () => {\n' +
+    '   7 \t// ... you will write your Prisma Client queries here\n' +
+    '→  8     const users = await prisma.user.findMany(\n' +
+    '  The table `public.User` does not exist in the current database.',
+  service: 'GeoChating server logger',
+  timestamp: '11-11-2021 16:30:45'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '11-11-2021 16:35:20'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '11-11-2021 16:50:52'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '11-11-2021 16:29:48'
+}
+{
+  level: 'info',
+  message: 'Router: GET, /api/v1',
+  service: 'GeoChating server logger',
+  timestamp: '11-11-2021 22:46:25'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '11-11-2021 22:48:39'
+}
+{
+  level: 'info',
+  message: 'Router: GET, /api/v1',
+  service: 'GeoChating server logger',
+  timestamp: '11-11-2021 22:48:56'
+}
+{
+  level: 'info',
+  message: 'Router: GET, /api/v1/users',
+  service: 'GeoChating server logger',
+  timestamp: '11-11-2021 23:05:32'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '12-11-2021 00:07:09'
+}
+{
+  level: 'info',
+  message: 'socket: 1ud2ABdIs8G_dg61AAAC connected',
+  service: 'GeoChating server logger',
+  timestamp: '12-11-2021 00:07:11'
+}
+{
+  level: 'info',
+  message: 'socket: iNB7VSiJbxC9_JBCAAAD connected',
+  service: 'GeoChating server logger',
+  timestamp: '12-11-2021 00:07:11'
+}
+{
+  level: 'info',
+  message: 'updatedUser: 9mabnbl in InMemoryUserRepository',
+  service: 'GeoChating server logger',
+  timestamp: '12-11-2021 00:07:11'
+}
+{
+  level: 'info',
+  message: 'check if user is already in users table if not create it',
+  service: 'GeoChating server logger',
+  timestamp: '12-11-2021 00:07:11'
+}
+{
+  level: 'info',
+  message: 'socket: KdZlzY98BZM8tMbBAAAG connected',
+  service: 'GeoChating server logger',
+  timestamp: '12-11-2021 00:07:16'
+}
+{
+  level: 'info',
+  message: 'socket: K2QiOOO-rNUZ0r5mAAAH connected',
+  service: 'GeoChating server logger',
+  timestamp: '12-11-2021 00:07:16'
+}
+{
+  level: 'info',
+  message: 'updatedUser: 9mabnbl in InMemoryUserRepository',
+  service: 'GeoChating server logger',
+  timestamp: '12-11-2021 00:07:16'
+}
+{
+  level: 'info',
+  message: 'check if user is already in users table if not create it',
+  service: 'GeoChating server logger',
+  timestamp: '12-11-2021 00:07:16'
+}
+{
+  level: 'info',
+  message: 'Router: GET, /api/v1/',
+  service: 'GeoChating server logger',
+  timestamp: '12-11-2021 00:07:39'
+}
+{
+  level: 'info',
+  message: 'Router: GET, /api/v1/users',
+  service: 'GeoChating server logger',
+  timestamp: '12-11-2021 00:07:44'
+}
+{
+  level: 'info',
+  message: 'socket: SSLa7tDM8PLeN5y5AAAK connected',
+  service: 'GeoChating server logger',
+  timestamp: '12-11-2021 00:07:59'
+}
+{
+  level: 'info',
+  message: 'socket: xHeRKhelUOrUJ4DcAAAL connected',
+  service: 'GeoChating server logger',
+  timestamp: '12-11-2021 00:07:59'
+}
+{
+  level: 'info',
+  message: 'updatedUser: 9mabnbl in InMemoryUserRepository',
+  service: 'GeoChating server logger',
+  timestamp: '12-11-2021 00:08:00'
+}
+{
+  level: 'info',
+  message: 'check if user is already in users table if not create it',
+  service: 'GeoChating server logger',
+  timestamp: '12-11-2021 00:08:00'
+}

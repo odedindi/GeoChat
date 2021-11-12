@@ -1,0 +1,11 @@
+{
+  "configurations": [
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "geochat",
+      "remoteRoot": "/usr/src/app",
+      "port": 4000
+    }
+  ]
+}

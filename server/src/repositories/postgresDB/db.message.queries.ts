@@ -8,17 +8,17 @@ export class DBMessageRepository implements MessageRepository {
 	constructor() {
 		this.db = db;
 	}
-	addMessage = async ({ messageid, fromuser, content, createdat }: Message) => {
+	addMessage = async ({ messageID, fromuser, content, createdat }: Message) => {
 		const query = {
-			text: 'INSERT INTO messages(messageid, fromuser, content, createdat) VALUES($1, $2, $3, $4)',
-			values: [messageid, fromuser, content, createdat],
+			text: 'INSERT INTO message(messageID, fromuser, content, createdat) VALUES($1, $2, $3, $4)',
+			values: [messageID, fromuser, content, createdat],
 		};
 		await this.db.query(query);
-		log.info(`Message: ${messageid} added to messages table`);
+		log.info(`Message: ${messageID} added to message table`);
 	};
 	getAllMessages = async () => {
 		const query = {
-			text: 'SELECT * FROM messages ORDER BY id ASC',
+			text: 'SELECT * FROM message ORDER BY id ASC',
 		};
 		const { rows } = await this.db.query(query);
 		log.info(`results of getAllMessages: ${JSON.stringify(rows)}`);

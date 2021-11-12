@@ -33,7 +33,7 @@ const Home: React.FC = () => {
 	const { storage } = useStorage();
 
 	const [currentUser, setCurrentUser] = React.useState<User>({
-		id: generateRandomId(),
+		userID: generateRandomId(),
 		avatar: '',
 		socketID: '',
 		username: '',

@@ -52,20 +52,20 @@ export const Messages: React.FC<{ socket: Socket }> = ({ socket }) => {
 	return (
 		<MessageList>
 			{[...(Object.values(messages) as Message[])]
-				.sort((a: Message, b: Message) => a.createdAt - b.createdAt)
+				.sort((a: Message, b: Message) => a.createdat - b.createdat)
 				.map((message) => (
 					<div
 						key={message.id}
 						className="message-container"
 						title={`Sent at ${new Date(
-							message.createdAt!,
+							message.createdat!,
 						).toLocaleTimeString()}`}
 					>
 						{console.log(message)}
-						<span className="user">{message.from}:</span>
-						<span className="message">{message.text}</span>
+						<span className="user">{message.fromuser}:</span>
+						<span className="message">{message.content}</span>
 						<span className="date">
-							{moment(message.createdAt).format('lll')}
+							{moment(message.createdat).format('lll')}
 						</span>
 					</div>
 				))}

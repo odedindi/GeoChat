@@ -145,3 +145,59 @@
   service: 'GeoChating server logger',
   timestamp: '10-11-2021 20:32:29'
 }
+{
+  level: 'error',
+  message: 'prisma.controller main() Error:  Error: \n' +
+    'Invalid `prisma.user.findMany()` invocation in\n' +
+    '/home/odedindi/Desktop/coding/my_portfolio/GeoChat/GeoChat/server/src/controllers/prisma.controller.ts:8:37\n' +
+    '\n' +
+    '   5 \n' +
+    '   6 export const main = async () => {\n' +
+    '   7 \t// ... you will write your Prisma Client queries here\n' +
+    '→  8     const users = await prisma.user.findMany(\n' +
+    '  The table `public.User` does not exist in the current database.',
+  service: 'GeoChating server logger',
+  timestamp: '11-11-2021 16:26:12'
+}
+{
+  level: 'error',
+  message: 'prisma.controller main() Error:  Error: \n' +
+    'Invalid `prisma.user.findMany()` invocation in\n' +
+    '/home/odedindi/Desktop/coding/my_portfolio/GeoChat/GeoChat/server/src/controllers/prisma.controller.ts:8:37\n' +
+    '\n' +
+    '   5 \n' +
+    '   6 export const main = async () => {\n' +
+    '   7 \t// ... you will write your Prisma Client queries here\n' +
+    '→  8     const users = await prisma.user.findMany(\n' +
+    '  The table `public.User` does not exist in the current database.',
+  service: 'GeoChating server logger',
+  timestamp: '11-11-2021 16:26:12'
+}
+{
+  level: 'error',
+  message: 'prisma.controller main() Error:  Error: \n' +
+    'Invalid `prisma.user.findMany()` invocation in\n' +
+    '/home/odedindi/Desktop/coding/my_portfolio/GeoChat/GeoChat/server/src/controllers/prisma.controller.ts:8:37\n' +
+    '\n' +
+    '   5 \n' +
+    '   6 export const main = async () => {\n' +
+    '   7 \t// ... you will write your Prisma Client queries here\n' +
+    '→  8     const users = await prisma.user.findMany(\n' +
+    '  The table `public.User` does not exist in the current database.',
+  service: 'GeoChating server logger',
+  timestamp: '11-11-2021 16:26:53'
+}
+{
+  level: 'error',
+  message: 'prisma.controller main() Error:  Error: \n' +
+    'Invalid `prisma.user.findMany()` invocation in\n' +
+    '/home/odedindi/Desktop/coding/my_portfolio/GeoChat/GeoChat/server/src/controllers/prisma.controller.ts:8:37\n' +
+    '\n' +
+    '   5 \n' +
+    '   6 export const main = async () => {\n' +
+    '   7 \t// ... you will write your Prisma Client queries here\n' +
+    '→  8     const users = await prisma.user.findMany(\n' +
+    '  The table `public.User` does not exist in the current database.',
+  service: 'GeoChating server logger',
+  timestamp: '11-11-2021 16:30:45'
+}

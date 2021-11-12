@@ -19,10 +19,10 @@ type User = {
 };
 
 type Message = {
-	messageid: ID;
+	messageID: ID;
 	fromuser: string;
 	content: string;
-	createdat: number;
+	createdat: StrOrNum;
 };
 
 type Room = {
