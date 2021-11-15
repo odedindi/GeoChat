@@ -19,8 +19,8 @@ type User = {
 };
 
 type Message = {
-	id?: number;
-	messageid: ID;
+	id: number;
+	messageID: ID;
 	fromuser: string;
 	content: string;
 	createdat: number;

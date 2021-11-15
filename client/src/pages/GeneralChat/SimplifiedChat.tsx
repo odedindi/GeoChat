@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage } from '@ionic/react';
+import { IonContent, IonFooter, IonHeader, IonPage } from '@ionic/react';
 import * as React from 'react';
 import { useSocket } from 'src/Socket';
 import { useStore } from 'src/Store';
@@ -21,14 +21,15 @@ import * as S from './styles';
 const log = getLogger('Chat Page');
 
 const Chat: React.FC = () => {
-	const { socket } = useSocket() as any;
+	const [isLoading, setIsLoading] = React.useState(false);
+
+	const { socket } = useSocket();
 	const { storage } = useStorage();
 	const {
 		storeState: { user },
 		storeDispatch,
 	} = useStore();
 	const [currentUser, setCurrentUser] = React.useState<User | null>(() => user);
-	const [roomUsers, setRoomUsers] = React.useState<any>({});
 
 	React.useEffect(() => {
 		const getUserFromStorage = async () => {
@@ -44,18 +45,30 @@ const Chat: React.FC = () => {
 				log('found user in storage, data dispatched to store');
 			}
 		};
-
+		setIsLoading(true);
 		getUserFromStorage();
+		setIsLoading(false);
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
-	React.useEffect(() => {
-		console.log(roomUsers);
-	});
 	const [isConnected, setIsConnected] = React.useState(() => socket.connected);
-	const [typing, setTyping] = React.useState(false);
-	const [isLoading, setIsLoading] = React.useState(false);
 
+	const [messages, setMessages] = React.useState<Message[]>([]);
+
+	const messageListener = React.useCallback(
+		(message: Message) =>
+			setMessages((prevMessages: Message[]) => [...prevMessages, message]),
+		[],
+	);
+	const [userInput, setUserInput] = React.useState('');
+	const submitForm = (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		const msgText = userInput.trim();
+		if (!msgText) return;
+
+		socket.emit('chatMessage', userInput);
+		setUserInput('');
+	};
 	React.useEffect(() => {
 		if (currentUser) {
 			socket.on('connect', () => {
@@ -66,20 +79,7 @@ const Chat: React.FC = () => {
 				});
 				setIsConnected(true);
 			});
-			// Get room and users
-			socket.on(
-				'roomUsers',
-				({ room, users }: { room: string; users: User[] }) => {
-					setIsLoading(true);
-					users.forEach((user) => {
-						setRoomUsers((prev: any) => ({
-							...prev,
-							[user.socketID]: user.username,
-						}));
-					});
-					setIsLoading(false);
-				},
-			);
+			socket.on('message', messageListener);
 
 			socket.on('disconnect', () => {
 				setIsConnected(false);
@@ -87,8 +87,9 @@ const Chat: React.FC = () => {
 		}
 		return () => {
 			socket.off('connect');
+			socket.off('roomUsers');
+			socket.off('message', messageListener);
 			socket.off('disconnect');
-			socket.off('message');
 		};
 	});
 
@@ -96,25 +97,29 @@ const Chat: React.FC = () => {
 		<IonPage>
 			<IonHeader>
 				<Header>
-					<Toolbar user={currentUser} />
-					<p>Socket Connected: {'' + isConnected}</p>
+					<p>Connected: {'' + isConnected}</p>
 				</Header>
+				<Toolbar user={currentUser} />
 			</IonHeader>
 			<IonContent fullscreen>
 				<Loading open={isLoading} />
 				<div>
 					{socket ? (
 						<div className="chat-container">
-							<Messages socket={socket} />
-							<MessageInput socket={socket} />
+							<Messages messages={messages} />
 						</div>
 					) : (
 						<div>Not Connected</div>
 					)}
 				</div>
-				<S.ChatWindow></S.ChatWindow>
-				<S.SideBar></S.SideBar>
 			</IonContent>
+			<IonFooter>
+				<MessageInput
+					value={userInput}
+					setValue={setUserInput}
+					onSubmit={submitForm}
+				/>
+			</IonFooter>
 		</IonPage>
 	);
 };

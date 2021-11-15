@@ -10,10 +10,9 @@ services:
     depends_on:
       - db
     environment:
-
+      NODE_ENV: development
     ports:
       - "4000:4000"
-    command: node --inspect=0.0.0.0:9229 ./bin/www
   db:
     image: postgres:14.0-alpine
     ports:

@@ -1,22 +1,20 @@
 import { IonItem, IonLabel } from '@ionic/react';
 import * as React from 'react';
-import type { Socket } from 'socket.io-client';
 
 import * as S from './styles';
 
-export const MessageInput: React.FC<{ socket: Socket }> = ({ socket }) => {
-	const [value, setValue] = React.useState('');
-	const submitForm = (e: React.FormEvent<HTMLFormElement>) => {
-		e.preventDefault();
-		const msgText = value.trim();
-		if (!msgText) return;
-
-		socket.emit('chatMessage', value);
-		setValue('');
-	};
-
+type MessageInputProps = {
+	value: string;
+	setValue: React.Dispatch<React.SetStateAction<string>>;
+	onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+};
+export const MessageInput: React.FC<MessageInputProps> = ({
+	value,
+	setValue,
+	onSubmit,
+}) => {
 	return (
-		<S.Form onSubmit={submitForm}>
+		<S.Form onSubmit={onSubmit}>
 			<IonItem>
 				<IonLabel position="floating">Type your message..</IonLabel>
 				<S.Input

@@ -1,3 +1,4 @@
+import moment from 'moment';
 import * as socketio from 'socket.io';
 import log from 'src/config/logger';
 import { botName } from '../config/constants';
@@ -92,9 +93,7 @@ class SocketController {
 
 	handleDisconnection = async (socket: socketio.Socket) => {
 		const user = await this.getCurrentUser(socket.id);
-		if (user) {
-			log.info(`${user[0].socketID} has left the chat`);
-			this.userRepository.removeUser(socket.id);
+		if (user[0]) {
 			log.info(
 				`Broadcast to ${user[0].room} that ${user[0].socketID} disconnected`,
 			);
@@ -108,6 +107,8 @@ class SocketController {
 				room: user[0].room,
 				users: this.getRoomUsers(user[0].room),
 			});
+			log.info(`${user[0].socketID} is leaving the chat`);
+			// this.userRepository.updateUser({ ...user[0], room: '', socketID: '' });
 		}
 	};
 

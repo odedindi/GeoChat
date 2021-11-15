@@ -19,6 +19,10 @@
 		"check:types": "tsc --pretty --noEmit",
 		"check:lint": "tslint -c tslint.json -p tsconfig.json",
 		"check": "yarn check:format && yarn check:types && yarn check:lint",
+		"prisma:studio": "yarn prisma studio",
+		"prisma:migrate:dev": "yarn prisma migrate dev",
+		"prisma:migrate:deploy": "yarn prisma migrate deploy",
+		"prisma:migrate:reset": "yarn prisma migrate reset -f",
 		"test": "jest --watch"
 	},
 	"dependencies": {

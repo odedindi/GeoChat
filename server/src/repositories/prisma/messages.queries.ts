@@ -3,17 +3,34 @@ import prisma from 'src/config/prisma.config';
 
 export class PrismaMessagesRepository implements MessageRepository {
 	addMessage = async ({ messageID, fromuser, content, createdat }: Message) => {
-		const response = (await prisma.$queryRaw`
-        insert into "Message" ("messageID", "fromuser", "content", "createdat")
-        values (${messageID}, (${fromuser}, (${content}, (${createdat}, ) returning id`) as any;
-		log.info(`Message: ${messageID} added to messages table`);
-		console.log(
-			'PrismaMessagesRepository addMessage response: ',
-			JSON.stringify(response),
-		);
+		const main = async () =>
+			await prisma.message.create({
+				data: {
+					messageID,
+					fromuser,
+					content,
+					createdat: createdat.toString(),
+				},
+			});
+		main()
+			.catch((e: Error) => {
+				log.error(`Prisma Message Repository add message error: ${e}`);
+				throw e;
+			})
+			.finally(async () => {
+				await prisma.$disconnect();
+			});
 	};
 	getAllMessages = async () => {
-		const messages = await prisma.message.findMany();
+		const main = async () => await prisma.message.findMany();
+		const messages = main()
+			.catch((e: Error) => {
+				log.error(`Prisma Message Repository add message error: ${e}`);
+				throw e;
+			})
+			.finally(async () => {
+				await prisma.$disconnect();
+			});
 		log.info(`results of getAllMessages: ${JSON.stringify(messages)}`);
 		return messages;
 	};
