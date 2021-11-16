@@ -17,7 +17,7 @@ import useDidMount from 'src/hooks/useDidMount';
 import { useKeyboardListener } from 'src/hooks/useKeyboardListener';
 import useStorage from 'src/hooks/useStorage';
 import { MainButton } from 'src/theme';
-import { generateRandomId } from 'src/utils/generateRandomId';
+import generate from 'src/utils/generators';
 import { getLogger } from 'src/utils/logger';
 
 import Banner from './Banner';
@@ -33,7 +33,7 @@ const Home: React.FC = () => {
 	const { storage } = useStorage();
 
 	const [currentUser, setCurrentUser] = React.useState<User>({
-		userID: generateRandomId(),
+		userID: generate.id(),
 		avatar: '',
 		socketID: '',
 		username: '',

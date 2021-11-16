@@ -1,14 +1,14 @@
 interface MessageRepository {
-	addMessage: (message: Message) => void;
-	getAllMessages: () => Promise<Message[]>;
+	addMessage: (message: MessageDTO) => void;
+	getAllMessages: () => Promise<MessageDTO[]>;
 }
 
 interface UserRepository {
-	addUser: (user: User) => void;
-	updateUser: (user: User) => void;
-	removeUser: (userID: ID) => void;
-	getAllUsers: () => Promise<User[]>;
-	getUserBySocketID: (socketID: ID) => Promise<User[]>;
-	getUsersByRoom: (room: string) => Promise<User[]>;
-	getUserByUserID: (userID: ID) => Promise<User[]>;
+	addUser: (user: UserDTO) => Promise<UserDTO>;
+	updateUser: (user: UserDTO) => Promise<UserDTO>;
+	removeUser: (userID: string) => Promise<UserDTO>;
+	getAllUsers: () => Promise<UserDTO[]>;
+	getUserBySocketID: (socketID: string) => Promise<UserDTO[]>;
+	getUsersByRoom: (room: string) => Promise<UserDTO[]>;
+	getUserByUserID: (userID: string) => Promise<UserDTO[]>;
 }

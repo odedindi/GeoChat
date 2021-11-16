@@ -1,152 +1,118 @@
-import { userInfo } from 'os';
 import log from 'src/config/logger';
 import prisma from 'src/config/prisma.config';
-
+import { User as PrismaUserModel } from '@prisma/client';
+import UserMap from './UserMap';
 export class PrismaUserRepository implements UserRepository {
-	addUser = ({
+	private userMap = new UserMap();
+	private handleError = async <T>(cb: Promise<T>, errMsg: string) =>
+		cb.catch((e: Error) => {
+			log.error(`${errMsg}: ${e}`);
+			throw e;
+		});
+
+	public addUser = async (user: UserDTO): Promise<PrismaUserModel> => {
+		const errMsg = 'Prisma User Repository add user error';
+		return this.handleError<PrismaUserModel>(
+			prisma.user.upsert({
+				where: {
+					userID: user.userID,
+				},
+				update: {
+					room: user.room,
+					socketID: user.socketID,
+				},
+				create: {
+					avatar: user.avatar,
+					preferedDistance: user.preferedDistance,
+					room: user.room,
+					socketID: user.socketID,
+					userID: user.userID,
+					username: user.username,
+				},
+			}),
+			errMsg,
+		);
+	};
+	public updateUser = async ({
 		username,
 		avatar,
 		socketID,
-		room,
-		geo: { coord, preferedDistance },
+		preferedDistance,
 		userID,
-	}: User) => {
-		const main = async () =>
-			await prisma.user.upsert({
-				where: {
-					userID,
-				},
-				update: {
-					socketID,
-					room,
-					geolocation_lat: coord.lat.toString(),
-					geolocation_lng: coord.lng.toString(),
-				},
-				create: {
-					username,
-					avatar,
-					socketID,
-					room,
-					userID,
-					preferedDistance,
-					geolocation_lat: coord.lat.toString(),
-					geolocation_lng: coord.lng.toString(),
-				},
-			});
-		main()
-			.catch((e: Error) => {
-				log.error(`Prisma User Repository add user error: ${e}`);
-				throw e;
-			})
-			.finally(async () => {
-				await prisma.$disconnect();
-			});
-	};
-	updateUser = ({ username, avatar, socketID, room, geo, userID }: User) => {
-		const { coord, preferedDistance } = geo;
-		const main = async () =>
-			await prisma.user.update({
+	}: UserDTO): Promise<PrismaUserModel> => {
+		const errMsg = 'Prisma User Repository update user error';
+		console.log(username, avatar, socketID, preferedDistance, userID);
+		return this.handleError<PrismaUserModel>(
+			prisma.user.update({
 				where: { userID },
 				data: {
 					username,
 					avatar,
 					socketID,
-					room,
 					userID,
 					preferedDistance,
-					geolocation_lat: coord.lat.toString(),
-					geolocation_lng: coord.lng.toString(),
 				},
-			});
-		main()
-			.catch((e: Error) => {
-				log.error(`Prisma User Repository update user error: ${e}`);
-				throw e;
-			})
-			.finally(async () => {
-				await prisma.$disconnect();
-			});
+			}),
+			errMsg,
+		);
 	};
-	removeUser = (userID: string) => {
-		const main = async () =>
-			await prisma.user.delete({
-				where: { userID },
-			});
-		main()
-			.catch((e: Error) => {
-				log.error(`Prisma User Repository remove user error: ${e}`);
-				throw e;
-			})
-			.finally(async () => {
-				await prisma.$disconnect();
-			});
+	public removeUser = (userID: string): Promise<PrismaUserModel> => {
+		const errMsg = 'Prisma User Repository remove user error';
+		return this.handleError<PrismaUserModel>(
+			prisma.user.delete({ where: { userID } }),
+			errMsg,
+		);
 	};
-	getAllUsers = async () => {
-		const main = async () =>
-			(await prisma.user.findMany({
-				include: { messages: true },
-			})) as User[];
+	public getAllUsers = async () => {
+		const errMsg = 'Prisma User Repository remove user error';
+		const prismaUsers = await this.handleError<PrismaUserModel[]>(
+			prisma.user.findMany(),
+			errMsg,
+		);
 
-		const users = main()
-			.catch((e: Error) => {
-				log.error(`Prisma User Repository remove user error: ${e}`);
-				throw e;
-			})
-			.finally(async () => {
-				await prisma.$disconnect();
-			});
-		log.info(`getAllUsers, number of users found: ${(await users).length} `);
+		const users: UserDTO[] = this.userMap.toDTOArr(prismaUsers);
+		log.info(`getAllUsers, number of users found: ${users.length} `);
 		return users;
 	};
-	getUserBySocketID = async (socketID: string) => {
-		const main = async () =>
-			(await prisma.user.findUnique({
+
+	public getUserBySocketID = async (socketID: string) => {
+		const errMsg = 'Prisma User Repository get User By SocketID error';
+		const prismaUser = await this.handleError(
+			prisma.user.findUnique({
 				where: { socketID },
-				include: { messages: true },
-			})) as User;
-		const match = await main()
-			.catch((e: Error) => {
-				log.error(`Prisma User Repository get User By SocketID error: ${e}`);
-				throw e;
-			})
-			.finally(async () => {
-				await prisma.$disconnect();
-			});
-
-		return [match];
+			}),
+			errMsg,
+		);
+		if (prismaUser) {
+			const matchUser = this.userMap.toDTO(prismaUser);
+			return [matchUser];
+		} else return [] as UserDTO[];
 	};
-	getUserByUserID = async (userID: string) => {
-		const main = async () =>
-			(await prisma.user.findUnique({
+
+	public getUserByUserID = async (userID: string) => {
+		const errMsg = 'Prisma User Repository get User By UserID error';
+		const prismaUser = await this.handleError(
+			prisma.user.findUnique({
 				where: { userID },
-				include: { messages: true },
-			})) as User;
-		const match = await main()
-			.catch((e: Error) => {
-				log.error(`Prisma User Repository get User By UserID error: ${e}`);
-				throw e;
-			})
-			.finally(async () => {
-				await prisma.$disconnect();
-			});
-
-		return [match];
+			}),
+			errMsg,
+		);
+		if (prismaUser) {
+			const matchUser: UserDTO = this.userMap.toDTO(prismaUser);
+			return [matchUser];
+		} else return [] as UserDTO[];
 	};
-	getUsersByRoom = async (room: string) => {
-		const main = async () =>
-			await prisma.user.findMany({
+	public getUsersByRoom = async (room: string) => {
+		const errMsg = 'Prisma User Repository get Users By room error';
+		const prismaUsers = await this.handleError<PrismaUserModel[]>(
+			prisma.user.findMany({
 				where: { room },
-				include: { messages: true },
-			});
-		const match = await main()
-			.catch((e: Error) => {
-				log.error(`Prisma User Repository get Users By room error: ${e}`);
-				throw e;
-			})
-			.finally(async () => {
-				await prisma.$disconnect();
-			});
+			}),
+			errMsg,
+		);
 
-		return match;
+		const users: UserDTO[] = this.userMap.toDTOArr(prismaUsers);
+		log.info(`getUsersByRoom, number of users found: ${users.length} `);
+		return users;
 	};
 }

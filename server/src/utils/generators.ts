@@ -6,9 +6,9 @@ const randomNumberFrom1ToNumber = (num: number) =>
 	Math.floor(Math.random() * num) + 1;
 
 const randomString = () => {
-	let result: string;
 	const characters =
 		'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+	let result: string = '';
 	for (let index = 0; index < randomNumberFrom1ToNumber(100); index++) {
 		result += characters.charAt(randomNumberFrom1ToNumber(characters.length));
 	}

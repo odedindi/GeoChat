@@ -1,4 +1,3 @@
-import moment from 'moment';
 import * as socketio from 'socket.io';
 import log from 'src/config/logger';
 import { botName } from '../config/constants';
@@ -10,7 +9,7 @@ class SocketController {
 		private readonly messageRepository: MessageRepository,
 	) {}
 	initConnection = (socket: socketio.Socket) => {
-		socket.on('joinRoom', ({ user, room }: { user: User; room: string }) =>
+		socket.on('joinRoom', ({ user, room }: { user: UserDTO; room: string }) =>
 			this.joinRoom(socket, user, room),
 		);
 		// Listen for chatMessage
@@ -27,8 +26,8 @@ class SocketController {
 		);
 	};
 
-	userJoin = async (socketID: ID, user: User, room: string) => {
-		const updatedUser: User = { ...user, socketID, room };
+	userJoin = async (socketID: string, user: UserDTO, room: string) => {
+		const updatedUser: UserDTO = { ...user, socketID, room };
 
 		// ==== InMemoryUserRepository ====
 		log.info(`updatedUser: ${updatedUser.userID} in InMemoryUserRepository`);
@@ -42,12 +41,12 @@ class SocketController {
 		return updatedUser;
 	};
 
-	getCurrentUser = (socketID: ID) =>
+	getCurrentUser = (socketID: string) =>
 		this.userRepository.getUserBySocketID(socketID);
 
 	getRoomUsers = (room: string) => this.userRepository.getUsersByRoom(room);
 
-	joinRoom = async (socket: socketio.Socket, user: User, room: string) => {
+	joinRoom = async (socket: socketio.Socket, user: UserDTO, room: string) => {
 		const joinedUser = await this.userJoin(socket.id, user, room);
 		socket.join(joinedUser.room);
 
@@ -86,7 +85,7 @@ class SocketController {
 
 	handleChatMessage = async (socket: socketio.Socket, content: string) => {
 		const user = await this.getCurrentUser(socket.id);
-		const message: Message = formatMessage(user[0].username, content);
+		const message: MessageDTO = formatMessage(user[0].username, content);
 		this.messageRepository.addMessage(message);
 		socket.broadcast.to(user[0].room).emit('message', message);
 	};

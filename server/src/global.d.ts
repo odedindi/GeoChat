@@ -1,34 +1,26 @@
-type StrOrNum = string | number;
+// type StrOrNum = string | number;
 
-type ID = string;
+// type GeoCoord = {
+// 	lat: StrOrNum;
+// 	lng: StrOrNum;
+// };
+// type LeafletGeometryElement = { id: number; latlngs: GeoCoord[] };
 
-type GeoCoord = {
-	lat: StrOrNum;
-	lng: StrOrNum;
-};
-
-type UserGeoData = { coord?: GeoCoord; preferedDistance: number };
-
-type User = {
+interface UserDTO {
+	id?: number;
 	avatar: string;
-	userID: ID;
-	socketID: ID;
+	userID: string;
+	socketID: string;
 	username: string;
 	room: string;
-	geo?: UserGeoData;
-};
-
-type Message = {
-	messageID: ID;
+	preferedDistance: number;
+}
+interface MessageDTO {
+	id?: number;
+	messageID: string;
 	fromuser: string;
 	content: string;
-	createdat: StrOrNum;
-};
-
-type Room = {
-	messages?: Message[];
-	roomname: string;
-	users?: User[];
-};
-
-type LeafletGeometryElement = { id: number; latlngs: GeoCoord[] };
+	createdat: string;
+	geolocation_lat: string;
+	geolocation_lng: string;
+}

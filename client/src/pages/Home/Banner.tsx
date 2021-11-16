@@ -3,7 +3,7 @@ import * as I from 'ionicons/icons';
 import * as React from 'react';
 import Avatar from 'src/components/Avatar';
 import { useGeoLocation, useUploadNewAvatar } from 'src/hooks';
-import { generateRandomAvatar } from 'src/utils/generateRandomAvatar';
+import generate from 'src/utils/generators';
 import { getLogger } from 'src/utils/logger';
 
 import PageNaviButton from './PageNaviButton';
@@ -24,7 +24,7 @@ const Banner: React.FC<BannerProps> = ({ user, userStateUpdateHandler }) => {
 			userStateUpdateHandler((prev) => ({ ...prev, avatar: path })),
 		[userStateUpdateHandler],
 	);
-	const generateAvatarHandler = () => updateAvatar(generateRandomAvatar());
+	const generateAvatarHandler = () => updateAvatar(generate.avatar());
 
 	React.useEffect(() => {
 		if (newAvatar) {

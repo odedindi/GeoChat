@@ -43937,3 +43937,697 @@
   service: 'GeoChating server logger',
   timestamp: '15-11-2021 18:15:21'
 }
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '15-11-2021 20:11:01'
+}
+{
+  level: 'info',
+  message: 'socket: TMDQmcQQtxoe51rVAAAB connected',
+  service: 'GeoChating server logger',
+  timestamp: '15-11-2021 20:11:02'
+}
+{
+  level: 'info',
+  message: 'updatedUser: 0kjmi25 in InMemoryUserRepository',
+  service: 'GeoChating server logger',
+  timestamp: '15-11-2021 20:11:02'
+}
+{
+  level: 'info',
+  message: 'check if user is already in users table if not create it',
+  service: 'GeoChating server logger',
+  timestamp: '15-11-2021 20:11:02'
+}
+{
+  level: 'info',
+  message: 'updated user: 0kjmi25 room: public details in pgDB',
+  service: 'GeoChating server logger',
+  timestamp: '15-11-2021 20:11:02'
+}
+{
+  level: 'info',
+  message: 'Welcome TMDQmcQQtxoe51rVAAAB',
+  service: 'GeoChating server logger',
+  timestamp: '15-11-2021 20:11:02'
+}
+{
+  level: 'info',
+  message: 'Broadcast to public that TMDQmcQQtxoe51rVAAAB connected',
+  service: 'GeoChating server logger',
+  timestamp: '15-11-2021 20:11:02'
+}
+{
+  level: 'info',
+  message: 'Send room users (total of 2) and to room: public ',
+  service: 'GeoChating server logger',
+  timestamp: '15-11-2021 20:11:02'
+}
+{
+  level: 'info',
+  message: 'Send old messages',
+  service: 'GeoChating server logger',
+  timestamp: '15-11-2021 20:11:02'
+}
+{
+  level: 'info',
+  message: 'results of getAllMessages: {}',
+  service: 'GeoChating server logger',
+  timestamp: '15-11-2021 20:11:02'
+}
+{
+  level: 'info',
+  message: 'socket: Nn-8hKzu5oRrvA1mAAAD connected',
+  service: 'GeoChating server logger',
+  timestamp: '15-11-2021 20:11:03'
+}
+{
+  level: 'info',
+  message: 'updatedUser: 9mabnbl in InMemoryUserRepository',
+  service: 'GeoChating server logger',
+  timestamp: '15-11-2021 20:11:03'
+}
+{
+  level: 'info',
+  message: 'check if user is already in users table if not create it',
+  service: 'GeoChating server logger',
+  timestamp: '15-11-2021 20:11:03'
+}
+{
+  level: 'info',
+  message: 'updated user: 9mabnbl room: public details in pgDB',
+  service: 'GeoChating server logger',
+  timestamp: '15-11-2021 20:11:03'
+}
+{
+  level: 'info',
+  message: 'Welcome Nn-8hKzu5oRrvA1mAAAD',
+  service: 'GeoChating server logger',
+  timestamp: '15-11-2021 20:11:03'
+}
+{
+  level: 'info',
+  message: 'Broadcast to public that Nn-8hKzu5oRrvA1mAAAD connected',
+  service: 'GeoChating server logger',
+  timestamp: '15-11-2021 20:11:03'
+}
+{
+  level: 'info',
+  message: 'Send room users (total of 2) and to room: public ',
+  service: 'GeoChating server logger',
+  timestamp: '15-11-2021 20:11:03'
+}
+{
+  level: 'info',
+  message: 'Send old messages',
+  service: 'GeoChating server logger',
+  timestamp: '15-11-2021 20:11:03'
+}
+{
+  level: 'info',
+  message: 'results of getAllMessages: {}',
+  service: 'GeoChating server logger',
+  timestamp: '15-11-2021 20:11:03'
+}
+{
+  level: 'info',
+  message: 'socket: 04RyFvMjYaw9DUHoAAAF connected',
+  service: 'GeoChating server logger',
+  timestamp: '15-11-2021 20:11:05'
+}
+{
+  level: 'info',
+  message: 'socket: -m6lxy2QF5DwAx3rAAAH connected',
+  service: 'GeoChating server logger',
+  timestamp: '15-11-2021 20:11:08'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 09:28:57'
+}
+{
+  level: 'info',
+  message: 'socket: kXGuFSIyuhVNRaT_AAAC connected',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 09:36:12'
+}
+{
+  level: 'info',
+  message: 'socket: oMInIf3kBYaV7WO1AAAD connected',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 09:36:12'
+}
+{
+  level: 'info',
+  message: 'updatedUser: 9mabnbl in InMemoryUserRepository',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 09:36:12'
+}
+{
+  level: 'info',
+  message: 'check if user is already in users table if not create it',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 09:36:12'
+}
+{
+  level: 'info',
+  message: 'updated user: 9mabnbl room: public details in pgDB',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 09:36:12'
+}
+{
+  level: 'info',
+  message: 'Welcome oMInIf3kBYaV7WO1AAAD',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 09:36:12'
+}
+{
+  level: 'info',
+  message: 'Broadcast to public that oMInIf3kBYaV7WO1AAAD connected',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 09:36:12'
+}
+{
+  level: 'info',
+  message: 'Send room users (total of 2) and to room: public ',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 09:36:13'
+}
+{
+  level: 'info',
+  message: 'Send old messages',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 09:36:13'
+}
+{
+  level: 'info',
+  message: 'results of getAllMessages: {}',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 09:36:13'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 09:48:45'
+}
+{
+  level: 'info',
+  message: 'socket: BxUscPj4ZvzQ7dmGAAAB connected',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 09:48:45'
+}
+{
+  level: 'info',
+  message: 'socket: hCWxZCC7PcUiQqkwAAAD connected',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 09:48:49'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 10:02:41'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:22:30'
+}
+{
+  level: 'info',
+  message: 'socket: M1F10Mkl8ittDUj5AAAC connected',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:22:36'
+}
+{
+  level: 'info',
+  message: 'socket: xjuAM6CVMCPokj0eAAAD connected',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:22:36'
+}
+{
+  level: 'info',
+  message: 'updatedUser: 9mabnbl in InMemoryUserRepository',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:22:36'
+}
+{
+  level: 'info',
+  message: 'check if user is already in users table if not create it',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:22:36'
+}
+{
+  level: 'error',
+  message: 'Prisma User Repository add user error: Error: \n' +
+    'Invalid `prisma.user.upsert()` invocation:\n' +
+    '\n' +
+    '{\n' +
+    '  where: {\n' +
+    "    userID: '9mabnbl'\n" +
+    '  },\n' +
+    '  update: {\n' +
+    "    room: 'public',\n" +
+    "    socketID: 'xjuAM6CVMCPokj0eAAAD'\n" +
+    '  },\n' +
+    '  create: {\n' +
+    "    avatar: 'https://robohash.org/2jwThNf2ZrpL4tqqT',\n" +
+    '+   preferedDistance: Int,\n' +
+    "    room: 'public',\n" +
+    "    socketID: 'xjuAM6CVMCPokj0eAAAD',\n" +
+    "    userID: '9mabnbl',\n" +
+    "    username: 'shimi',\n" +
+    '?   messages?: {\n' +
+    '?     create?: MessageCreateWithoutUserInput | MessageCreateWithoutUserInput | MessageUncheckedCreateWithoutUserInput | MessageUncheckedCreateWithoutUserInput,\n' +
+    '?     connectOrCreate?: MessageCreateOrConnectWithoutUserInput | MessageCreateOrConnectWithoutUserInput,\n' +
+    '?     createMany?: MessageCreateManyUserInputEnvelope,\n' +
+    '?     connect?: MessageWhereUniqueInput | MessageWhereUniqueInput\n' +
+    '?   }\n' +
+    '  }\n' +
+    '}\n' +
+    '\n' +
+    'Argument preferedDistance for create.preferedDistance is missing.\n' +
+    '\n' +
+    'Note: Lines with + are required, lines with ? are optional.\n',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:22:36'
+}
+{
+  level: 'info',
+  message: 'updated user: 9mabnbl room: public details in pgDB',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:22:36'
+}
+{
+  level: 'info',
+  message: 'Welcome xjuAM6CVMCPokj0eAAAD',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:22:36'
+}
+{
+  level: 'info',
+  message: 'Broadcast to public that xjuAM6CVMCPokj0eAAAD connected',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:22:36'
+}
+{
+  level: 'error',
+  message: 'Prisma User Repository update user error: Error: \n' +
+    'Invalid `prisma.user.update()` invocation in\n' +
+    '/home/odedindi/Desktop/coding/my_portfolio/GeoChat/GeoChat/server/src/repositories/prisma/users.queries.ts:46:16\n' +
+    '\n' +
+    '  43 }: UserDTO): Promise<PrismaUserModel> => {\n' +
+    "  44 \tconst errMsg = 'Prisma User Repository update user error';\n" +
+    '  45 \treturn this.handleError<PrismaUserModel>(\n' +
+    '→ 46 \t\tprisma.user.update(\n' +
+    '  An operation failed because it depends on one or more records that were required but not found. Record to update not found.',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:22:36'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:23'
+}
+{
+  level: 'info',
+  message: 'socket: lAEdzcXCz7-xQ4F5AAAB connected',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:25'
+}
+{
+  level: 'info',
+  message: 'socket: GaGd2ro98ykoaXDqAAAD connected',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:25'
+}
+{
+  level: 'info',
+  message: 'socket: qFmiPkpc3rg5Q_snAAAG connected',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:35'
+}
+{
+  level: 'info',
+  message: 'socket: jVgtJN56fLFIWsHYAAAH connected',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:35'
+}
+{
+  level: 'info',
+  message: 'updatedUser: bh722g9 in InMemoryUserRepository',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:35'
+}
+{
+  level: 'info',
+  message: 'check if user is already in users table if not create it',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:35'
+}
+{
+  level: 'error',
+  message: 'Prisma User Repository add user error: Error: \n' +
+    'Invalid `prisma.user.upsert()` invocation:\n' +
+    '\n' +
+    '{\n' +
+    '  where: {\n' +
+    "    userID: 'bh722g9'\n" +
+    '  },\n' +
+    '  update: {\n' +
+    "    room: 'public',\n" +
+    "    socketID: 'jVgtJN56fLFIWsHYAAAH'\n" +
+    '  },\n' +
+    '  create: {\n' +
+    "    avatar: 'https://robohash.org/Ypfq7dG16fZZL',\n" +
+    '+   preferedDistance: Int,\n' +
+    "    room: 'public',\n" +
+    "    socketID: 'jVgtJN56fLFIWsHYAAAH',\n" +
+    "    userID: 'bh722g9',\n" +
+    "    username: 'oded',\n" +
+    '?   messages?: {\n' +
+    '?     create?: MessageCreateWithoutUserInput | MessageCreateWithoutUserInput | MessageUncheckedCreateWithoutUserInput | MessageUncheckedCreateWithoutUserInput,\n' +
+    '?     connectOrCreate?: MessageCreateOrConnectWithoutUserInput | MessageCreateOrConnectWithoutUserInput,\n' +
+    '?     createMany?: MessageCreateManyUserInputEnvelope,\n' +
+    '?     connect?: MessageWhereUniqueInput | MessageWhereUniqueInput\n' +
+    '?   }\n' +
+    '  }\n' +
+    '}\n' +
+    '\n' +
+    'Argument preferedDistance for create.preferedDistance is missing.\n' +
+    '\n' +
+    'Note: Lines with + are required, lines with ? are optional.\n',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:35'
+}
+{
+  level: 'info',
+  message: 'updated user: bh722g9 room: public details in pgDB',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:36'
+}
+{
+  level: 'info',
+  message: 'Welcome jVgtJN56fLFIWsHYAAAH',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:36'
+}
+{
+  level: 'info',
+  message: 'Broadcast to public that jVgtJN56fLFIWsHYAAAH connected',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:36'
+}
+{
+  level: 'error',
+  message: 'Prisma User Repository update user error: Error: \n' +
+    'Invalid `prisma.user.update()` invocation in\n' +
+    '/home/odedindi/Desktop/coding/my_portfolio/GeoChat/GeoChat/server/src/repositories/prisma/users.queries.ts:45:16\n' +
+    '\n' +
+    '  42 }: UserDTO): Promise<PrismaUserModel> => {\n' +
+    "  43 \tconst errMsg = 'Prisma User Repository update user error';\n" +
+    '  44 \treturn this.handleError<PrismaUserModel>(\n' +
+    '→ 45 \t\tprisma.user.update(\n' +
+    '  An operation failed because it depends on one or more records that were required but not found. Record to update not found.',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:36'
+}
+{
+  level: 'info',
+  message: 'getUsersByRoom, number of users found: 0 ',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:36'
+}
+{
+  level: 'info',
+  message: 'Send room users (total of 0) and to room: public ',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:36'
+}
+{
+  level: 'info',
+  message: 'Send old messages',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:36'
+}
+{
+  level: 'info',
+  message: 'results of getAllMessages: []',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:36'
+}
+{
+  level: 'info',
+  message: 'socket: MzkqN7jzo0Jy6EwoAAAK connected',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:49'
+}
+{
+  level: 'info',
+  message: 'socket: K1HJr7Euqy78-XcBAAAL connected',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:49'
+}
+{
+  level: 'info',
+  message: 'updatedUser: bh722g9 in InMemoryUserRepository',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:49'
+}
+{
+  level: 'info',
+  message: 'check if user is already in users table if not create it',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:49'
+}
+{
+  level: 'error',
+  message: 'Prisma User Repository add user error: Error: \n' +
+    'Invalid `prisma.user.upsert()` invocation:\n' +
+    '\n' +
+    '{\n' +
+    '  where: {\n' +
+    "    userID: 'bh722g9'\n" +
+    '  },\n' +
+    '  update: {\n' +
+    "    room: 'public',\n" +
+    "    socketID: 'K1HJr7Euqy78-XcBAAAL'\n" +
+    '  },\n' +
+    '  create: {\n' +
+    "    avatar: 'https://robohash.org/Ypfq7dG16fZZL',\n" +
+    '+   preferedDistance: Int,\n' +
+    "    room: 'public',\n" +
+    "    socketID: 'K1HJr7Euqy78-XcBAAAL',\n" +
+    "    userID: 'bh722g9',\n" +
+    "    username: 'oded',\n" +
+    '?   messages?: {\n' +
+    '?     create?: MessageCreateWithoutUserInput | MessageCreateWithoutUserInput | MessageUncheckedCreateWithoutUserInput | MessageUncheckedCreateWithoutUserInput,\n' +
+    '?     connectOrCreate?: MessageCreateOrConnectWithoutUserInput | MessageCreateOrConnectWithoutUserInput,\n' +
+    '?     createMany?: MessageCreateManyUserInputEnvelope,\n' +
+    '?     connect?: MessageWhereUniqueInput | MessageWhereUniqueInput\n' +
+    '?   }\n' +
+    '  }\n' +
+    '}\n' +
+    '\n' +
+    'Argument preferedDistance for create.preferedDistance is missing.\n' +
+    '\n' +
+    'Note: Lines with + are required, lines with ? are optional.\n',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:49'
+}
+{
+  level: 'info',
+  message: 'updated user: bh722g9 room: public details in pgDB',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:49'
+}
+{
+  level: 'info',
+  message: 'Welcome K1HJr7Euqy78-XcBAAAL',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:49'
+}
+{
+  level: 'info',
+  message: 'Broadcast to public that K1HJr7Euqy78-XcBAAAL connected',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:49'
+}
+{
+  level: 'error',
+  message: 'Prisma User Repository update user error: Error: \n' +
+    'Invalid `prisma.user.update()` invocation in\n' +
+    '/home/odedindi/Desktop/coding/my_portfolio/GeoChat/GeoChat/server/src/repositories/prisma/users.queries.ts:45:16\n' +
+    '\n' +
+    '  42 }: UserDTO): Promise<PrismaUserModel> => {\n' +
+    "  43 \tconst errMsg = 'Prisma User Repository update user error';\n" +
+    '  44 \treturn this.handleError<PrismaUserModel>(\n' +
+    '→ 45 \t\tprisma.user.update(\n' +
+    '  An operation failed because it depends on one or more records that were required but not found. Record to update not found.',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:49'
+}
+{
+  level: 'info',
+  message: 'getUsersByRoom, number of users found: 0 ',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:49'
+}
+{
+  level: 'info',
+  message: 'Send room users (total of 0) and to room: public ',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:49'
+}
+{
+  level: 'info',
+  message: 'Send old messages',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:49'
+}
+{
+  level: 'info',
+  message: 'results of getAllMessages: []',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:49'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:25:07'
+}
+{
+  level: 'info',
+  message: 'socket: B_bzQaYAjruQyjGwAAAB connected',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:25:07'
+}
+{
+  level: 'info',
+  message: 'socket: OSBxAWlAiwwgan9kAAAD connected',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:25:11'
+}
+{
+  level: 'info',
+  message: 'updatedUser: bh722g9 in InMemoryUserRepository',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:25:11'
+}
+{
+  level: 'info',
+  message: 'check if user is already in users table if not create it',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:25:12'
+}
+{
+  level: 'error',
+  message: 'Prisma User Repository add user error: Error: \n' +
+    'Invalid `prisma.user.upsert()` invocation:\n' +
+    '\n' +
+    '{\n' +
+    '  where: {\n' +
+    "    userID: 'bh722g9'\n" +
+    '  },\n' +
+    '  update: {\n' +
+    "    room: 'public',\n" +
+    "    socketID: 'OSBxAWlAiwwgan9kAAAD'\n" +
+    '  },\n' +
+    '  create: {\n' +
+    "    avatar: 'https://robohash.org/Ypfq7dG16fZZL',\n" +
+    '+   preferedDistance: Int,\n' +
+    "    room: 'public',\n" +
+    "    socketID: 'OSBxAWlAiwwgan9kAAAD',\n" +
+    "    userID: 'bh722g9',\n" +
+    "    username: 'oded',\n" +
+    '?   messages?: {\n' +
+    '?     create?: MessageCreateWithoutUserInput | MessageCreateWithoutUserInput | MessageUncheckedCreateWithoutUserInput | MessageUncheckedCreateWithoutUserInput,\n' +
+    '?     connectOrCreate?: MessageCreateOrConnectWithoutUserInput | MessageCreateOrConnectWithoutUserInput,\n' +
+    '?     createMany?: MessageCreateManyUserInputEnvelope,\n' +
+    '?     connect?: MessageWhereUniqueInput | MessageWhereUniqueInput\n' +
+    '?   }\n' +
+    '  }\n' +
+    '}\n' +
+    '\n' +
+    'Argument preferedDistance for create.preferedDistance is missing.\n' +
+    '\n' +
+    'Note: Lines with + are required, lines with ? are optional.\n',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:25:12'
+}
+{
+  level: 'info',
+  message: 'updated user: bh722g9 room: public details in pgDB',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:25:12'
+}
+{
+  level: 'info',
+  message: 'Welcome OSBxAWlAiwwgan9kAAAD',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:25:12'
+}
+{
+  level: 'info',
+  message: 'Broadcast to public that OSBxAWlAiwwgan9kAAAD connected',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:25:12'
+}
+{
+  level: 'error',
+  message: 'Prisma User Repository update user error: Error: \n' +
+    'Invalid `prisma.user.update()` invocation in\n' +
+    '/home/odedindi/Desktop/coding/my_portfolio/GeoChat/GeoChat/server/src/repositories/prisma/users.queries.ts:46:16\n' +
+    '\n' +
+    "  43 const errMsg = 'Prisma User Repository update user error';\n" +
+    '  44 console.log(username, avatar, socketID, preferedDistance, userID);\n' +
+    '  45 return this.handleError<PrismaUserModel>(\n' +
+    '→ 46 \tprisma.user.update(\n' +
+    '  An operation failed because it depends on one or more records that were required but not found. Record to update not found.',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:25:12'
+}
+{
+  level: 'info',
+  message: 'getUsersByRoom, number of users found: 0 ',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:25:12'
+}
+{
+  level: 'info',
+  message: 'Send room users (total of 0) and to room: public ',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:25:12'
+}
+{
+  level: 'info',
+  message: 'Send old messages',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:25:12'
+}
+{
+  level: 'info',
+  message: 'results of getAllMessages: []',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:25:12'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:56:00'
+}
+{
+  level: 'info',
+  message: 'Server is running at http://localhost:4000',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 23:06:11'
+}

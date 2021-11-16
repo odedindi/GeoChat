@@ -1,11 +1,11 @@
-const messages = new Set<Message>();
+const messages = new Set<MessageDTO>();
 
 export class InMemoryMessageRepository implements MessageRepository {
-	addMessage = (message: Message) => {
+	public addMessage = (message: MessageDTO) => {
 		messages.add(message);
 	};
-	getAllMessages = () => {
-		const messagesList: Message[] = [];
+	public getAllMessages = () => {
+		const messagesList: MessageDTO[] = [];
 		messages.forEach((message) => messagesList.push(message));
 		return Promise.resolve(messagesList);
 	};

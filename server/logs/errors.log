@@ -201,3 +201,199 @@
   service: 'GeoChating server logger',
   timestamp: '11-11-2021 16:30:45'
 }
+{
+  level: 'error',
+  message: 'Prisma User Repository add user error: Error: \n' +
+    'Invalid `prisma.user.upsert()` invocation:\n' +
+    '\n' +
+    '{\n' +
+    '  where: {\n' +
+    "    userID: '9mabnbl'\n" +
+    '  },\n' +
+    '  update: {\n' +
+    "    room: 'public',\n" +
+    "    socketID: 'xjuAM6CVMCPokj0eAAAD'\n" +
+    '  },\n' +
+    '  create: {\n' +
+    "    avatar: 'https://robohash.org/2jwThNf2ZrpL4tqqT',\n" +
+    '+   preferedDistance: Int,\n' +
+    "    room: 'public',\n" +
+    "    socketID: 'xjuAM6CVMCPokj0eAAAD',\n" +
+    "    userID: '9mabnbl',\n" +
+    "    username: 'shimi',\n" +
+    '?   messages?: {\n' +
+    '?     create?: MessageCreateWithoutUserInput | MessageCreateWithoutUserInput | MessageUncheckedCreateWithoutUserInput | MessageUncheckedCreateWithoutUserInput,\n' +
+    '?     connectOrCreate?: MessageCreateOrConnectWithoutUserInput | MessageCreateOrConnectWithoutUserInput,\n' +
+    '?     createMany?: MessageCreateManyUserInputEnvelope,\n' +
+    '?     connect?: MessageWhereUniqueInput | MessageWhereUniqueInput\n' +
+    '?   }\n' +
+    '  }\n' +
+    '}\n' +
+    '\n' +
+    'Argument preferedDistance for create.preferedDistance is missing.\n' +
+    '\n' +
+    'Note: Lines with + are required, lines with ? are optional.\n',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:22:36'
+}
+{
+  level: 'error',
+  message: 'Prisma User Repository update user error: Error: \n' +
+    'Invalid `prisma.user.update()` invocation in\n' +
+    '/home/odedindi/Desktop/coding/my_portfolio/GeoChat/GeoChat/server/src/repositories/prisma/users.queries.ts:46:16\n' +
+    '\n' +
+    '  43 }: UserDTO): Promise<PrismaUserModel> => {\n' +
+    "  44 \tconst errMsg = 'Prisma User Repository update user error';\n" +
+    '  45 \treturn this.handleError<PrismaUserModel>(\n' +
+    '→ 46 \t\tprisma.user.update(\n' +
+    '  An operation failed because it depends on one or more records that were required but not found. Record to update not found.',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:22:36'
+}
+{
+  level: 'error',
+  message: 'Prisma User Repository add user error: Error: \n' +
+    'Invalid `prisma.user.upsert()` invocation:\n' +
+    '\n' +
+    '{\n' +
+    '  where: {\n' +
+    "    userID: 'bh722g9'\n" +
+    '  },\n' +
+    '  update: {\n' +
+    "    room: 'public',\n" +
+    "    socketID: 'jVgtJN56fLFIWsHYAAAH'\n" +
+    '  },\n' +
+    '  create: {\n' +
+    "    avatar: 'https://robohash.org/Ypfq7dG16fZZL',\n" +
+    '+   preferedDistance: Int,\n' +
+    "    room: 'public',\n" +
+    "    socketID: 'jVgtJN56fLFIWsHYAAAH',\n" +
+    "    userID: 'bh722g9',\n" +
+    "    username: 'oded',\n" +
+    '?   messages?: {\n' +
+    '?     create?: MessageCreateWithoutUserInput | MessageCreateWithoutUserInput | MessageUncheckedCreateWithoutUserInput | MessageUncheckedCreateWithoutUserInput,\n' +
+    '?     connectOrCreate?: MessageCreateOrConnectWithoutUserInput | MessageCreateOrConnectWithoutUserInput,\n' +
+    '?     createMany?: MessageCreateManyUserInputEnvelope,\n' +
+    '?     connect?: MessageWhereUniqueInput | MessageWhereUniqueInput\n' +
+    '?   }\n' +
+    '  }\n' +
+    '}\n' +
+    '\n' +
+    'Argument preferedDistance for create.preferedDistance is missing.\n' +
+    '\n' +
+    'Note: Lines with + are required, lines with ? are optional.\n',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:35'
+}
+{
+  level: 'error',
+  message: 'Prisma User Repository update user error: Error: \n' +
+    'Invalid `prisma.user.update()` invocation in\n' +
+    '/home/odedindi/Desktop/coding/my_portfolio/GeoChat/GeoChat/server/src/repositories/prisma/users.queries.ts:45:16\n' +
+    '\n' +
+    '  42 }: UserDTO): Promise<PrismaUserModel> => {\n' +
+    "  43 \tconst errMsg = 'Prisma User Repository update user error';\n" +
+    '  44 \treturn this.handleError<PrismaUserModel>(\n' +
+    '→ 45 \t\tprisma.user.update(\n' +
+    '  An operation failed because it depends on one or more records that were required but not found. Record to update not found.',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:36'
+}
+{
+  level: 'error',
+  message: 'Prisma User Repository add user error: Error: \n' +
+    'Invalid `prisma.user.upsert()` invocation:\n' +
+    '\n' +
+    '{\n' +
+    '  where: {\n' +
+    "    userID: 'bh722g9'\n" +
+    '  },\n' +
+    '  update: {\n' +
+    "    room: 'public',\n" +
+    "    socketID: 'K1HJr7Euqy78-XcBAAAL'\n" +
+    '  },\n' +
+    '  create: {\n' +
+    "    avatar: 'https://robohash.org/Ypfq7dG16fZZL',\n" +
+    '+   preferedDistance: Int,\n' +
+    "    room: 'public',\n" +
+    "    socketID: 'K1HJr7Euqy78-XcBAAAL',\n" +
+    "    userID: 'bh722g9',\n" +
+    "    username: 'oded',\n" +
+    '?   messages?: {\n' +
+    '?     create?: MessageCreateWithoutUserInput | MessageCreateWithoutUserInput | MessageUncheckedCreateWithoutUserInput | MessageUncheckedCreateWithoutUserInput,\n' +
+    '?     connectOrCreate?: MessageCreateOrConnectWithoutUserInput | MessageCreateOrConnectWithoutUserInput,\n' +
+    '?     createMany?: MessageCreateManyUserInputEnvelope,\n' +
+    '?     connect?: MessageWhereUniqueInput | MessageWhereUniqueInput\n' +
+    '?   }\n' +
+    '  }\n' +
+    '}\n' +
+    '\n' +
+    'Argument preferedDistance for create.preferedDistance is missing.\n' +
+    '\n' +
+    'Note: Lines with + are required, lines with ? are optional.\n',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:49'
+}
+{
+  level: 'error',
+  message: 'Prisma User Repository update user error: Error: \n' +
+    'Invalid `prisma.user.update()` invocation in\n' +
+    '/home/odedindi/Desktop/coding/my_portfolio/GeoChat/GeoChat/server/src/repositories/prisma/users.queries.ts:45:16\n' +
+    '\n' +
+    '  42 }: UserDTO): Promise<PrismaUserModel> => {\n' +
+    "  43 \tconst errMsg = 'Prisma User Repository update user error';\n" +
+    '  44 \treturn this.handleError<PrismaUserModel>(\n' +
+    '→ 45 \t\tprisma.user.update(\n' +
+    '  An operation failed because it depends on one or more records that were required but not found. Record to update not found.',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:23:49'
+}
+{
+  level: 'error',
+  message: 'Prisma User Repository add user error: Error: \n' +
+    'Invalid `prisma.user.upsert()` invocation:\n' +
+    '\n' +
+    '{\n' +
+    '  where: {\n' +
+    "    userID: 'bh722g9'\n" +
+    '  },\n' +
+    '  update: {\n' +
+    "    room: 'public',\n" +
+    "    socketID: 'OSBxAWlAiwwgan9kAAAD'\n" +
+    '  },\n' +
+    '  create: {\n' +
+    "    avatar: 'https://robohash.org/Ypfq7dG16fZZL',\n" +
+    '+   preferedDistance: Int,\n' +
+    "    room: 'public',\n" +
+    "    socketID: 'OSBxAWlAiwwgan9kAAAD',\n" +
+    "    userID: 'bh722g9',\n" +
+    "    username: 'oded',\n" +
+    '?   messages?: {\n' +
+    '?     create?: MessageCreateWithoutUserInput | MessageCreateWithoutUserInput | MessageUncheckedCreateWithoutUserInput | MessageUncheckedCreateWithoutUserInput,\n' +
+    '?     connectOrCreate?: MessageCreateOrConnectWithoutUserInput | MessageCreateOrConnectWithoutUserInput,\n' +
+    '?     createMany?: MessageCreateManyUserInputEnvelope,\n' +
+    '?     connect?: MessageWhereUniqueInput | MessageWhereUniqueInput\n' +
+    '?   }\n' +
+    '  }\n' +
+    '}\n' +
+    '\n' +
+    'Argument preferedDistance for create.preferedDistance is missing.\n' +
+    '\n' +
+    'Note: Lines with + are required, lines with ? are optional.\n',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:25:12'
+}
+{
+  level: 'error',
+  message: 'Prisma User Repository update user error: Error: \n' +
+    'Invalid `prisma.user.update()` invocation in\n' +
+    '/home/odedindi/Desktop/coding/my_portfolio/GeoChat/GeoChat/server/src/repositories/prisma/users.queries.ts:46:16\n' +
+    '\n' +
+    "  43 const errMsg = 'Prisma User Repository update user error';\n" +
+    '  44 console.log(username, avatar, socketID, preferedDistance, userID);\n' +
+    '  45 return this.handleError<PrismaUserModel>(\n' +
+    '→ 46 \tprisma.user.update(\n' +
+    '  An operation failed because it depends on one or more records that were required but not found. Record to update not found.',
+  service: 'GeoChating server logger',
+  timestamp: '16-11-2021 22:25:12'
+}

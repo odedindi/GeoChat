@@ -3,91 +3,82 @@ import db from 'src/config/db.config';
 import log from 'src/config/logger';
 
 export class DBUserRepository implements UserRepository {
-	db: Pool;
+	private db: Pool;
 	constructor() {
 		this.db = db;
 	}
-	addUser = async ({
-		userID,
-		avatar,
-		socketID,
-		username,
-		room,
-		geo: { coord, preferedDistance },
-	}: User) => {
-		const geoLocation = `(${coord.lat}, ${coord.lng})`;
+	public addUser = async (user: UserDTO) => {
 		const query = {
 			text: `INSERT INTO user
-			(userID, username, avatar, socketid, room, geolocation, prefereddistance)
-			VALUES ($1, $2, $3, $4, $5, $6, $7)`,
+			(userID, username, avatar, socketid, room, prefereddistance)
+			VALUES ($1, $2, $3, $4, $5, $6)`,
 			values: [
-				userID,
-				username,
-				avatar,
-				socketID,
-				room,
-				geoLocation,
-				preferedDistance,
+				user.userID,
+				user.username,
+				user.avatar,
+				user.socketID,
+				user.room,
+				user.preferedDistance,
 			],
 		};
 		await this.db.query(query);
-		log.info(`User: ${userID} added`);
+		log.info(`User: ${user.userID} added`);
+		return Promise.resolve(user);
 	};
 
-	updateUser = async ({
-		userID,
-		avatar,
-		socketID,
-		username,
-		room,
-		geo: { coord, preferedDistance },
-	}: User) => {
-		const geoLocation = `(${coord.lat}, ${coord.lng})`;
+	public updateUser = async (user: UserDTO) => {
 		const query = {
-			text: 'UPDATE user SET username = $2, avatar = $3, socketid = $4, room=$5, geolocation=$6, prefereddistance=$7 WHERE userid = $1',
+			text: `UPDATE user SET username=$2, avatar=$3, socketid=$4, room=$5, prefereddistance=$6, WHERE userid=$1`,
 			values: [
-				userID,
-				username,
-				avatar,
-				socketID,
-				room,
-				geoLocation,
-				preferedDistance,
+				user.userID,
+				user.username,
+				user.avatar,
+				user.socketID,
+				user.room,
+				user.preferedDistance,
 			],
 		};
 		await this.db.query(query);
-		log.info(`User: ${userID} updated`);
+		log.info(`User: ${user.userID} updated`);
+		return Promise.resolve(user);
 	};
 
-	removeUser = async (userID: ID) => {
+	public removeUser = async (userID: string) => {
+		const user = await this.getUserByUserID(userID);
+		if (!user[0]) {
+			log.error(`no user with userID: ${userID}`);
+			throw Error;
+		}
+
 		const query = {
 			text: 'DELETE FROM user WHERE userid = $1',
 			values: [userID],
 		};
 		await this.db.query(query);
 		log.info(`User: ${userID} removed`);
+		return Promise.resolve(user[0]);
 	};
 
-	getAllUsers = async () => {
+	public getAllUsers = async () => {
 		const query = {
 			text: 'SELECT * FROM user ORDER BY id ASC',
 		};
 		const { rows } = await this.db.query(query);
 		log.info(`getAllUsers, number of users found: ${rows.length} `);
-		return rows as User[];
+		return rows as UserDTO[];
 	};
 
-	getUserBySocketID = async (socketID: ID) => {
+	public getUserBySocketID = async (socketID: string) => {
 		const query = {
 			text: 'SELECT * FROM user WHERE socketid = $1',
 			values: [socketID],
 		};
 		const { rows } = await this.db.query(query);
 		log.info(`getUserBySocketID, number of users found: ${rows.length}`);
-		return rows as User[];
+		return rows as UserDTO[];
 	};
 
-	getUsersByRoom = async (room: string) => {
+	public getUsersByRoom = async (room: string) => {
 		const query = {
 			text: 'SELECT * FROM user WHERE room = $1',
 			values: [room],
@@ -96,10 +87,10 @@ export class DBUserRepository implements UserRepository {
 		log.info(
 			`getUsersByRoom, room: ${room}, number of users found: ${rows.length}`,
 		);
-		return rows as User[];
+		return rows as UserDTO[];
 	};
 
-	getUserByUserID = async (userID: ID) => {
+	public getUserByUserID = async (userID: string) => {
 		const query = {
 			text: 'SELECT * FROM user WHERE userid = $1',
 			values: [userID],
@@ -108,6 +99,6 @@ export class DBUserRepository implements UserRepository {
 		log.info(
 			`results of getUserByUserID, number of users found: ${rows.length}`,
 		);
-		return rows as User[];
+		return rows as UserDTO[];
 	};
 }

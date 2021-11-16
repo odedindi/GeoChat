@@ -10,21 +10,22 @@ datasource db {
 model Message {
   id        Int     @id @default(autoincrement())
   messageID String  @db.VarChar(255)
-  fromuser  String @db.VarChar(50) 
-  User      User    @relation(fields: [fromuser], references: [username])
+  fromuser  String  @db.VarChar(50) 
+  User      User?   @relation(fields: [fromuser], references: [username])
   content   String  @db.VarChar(255) 
-  createdat String? @db.VarChar(255)
+  createdat String
+  geolocation_lat  String
+  geolocation_lng  String  
 }
 
 model User {
   id               Int                   @id @default(autoincrement())
-  username         String?               @db.VarChar(50) @unique
-  avatar           String?               @db.VarChar(100)
-  socketID         String?               @db.VarChar(100) @unique
-  room             String?               @db.VarChar(100)
-  geolocation_lat  String?
-  geolocation_lng  String?
-  preferedDistance Int?
-  userID           String?               @db.VarChar(50) @unique
+  username         String               @db.VarChar(50) @unique
+  avatar           String               @db.VarChar(100)
+  socketID         String              @db.VarChar(100) @unique
+  preferedDistance Int
+  userID           String               @db.VarChar(50) @unique
   messages Message[]
+  room             String               @db.VarChar(100)
+
 }

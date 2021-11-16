@@ -12,6 +12,7 @@ import {
 	useToast,
 	useStorage,
 } from 'src/hooks';
+import userMap from 'src/utils/Mapper/UserMap';
 import { getLogger } from 'src/utils/logger';
 import styled from 'styled-components';
 
@@ -72,9 +73,9 @@ const Chat: React.FC = () => {
 	React.useEffect(() => {
 		if (currentUser) {
 			socket.on('connect', () => {
+				const userDto = userMap.toDTO(currentUser);
 				socket.emit('joinRoom', {
-					username: currentUser.username,
-					user: currentUser,
+					user: userDto,
 					room: 'public',
 				});
 				setIsConnected(true);

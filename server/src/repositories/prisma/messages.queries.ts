@@ -1,36 +1,28 @@
 import log from 'src/config/logger';
 import prisma from 'src/config/prisma.config';
+import { Message as PrismaMessageModel } from '@prisma/client';
 
 export class PrismaMessagesRepository implements MessageRepository {
-	addMessage = async ({ messageID, fromuser, content, createdat }: Message) => {
-		const main = async () =>
-			await prisma.message.create({
-				data: {
-					messageID,
-					fromuser,
-					content,
-					createdat: createdat.toString(),
-				},
-			});
-		main()
-			.catch((e: Error) => {
-				log.error(`Prisma Message Repository add message error: ${e}`);
-				throw e;
-			})
-			.finally(async () => {
-				await prisma.$disconnect();
-			});
+	private handleError = async <T>(cb: Promise<T>, errMsg: string) =>
+		cb.catch((e: Error) => {
+			log.error(`${errMsg}: ${e}`);
+			throw e;
+		});
+
+	public addMessage = async (message: MessageDTO) => {
+		const errMsg = 'Prisma Message Repository add message error:';
+		return this.handleError<PrismaMessageModel>(
+			prisma.message.create({ data: { ...message } }),
+			errMsg,
+		);
 	};
-	getAllMessages = async () => {
-		const main = async () => await prisma.message.findMany();
-		const messages = main()
-			.catch((e: Error) => {
-				log.error(`Prisma Message Repository add message error: ${e}`);
-				throw e;
-			})
-			.finally(async () => {
-				await prisma.$disconnect();
-			});
+	public getAllMessages = async () => {
+		const errMsg = 'Prisma Message Repository add message error:';
+
+		const messages = await this.handleError<PrismaMessageModel[]>(
+			prisma.message.findMany(),
+			errMsg,
+		);
 		log.info(`results of getAllMessages: ${JSON.stringify(messages)}`);
 		return messages;
 	};

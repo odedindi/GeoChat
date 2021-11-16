@@ -6,7 +6,9 @@ import * as S from './styles';
 export const Messages: React.FC<{ messages: Message[] }> = ({ messages }) => (
 	<S.MessageList>
 		{messages
-			.sort((a: Message, b: Message) => b.createdat - a.createdat)
+			.sort(
+				(a: Message, b: Message) => Number(b.createdat) - Number(a.createdat),
+			)
 			.map(({ messageID, createdat, fromuser, content }) => (
 				<S.Message
 					key={messageID}
@@ -14,11 +16,7 @@ export const Messages: React.FC<{ messages: Message[] }> = ({ messages }) => (
 				>
 					<S.From>{fromuser}:</S.From>
 					<S.Content>{content}</S.Content>
-					<S.Date>
-						{moment(
-							typeof createdat === 'string' ? Number(createdat) : createdat,
-						).format('lll')}
-					</S.Date>
+					<S.Date>{moment(Number(createdat)).format('lll')}</S.Date>
 				</S.Message>
 			))}
 	</S.MessageList>
