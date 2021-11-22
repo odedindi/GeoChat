@@ -39,7 +39,7 @@
 		"react-router": "^5.2.0",
 		"react-router-dom": "^5.2.0",
 		"react-scripts": "4.0.2",
-		"slate": "^0.66.5",
+		"slate": "^0.67.1",
 		"slate-history": "^0.66.0",
 		"slate-plain-serializer": "^0.7.13",
 		"slate-react": "^0.69.0",
