@@ -1,68 +1,79 @@
 {
-	"name": "server",
-	"version": "0.0.1",
-	"main": "dist/server.js",
-	"license": "MIT",
-	"_moduleAliases": {
-		"src": "dist/"
-	},
-	"scripts": {
-		"clean": "rimraf dist/*",
-		"lint": "tslint -c tslint.json -p tsconfig.json --fix",
-		"tsc": "tsc",
-		"build": "yarn clean && yarn lint && yarn tsc",
-		"dev:start": "yarn build && yarn ts-node --files ./src/server.ts",
-		"dev": "nodemon --watch ./src -e ts --exec yarn dev:start",
-		"start": "node .",
-		"format": "prettier --write .",
-		"check:format": "prettier --check .",
-		"check:types": "tsc --pretty --noEmit",
-		"check:lint": "tslint -c tslint.json -p tsconfig.json",
-		"check": "yarn check:format && yarn check:types && yarn check:lint",
-		"prisma:studio": "yarn prisma studio",
-		"prisma:migrate:dev": "yarn prisma migrate dev",
-		"prisma:migrate:deploy": "yarn prisma migrate deploy",
-		"prisma:migrate:reset": "yarn prisma migrate reset -f",
-		"test": "jest --watch"
-	},
-	"prisma": {
-		"seed": "ts-node ./src/repositories/prisma/seed/seed.ts"
-	},
-	"dependencies": {
-		"@prisma/client": "^3.5.0",
-		"compression": "^1.7.4",
-		"cors": "^2.8.5",
-		"dotenv": "^10.0.0",
-		"express": "^4.17.1",
-		"jsonwebtoken": "^8.5.1",
-		"lodash": "^4.17.21",
-		"moment": "^2.29.1",
-		"pg": "^8.7.1",
-		"socket.io": "^4.3.1",
-		"uuid": "^8.3.2",
-		"winston": "^3.3.3"
-	},
-	"devDependencies": {
-		"@types/compression": "^1.7.2",
-		"@types/express": "^4.17.13",
-		"@types/jest": "^27.0.2",
-		"@types/lodash": "^4.14.176",
-		"@types/node": "^16.11.4",
-		"@types/pg": "^8.6.1",
-		"@types/supertest": "^2.0.11",
-		"@types/uuid": "^8.3.1",
-		"jest": "^27.3.1",
-		"module-alias": "^2.2.2",
-		"nodemon": "^2.0.14",
-		"prettier": "^2.4.1",
-		"prisma": "^3.5.0",
-		"rimraf": "^3.0.2",
-		"socket.io-client": "^4.3.2",
-		"supertest": "^6.1.6",
-		"ts-jest": "^27.0.7",
-		"ts-node": "^10.4.0",
-		"tsconfig-paths": "^3.11.0",
-		"tslint": "^6.1.3",
-		"typescript": "^4.4.4"
-	}
+  "name": "server-nest",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "nest build",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/main",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "prisma:studio": "yarn prisma studio",
+    "prisma:migrate:dev": "yarn prisma migrate dev",
+    "prisma:migrate:deploy": "yarn prisma migrate deploy",
+    "prisma:migrate:reset": "yarn prisma migrate reset -f",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "test:e2e": "jest --config ./test/jest-e2e.json"
+  },
+  "dependencies": {
+    "@nestjs/common": "^8.0.0",
+    "@nestjs/config": "^1.1.2",
+    "@nestjs/core": "^8.0.0",
+    "@nestjs/platform-express": "^8.0.0",
+    "@prisma/client": "3.5.0",
+    "eslint": "6.8.0",
+    "reflect-metadata": "^0.1.13",
+    "rimraf": "^3.0.2",
+    "rxjs": "^7.2.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^8.0.0",
+    "@nestjs/schematics": "^8.0.0",
+    "@nestjs/testing": "^8.0.0",
+    "@types/express": "^4.17.13",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.0.0",
+    "@types/supertest": "^2.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.2.5",
+    "prettier": "^2.3.2",
+    "prisma": "3.5.0",
+    "source-map-support": "^0.5.20",
+    "supertest": "^6.1.3",
+    "ts-jest": "^27.0.3",
+    "ts-loader": "^9.2.3",
+    "ts-node": "^10.0.0",
+    "tsconfig-paths": "^3.10.1",
+    "typescript": "^4.3.5"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  }
 }

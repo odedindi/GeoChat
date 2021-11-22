@@ -8,25 +8,33 @@ datasource db {
 }
 
 model Message {
-  id        Int     @id @default(autoincrement())
-  messageID String  @db.VarChar(255)
-  fromuser  String  @db.VarChar(50) 
-  User      User?   @relation(fields: [fromuser], references: [username])
-  content   String  @db.VarChar(255) 
-  createdat String
-  geolocation_lat  Float
-  geolocation_lng  Float  
+  id              Int    @id @default(autoincrement())
+  messageID       String @db.VarChar(255)
+  fromuser        String @db.VarChar(50)
+  content         String @db.VarChar(255)
+  createdat       String
+  geolocation_lat Float
+  geolocation_lng Float
+  User            User?   @relation(fields: [fromuser], references: [username])
 }
 
 model User {
-  id               Int      @id @default(autoincrement())
-  username         String   @db.VarChar(50) @unique
-  avatar           String   @db.VarChar(100)
-  socketID         String   @db.VarChar(100) @unique
+  id               Int       @id @default(autoincrement())
+  username         String    @unique @db.VarChar(50)
+  avatar           String    @db.VarChar(100)
+  socketID         String    @unique @db.VarChar(100)
   preferedDistance Int
-  userID           String   @db.VarChar(50) @unique
-  messages Message[]
-  room             String   @db.VarChar(100)
+  userID           String    @unique @db.VarChar(50)
+  room             String    @db.VarChar(100)
   geolocation_lat  Float
-  geolocation_lng  Float  
+  geolocation_lng  Float
+  Message          Message[]
+}
+
+model spatial_ref_sys {
+  srid      Int     @id
+  auth_name String? @db.VarChar(256)
+  auth_srid Int?
+  srtext    String? @db.VarChar(2048)
+  proj4text String? @db.VarChar(2048)
 }
