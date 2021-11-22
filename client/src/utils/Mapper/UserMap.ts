@@ -1,15 +1,5 @@
 import Mapper from './Mapper';
 
-interface UserDTO {
-	id?: number;
-	avatar: string;
-	userID: string;
-	socketID: string;
-	username: string;
-	room: string;
-	preferedDistance: number;
-}
-
 class UserMap extends Mapper<User, UserDTO> {
 	toDTO = ({
 		avatar,
@@ -17,14 +7,19 @@ class UserMap extends Mapper<User, UserDTO> {
 		socketID,
 		username,
 		room,
-		geo,
+		geo: {
+			coord: { lat, lng },
+			preferedDistance,
+		},
 	}: User): UserDTO => ({
 		avatar,
 		userID,
 		username,
 		socketID,
 		room,
-		preferedDistance: geo.preferedDistance,
+		preferedDistance,
+		geolocation_lat: lat,
+		geolocation_lng: lng,
 	});
 
 	fromDTO = ({
@@ -34,13 +29,18 @@ class UserMap extends Mapper<User, UserDTO> {
 		username,
 		room,
 		preferedDistance,
+		geolocation_lat,
+		geolocation_lng,
 	}: UserDTO): User => ({
 		avatar,
 		userID,
 		socketID,
 		username,
 		room,
-		geo: { coord: { lat: 0, lng: 0 }, preferedDistance },
+		geo: {
+			coord: { lat: geolocation_lat, lng: geolocation_lng },
+			preferedDistance,
+		},
 	});
 }
 

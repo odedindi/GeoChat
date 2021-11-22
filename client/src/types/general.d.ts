@@ -1,11 +1,9 @@
-type StrOrNum = string | number;
-
-type GeoCoord = {
-	lat: StrOrNum;
-	lng: StrOrNum;
+type Coord = {
+	lat: number;
+	lng: number;
 };
 
-type UserGeoData = { coord: GeoCoord; preferedDistance: number };
+type UserGeoData = { coord: Coord; preferedDistance: number };
 
 type User = {
 	avatar: string;
@@ -22,17 +20,9 @@ type Message = {
 	fromuser: string;
 	content: string;
 	createdat: string;
-	geolocation_lat: string;
-	geolocation_lng: string;
+	geolocation_lat: number;
+	geolocation_lng: number;
 };
-
-type Room = {
-	messages?: Message[];
-	roomname: string;
-	users?: User[];
-};
-
-type LeafletGeometryElement = { id: number; latlngs: GeoCoord[] };
 
 interface UserDTO {
 	id?: number;
@@ -42,6 +32,8 @@ interface UserDTO {
 	username: string;
 	room: string;
 	preferedDistance: number;
+	geolocation_lat: number;
+	geolocation_lng: number;
 }
 interface MessageDTO {
 	id?: number;
@@ -49,4 +41,6 @@ interface MessageDTO {
 	fromuser: string;
 	content: string;
 	createdat: string;
+	geolocation_lat: number;
+	geolocation_lng: number;
 }

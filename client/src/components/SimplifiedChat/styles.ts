@@ -21,9 +21,10 @@ export const Message = styled.div`
 	align-items: center;
 `;
 export const From = styled.span`
-	min-width: 120px;
+	min-width: 80px;
 `;
 export const Content = styled.span`
+	min-width: 80px;
 	flex-grow: 1;
 `;
 export const Date = styled(From)`

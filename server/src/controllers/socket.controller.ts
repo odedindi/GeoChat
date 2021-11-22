@@ -9,18 +9,16 @@ class SocketController {
 		private readonly messageRepository: MessageRepository,
 	) {}
 	initConnection = (socket: socketio.Socket) => {
-		socket.on('joinRoom', ({ user, room }: { user: UserDTO; room: string }) =>
+		socket.on('join', ({ user, room }: { user: UserDTO; room: string }) =>
 			this.joinRoom(socket, user, room),
 		);
 		// Listen for chatMessage
-		socket.on('chatMessage', (content) =>
-			this.handleChatMessage(socket, content),
+		socket.on('chatMessage', ({ content, coord }) =>
+			this.handleChatMessage(socket, content, coord),
 		);
-		socket.on('disconnect', async () => {
-			this.handleDisconnection(socket);
-		});
+		socket.on('disconnect', async () => this.handleDisconnection(socket));
 		// ====> older stuff
-		socket.on('getMessages', () => this.getMessages());
+		socket.on('getMessages', () => this.getMessages(socket));
 		socket.on('connect_error', (error) =>
 			log.error(`connect_error: ${error.message}`),
 		);
@@ -79,15 +77,24 @@ class SocketController {
 		});
 
 		log.info(`Send old messages`);
-		const messages = await this.getMessages();
+
+		const messages = await this.messageRepository.getMessagesWithinRange(
+			user.geolocation_lat,
+			user.geolocation_lng,
+			user.preferedDistance,
+		);
 		messages.forEach((message) => socket.emit('message', message));
 	};
 
-	handleChatMessage = async (socket: socketio.Socket, content: string) => {
+	handleChatMessage = async (
+		socket: socketio.Socket,
+		content: string,
+		coord: Coord,
+	) => {
 		const user = await this.getCurrentUser(socket.id);
-		const message: MessageDTO = formatMessage(user[0].username, content);
+		const message: MessageDTO = formatMessage(user[0].username, content, coord);
 		this.messageRepository.addMessage(message);
-		socket.broadcast.to(user[0].room).emit('message', message);
+		socket.emit('message', message);
 	};
 
 	handleDisconnection = async (socket: socketio.Socket) => {
@@ -111,7 +118,23 @@ class SocketController {
 		}
 	};
 
-	getMessages = () => this.messageRepository.getAllMessages();
+	getMessages = async (socket: socketio.Socket) => {
+		const user = await this.getCurrentUser(socket.id);
+		if (user[0]) {
+			log.info(`user: ${user[0].userID} found`);
+			const {
+				geolocation_lat: lat,
+				geolocation_lng: lng,
+				preferedDistance: radius,
+			} = user[0];
+			const messages = await this.messageRepository.getMessagesWithinRange(
+				lat,
+				lng,
+				radius,
+			);
+			messages.forEach((message) => socket.emit('message', message));
+		} else log.error(`User with socketID: ${socket.id} was not found `);
+	};
 }
 
 export default SocketController;

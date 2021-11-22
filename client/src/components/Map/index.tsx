@@ -1,60 +1,58 @@
-import type L from 'leaflet';
-import type { LatLngExpression } from 'leaflet';
-import { CRS } from 'leaflet';
 import * as React from 'react';
-import { MapContainer, Marker, Popup, Circle } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
-import 'leaflet-draw/dist/leaflet.draw.css';
-import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
-import 'leaflet-defaulticon-compatibility';
-import { useStore } from 'src/Store';
+import Loading from 'src/components/Spinner/Loading';
+import { useDidMount, useSocket } from 'src/hooks';
 
-import MapConfig from './config';
-import * as S from './styles';
+import LeafletMap from './LeafletMap';
 
-type MapProps = {
-	setMapCenter: React.Dispatch<React.SetStateAction<L.Map>>;
-	startLocation: LatLngExpression;
-	zoom: number;
-	user: User;
-};
+const Map: React.FC<{ user: User | null }> = ({ user }) => {
+	const { didMount } = useDidMount();
+	const { socket } = useSocket();
+	const [zoom] = React.useState(8);
 
-const Map: React.FC<MapProps> = ({
-	setMapCenter,
-	startLocation,
-	zoom,
-	user,
-}) => {
-	const {
-		mapMarking: { useMarkings },
-	} = useStore();
+	const [isLoading, setIsLoading] = React.useState(false);
+
 	React.useEffect(() => {
-		console.log(useMarkings);
-		console.log(user.geo.preferedDistance);
-	}, [useMarkings, user]);
+		!user ? setIsLoading(true) : setIsLoading(false);
+	}, [user]);
 
-	return (
-		<S.MapWrapper>
-			<MapContainer
-				id="map"
-				center={startLocation}
-				zoom={zoom}
-				whenCreated={setMapCenter}
-				scrollWheelZoom={false}
-				layers={[]}
-				crs={CRS.EPSG3857}
-			>
-				<MapConfig />
+	const [messages, setMessages] = React.useState<Message[]>([]);
 
-				<Marker position={startLocation}>
-					<Popup>You Are Here :D</Popup>
-				</Marker>
-				<Circle
-					center={startLocation}
-					radius={user.geo.preferedDistance * 1000}
-				/>
-			</MapContainer>
-		</S.MapWrapper>
+	const messageListener = React.useCallback(
+		(message: Message) => {
+			if (
+				!messages.includes(message) &&
+				(message.geolocation_lat || message.geolocation_lng)
+			)
+				setMessages((prevMessages) => [...prevMessages, message]);
+		},
+		[messages],
+	);
+
+	React.useEffect(() => {
+		if (user) {
+			socket.on('message', messageListener);
+			return () => {
+				socket.off('message', messageListener);
+			};
+		}
+	});
+
+	React.useEffect(() => {
+		// on first load ask the server for messages
+		if (user) socket.emit('getMessages');
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
+
+	React.useEffect(() => {
+		console.log(messages);
+	}, [messages]);
+
+	if (!didMount) return <Loading open={!didMount} />;
+	if (isLoading) return <Loading open={isLoading} />;
+	return !user ? (
+		<Loading open={!user} />
+	) : (
+		<LeafletMap zoom={zoom} usergeoData={user.geo} messages={messages} />
 	);
 };
 

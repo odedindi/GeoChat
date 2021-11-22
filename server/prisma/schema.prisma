@@ -14,8 +14,8 @@ model Message {
   User      User?   @relation(fields: [fromuser], references: [username])
   content   String  @db.VarChar(255) 
   createdat String
-  geolocation_lat  String
-  geolocation_lng  String  
+  geolocation_lat  Float
+  geolocation_lng  Float  
 }
 
 model User {
@@ -27,5 +27,6 @@ model User {
   userID           String               @db.VarChar(50) @unique
   messages Message[]
   room             String               @db.VarChar(100)
-
+  geolocation_lat  Float
+  geolocation_lng  Float  
 }

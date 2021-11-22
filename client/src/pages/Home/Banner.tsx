@@ -2,7 +2,7 @@ import { IonCol, IonIcon, IonRow } from '@ionic/react';
 import * as I from 'ionicons/icons';
 import * as React from 'react';
 import Avatar from 'src/components/Avatar';
-import { useGeoLocation, useUploadNewAvatar } from 'src/hooks';
+import { usePosition, useUploadNewAvatar } from 'src/hooks';
 import generate from 'src/utils/generators';
 import { getLogger } from 'src/utils/logger';
 
@@ -15,10 +15,10 @@ type BannerProps = {
 	user: User | Partial<User>;
 	userStateUpdateHandler: React.Dispatch<React.SetStateAction<User>>;
 };
-const Banner: React.FC<BannerProps> = ({ user, userStateUpdateHandler }) => {
-	const { geoLocation, getGeoLocation } = useGeoLocation();
-	const { newAvatar, uploadNewAvatar } = useUploadNewAvatar();
 
+const Banner: React.FC<BannerProps> = ({ user, userStateUpdateHandler }) => {
+	const { geoPosError } = usePosition();
+	const { newAvatar, uploadNewAvatar } = useUploadNewAvatar();
 	const updateAvatar = React.useCallback(
 		(path: string) =>
 			userStateUpdateHandler((prev) => ({ ...prev, avatar: path })),
@@ -33,57 +33,45 @@ const Banner: React.FC<BannerProps> = ({ user, userStateUpdateHandler }) => {
 		}
 	}, [newAvatar, updateAvatar]);
 
-	const [geoLocError, setGeoLocError] = React.useState<string | null>(null);
-	React.useEffect(() => {
-		if (!geoLocation) return;
-		else if (typeof geoLocation === 'string') {
-			setGeoLocError(geoLocation as string);
-			log(`error: ${geoLocation}`);
-		} else {
-			setGeoLocError(null);
-			userStateUpdateHandler(
-				(prev): User => ({ ...prev, geo: { ...prev.geo, coord: geoLocation } }),
-			);
-			log(`getLocation successful`);
-		}
-	}, [geoLocation, userStateUpdateHandler]);
+	const avatar = (
+		<IonCol size="1">
+			<Avatar avatar={user?.avatar} />
+			<S.AvatarUpload onClick={uploadNewAvatar}>
+				<IonIcon icon={I.cameraOutline} />
+			</S.AvatarUpload>
+		</IonCol>
+	);
+	const username = (
+		<IonCol size="1">
+			<IonRow>
+				<S.ProfileTitle>{user?.username}</S.ProfileTitle>
+			</IonRow>
+		</IonCol>
+	);
+	const generateAvatarButton = (
+		<IonCol size="12">
+			<IonRow>
+				<PageNaviButton
+					clickHandler={generateAvatarHandler}
+					title={'Generate Avatar'}
+				/>
+			</IonRow>
+		</IonCol>
+	);
+	const geoLocationError = (
+		<IonCol size="12">
+			<S.ProfileTitle>
+				{geoPosError && <S.GeoLocError>{geoPosError}</S.GeoLocError>}
+			</S.ProfileTitle>
+		</IonCol>
+	);
 
 	return (
 		<S.Banner>
-			<IonRow>
-				<IonCol size="6">
-					<IonRow>
-						<PageNaviButton
-							clickHandler={generateAvatarHandler}
-							title={'Generate Avatar'}
-						/>
-					</IonRow>
-					<IonRow>
-						<PageNaviButton
-							clickHandler={() => getGeoLocation()}
-							title={'Get Location'}
-						/>
-					</IonRow>
-
-					{geoLocError && <S.GeoLocError>error</S.GeoLocError>}
-				</IonCol>
-				<IonCol size="6">
-					<Avatar avatar={user?.avatar} />
-					<S.AvatarUpload onClick={uploadNewAvatar}>
-						<IonIcon icon={I.cameraOutline} />
-					</S.AvatarUpload>
-				</IonCol>
-				<S.ProfileTitle>{user?.username ? user.username : ''}</S.ProfileTitle>
-				<IonCol size="6" className="ion-text-center">
-					<S.ProfileTitle>
-						{user?.geo?.coord
-							? `Coord: [${Number(user.geo.coord.lat).toFixed(2)}, ${Number(
-									user.geo.coord.lng,
-							  ).toFixed(2)}]`
-							: ''}
-					</S.ProfileTitle>
-				</IonCol>
-			</IonRow>
+			{avatar}
+			{username}
+			{generateAvatarButton}
+			{geoLocationError}
 		</S.Banner>
 	);
 };

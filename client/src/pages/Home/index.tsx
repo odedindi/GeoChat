@@ -9,13 +9,16 @@ import {
 } from '@ionic/react';
 import * as React from 'react';
 import { useHistory } from 'react-router-dom';
-import { useStore } from 'src/Store';
 import * as Action from 'src/Store/action';
 import InputField from 'src/components/InputField';
 import Loading from 'src/components/Spinner/Loading';
-import useDidMount from 'src/hooks/useDidMount';
-import { useKeyboardListener } from 'src/hooks/useKeyboardListener';
-import useStorage from 'src/hooks/useStorage';
+import {
+	useDidMount,
+	useKeyboardListener,
+	usePosition,
+	useStorage,
+	useStore,
+} from 'src/hooks';
 import { MainButton } from 'src/theme';
 import generate from 'src/utils/generators';
 import { getLogger } from 'src/utils/logger';
@@ -31,6 +34,7 @@ const Home: React.FC = () => {
 	const history = useHistory();
 	const { storeDispatch } = useStore();
 	const { storage } = useStorage();
+	const { geoPos } = usePosition();
 
 	const [currentUser, setCurrentUser] = React.useState<User>({
 		userID: generate.id(),
@@ -40,25 +44,41 @@ const Home: React.FC = () => {
 		room: '',
 		geo: { coord: { lat: 0, lng: 0 }, preferedDistance: 40 },
 	});
+	// fetch user's data from storage
 	React.useEffect(() => {
-		const get = async () => {
+		const getUser = async () => {
 			const { value } = (await storage.getItem('GeoChatUserDetails')) as {
 				value: string;
 			};
 			if (value) setCurrentUser(JSON.parse(value) as User);
 		};
-		get();
+		getUser();
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
+
+	// update user's location
+	React.useEffect(() => {
+		if (geoPos) {
+			setCurrentUser(
+				(prev): User => ({
+					...prev,
+					geo: {
+						...prev.geo,
+						coord: { lat: geoPos.latitude, lng: geoPos.longitude },
+					},
+				}),
+			);
+		}
+	}, [geoPos]);
 
 	const inputChangeHandler = ({ id, value }: HTMLIonInputElement) =>
 		setCurrentUser((prev) => ({ ...prev, [id]: value }));
 
 	const [disableSubmitButton, setDisableSubmitButton] = React.useState(true);
 	React.useEffect(() => {
-		if (currentUser?.username) setDisableSubmitButton(false);
+		if (currentUser?.username && geoPos) setDisableSubmitButton(false);
 		else setDisableSubmitButton(true);
-	}, [currentUser]);
+	}, [currentUser, disableSubmitButton, geoPos]);
 
 	const [submiting, setSubmiting] = React.useState(false);
 	const submitHandler = React.useCallback(() => {

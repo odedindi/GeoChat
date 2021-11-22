@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 export const GeoLocError = styled(IonRow)`
 	justify-content: center;
+	font-size: 0.75rem;
 	color: var(--ion-color-danger);
 `;
 
@@ -12,8 +13,6 @@ export const Banner = styled(IonGrid)`
 	justify-content: center;
 	align-items: center;
 	align-content: center;
-	/* background-color: var(--ion-color-success-tint);
-	color: white; */
 	background-color: #282c34;
 	color: white;
 `;
@@ -45,7 +44,7 @@ export const AvatarUpload = styled.div`
 `;
 
 export const ProfileTitle = styled(IonCardTitle)`
-	padding: 1rem;
+	padding: 0.5rem 0;
 	color: white;
 	font-size: 1.5rem;
 `;

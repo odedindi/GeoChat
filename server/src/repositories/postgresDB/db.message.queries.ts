@@ -29,4 +29,13 @@ export class DBMessageRepository implements MessageRepository {
 		log.info(`results of getAllMessages: ${JSON.stringify(rows)}`);
 		return rows as MessageDTO[];
 	};
+	public getMessagesWithinRange = async (
+		lat: number,
+		lng: number,
+		radius: number,
+	) => {
+		log.info(`not implemented yet`);
+		const messages: MessageDTO[] = [];
+		return messages;
+	};
 }

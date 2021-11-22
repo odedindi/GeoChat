@@ -16,7 +16,7 @@ type UseCamera = {
 		photos: UserPhoto[];
 	};
 };
-export const useCamera: UseCamera = () => {
+const useCamera: UseCamera = () => {
 	const PHOTO_STORAGE = 'photos';
 	const [photos, setPhotos] = React.useState<UserPhoto[]>([]);
 
@@ -129,3 +129,5 @@ export const base64FromPath = async (path: string): Promise<string> => {
 		reader.readAsDataURL(blob);
 	});
 };
+
+export default useCamera;

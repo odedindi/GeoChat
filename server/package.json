@@ -25,8 +25,11 @@
 		"prisma:migrate:reset": "yarn prisma migrate reset -f",
 		"test": "jest --watch"
 	},
+	"prisma": {
+		"seed": "ts-node ./src/repositories/prisma/seed/seed.ts"
+	},
 	"dependencies": {
-		"@prisma/client": "^3.4.2",
+		"@prisma/client": "^3.5.0",
 		"compression": "^1.7.4",
 		"cors": "^2.8.5",
 		"dotenv": "^10.0.0",
@@ -52,7 +55,7 @@
 		"module-alias": "^2.2.2",
 		"nodemon": "^2.0.14",
 		"prettier": "^2.4.1",
-		"prisma": "^3.4.2",
+		"prisma": "^3.5.0",
 		"rimraf": "^3.0.2",
 		"socket.io-client": "^4.3.2",
 		"supertest": "^6.1.6",

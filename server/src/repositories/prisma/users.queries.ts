@@ -14,44 +14,22 @@ export class PrismaUserRepository implements UserRepository {
 		const errMsg = 'Prisma User Repository add user error';
 		return this.handleError<PrismaUserModel>(
 			prisma.user.upsert({
-				where: {
-					userID: user.userID,
-				},
+				where: { userID: user.userID },
 				update: {
 					room: user.room,
 					socketID: user.socketID,
 				},
-				create: {
-					avatar: user.avatar,
-					preferedDistance: user.preferedDistance,
-					room: user.room,
-					socketID: user.socketID,
-					userID: user.userID,
-					username: user.username,
-				},
+				create: { ...user },
 			}),
 			errMsg,
 		);
 	};
-	public updateUser = async ({
-		username,
-		avatar,
-		socketID,
-		preferedDistance,
-		userID,
-	}: UserDTO): Promise<PrismaUserModel> => {
+	public updateUser = async (user: UserDTO): Promise<PrismaUserModel> => {
 		const errMsg = 'Prisma User Repository update user error';
-		console.log(username, avatar, socketID, preferedDistance, userID);
 		return this.handleError<PrismaUserModel>(
 			prisma.user.update({
-				where: { userID },
-				data: {
-					username,
-					avatar,
-					socketID,
-					userID,
-					preferedDistance,
-				},
+				where: { userID: user.userID },
+				data: { ...user },
 			}),
 			errMsg,
 		);

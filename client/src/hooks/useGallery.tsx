@@ -1,7 +1,7 @@
 import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 import { Capacitor } from '@capacitor/core';
 
-export const useGallery = (): {
+const useGallery = (): {
 	prompt: () => Promise<string>;
 } => {
 	const prompt = async () => {
@@ -18,3 +18,5 @@ export const useGallery = (): {
 		prompt,
 	};
 };
+
+export default useGallery;

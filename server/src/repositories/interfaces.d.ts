@@ -1,6 +1,11 @@
 interface MessageRepository {
 	addMessage: (message: MessageDTO) => void;
 	getAllMessages: () => Promise<MessageDTO[]>;
+	getMessagesWithinRange: (
+		lat: number,
+		lng: number,
+		radius: number,
+	) => Promise<MessageDTO[]>;
 }
 
 interface UserRepository {

@@ -2,12 +2,13 @@ import { IonRow, IonTitle, IonToolbar, IonButton, IonCol } from '@ionic/react';
 import * as React from 'react';
 import { useHistory } from 'react-router-dom';
 import Avatar from 'src/components/Avatar';
+import Map from 'src/components/Map';
 import { useStorage } from 'src/hooks';
 import { getLogger } from 'src/utils/logger';
 
 const log = getLogger('Toolbar');
 
-const Toolbar: React.FC<{ user: User | undefined | null }> = ({ user }) => {
+const Toolbar: React.FC<{ user: User | null }> = ({ user }) => {
 	const history = useHistory();
 	const { storage } = useStorage();
 
@@ -19,13 +20,18 @@ const Toolbar: React.FC<{ user: User | undefined | null }> = ({ user }) => {
 	return (
 		<IonToolbar>
 			<IonRow>
-				<IonCol size="8">
+				<IonCol size="3.5">
 					<IonRow>
-						<IonTitle>Welcome</IonTitle>
+						<IonTitle>Welcome {user?.username}</IonTitle>
 						<Avatar avatar={user?.avatar} />
 					</IonRow>
 				</IonCol>
-				<IonCol size="4">
+				<IonCol size="6.5">
+					<div style={{ height: '100%', width: '100%', background: 'red' }}>
+						<Map user={user} />
+					</div>
+				</IonCol>
+				<IonCol size="2">
 					<IonButton onClick={disconnectHandler}>Disconnect</IonButton>
 				</IonCol>
 			</IonRow>

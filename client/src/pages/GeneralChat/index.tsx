@@ -10,8 +10,6 @@ import * as I from 'ionicons/icons';
 import * as React from 'react';
 import { useHistory } from 'react-router-dom';
 import type { CustomTypes } from 'slate';
-import { useSocket } from 'src/Socket';
-import { useStore } from 'src/Store';
 import * as Action from 'src/Store/action';
 import ChatMessage from 'src/components/Chat/Message';
 import TextArea from 'src/components/Chat/TextArea';
@@ -20,7 +18,9 @@ import {
 	useDidMount,
 	useKeyboardListener,
 	useToast,
+	useSocket,
 	useStorage,
+	useStore,
 } from 'src/hooks';
 import { getLogger } from 'src/utils/logger';
 

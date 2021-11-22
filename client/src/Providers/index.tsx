@@ -1,23 +1,34 @@
 import { useLocation } from 'react-router-dom';
-import { SocketProvider } from 'src/Socket';
-import { StoreProvider } from 'src/Store';
+import { MapCenterProvider } from 'src/hooks/useMapCenter';
+import { PositionProvider } from 'src/hooks/usePosition';
+import { SocketProvider } from 'src/hooks/useSocket';
+import { StoreProvider } from 'src/hooks/useStore';
 
 import routes from '../routes/routes';
 
-const Providers: React.FC = ({ children }) => {
+const WithSocket: React.FC = ({ children }) => {
 	const { pathname } = useLocation();
-
 	return (
 		<>
-			{pathname === routes.chat ? (
-				<StoreProvider>
-					<SocketProvider>{children}</SocketProvider>
-				</StoreProvider>
+			{pathname === routes.chat || pathname === routes.map ? (
+				<SocketProvider>{children}</SocketProvider>
 			) : (
-				<StoreProvider>{children}</StoreProvider>
+				<>{children}</>
 			)}
 		</>
 	);
 };
+
+const Providers: React.FC = ({ children }) => (
+	<>
+		<StoreProvider>
+			<PositionProvider>
+				<MapCenterProvider>
+					<WithSocket>{children}</WithSocket>
+				</MapCenterProvider>
+			</PositionProvider>
+		</StoreProvider>
+	</>
+);
 
 export default Providers;
