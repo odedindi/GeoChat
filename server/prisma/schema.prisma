@@ -19,14 +19,14 @@ model Message {
 }
 
 model User {
-  id               Int                   @id @default(autoincrement())
-  username         String               @db.VarChar(50) @unique
-  avatar           String               @db.VarChar(100)
-  socketID         String              @db.VarChar(100) @unique
+  id               Int      @id @default(autoincrement())
+  username         String   @db.VarChar(50) @unique
+  avatar           String   @db.VarChar(100)
+  socketID         String   @db.VarChar(100) @unique
   preferedDistance Int
-  userID           String               @db.VarChar(50) @unique
+  userID           String   @db.VarChar(50) @unique
   messages Message[]
-  room             String               @db.VarChar(100)
+  room             String   @db.VarChar(100)
   geolocation_lat  Float
   geolocation_lng  Float  
 }
