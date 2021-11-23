@@ -1620,10 +1620,10 @@
   resolved "https://registry.yarnpkg.com/@ionic/pwa-elements/-/pwa-elements-3.0.2.tgz#caca76f816d4b478f1751e75698197d5d88f545b"
   integrity sha512-Wwb8/NgzeX1GA8MDPvcis7nx1vqtWdEaDz3t0tTbtUduR/oCNkWZkY2PFL49ET0+/lRhcqE2jZwXvTVn0R1UGw==
 
-"@ionic/react-router@^5.5.0":
-  version "5.8.4"
-  resolved "https://registry.yarnpkg.com/@ionic/react-router/-/react-router-5.8.4.tgz#75ce2e7187fe8ba120128251387ec59b2a27fce0"
-  integrity sha512-qmZTQaUQvUpPt97DSbefRn4PVg6Y8j4ve0lV+cBZ/WXOeRAgFK16ZjgucTrra3pV096fOIbkdvFYEp9iV6TPOQ==
+"@ionic/react-router@^5.8.5":
+  version "5.9.1"
+  resolved "https://registry.yarnpkg.com/@ionic/react-router/-/react-router-5.9.1.tgz#2c6ea6af4081901d93290e8f09acefa23e3c4236"
+  integrity sha512-O2SlglLB1loeNnPvN2kZE4ncpc1zltOMZPWXpkAhgPdB+QgD26lrwT9WjFvuVMqWsXLSPFmqs2SIgM6gKWSZdw==
   dependencies:
     tslib "*"
 
