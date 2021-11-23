@@ -18,10 +18,6 @@
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "lib": ["es2017"],
-    "paths": {
-      "*": ["*", "src/*"],
-      "src/*": ["src/*"]
-    }
   },
   "exclude": ["node_modules", "dist"],
   "include": ["src/**/*", "prisma/seed.ts"]

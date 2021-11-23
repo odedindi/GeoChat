@@ -12,9 +12,8 @@ import {
 @Controller()
 export class AppController {
   constructor(
-    private readonly appService: AppService, // private readonly userService: UserRepository,
-  ) // private readonly messageService: MessageRepository,
-  {}
+    private readonly appService: AppService, // private readonly userService: UserRepository, // private readonly messageService: MessageRepository,
+  ) {}
 
   @Get()
   getOK(): string {

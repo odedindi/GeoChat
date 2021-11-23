@@ -1,8 +1,5 @@
 import { Module } from '@nestjs/common';
-import { ChatModule } from 'src/chat/chat.module';
-import { MessageService } from 'src/services/message.service';
-import { PrismaService } from 'src/services/prisma.service';
-import { UserService } from 'src/services/user.service';
+import { ChatModule } from '../chat/chat.module';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 

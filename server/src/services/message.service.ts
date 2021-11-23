@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import log from 'src/config/logger';
 import { Prisma, Message as PrismaMessage } from '@prisma/client';
+import log from '../config/logger';
 import { PrismaService } from './prisma.service';
-import MessageMap from 'src/utils/Mappers/MessageMap';
+import MessageMap from '../utils/Mappers/MessageMap';
 
 @Injectable()
 export class MessageService implements MessageRepository {

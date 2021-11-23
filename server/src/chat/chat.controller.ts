@@ -1,6 +1,6 @@
 import { Controller } from '@nestjs/common';
 import * as socketio from 'socket.io';
-import log from 'src/config/logger';
+import log from '../config/logger';
 import { botName } from '../config/constants';
 import formatMessage from '../utils/formatMessage';
 
