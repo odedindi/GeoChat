@@ -1,53 +1,34 @@
 import { Injectable } from '@nestjs/common';
 import log from 'src/config/logger';
-import { Prisma, Message as PrismaMessage } from '@prisma/client';
-import { PrismaService } from './prisma.service';
+import prisma from 'src/config/prisma.config';
+import { Message as PrismaMessage, Prisma } from '@prisma/client';
 import MessageMap from 'src/utils/Mappers/MessageMap';
 
 @Injectable()
-export class MessageService implements MessageRepository {
-  constructor(private prisma: PrismaService) {}
+export class PrismaMessageRepository implements MessageRepository {
   private messageMap = new MessageMap();
-  private handleError = async <T>(cb: Promise<T>, errMsg: string) =>
+  private handleError = async <T>(cb: Promise<T>, errMsg: string): Promise<T> =>
     cb.catch((e: Error) => {
       log.error(`${errMsg}: ${e}`);
       throw e;
     });
 
-  public addMessage = async (
-    data: Prisma.MessageCreateInput,
-  ): Promise<MessageDTO> => {
+  public addMessage = async (data: Prisma.MessageCreateInput) => {
     const errMsg = 'Prisma Message Repository add message error:';
     const prismaMessage = await this.handleError(
-      this.prisma.message.create({ data }),
+      prisma.message.create({ data }),
       errMsg,
     );
     return this.messageMap.toDTO(prismaMessage);
   };
 
-  public removeMessage = async (
-    where: Prisma.MessageWhereUniqueInput,
-  ): Promise<MessageDTO> => {
+  public removeMessage = async (where: Prisma.MessageWhereUniqueInput) => {
     const errMsg = 'Prisma Message Repository removeMessage error';
     const prismaMessage = await this.handleError(
-      this.prisma.message.delete({ where }),
+      prisma.message.delete({ where }),
       errMsg,
     );
     return this.messageMap.toDTO(prismaMessage);
-  };
-  public getMessage = async (
-    messageWhereUniqueInput: Prisma.MessageWhereUniqueInput,
-  ): Promise<MessageDTO[]> => {
-    const errMsg = 'Prisma Message Repository getMessage error';
-    const prismaMessage = await this.handleError(
-      this.prisma.message.findUnique({ where: messageWhereUniqueInput }),
-      errMsg,
-    );
-    if (prismaMessage) {
-      const matchMessage = this.messageMap.toDTO(prismaMessage);
-      return [matchMessage];
-    }
-    return [] as MessageDTO[];
   };
 
   public getAllMessages = async ({
@@ -62,11 +43,11 @@ export class MessageService implements MessageRepository {
     cursor?: Prisma.MessageWhereUniqueInput;
     where?: Prisma.MessageWhereInput;
     orderBy?: Prisma.MessageOrderByWithRelationInput;
-  }): Promise<MessageDTO[]> => {
+  }) => {
     const errMsg = 'Prisma Message Repository add message error:';
 
-    const prismaMessages = await this.handleError(
-      this.prisma.message.findMany({
+    const prismaMessages = await this.handleError<PrismaMessage[]>(
+      prisma.message.findMany({
         skip,
         take,
         cursor,
@@ -84,8 +65,9 @@ export class MessageService implements MessageRepository {
     lat: number,
     lng: number,
     radius: number,
-  ): Promise<MessageDTO[]> => {
-    const errMsg = 'Prisma Message Repository find messagesWithinRange error:';
+  ) => {
+    const errMsg =
+      'Prisma Message Repository find messages within range error:';
 
     const query = Prisma.sql`
 			SELECT
@@ -96,12 +78,11 @@ export class MessageService implements MessageRepository {
 				ST_DWithin(ST_MakePoint(geolocation_lat,geolocation_lng), ST_MakePoint(${lat}, ${lng})::geography, ${radius} * 1000)
 		`;
 
-    const prismaMessages = await this.handleError<PrismaMessage[]>(
-      this.prisma.$queryRaw(query),
+    const messages = await this.handleError<PrismaMessage[]>(
+      prisma.$queryRaw(query),
       errMsg,
     );
 
-    const messages = this.messageMap.toDTOArr(prismaMessages);
     log.info(
       `getMessagesWithinRange: number of messages found: ${messages.length}`,
     );
