@@ -15,7 +15,7 @@
 		"@emotion/css": "^11.5.0",
 		"@ionic/eslint-config": "^0.3.0",
 		"@ionic/pwa-elements": "^3.0.2",
-		"@ionic/react": "^5.5.0",
+		"@ionic/react": "^5.8.5",
 		"@ionic/react-router": "^5.5.0",
 		"@testing-library/jest-dom": "^5.11.9",
 		"@testing-library/react": "^11.2.5",
