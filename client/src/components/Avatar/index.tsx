@@ -1,16 +1,10 @@
-import { IonIcon, IonImg } from '@ionic/react';
-import * as I from 'ionicons/icons';
+import BasicAvatar from './Avatar';
+import EditableAvatar from './Editable';
 
-import * as S from './styles';
-
-const Avatar: React.FC<{ avatar: string | undefined }> = ({ avatar }) => (
-	<S.Avatar>
-		{avatar ? (
-			<IonImg src={avatar} alt="avatar" />
-		) : (
-			<IonIcon icon={I.personCircleOutline} style={{ fontSize: '6rem' }} />
-		)}
-	</S.Avatar>
-);
-
+const Avatar: React.FC<AvatarProps> = ({ avatar, userUpdateHandler }) => {
+	if (!userUpdateHandler) return <BasicAvatar avatar={avatar} />;
+	return (
+		<EditableAvatar avatar={avatar} userUpdateHandler={userUpdateHandler} />
+	);
+};
 export default Avatar;

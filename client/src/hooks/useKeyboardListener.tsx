@@ -7,7 +7,7 @@ type BtnCode = string;
 export const useKeyboardListener = (
 	fn: ReturnVoid | ReturnPromise,
 	btnCode: BtnCode,
-	withCtrlKey?: string,
+	withCtrlKey?: boolean,
 ): void => {
 	React.useEffect(() => {
 		const keyboardListener = ({ code, ctrlKey }: KeyboardEvent) => {

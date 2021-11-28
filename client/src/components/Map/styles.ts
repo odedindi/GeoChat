@@ -5,5 +5,10 @@ export const MapWrapper = styled.div`
 	#map {
 		height: 100%;
 		width: 100%;
+
+		.leaflet-div-icon {
+			background: transparent;
+			border: none;
+		}
 	}
 `;

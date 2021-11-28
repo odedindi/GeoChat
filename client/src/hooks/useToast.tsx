@@ -4,7 +4,7 @@ import * as React from 'react';
 type UseToast = {
 	(): {
 		Toast: React.FC;
-		toastHandler: (msg: string) => void;
+		raiseToast: (msg: string) => void;
 	};
 };
 const useToast: UseToast = () => {
@@ -12,18 +12,27 @@ const useToast: UseToast = () => {
 		show: false,
 		msg: '',
 	});
-	const toastHandler = (msg: string) => setToastState({ show: true, msg });
+	const raiseToast = (msg: string) => setToastState({ show: true, msg });
 
 	const Toast: React.FC = () => (
 		<IonToast
 			isOpen={toastState.show}
-			onDidDismiss={() => setToastState({ show: false, msg: '' })}
 			message={toastState.msg}
-			duration={2500}
+			duration={10000}
+			position="top"
+			keyboardClose={true}
+			onDidDismiss={() => setToastState((prev) => ({ ...prev, show: false }))}
+			buttons={[
+				{
+					text: 'X',
+					role: 'cancel',
+				},
+			]}
+			color="warning"
 		/>
 	);
 
-	return { Toast, toastHandler };
+	return { Toast, raiseToast };
 };
 
 export default useToast;

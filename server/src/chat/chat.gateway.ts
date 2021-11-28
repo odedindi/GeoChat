@@ -19,7 +19,6 @@ export class ChatGateway
   server: Server;
 
   chatController = new ChatController(messageRepository, userRepository);
-  //   constructor(private readonly chatController: ChatController) {}
 
   handleDisconnect = async (socket: Socket) =>
     this.chatController.handleDisconnection(socket);

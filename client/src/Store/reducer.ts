@@ -11,6 +11,12 @@ const reducer = (
 				...state,
 				user: payload,
 			};
+
+		case T.LOGUSEROUT:
+			return {
+				...state,
+				user: payload,
+			};
 		default:
 			return state;
 	}

@@ -1,7 +1,27 @@
-import { IonAvatar, IonCardTitle, IonGrid, IonRow } from '@ionic/react';
+import { IonContent, IonGrid, IonRow } from '@ionic/react';
+import { MainButton } from 'src/theme';
 import styled from 'styled-components';
 
+export const PageContainer = styled(IonContent)``;
+
+export const LogInContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	margin-top: 2rem;
+
+	.rangeWrapper {
+		margin-bottom: 2rem;
+	}
+`;
+export const BtnContainer = styled(IonRow)`
+	justify-content: center;
+	padding-top: 2rem;
+`;
+
+export const EnterChatBtn = styled(MainButton)``;
+
 export const GeoLocError = styled(IonRow)`
+	padding: 0.5rem 0;
 	justify-content: center;
 	font-size: 0.75rem;
 	color: var(--ion-color-danger);
@@ -13,38 +33,7 @@ export const Banner = styled(IonGrid)`
 	justify-content: center;
 	align-items: center;
 	align-content: center;
-	background-color: #282c34;
+	background-color: var(--banner-background);
 	color: white;
-`;
-
-export const Avatar = styled(IonAvatar)`
-	padding: 0.25rem;
-	width: 7rem;
-	height: 7rem;
-	border: 5px solid rgba(218, 223, 208, 0.4);
-`;
-
-export const AvatarUpload = styled.div`
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	background-color: #fff;
-	border: 3px solid rgba(218, 223, 208, 0.4);
-	color: #505050;
-	position: absolute;
-	padding: 0.3rem;
-	font-size: 1.1rem;
-	border-radius: 500px;
-	margin-top: -2.2rem;
-	margin-left: 5rem;
-
-	&:hover {
-		cursor: pointer;
-	}
-`;
-
-export const ProfileTitle = styled(IonCardTitle)`
-	padding: 0.5rem 0;
-	color: white;
-	font-size: 1.5rem;
+	padding-top: 2rem;
 `;

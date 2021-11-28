@@ -1,15 +1,14 @@
 import type { LatLngExpression } from 'leaflet';
 import { CRS } from 'leaflet';
 import * as React from 'react';
-import { MapContainer, Marker, Popup, Circle } from 'react-leaflet';
+import { MapContainer, Circle } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-draw/dist/leaflet.draw.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
 import 'leaflet-defaulticon-compatibility';
 import { useMapCenter } from 'src/hooks';
 
-import Message from '../SimplifiedChat/Message';
-
+// import { MessageMarker } from './Marker';
 import MapConfig from './config';
 import * as S from './styles';
 
@@ -17,31 +16,16 @@ type MapProps = {
 	messages: Message[];
 	usergeoData: UserGeoData;
 	zoom: number;
+	zoomControl: boolean;
 };
 
-// const UserMarker: React.FC<{ position: LatLngExpression }> = ({ position }) => (
-// 	<Marker position={position}>
-// 		<Popup>&#9880; You Are Here &#9880;</Popup>
-// 	</Marker>
-// );
-type MessageMarkerProps = { message: Message; position: LatLngExpression };
-const MessageMarker: React.FC<MessageMarkerProps> = ({ message, position }) => (
-	<Marker position={position}>
-		<Popup>
-			<div style={{ padding: '0.5rem', width: '100%' }}>
-				<Message message={message} />
-			</div>
-		</Popup>
-	</Marker>
-);
-
 const Map: React.FC<MapProps> = ({
-	messages,
 	usergeoData: {
 		coord: { lat, lng },
 		preferedDistance,
 	},
 	zoom,
+	zoomControl,
 }) => {
 	const { setMapCenter } = useMapCenter();
 	const [userPosition] = React.useState<LatLngExpression>(() => [lat, lng]);
@@ -52,6 +36,7 @@ const Map: React.FC<MapProps> = ({
 				id="map"
 				center={userPosition}
 				zoom={zoom}
+				zoomControl={zoomControl}
 				whenCreated={setMapCenter}
 				scrollWheelZoom={false}
 				layers={[]}
@@ -60,8 +45,7 @@ const Map: React.FC<MapProps> = ({
 				<MapConfig />
 
 				<Circle center={userPosition} radius={preferedDistance * 1000} />
-
-				{messages.map((msg) => (
+				{/* {messages.map((msg) => (
 					<MessageMarker
 						key={msg.messageID}
 						position={
@@ -69,7 +53,7 @@ const Map: React.FC<MapProps> = ({
 						}
 						message={msg}
 					/>
-				))}
+				))} */}
 			</MapContainer>
 		</S.MapWrapper>
 	);

@@ -4,6 +4,7 @@ import useGallery from './useGallery';
 import useIsSocketConnected from './useIsSocketConnected';
 import useKeyboardListener from './useKeyboardListener';
 import useMapCenter from './useMapCenter';
+import useObservable from './useObservable';
 import usePosition from './usePosition';
 import useSocket from './useSocket';
 import useStorage from './useStorage';
@@ -17,8 +18,9 @@ export {
 	useGallery,
 	useIsSocketConnected,
 	useKeyboardListener,
-	usePosition,
 	useMapCenter,
+	useObservable,
+	usePosition,
 	useSocket,
 	useStorage,
 	useStore,

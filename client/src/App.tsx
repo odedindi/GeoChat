@@ -35,8 +35,7 @@ import Providers from './Providers';
 import Login from './pages/Auth/Login';
 import RestorePassword from './pages/Auth/RestorePassword';
 import Signup from './pages/Auth/Signup';
-import GeneralChat from './pages/GeneralChat';
-import Chat from './pages/GeneralChat/SimplifiedChat';
+import Chat from './pages/Chat';
 import Home from './pages/Home';
 import MapPage from './pages/Map';
 import UnAuthed from './routes/UnAuthed';
@@ -54,6 +53,8 @@ const App: React.FC = () => {
 							<UnAuthed path={routes.map} component={MapPage} />
 							<UnAuthed path={routes.login} component={Login} />
 							<UnAuthed path={routes.signup} component={Signup} />
+
+							{/* <UnAuthed path={routes.settings} component={} /> */}
 							<UnAuthed
 								path={routes.restorePassword}
 								component={RestorePassword}

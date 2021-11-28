@@ -1,4 +1,6 @@
+import { IonContent, IonHeader, IonPage } from '@ionic/react';
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import { useKeyboardListener } from 'src/hooks/useKeyboardListener';
 
 import * as S from './styles';
@@ -16,7 +18,7 @@ const RestorePassword: React.FC = () => {
 		}
 	}, [loading, userInput]);
 
-	const initStream = async () => {
+	const handleSubmit = async () => {
 		setLoading(true);
 
 		const url = '';
@@ -37,27 +39,39 @@ const RestorePassword: React.FC = () => {
 		setLoading(false);
 	};
 
-	useKeyboardListener(initStream, 'Enter');
+	useKeyboardListener(handleSubmit, 'Enter');
 
 	const inputChangeHandler = ({ name, value }: HTMLInputElement) =>
 		setInput((prev) => ({ ...prev, [name]: value }));
 
 	return (
-		<S.CardWrapper>
-			<S.Card>
-				<S.CardTitle>GeoChating Restore Password</S.CardTitle>
-				<h5>Fill in your email address and we will send you a new password</h5>
-				<S.Input
-					type="email"
-					placeholder="Email"
-					name="email"
-					onChange={({ target }) => inputChangeHandler(target)}
-				/>
-				<S.Button disabled={preventSubmit} onClick={initStream}>
-					Submit
-				</S.Button>
-			</S.Card>
-		</S.CardWrapper>
+		<IonPage>
+			<IonHeader>
+				<S.CardHeader>
+					<h6>Go back to the home page</h6>
+					<Link to="/">Home</Link>
+				</S.CardHeader>
+			</IonHeader>
+			<IonContent fullscreen={true} scrollEvents={true}>
+				<S.CardWrapper>
+					<S.Card>
+						<S.CardTitle>GeoChating Restore Password</S.CardTitle>
+						<h5>
+							Fill in your email address and we will send you a new password
+						</h5>
+						<S.Input
+							type="email"
+							placeholder="Email"
+							name="email"
+							onChange={({ target }) => inputChangeHandler(target)}
+						/>
+						<S.Button disabled={preventSubmit} onClick={handleSubmit}>
+							Submit
+						</S.Button>
+					</S.Card>
+				</S.CardWrapper>
+			</IonContent>
+		</IonPage>
 	);
 };
 

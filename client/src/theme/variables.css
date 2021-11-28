@@ -3,6 +3,12 @@ http://ionicframework.com/docs/theming/ */
 
 /** Ionic CSS Variables **/
 :root {
+	/** custom **/
+	--background-color: #282c34;
+	--banner-background: #1a1a1d;
+	--outgoing-message-background: #dcf8c6;
+	--incoming-message-background: #ece5dd;
+
 	/** primary **/
 	--ion-color-primary: #3880ff;
 	--ion-color-primary-rgb: 56, 128, 255;

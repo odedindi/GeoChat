@@ -1,4 +1,4 @@
-import { IonIcon } from '@ionic/react';
+import { IonContent, IonHeader, IonIcon, IonPage } from '@ionic/react';
 import * as I from 'ionicons/icons';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
@@ -24,7 +24,7 @@ const Login: React.FC = () => {
 			setPreventSubmit(false);
 	}, [loading, userInput]);
 
-	const initStream = async () => {
+	const handleSubmit = async () => {
 		setLoading(true);
 
 		const url = '';
@@ -48,59 +48,65 @@ const Login: React.FC = () => {
 		setLoading(false);
 	};
 
-	useKeyboardListener(initStream, 'Enter');
+	useKeyboardListener(handleSubmit, 'Enter');
 
 	const inputChangeHandler = ({ name, value }: HTMLInputElement) =>
 		setInput((prev) => ({ ...prev, [name]: value }));
 
 	return (
-		<S.CardWrapper>
-			<S.CardHeader>
-				<h6>Don't have an account yet?</h6>
-				<Link to="/auth/signup">Signup</Link>
-			</S.CardHeader>
-			<S.Card>
-				<S.CardTitle>GeoChating Login</S.CardTitle>
-				<S.Input
-					type="text"
-					placeholder="Username"
-					name="username"
-					value={userInput.username}
-					onChange={({ target }) => inputChangeHandler(target)}
-				/>
-				<S.Input
-					type={showPassword ? 'text' : 'password'}
-					placeholder="Password"
-					name="password"
-					value={userInput.password}
-					onChange={({ target }) => inputChangeHandler(target)}
-				/>
-
-				<S.ShowUnshowButton
-					onClick={showUnshowPassword}
-					fill="clear"
-					slot="icon-only"
-					shape="round"
-					color="dark"
-					size="large"
-				>
-					{!showPassword ? (
-						<IonIcon icon={I.eye} />
-					) : (
-						<IonIcon icon={I.eyeOff} />
-					)}
-				</S.ShowUnshowButton>
-
+		<IonPage>
+			<IonHeader>
 				<S.CardHeader>
-					<Link to="/auth/restorepassword">
-						Forgot your username or password?
-					</Link>
+					<h6>Don't have an account yet?</h6>
+					<Link to="/auth/signup">Signup</Link>
 				</S.CardHeader>
-				<S.Button disabled={preventSubmit} onClick={initStream}>
-					Submit
-				</S.Button>
-			</S.Card>
-		</S.CardWrapper>
+			</IonHeader>
+			<IonContent fullscreen={true} scrollEvents={true}>
+				<S.CardWrapper>
+					<S.Card>
+						<S.CardTitle>GeoChating Login</S.CardTitle>
+						<S.Input
+							type="text"
+							placeholder="Username"
+							name="username"
+							value={userInput.username}
+							onChange={({ target }) => inputChangeHandler(target)}
+						/>
+						<S.Input
+							type={showPassword ? 'text' : 'password'}
+							placeholder="Password"
+							name="password"
+							value={userInput.password}
+							onChange={({ target }) => inputChangeHandler(target)}
+						/>
+
+						<S.ShowUnshowButton
+							onClick={showUnshowPassword}
+							fill="clear"
+							slot="icon-only"
+							shape="round"
+							color="dark"
+							size="large"
+						>
+							{!showPassword ? (
+								<IonIcon icon={I.eye} />
+							) : (
+								<IonIcon icon={I.eyeOff} />
+							)}
+						</S.ShowUnshowButton>
+
+						<S.CardHeader>
+							<Link to="/auth/restorepassword">
+								Forgot your username or password?
+							</Link>
+						</S.CardHeader>
+						<S.Button disabled={preventSubmit} onClick={handleSubmit}>
+							Submit
+						</S.Button>
+					</S.Card>
+				</S.CardWrapper>
+			</IonContent>
+		</IonPage>
 	);
 };
 

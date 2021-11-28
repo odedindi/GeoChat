@@ -9,18 +9,19 @@ const Container = styled.div`
 
 type UseIsSocketConnected = () => {
 	IsConnected: () => JSX.Element;
+	isSocketConnected: boolean;
 	setIsConnected: React.Dispatch<React.SetStateAction<boolean>>;
 };
 const useIsSocketConnected: UseIsSocketConnected = () => {
-	const [isConnected, setIsConnected] = React.useState(false);
+	const [isSocketConnected, setIsConnected] = React.useState(false);
 
 	const IsConnected = () => (
 		<Container>
-			<p>Connected: {'' + isConnected}</p>
+			<p>Connected: {'' + isSocketConnected}</p>
 		</Container>
 	);
 
-	return { IsConnected, setIsConnected };
+	return { IsConnected, isSocketConnected, setIsConnected };
 };
 
 export default useIsSocketConnected;

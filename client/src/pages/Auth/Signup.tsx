@@ -1,10 +1,4 @@
-import {
-	IonContent,
-	IonFooter,
-	IonHeader,
-	IonIcon,
-	IonPage,
-} from '@ionic/react';
+import { IonContent, IonHeader, IonIcon, IonPage } from '@ionic/react';
 import * as I from 'ionicons/icons';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
@@ -51,7 +45,7 @@ const Signup: React.FC = () => {
 		}
 	}, [userInput]);
 
-	const initStream = React.useCallback(async () => {
+	const handleSubmit = React.useCallback(async () => {
 		setLoading(true);
 		const { name, email, password } = userInput;
 		const url = '';
@@ -76,7 +70,7 @@ const Signup: React.FC = () => {
 		setLoading(false);
 	}, [userInput]);
 
-	useKeyboardListener(initStream, 'Enter');
+	useKeyboardListener(handleSubmit, 'Enter');
 
 	const inputChangeHandler = ({ name, value }: HTMLInputElement) =>
 		setInput((prev) => ({ ...prev, [name]: value }));
@@ -91,8 +85,8 @@ const Signup: React.FC = () => {
 			</IonHeader>
 			<IonContent fullscreen={true} scrollEvents={true}>
 				<S.CardWrapper>
-					<S.CardTitle>GeoChating Signup</S.CardTitle>
 					<S.Card>
+						<S.CardTitle>GeoChating Signup</S.CardTitle>
 						<S.Input
 							type="text"
 							placeholder="Full Name"
@@ -129,21 +123,19 @@ const Signup: React.FC = () => {
 							color="dark"
 							size="large"
 						>
-							{!showPassword ? (
+							{showPassword ? (
 								<IonIcon icon={I.eye} />
 							) : (
 								<IonIcon icon={I.eyeOff} />
 							)}
 						</S.ShowUnshowButton>
 						{errorMsg && <S.CardTitle>{errorMsg}</S.CardTitle>}
+						<S.Button disabled={preventSubmit} onClick={handleSubmit}>
+							Submit
+						</S.Button>
 					</S.Card>
 				</S.CardWrapper>
 			</IonContent>
-			<IonFooter>
-				<S.Button disabled={preventSubmit} onClick={initStream}>
-					Submit
-				</S.Button>
-			</IonFooter>
 		</IonPage>
 	);
 };

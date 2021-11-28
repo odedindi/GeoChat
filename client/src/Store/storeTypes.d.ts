@@ -11,11 +11,17 @@ interface AddUserActionArgument {
 	type: 'ADDUSER';
 	payload: User;
 }
-type AddUserAction = {
-	(payload: User): AddUserActionArgument;
-};
 
-type ReducerActionArgument = AddUserActionArgument;
+type AddUserAction = (payload: User) => AddUserActionArgument;
+
+interface LogUserOutActionArgument {
+	type: 'LOGUSEROUT';
+	payload: null;
+}
+
+type LogUserOutAction = () => LogUserOutActionArgument;
+
+type ReducerActionArgument = AddUserActionArgument | LogUserOutActionArgument;
 
 type StoreReducer = {
 	(state: StoreState, action: ReducerActionArgument): StoreState;

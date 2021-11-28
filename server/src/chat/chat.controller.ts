@@ -3,142 +3,159 @@ import * as socketio from 'socket.io';
 import log from '../config/logger';
 import { botName } from '../config/constants';
 import formatMessage from '../utils/formatMessage';
+import { getAerialDistance } from '../utils/haversine';
 
 @Controller()
 export default class ChatController {
   constructor(
-    private readonly messageRepository: MessageRepository,
-    private readonly userRepository: UserRepository,
+    private readonly msgRepo: MessageRepository,
+    private readonly usrRepo: UserRepository,
   ) {}
   initConnection = (socket: socketio.Socket) => {
-    socket.on('join', ({ user, room }: { user: UserDTO; room: string }) =>
-      this.joinRoom(socket, user, room),
+    socket.on('join', ({ user }: { user: UserDTO }) =>
+      this.handleUserJoining(socket, user),
     );
     // Listen for chatMessage
-    socket.on('chatMessage', ({ content, coord }) =>
-      this.handleChatMessage(socket, content, coord),
+    socket.on('messageFromUser', (messageFromUser: MessageFromUser) =>
+      this.handleMessageFromUser(socket, messageFromUser),
     );
     socket.on('disconnect', async () => this.handleDisconnection(socket));
-    // ====> older stuff
-    socket.on('getMessages', () => this.getMessages(socket));
+
+    // Listen to users requests
+    socket.on('getMessages', () => this.getMessagesInProximity(socket));
+    socket.on('getOtherUsers', () => this.getUsersInProximity(socket));
+
+    // Listen to error
     socket.on('connect_error', (error) =>
       log.error(`connect_error: ${error.message}`),
     );
   };
 
-  userJoin = async (socketID: string, user: UserDTO, room: string) => {
-    const updatedUser: UserDTO = { ...user, socketID, room };
+  userJoin = async (
+    socket: socketio.Socket,
+    user: UserDTO,
+    room = 'geoChat',
+  ) => {
+    const updatedUser: UserDTO = { ...user, socketID: socket.id, room };
+    socket.join(updatedUser.room);
     const { userID } = updatedUser;
 
     log.info('check if user is already in users table if not create it');
-    const match = await this.userRepository.getUser({ userID });
-    if (!match) this.userRepository.addUser(updatedUser);
-
+    const match = await this.usrRepo.getUser({ userID });
+    log.info(`Welcome ${updatedUser.socketID}`);
+    if (match.length) {
+      log.info(`user found ${JSON.stringify(match)} `);
+      socket.emit('raiseToast', `${botName}: Welcome Back ${user.username}!`);
+    } else {
+      log.info('user not found adding user to db');
+      const newUser = await this.usrRepo.addUser(updatedUser);
+      socket.emit('raiseToast', `${botName}: Welcome ${user.username}!`);
+      log.info(`${newUser}`);
+    }
     return updatedUser;
   };
 
   getCurrentUser = async (socketID: string) =>
-    await this.userRepository.getUser({ socketID });
+    await this.usrRepo.getUser({ socketID });
 
-  // TODO: modify join room ============>
-  // migrate from rooms to only geolocations
+  handleUserJoining = async (socket: socketio.Socket, user: UserDTO) => {
+    log.info(`handling user: ${user.userID} joining`);
+    const joinedUser = await this.userJoin(socket, user);
 
-  getRoomUsers = (room: string) =>
-    this.userRepository.getAllUsers({ where: { room } });
-
-  joinRoom = async (socket: socketio.Socket, user: UserDTO, room: string) => {
-    const joinedUser = await this.userJoin(socket.id, user, room);
-    socket.join(joinedUser.room);
-
-    this.userRepository.updateUser({
+    await this.usrRepo.updateUser({
       data: joinedUser,
       where: { userID: joinedUser.userID },
     });
-    log.info(
-      `updated user: ${joinedUser.userID} room: ${room} details in pgDB`,
-    );
+    log.info(`updated user: ${joinedUser.userID} in pgDB`);
 
-    log.info(`Welcome ${joinedUser.socketID}`);
-    socket.emit('message', formatMessage(botName, 'Welcome Back!'));
-
-    log.info(
-      `Broadcast to ${joinedUser.room} that ${joinedUser.socketID} connected`,
-    );
-    socket.broadcast
-      .to(joinedUser.room)
-      .emit(
-        'message',
-        formatMessage(botName, `${joinedUser.username} has joined the chat`),
-      );
-
-    const users = await this.getRoomUsers(joinedUser.room);
-    log.info(
-      `Send room users (total of ${users.length}) and to room: ${room} `,
-    );
-
-    socket.broadcast.to(joinedUser.room).emit('roomUsers', {
-      room: joinedUser.room,
-      users,
-    });
-
-    log.info(`Send old messages`);
-
-    const messages = await this.messageRepository.getMessagesWithinRange(
+    log.info(`get messages within range`);
+    const messages = await this.msgRepo.getMessagesWithinRange(
       user.geolocation_lat,
       user.geolocation_lng,
       user.preferedDistance,
     );
+    log.info(`Send all messages`);
     messages.forEach((message) => socket.emit('message', message));
   };
-  // TODO: modify join room <===================
 
-  handleChatMessage = async (
+  handleMessageFromUser = async (
     socket: socketio.Socket,
-    content: string,
-    coord: Coord,
+    { content, coord, mentions }: MessageFromUser,
   ) => {
     const user = await this.getCurrentUser(socket.id);
-    const message: MessageDTO = formatMessage(user[0].username, content, coord);
-    this.messageRepository.addMessage(message);
-    socket.emit('message', message);
+    const author = user[0];
+    log.info(`handling message from user ${author.userID}, ${author.username}`);
+    const message: MessageDTO = formatMessage(author.username, content, coord);
+    this.msgRepo.addMessage(message);
+
+    if (mentions.length) {
+      log.info(`message ${message.id} contains mentions`);
+      mentions.forEach(async ({ userID }, index) => {
+        const mentionedUser = await this.usrRepo.getUser({ userID });
+        log.info(`${index + 1}: ${mentionedUser[0].userID}`);
+        const mentionedSocketID = mentionedUser[0]?.socketID;
+        if (mentionedSocketID)
+          socket
+            .to(mentionedSocketID)
+            .emit('youGotMentioned', author.username, content);
+      });
+    }
+    log.info(
+      `broadcast message to users that are in author's preferred distance: ${author.preferedDistance} `,
+    );
+    const usersInProximity = await this.usrRepo.getUsersWithinRange(
+      coord.lat,
+      coord.lng,
+      author.preferedDistance,
+    );
+    if (usersInProximity.length) {
+      usersInProximity.forEach(
+        ({
+          geolocation_lat: lat,
+          geolocation_lng: lng,
+          preferedDistance,
+          socketID,
+        }) => {
+          const withinUserpreferedDistance =
+            preferedDistance > getAerialDistance({ lat, lng }, coord);
+          if (withinUserpreferedDistance)
+            socket.to(socketID).emit('message', message);
+        },
+      );
+    }
   };
 
   handleDisconnection = async (socket: socketio.Socket) => {
     const user = await this.getCurrentUser(socket.id);
     if (user[0]) {
-      log.info(
-        `Broadcast to ${user[0].room} that ${user[0].socketID} disconnected`,
-      );
-      socket.broadcast
-        .to(user[0].room)
-        .emit(
-          'message',
-          formatMessage(botName, `${user[0].username} has left the chat`),
-        );
-      socket.broadcast.to(user[0].room).emit('roomUsers', {
-        room: user[0].room,
-        users: this.getRoomUsers(user[0].room),
-      });
       log.info(`${user[0].socketID} left the chat`);
-      // this.userRepository.updateUser({ ...user[0], room: '', socketID: '' });
     }
   };
 
-  getMessages = async (socket: socketio.Socket) => {
-    const user = await this.getCurrentUser(socket.id);
-    if (user[0]) {
-      log.info(`user: ${user[0].userID} found`);
-      const {
-        geolocation_lat: lat,
-        geolocation_lng: lng,
-        preferedDistance: radius,
-      } = user[0];
-      const messages = await this.messageRepository.getMessagesWithinRange(
-        lat,
-        lng,
-        radius,
-      );
-      messages.forEach((message) => socket.emit('message', message));
-    } else log.error(`User with socketID: ${socket.id} was not found `);
+  getGeoDataFromUser = async (socketID: string) => {
+    const user = await this.getCurrentUser(socketID);
+    log.info(`user: ${user[0].userID} found`);
+    const {
+      geolocation_lat: lat,
+      geolocation_lng: lng,
+      preferedDistance: radius,
+    } = user[0];
+    return { lat, lng, radius };
+  };
+
+  getMessagesInProximity = async (socket: socketio.Socket) => {
+    const { lat, lng, radius } = await this.getGeoDataFromUser(socket.id);
+    const messages = await this.msgRepo.getMessagesWithinRange(
+      lat,
+      lng,
+      radius,
+    );
+    messages.forEach((message) => socket.emit('messagesInProximity', message));
+  };
+
+  getUsersInProximity = async (socket: socketio.Socket) => {
+    const { lat, lng, radius } = await this.getGeoDataFromUser(socket.id);
+    const users = await this.usrRepo.getUsersWithinRange(lat, lng, radius);
+    socket.emit('usersInProximity', users);
   };
 }

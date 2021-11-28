@@ -35,6 +35,21 @@ interface UserDTO {
 	geolocation_lat: number;
 	geolocation_lng: number;
 }
+
+interface MentionableUser {
+	id: string; // userID
+	display: string; // username
+}
+
+interface MentionedUser {
+	userID: string;
+	username: string;
+}
+interface MessageFromUser {
+	mentions: MentionedUser[];
+	content: string;
+	coord: Coord;
+}
 interface MessageDTO {
 	id?: number;
 	messageID: string;

@@ -8,7 +8,7 @@ const SelectPreferedRange: React.FC<{
 	setValue: (event: CustomEvent<RangeChangeEventDetail>) => void;
 }> = ({ value, setValue }) => {
 	return (
-		<>
+		<div className="rangeWrapper">
 			<IonItemDivider>Set Your Prefered Range (km)</IonItemDivider>
 			<IonItem>
 				<IonRange
@@ -24,7 +24,7 @@ const SelectPreferedRange: React.FC<{
 					<IonIcon slot="end" size="large" icon={I.ellipseOutline} />
 				</IonRange>
 			</IonItem>
-		</>
+		</div>
 	);
 };
 
