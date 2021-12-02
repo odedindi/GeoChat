@@ -15,7 +15,7 @@ const InputField: React.FC<InputFieldProps> = ({
 }) => {
 	const title = `${id[0].toUpperCase()}${id.slice(1)}`;
 	return (
-		<IonItem>
+		<IonItem lines="full">
 			<IonLabel position="floating">
 				{title}
 				{required && '*'}

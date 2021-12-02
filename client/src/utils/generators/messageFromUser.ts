@@ -1,10 +1,3 @@
-type GenerateMessageContentAndMentions = (userInput: string) => {
-	content: string;
-	mentions: {
-		userID: string;
-		username: string;
-	}[];
-};
 export const messageContentAndMentions: GenerateMessageContentAndMentions = (
 	userInput,
 ) => {
@@ -37,10 +30,10 @@ export const messageContentAndMentions: GenerateMessageContentAndMentions = (
 	return { content, mentions };
 };
 
-export const messageToSendToServer = (
-	userInput: string,
-	geoPos: Position | null,
-): MessageFromUser => {
+export const messageToSendToServer: GenerateMessageToSendToServer = (
+	userInput,
+	geoPos,
+) => {
 	const { content, mentions } = messageContentAndMentions(userInput);
 
 	return {

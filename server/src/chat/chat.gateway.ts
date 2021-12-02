@@ -26,5 +26,5 @@ export class ChatGateway
   afterInit = (_server: Server) => log.info(`WebSocketGateway init`);
 
   handleConnection = async (socket: Socket) =>
-    this.chatController.initConnection(socket);
+    this.chatController.initConnection(this.server, socket);
 }

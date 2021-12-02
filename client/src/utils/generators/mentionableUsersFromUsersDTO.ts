@@ -1,7 +1,6 @@
-export const mentionableUsersFromUsersDTO = (
-	users: UserDTO[],
-): MentionableUser[] =>
-	users.map(({ userID, username }) => ({
-		id: userID,
-		display: username,
-	}));
+export const mentionableUsersFromUsersDTO: GenerateMentionableUsersFromUsersDTO =
+	(users) =>
+		users.map(({ userID, username }) => ({
+			id: userID,
+			display: username,
+		}));

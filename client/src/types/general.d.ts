@@ -12,6 +12,7 @@ type User = {
 	username: string;
 	room: string;
 	geo: UserGeoData;
+	beSeenBeyondRange: boolean;
 };
 
 type Message = {
@@ -34,6 +35,7 @@ interface UserDTO {
 	preferedDistance: number;
 	geolocation_lat: number;
 	geolocation_lng: number;
+	beSeenBeyondRange: boolean;
 }
 
 interface MentionableUser {

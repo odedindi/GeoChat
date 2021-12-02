@@ -33,16 +33,7 @@ const Home: React.FC = () => {
 	} = useStore();
 	// if is not in store fetch user's data from storage
 	const [currentUser, setCurrentUser] = React.useState<User>(() =>
-		user
-			? user
-			: {
-					userID: generate.id(),
-					avatar: '',
-					socketID: '',
-					username: '',
-					room: '',
-					geo: { coord: { lat: 0, lng: 0 }, preferedDistance: 40 },
-			  },
+		user ? user : generate.newUser(),
 	);
 
 	React.useEffect(() => {

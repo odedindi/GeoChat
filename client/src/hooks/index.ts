@@ -1,4 +1,5 @@
 import useCamera from './useCamera';
+import useDarkMode from './useDarkMode';
 import useDidMount from './useDidMount';
 import useGallery from './useGallery';
 import useIsSocketConnected from './useIsSocketConnected';
@@ -14,6 +15,7 @@ import useUploadNewAvatar from './useUploadNewAvatar';
 
 export {
 	useCamera,
+	useDarkMode,
 	useDidMount,
 	useGallery,
 	useIsSocketConnected,

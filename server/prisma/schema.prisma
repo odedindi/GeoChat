@@ -28,6 +28,7 @@ model User {
   room             String    @db.VarChar(100)
   geolocation_lat  Float
   geolocation_lng  Float
+  beSeenBeyondRange Boolean
   Message          Message[]
 }
 

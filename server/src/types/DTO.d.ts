@@ -5,6 +5,7 @@ interface UserDTO {
   socketID: string;
   username: string;
   room: string;
+  beSeenBeyondRange: boolean;
   preferedDistance: number;
   geolocation_lat: number;
   geolocation_lng: number;

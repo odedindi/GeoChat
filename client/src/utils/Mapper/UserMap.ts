@@ -11,6 +11,7 @@ class UserMap extends Mapper<User, UserDTO> {
 			coord: { lat, lng },
 			preferedDistance,
 		},
+		beSeenBeyondRange,
 	}: User): UserDTO => ({
 		avatar,
 		userID,
@@ -20,6 +21,7 @@ class UserMap extends Mapper<User, UserDTO> {
 		preferedDistance,
 		geolocation_lat: lat,
 		geolocation_lng: lng,
+		beSeenBeyondRange,
 	});
 
 	fromDTO = ({
@@ -31,6 +33,7 @@ class UserMap extends Mapper<User, UserDTO> {
 		preferedDistance,
 		geolocation_lat,
 		geolocation_lng,
+		beSeenBeyondRange,
 	}: UserDTO): User => ({
 		avatar,
 		userID,
@@ -41,6 +44,7 @@ class UserMap extends Mapper<User, UserDTO> {
 			coord: { lat: geolocation_lat, lng: geolocation_lng },
 			preferedDistance,
 		},
+		beSeenBeyondRange,
 	});
 }
 

@@ -20,16 +20,13 @@ const Toolbar: React.FC<{ user: User | null }> = ({ user }) => {
 	return (
 		<IonToolbar>
 			<IonRow>
-				<IonCol size="3.5">
+				<IonCol size="2">
 					<IonRow>
-						<IonTitle>Welcome {user?.username}</IonTitle>
 						<Avatar avatar={user?.avatar} />
 					</IonRow>
 				</IonCol>
-				<IonCol size="6.5">
-					<div style={{ height: '100%', width: '100%' }}>
-						<Map user={user} />
-					</div>
+				<IonCol size="7">
+					<Map user={user} />
 				</IonCol>
 				<IonCol size="2">
 					<IonButton color="warning" onClick={disconnectHandler}>

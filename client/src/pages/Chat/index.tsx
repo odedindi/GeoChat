@@ -50,7 +50,8 @@ const Chat: React.FC = () => {
 	// old messages from the server
 	const [messages, setMessages] = React.useState<Message[]>([]);
 	const messageListener = React.useCallback((message: Message) => {
-		setMessages((prevMessages) => [...prevMessages, message]);
+		setMessages((prev) => [...prev, message]);
+
 		// automatic scrool to bottom when get new messages
 		const list = document.querySelector('ion-content');
 		list?.scrollToBottom(2000);
@@ -77,12 +78,17 @@ const Chat: React.FC = () => {
 					}`,
 				),
 			);
+			socket.on('usersInAuthorProximity', (users: UserDTO[]) => {
+				setMentionableUsers(generate.mentionableUsersFromUsersDTO(users));
+			});
 			socket.on('disconnect', () => setIsConnected(false));
 		}
 		return () => {
 			socket.off('connect');
 			socket.on('raiseToast', raiseToast);
 			socket.off('message', messageListener);
+			socket.off('youGotMentioned');
+			socket.off('usersInAuthorProximity');
 			socket.off('disconnect');
 		};
 	});
@@ -105,16 +111,10 @@ const Chat: React.FC = () => {
 			(!userInput.length && newValue === mentioningTrigger) ||
 			(!mentionableUsers.length && newValue[triggerMentions - 1] === ' ')
 		) {
-			socket.emit('getOtherUsers');
+			socket.emit('getUsersAroundMe');
 		}
 		setUserInput(newValue);
 	};
-
-	React.useEffect(() => {
-		socket.on('usersInProximity', (users: UserDTO[]) =>
-			setMentionableUsers(generate.mentionableUsersFromUsersDTO(users)),
-		);
-	}, [socket]);
 
 	const submitMessage = () => {
 		const msgContent = userInput.trim();
@@ -127,19 +127,13 @@ const Chat: React.FC = () => {
 
 	return (
 		<IonPage>
-			<Loading open={isLoading} />
+			<Loading open={isLoading || !isSocketConnected} />
 			<IonHeader>
 				<Toast />
 				<Toolbar user={user} />
 			</IonHeader>
 			<IonContent fullscreen>
-				{isSocketConnected ? (
-					<>
-						<MessageList messages={messages} />
-					</>
-				) : (
-					<Loading open={!isSocketConnected} />
-				)}
+				<MessageList messages={messages} />
 			</IonContent>
 			<IonFooter>
 				<InputFieldWithMention
