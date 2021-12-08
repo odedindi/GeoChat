@@ -102,4 +102,4 @@ branch. Pull requests are warmly welcome."
 
 ## Licensing
 
-"The code in this project is licensed under MIT [license](https://github.com/odedindi/GeoChat/blob/main/LICENSE)."
+The code in this project is licensed under MIT [license](https://github.com/odedindi/GeoChat/blob/main/LICENSE).
