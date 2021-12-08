@@ -83,7 +83,7 @@ What's all the bells and whistles this project can perform?
 
 - A live chat using Socket.io, where a use can get mentioned and mention other users in his range of preferrence.
 - A live map where a user can see where he\she got mentioned
-- Modify user's settings where can upload a personal avatar or choose a random one, change range, privacy and personal preferrences
+- Personalize user's settings, upload a personal avatar or choose a random one, change range, privacy and personal preferrences and more
 
 ## Contributing
 
