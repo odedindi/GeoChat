@@ -8,26 +8,19 @@ Beacon GeoChat is especially awesome among friends and family and random people 
 
 ## Screenshots
 
-- Chat Page
-  <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/chat.png' alt='Chat Page' width='350px' height='350px' />
+- Chat Page - <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/chat.png' alt='Chat Page' width='350px' height='350px' />
 
-- Map Page
-  <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/map.png' alt='Map Page' width='350px' height='350px' />
+- Map Page - <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/map.png' alt='Map Page' width='350px' height='350px' />
 
-- Settings Page
-  <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/settings.png' alt='Settings Page' width='350px' height='350px' />
+- Settings Page - <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/settings.png' alt='Settings Page' width='350px' height='350px' />
 
-- Dark Mode Page
-  <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/settingsDark.png' alt='Dark Mode Page' width='350px' height='350px' />
+- Dark Mode Page - <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/settingsDark.png' alt='Dark Mode Page' width='350px' height='350px' />
 
-- Signup Page
-  <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/signup.png' alt='Signup Page' width='350px' height='350px' />
+- Signup Page - <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/signup.png' alt='Signup Page' width='350px' height='350px' />
 
-- Login Page
-  <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/login.png' alt='Login Paget' width='350px' height='350px' />
+- Login Page - <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/login.png' alt='Login Paget' width='350px' height='350px' />
 
-- Restore Password Page
-  <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/restorePassword.png' alt='Restore Password Page' width='350px' height='350px' />
+- Restore Password Page - <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/restorePassword.png' alt='Restore Password Page' width='350px' height='350px' />
 
 ## Tech/framework used
 
