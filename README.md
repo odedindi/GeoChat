@@ -8,26 +8,26 @@ Beacon GeoChat is especially awesome among friends and family and random people 
 
 ## Screenshots
 
-- ![Chat Page](https://github.com/odedindi/GeoChat/screenshots/chat.png)
-  <img src='https://github.com/odedindi/GeoChat/screenshots/chat.png' alt='Logo of the project' width='350px' height='350px' />
+- ![Chat Page](https://github.com/odedindi/GeoChat/tree/main/screenshots/chat.png)
+  <img src='https://github.com/odedindi/GeoChat/tree/main/screenshots/chat.png' alt='Logo of the project' width='350px' height='350px' />
 
-- ![Map Page](https://github.com/odedindi/GeoChat/screenshots/map.png)
-  <img src='https://github.com/odedindi/GeoChat/screenshots/map.png' alt='Logo of the project' width='350px' height='350px' />
+- ![Map Page](https://github.com/odedindi/GeoChat/tree/main/screenshots/map.png)
+  <img src='https://github.com/odedindi/GeoChat/tree/main/screenshots/map.png' alt='Logo of the project' width='350px' height='350px' />
 
-- ![Settings Page](https://github.com/odedindi/GeoChat/screenshots/settings.png)
-  <img src='https://github.com/odedindi/GeoChat/screenshots/settings.png' alt='Logo of the project' width='350px' height='350px' />
+- ![Settings Page](https://github.com/odedindi/GeoChat/tree/main/screenshots/settings.png)
+  <img src='https://github.com/odedindi/GeoChat/tree/main/screenshots/settings.png' alt='Logo of the project' width='350px' height='350px' />
 
-- ![Dark Mode Page](https://github.com/odedindi/GeoChat/screenshots/settingsDark.png)
-  <img src='https://github.com/odedindi/GeoChat/screenshots/settingsDark.png' alt='Logo of the project' width='350px' height='350px' />
+- ![Dark Mode Page](https://github.com/odedindi/GeoChat/tree/main/screenshots/settingsDark.png)
+  <img src='https://github.com/odedindi/GeoChat/tree/main/screenshots/settingsDark.png' alt='Logo of the project' width='350px' height='350px' />
 
-- ![Signup Page](https://github.com/odedindi/GeoChat/screenshots/signup.png)
-  <img src='https://github.com/odedindi/GeoChat/screenshots/signup.png' alt='Logo of the project' width='350px' height='350px' />
+- ![Signup Page](https://github.com/odedindi/GeoChat/tree/main/screenshots/signup.png)
+  <img src='https://github.com/odedindi/GeoChat/tree/main/screenshots/signup.png' alt='Logo of the project' width='350px' height='350px' />
 
-- ![Login Page](https://github.com/odedindi/GeoChat/screenshots/login.png)
-  <img src='https://github.com/odedindi/GeoChat/screenshots/login.png' alt='Logo of the project' width='350px' height='350px' />
+- ![Login Page](https://github.com/odedindi/GeoChat/tree/main/screenshots/login.png)
+  <img src='https://github.com/odedindi/GeoChat/tree/main/screenshots/login.png' alt='Logo of the project' width='350px' height='350px' />
 
-- ![Restore Password Page](https://github.com/odedindi/GeoChat/screenshots/restorePassword.png)
-  <img src='https://github.com/odedindi/GeoChat/screenshots/restorePassword.png' alt='Logo of the project' width='350px' height='350px' />
+- ![Restore Password Page](https://github.com/odedindi/GeoChat/tree/main/screenshots/restorePassword.png)
+  <img src='https://github.com/odedindi/GeoChat/tree/main/screenshots/restorePassword.png' alt='Logo of the project' width='350px' height='350px' />
 
 ## Tech/framework used
 
