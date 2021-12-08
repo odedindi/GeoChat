@@ -8,25 +8,25 @@ Beacon GeoChat is especially awesome among friends and family and random people 
 
 ## Screenshots
 
-- ![Chat Page](https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/chat.png)
+- Chat Page
   <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/chat.png' alt='Chat Page' width='350px' height='350px' />
 
-- ![Map Page](https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/map.png)
+- Map Page
   <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/map.png' alt='Map Page' width='350px' height='350px' />
 
-- ![Settings Page](https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/settings.png)
+- Settings Page
   <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/settings.png' alt='Settings Page' width='350px' height='350px' />
 
-- ![Dark Mode Page](https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/settingsDark.png)
+- Dark Mode Page
   <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/settingsDark.png' alt='Dark Mode Page' width='350px' height='350px' />
 
-- ![Signup Page](https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/signup.png)
+- Signup Page
   <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/signup.png' alt='Signup Page' width='350px' height='350px' />
 
-- ![Login Page](https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/login.png)
+- Login Page
   <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/login.png' alt='Login Paget' width='350px' height='350px' />
 
-- ![Restore Password Page](https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/restorePassword.png)
+- Restore Password Page
   <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/restorePassword.png' alt='Restore Password Page' width='350px' height='350px' />
 
 ## Tech/framework used
@@ -43,7 +43,7 @@ Beacon GeoChat is especially awesome among friends and family and random people 
 - [Socket.IO](https://socket.io/)
 
 - <b>Client:</b>
--
+
 - [React.js](https://reactjs.org)
 - [Ionic](https://electron.atom.io)
 - [Leaflet](https://leafletjs.com)
