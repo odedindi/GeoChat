@@ -20,9 +20,9 @@ Beacon GeoChat is especially awesome among friends and family and random people 
 
   - <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/settings.png' alt='Settings Page' width='350px' height='350px' />
 
-- Dark Mode Page
+- Dark Mode
 
-  - <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/settingsDark.png' alt='Dark Mode Page' width='350px' height='350px' />
+  - <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/settingsDark.png' alt='Dark Mode' width='350px' height='350px' />
 
 - Signup Page
 
