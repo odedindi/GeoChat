@@ -65,10 +65,6 @@ Then from root:
 docker-compose up
 ```
 
-### Initial Configuration
-
-no Inital configuration needed
-
 ## Developing
 
 A brief intro for developers in order to start developing the project further:
@@ -95,8 +91,9 @@ What's all the bells and whistles this project can perform?
 
 ## Contributing
 
-"If you'd like to contribute, please fork the repository and use a feature
-branch. Pull requests are warmly welcome."
+If you'd like to contribute, please fork the repository and use a feature
+branch.
+Pull requests are warmly welcome.
 
 ## Links
 
