@@ -1,4 +1,3 @@
-<!-- ![Logo of the project](https://github.com/odedindi/GeoChat/blob/main/client/public/assets/beacon.png) -->
 <img src='https://github.com/odedindi/GeoChat/blob/main/client/public/assets/beacon.png' alt='Logo of the project' width='50px' height='50px' />
 
 # Beacon GeoChat
@@ -9,26 +8,26 @@ Beacon GeoChat is especially awesome among friends and family and random people 
 
 ## Screenshots
 
-- Chat
-  ![Chat Page](https://github.com/odedindi/GeoChat/screenshots/chat.png)
+- ![Chat Page](https://github.com/odedindi/GeoChat/screenshots/chat.png)
+  <img src='https://github.com/odedindi/GeoChat/screenshots/chat.png' alt='Logo of the project' width='350px' height='350px' />
 
-- Map
-  ![Map Page](https://github.com/odedindi/GeoChat/screenshots/map.png)
+- ![Map Page](https://github.com/odedindi/GeoChat/screenshots/map.png)
+  <img src='https://github.com/odedindi/GeoChat/screenshots/map.png' alt='Logo of the project' width='350px' height='350px' />
 
-- Settings
-  ![Settings Page](https://github.com/odedindi/GeoChat/screenshots/settings.png)
+- ![Settings Page](https://github.com/odedindi/GeoChat/screenshots/settings.png)
+  <img src='https://github.com/odedindi/GeoChat/screenshots/settings.png' alt='Logo of the project' width='350px' height='350px' />
 
-- Dark Mode
-  ![Dark Mode Page](https://github.com/odedindi/GeoChat/screenshots/settingsDark.png)
+- ![Dark Mode Page](https://github.com/odedindi/GeoChat/screenshots/settingsDark.png)
+  <img src='https://github.com/odedindi/GeoChat/screenshots/settingsDark.png' alt='Logo of the project' width='350px' height='350px' />
 
-- Signup
-  ![Signup Page](https://github.com/odedindi/GeoChat/screenshots/signup.png)
+- ![Signup Page](https://github.com/odedindi/GeoChat/screenshots/signup.png)
+  <img src='https://github.com/odedindi/GeoChat/screenshots/signup.png' alt='Logo of the project' width='350px' height='350px' />
 
-- Login
-  ![Login Page](https://github.com/odedindi/GeoChat/screenshots/login.png)
+- ![Login Page](https://github.com/odedindi/GeoChat/screenshots/login.png)
+  <img src='https://github.com/odedindi/GeoChat/screenshots/login.png' alt='Logo of the project' width='350px' height='350px' />
 
-- Restore Password
-  ![Restore Password Page](https://github.com/odedindi/GeoChat/screenshots/restorePassword.png)
+- ![Restore Password Page](https://github.com/odedindi/GeoChat/screenshots/restorePassword.png)
+  <img src='https://github.com/odedindi/GeoChat/screenshots/restorePassword.png' alt='Logo of the project' width='350px' height='350px' />
 
 ## Tech/framework used
 
