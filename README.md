@@ -1,4 +1,5 @@
-![Logo of the project](https://github.com/odedindi/GeoChat/blob/main/client/public/assets/beacon.png)
+<!-- ![Logo of the project](https://github.com/odedindi/GeoChat/blob/main/client/public/assets/beacon.png) -->
+<img src='https://github.com/odedindi/GeoChat/blob/main/client/public/assets/beacon.png' alt='Logo of the project' width='50px' height='50px' />
 
 # Beacon GeoChat
 
