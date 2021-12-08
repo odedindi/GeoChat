@@ -1,4 +1,3 @@
-
 ![Logo of the project](https://github.com/odedindi/GeoChat/blob/main/client/public/assets/beacon.png)
 
 # Beacon GeoChat
@@ -6,6 +5,49 @@
 > A free, multiplatform messaging app prototype, that lets you choose a range where you want to find chat buddies to communicate with all with just a Wi-Fi connection.
 
 Beacon GeoChat is especially awesome among friends and family and random people who want to stay in touch.
+
+## Screenshots
+
+- Chat
+  ![Chat Page](https://github.com/odedindi/GeoChat/screenshots/chat.png)
+
+- Map
+  ![Map Page](https://github.com/odedindi/GeoChat/screenshots/map.png)
+
+- Settings
+  ![Settings Page](https://github.com/odedindi/GeoChat/screenshots/settings.png)
+
+- Dark Mode
+  ![Dark Mode Page](https://github.com/odedindi/GeoChat/screenshots/settingsDark.png)
+
+- Signup
+  ![Signup Page](https://github.com/odedindi/GeoChat/screenshots/signup.png)
+
+- Login
+  ![Login Page](https://github.com/odedindi/GeoChat/screenshots/login.png)
+
+- Restore Password
+  ![Restore Password Page](https://github.com/odedindi/GeoChat/screenshots/restorePassword.png)
+
+## Tech/framework used
+
+- TypeScript
+
+<b>Server:</b>
+
+- [Nest.js](https://nestjs.com/)
+- [Prisma](https://www.prisma.io/)
+- [PostgreSQL](https://www.postgresql.org)
+- [POSTGIS](https://postgis.net)
+- [Passport.js](http://www.passportjs.org)
+- [Socket.IO](https://socket.io/)
+
+- <b>Client:</b>
+-
+- [React.js](https://reactjs.org)
+- [Ionic](https://electron.atom.io)
+- [Leaflet](https://leafletjs.com)
+- [Socket.IO](https://socket.io/)
 
 ## Installing / Getting started
 

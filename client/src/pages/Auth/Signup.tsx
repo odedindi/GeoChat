@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonIcon, IonPage } from '@ionic/react';
+import { IonContent, IonIcon, IonPage } from '@ionic/react';
 import * as I from 'ionicons/icons';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
@@ -77,16 +77,14 @@ const Signup: React.FC = () => {
 
 	return (
 		<IonPage>
-			<IonHeader>
+			<IonContent fullscreen={true} scrollEvents={true}>
 				<S.CardHeader>
 					<h6>Already got an account?</h6>
 					<Link to="/auth/login">Login</Link>
 				</S.CardHeader>
-			</IonHeader>
-			<IonContent fullscreen={true} scrollEvents={true}>
 				<S.CardWrapper>
 					<S.Card>
-						<S.CardTitle>GeoChating Signup</S.CardTitle>
+						<S.CardTitle>Beacon Signup</S.CardTitle>
 						<S.Input
 							type="text"
 							placeholder="Full Name"

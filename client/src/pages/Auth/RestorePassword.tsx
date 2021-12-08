@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage } from '@ionic/react';
+import { IonContent, IonPage } from '@ionic/react';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { useKeyboardListener } from 'src/hooks/useKeyboardListener';
@@ -46,16 +46,14 @@ const RestorePassword: React.FC = () => {
 
 	return (
 		<IonPage>
-			<IonHeader>
+			<IonContent fullscreen={true} scrollEvents={true}>
 				<S.CardHeader>
 					<h6>Go back to the home page</h6>
 					<Link to="/">Home</Link>
 				</S.CardHeader>
-			</IonHeader>
-			<IonContent fullscreen={true} scrollEvents={true}>
 				<S.CardWrapper>
 					<S.Card>
-						<S.CardTitle>GeoChating Restore Password</S.CardTitle>
+						<S.CardTitle>Beacon Restore Password</S.CardTitle>
 						<h5>
 							Fill in your email address and we will send you a new password
 						</h5>

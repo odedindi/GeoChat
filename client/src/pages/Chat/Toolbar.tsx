@@ -1,4 +1,4 @@
-import { IonRow, IonTitle, IonToolbar, IonButton, IonCol } from '@ionic/react';
+import { IonRow, IonToolbar, IonButton, IonCol } from '@ionic/react';
 import * as React from 'react';
 import { useHistory } from 'react-router-dom';
 import Avatar from 'src/components/Avatar';
