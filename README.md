@@ -81,7 +81,7 @@ Now we started both server (localhost:4000) and client (localhost:8100)
 
 What's all the bells and whistles this project can perform?
 
-- A live chat use Socket.io, where a use can get mentioned and mention other users in his range of preferrence.
+- A live chat using Socket.io, where a use can get mentioned and mention other users in his range of preferrence.
 - A live map where a user can see where he\she got mentioned
 - Modify user's settings where can upload a personal avatar or choose a random one, change range, privacy and personal preferrences
 
