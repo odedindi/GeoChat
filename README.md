@@ -2,32 +2,32 @@
 
 # Beacon GeoChat
 
-> A free, multiplatform messaging app prototype, that lets you choose a range where you want to find chat buddies to communicate with all with just a Wi-Fi connection.
+> A free, multiplatform messaging app prototype, lets you choose a range where you want to find chat buddies to communicate with all with just a Wi-Fi connection.
 
 Beacon GeoChat is especially awesome among friends and family and random people who want to stay in touch.
 
 ## Screenshots
 
-- ![Chat Page](https://github.com/odedindi/GeoChat/main/screenshots/chat.png)
-  <img src='https://github.com/odedindi/GeoChat/main/screenshots/chat.png' alt='Chat Page' width='350px' height='350px' />
+- ![Chat Page](https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/chat.png)
+  <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/chat.png' alt='Chat Page' width='350px' height='350px' />
 
-- ![Map Page](https://github.com/odedindi/GeoChat/main/screenshots/map.png)
-  <img src='https://github.com/odedindi/GeoChat/main/screenshots/map.png' alt='Map Page' width='350px' height='350px' />
+- ![Map Page](https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/map.png)
+  <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/map.png' alt='Map Page' width='350px' height='350px' />
 
-- ![Settings Page](https://github.com/odedindi/GeoChat/main/screenshots/settings.png)
-  <img src='https://github.com/odedindi/GeoChat/main/screenshots/settings.png' alt='Settings Page' width='350px' height='350px' />
+- ![Settings Page](https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/settings.png)
+  <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/settings.png' alt='Settings Page' width='350px' height='350px' />
 
-- ![Dark Mode Page](https://github.com/odedindi/GeoChat/main/screenshots/settingsDark.png)
-  <img src='https://github.com/odedindi/GeoChat/main/screenshots/settingsDark.png' alt='Dark Mode Page' width='350px' height='350px' />
+- ![Dark Mode Page](https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/settingsDark.png)
+  <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/settingsDark.png' alt='Dark Mode Page' width='350px' height='350px' />
 
-- ![Signup Page](https://github.com/odedindi/GeoChat/main/screenshots/signup.png)
-  <img src='https://github.com/odedindi/GeoChat/main/screenshots/signup.png' alt='Signup Page' width='350px' height='350px' />
+- ![Signup Page](https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/signup.png)
+  <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/signup.png' alt='Signup Page' width='350px' height='350px' />
 
-- ![Login Page](https://github.com/odedindi/GeoChat/main/screenshots/login.png)
-  <img src='https://github.com/odedindi/GeoChat/main/screenshots/login.png' alt='Login Paget' width='350px' height='350px' />
+- ![Login Page](https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/login.png)
+  <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/login.png' alt='Login Paget' width='350px' height='350px' />
 
-- ![Restore Password Page](https://github.com/odedindi/GeoChat/tree/main/screenshots/restorePassword.png)
-  <img src='https://github.com/odedindi/GeoChat/tree/main/screenshots/restorePassword.png' alt='Restore Password Page' width='350px' height='350px' />
+- ![Restore Password Page](https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/restorePassword.png)
+  <img src='https://raw.githubusercontent.com/odedindi/GeoChat/main/screenshots/restorePassword.png' alt='Restore Password Page' width='350px' height='350px' />
 
 ## Tech/framework used
 
