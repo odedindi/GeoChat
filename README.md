@@ -49,10 +49,10 @@ Beacon GeoChat is especially awesome among friends and family and random people 
 - [Passport.js](http://www.passportjs.org)
 - [Socket.IO](https://socket.io/)
 
-- <b>Client:</b>
+<b>Client:</b>
 
 - [React.js](https://reactjs.org)
-- [Ionic](https://electron.atom.io)
+- [Ionic](https://ionicframework.com/)
 - [Leaflet](https://leafletjs.com)
 - [Socket.IO](https://socket.io/)
 
