@@ -40,8 +40,6 @@ Beacon GeoChat is especially awesome among friends and family and random people 
 
 - TypeScript
 
-<b>Server:</b>
-
 - [Nest.js](https://nestjs.com/)
 - [Prisma](https://www.prisma.io/)
 - [PostgreSQL](https://www.postgresql.org)
@@ -49,12 +47,10 @@ Beacon GeoChat is especially awesome among friends and family and random people 
 - [Passport.js](http://www.passportjs.org)
 - [Socket.IO](https://socket.io/)
 
-<b>Client:</b>
-
 - [React.js](https://reactjs.org)
 - [Ionic](https://ionicframework.com/)
 - [Leaflet](https://leafletjs.com)
-- [Socket.IO](https://socket.io/)
+
 
 ## Installing / Getting started
 
