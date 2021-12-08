@@ -2,7 +2,7 @@
 
 # Beacon GeoChat
 
-> A free, multiplatform messaging app prototype, lets you choose a range where you want to find chat buddies to communicate with all with just a Wi-Fi connection.
+A free, multiplatform messaging app prototype, lets you choose a range where you want to find chat buddies to communicate with all with just a Wi-Fi connection.
 
 Beacon GeoChat is especially awesome among friends and family and random people who want to stay in touch.
 
