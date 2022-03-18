@@ -1,4 +1,4 @@
-FROM node:slim
+FROM node:17.7.1-slim
 
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 
