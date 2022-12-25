@@ -45,7 +45,7 @@
 		"react-mentions": "^4.3.0",
 		"react-router": "^5.2.0",
 		"react-router-dom": "^5.2.0",
-		"react-scripts": "^4.0.3",
+		"react-scripts": "^5.0.0",
 		"rxjs": "^7.4.0",
 		"slate": "^0.67.1",
 		"slate-history": "^0.66.0",
