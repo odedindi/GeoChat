@@ -16,7 +16,7 @@
 		"@fortawesome/fontawesome-svg-core": "^1.2.36",
 		"@fortawesome/free-solid-svg-icons": "^5.15.4",
 		"@fortawesome/react-fontawesome": "^0.1.16",
-		"@ionic/eslint-config": "^0.3.0",
+		"@ionic/eslint-config": "^0.4.0",
 		"@ionic/pwa-elements": "^3.0.2",
 		"@ionic/react": "^5.5.0",
 		"@ionic/react-router": "^5.5.0",
