@@ -37,7 +37,7 @@
 		"lodash": "^4.17.21",
 		"moment": "^2.29.1",
 		"react": "^17.0.1",
-		"react-device-detect": "^2.1.2",
+		"react-device-detect": "^2.2.3",
 		"react-dom": "^17.0.1",
 		"react-emoji": "^0.5.0",
 		"react-leaflet": "^3.2.2",
