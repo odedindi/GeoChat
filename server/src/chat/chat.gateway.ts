@@ -1,29 +1,69 @@
 import {
-  WebSocketGateway,
-  OnGatewayInit,
-  WebSocketServer,
   OnGatewayConnection,
   OnGatewayDisconnect,
+  OnGatewayInit,
+  SubscribeMessage,
+  WebSocketGateway,
+  WebSocketServer,
+  ConnectedSocket,
+  MessageBody,
 } from '@nestjs/websockets';
-import { Server, Socket } from 'socket.io';
-import log from '../config/logger';
-import ChatController from './chat.controller';
-import { messageRepository, userRepository } from '../repositories';
+import { Logger } from '@nestjs/common';
+import type { Server, Socket } from 'socket.io';
+import {
+  ChatService,
+  type MessageFromUser,
+  type UserDTO,
+} from './chat.service';
 
-@WebSocketGateway({ cors: true })
+@WebSocketGateway({
+  cors: {
+    origin: (process.env.CORS_ORIGIN || '*').split(',').map((s) => s.trim()),
+  },
+})
 export class ChatGateway
   implements OnGatewayInit, OnGatewayConnection, OnGatewayDisconnect
 {
-  @WebSocketServer()
-  server: Server;
+  @WebSocketServer() server!: Server;
+  private readonly logger = new Logger(ChatGateway.name);
 
-  chatController = new ChatController(messageRepository, userRepository);
+  constructor(private readonly chat: ChatService) {}
 
-  handleDisconnect = async (socket: Socket) =>
-    this.chatController.handleDisconnection(socket);
+  afterInit() {
+    this.logger.log('WebSocket gateway ready');
+  }
 
-  afterInit = (_server: Server) => log.info(`WebSocketGateway init`);
+  handleConnection(socket: Socket) {
+    this.logger.debug(`socket connected: ${socket.id}`);
+  }
 
-  handleConnection = async (socket: Socket) =>
-    this.chatController.initConnection(this.server, socket);
+  async handleDisconnect(socket: Socket) {
+    await this.chat.handleDisconnect(socket);
+  }
+
+  @SubscribeMessage('join')
+  async onJoin(
+    @ConnectedSocket() socket: Socket,
+    @MessageBody() payload: { user: UserDTO },
+  ) {
+    await this.chat.handleJoin(this.server, socket, payload.user);
+  }
+
+  @SubscribeMessage('messageFromUser')
+  async onMessage(
+    @ConnectedSocket() socket: Socket,
+    @MessageBody() payload: MessageFromUser,
+  ) {
+    await this.chat.handleMessage(this.server, socket, payload);
+  }
+
+  @SubscribeMessage('getMessages')
+  async onGetMessages(@ConnectedSocket() socket: Socket) {
+    await this.chat.sendMessagesInProximity(socket);
+  }
+
+  @SubscribeMessage('getUsersAroundMe')
+  async onGetUsersAroundMe(@ConnectedSocket() socket: Socket) {
+    await this.chat.sendUsersAroundMe(socket);
+  }
 }

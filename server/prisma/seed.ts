@@ -1,14 +1,17 @@
 import { generate } from '../src/utils/generators';
 import { PrismaClient, Prisma } from '@prisma/client';
-import log from '../src/config/logger';
+import { PrismaPg } from '@prisma/adapter-pg';
+
+const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL! });
+const prisma = new PrismaClient({ adapter });
 
 const seed = async (usersList: Prisma.UserCreateInput[]) => {
-  log.info(`===> 🌱Seeding start🌱 <===`);
-  usersList.forEach(async (user) => {
+  console.log(`===> 🌱 Seeding start 🌱 <===`);
+  for (const user of usersList) {
     const prismaUser = await prisma.user.create({ data: user });
-    log.info(`User: ${prismaUser.id} successfully created`);
-  });
-  log.info('===> 🌱Seeding end🌱 <===');
+    console.log(`User: ${prismaUser.id} (${prismaUser.username}) created`);
+  }
+  console.log('===> 🌱 Seeding end 🌱 <===');
 };
 
 const users: Prisma.UserCreateInput[] = [
@@ -164,11 +167,11 @@ const users: Prisma.UserCreateInput[] = [
   },
 ];
 
-const prisma = new PrismaClient();
+const prismaClose = async () => prisma.$disconnect();
 
 seed(users)
   .catch((err) => {
-    log.error(err);
+    console.error(err);
     process.exit(1);
   })
-  .finally(async () => await prisma.$disconnect());
+  .finally(prismaClose);
