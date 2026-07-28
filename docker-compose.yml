@@ -7,11 +7,11 @@ services:
       POSTGRES_PASSWORD: password
       POSTGRES_DB: geochatapi
     ports:
-      - "5434:5432"
+      - '5434:5432'
     volumes:
       - postgres:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U pg -d geochatapi"]
+      test: ['CMD-SHELL', 'pg_isready -U pg -d geochatapi']
       interval: 5s
       timeout: 5s
       retries: 10
@@ -30,7 +30,7 @@ services:
       db:
         condition: service_healthy
     ports:
-      - "4000:4000"
+      - '4000:4000'
 
 volumes:
   postgres:

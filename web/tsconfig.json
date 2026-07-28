@@ -10,6 +10,8 @@
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
     "noEmit": true,
+    "extendedDiagnostics": true,
+    "diagnostics": true,
     "jsx": "react-jsx",
     "strict": true,
     "noUnusedLocals": true,
@@ -18,9 +20,13 @@
     "noUncheckedSideEffectImports": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "baseUrl": ".",
     "paths": { "@/*": ["./src/*"] },
-    "types": ["vite/client", "vite-plugin-pwa/client", "vitest/globals", "@testing-library/jest-dom"]
+    "types": [
+      "vite/client",
+      "vite-plugin-pwa/client",
+      "vitest/globals",
+      "@testing-library/jest-dom"
+    ]
   },
   "include": ["src", "vite.config.ts"],
   "exclude": ["src/**/*.test.*", "src/**/__tests__/**"]

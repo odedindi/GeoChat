@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [main, master]
   pull_request:
-    branches: [ main, master ]
+    branches: [main, master]
 
 jobs:
   test:
@@ -19,61 +19,57 @@ jobs:
           POSTGRES_PASSWORD: password
           POSTGRES_DB: geochatci
         options: >-
-          --health-cmd "pg_isready -U pg -d geochatci" \
-          --health-interval=5s --health-timeout=5s --health-retries=20
+          --health-cmd "pg_isready -U pg -d geochatci"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
 
     env:
       DATABASE_URL: postgresql://pg:password@localhost:5432/geochatci?schema=public
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Use Node.js 20
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
-      - name: Install root deps
-        run: npm ci
-
-      - name: Generate Prisma Client (server)
-        working-directory: ./server
+      - name: Install dependencies
         run: |
-          npm ci
-          npx prisma generate
+          corepack enable
+          yarn install --immutable
 
-      - name: Apply migrations (server)
-        working-directory: ./server
-        run: |
-          npx prisma migrate deploy
+      - name: Generate Prisma Client
+        run: yarn workspace geochat-server prisma generate
 
-      - name: Run server unit tests
-        working-directory: ./server
-        run: npm test --silent
+      - name: Apply migrations
+        run: yarn workspace geochat-server prisma migrate deploy
+
+      - name: Server unit tests
+        run: yarn workspace geochat-server test --silent
+
+      - name: Server typecheck
+        run: yarn workspace geochat-server typecheck
 
       - name: Build server
-        working-directory: ./server
-        run: npm run build
+        run: yarn workspace geochat-server build
 
       - name: Start server (background)
-        working-directory: ./server
         run: |
-          node ./dist/src/main.js &
-          for i in {1..30}; do
-            if curl -sS "http://localhost:4000/v2" >/dev/null; then
+          node server/dist/main.js &
+          for i in $(seq 1 30); do
+            if curl -sS "http://localhost:4000/v2" >/dev/null 2>&1; then
               echo "server up" && break
             fi
             sleep 1
           done
 
-      - name: Run integration script (retry up to 3 times)
-        working-directory: ./server
+      - name: Integration test (retry up to 3x)
         run: |
           set -e
           for i in 1 2 3; do
             echo "Integration attempt $i"
-            if npm run integration --silent; then
+            if yarn workspace geochat-server integration --silent; then
               echo "Integration succeeded" && break
             fi
             if [ "$i" = 3 ]; then
@@ -82,11 +78,17 @@ jobs:
             sleep 2
           done
 
-      - name: Run web tests
-        working-directory: ./web
-        run: |
-          npm ci
-          npm test --silent
+      - name: Web typecheck
+        run: yarn workspace geochat-web typecheck
+
+      - name: Web unit tests
+        run: yarn workspace geochat-web test --silent
+
+      - name: Web lint
+        run: yarn workspace geochat-web lint
+
+      - name: Build web
+        run: yarn workspace geochat-web build
 
       - name: Upload test artifacts
         if: failure()
@@ -96,67 +98,3 @@ jobs:
           path: |
             server/coverage
             web/coverage
-name: CI
-
-on:
-  push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
-
-jobs:
-  build-and-test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Use Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install root deps
-        run: npm install
-
-      - name: Server: install & generate prisma
-        working-directory: server
-        run: |
-          npm install
-          npx prisma generate
-
-      - name: Server: run unit tests
-        working-directory: server
-        run: npm test --silent
-
-      - name: Web: install & test
-        working-directory: web
-        run: |
-          npm install
-          npm test --silent
-
-      - name: Build web
-        working-directory: web
-        run: npm run build --silent
-name: CI
-
-on:
-  push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
-
-jobs:
-  web-tests:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Use Node.js 18
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-      - name: Install web deps
-        working-directory: ./web
-        run: npm ci
-      - name: Run unit tests
-        working-directory: ./web
-        run: npm test --silent

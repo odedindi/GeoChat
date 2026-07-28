@@ -5,7 +5,7 @@ const { JSDOM } = require('jsdom');
 async function run() {
   const dist = path.resolve(__dirname, '..', 'dist', 'index.html');
   if (!fs.existsSync(dist)) {
-    console.error('dist/index.html not found, run `npm run build` first');
+    console.error('dist/index.html not found, run `yarn build` first');
     process.exit(2);
   }
   const html = fs.readFileSync(dist, 'utf8');

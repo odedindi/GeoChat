@@ -61,10 +61,10 @@ export default defineConfig(({ mode }) => {
       sourcemap: true,
       rollupOptions: {
         output: {
-          manualChunks: {
-            react: ['react', 'react-dom', 'react-router-dom'],
-            leaflet: ['leaflet', 'react-leaflet'],
-            socket: ['socket.io-client']
+          manualChunks(id: string) {
+            if (id.includes('node_modules/react-dom') || id.includes('node_modules/react-router-dom') || id.includes('node_modules/react/')) return 'react';
+            if (id.includes('node_modules/leaflet') || id.includes('node_modules/react-leaflet')) return 'leaflet';
+            if (id.includes('node_modules/socket.io-client')) return 'socket';
           }
         }
       }

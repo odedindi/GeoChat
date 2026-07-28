@@ -1,0 +1,26 @@
+{
+  // OXC (oxlint + oxfmt) — Rust-native linting and formatting
+  "oxc.typeAware": true,
+  "oxc.configPath": "oxlint.json",
+  "oxc.unusedDisableDirectives": "deny",
+  "oxc.fmt.configPath": ".oxfmtrc.json",
+
+  // Use OXC as the default formatter for JS/TS/JSX/TSX
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "[javascript]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "[javascriptreact]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "[typescript]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "[typescriptreact]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "[json]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+  "[jsonc]": { "editor.defaultFormatter": "oxc.oxc-vscode" },
+
+  // Format on save
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+
+  // Code actions on save — let OXC handle fixes
+  "editor.codeActionsOnSave": {
+    "source.fixAll.oxc": "explicit",
+    "source.organizeImports": "never"
+  }
+}

@@ -12,13 +12,13 @@ while true; do
   echo "[CI-LOCAL] Run #$COUNT: $(date)" | tee -a "$LOGDIR/ci.log"
 
   echo "[CI-LOCAL] 1) Run server tests" | tee -a "$LOGDIR/ci.log"
-  (cd server && npm test --silent) 2>&1 | tee -a "$LOGDIR/server-test.log" || echo "[CI-LOCAL] server tests failed" | tee -a "$LOGDIR/ci.log"
+  (cd server && yarn test --silent) 2>&1 | tee -a "$LOGDIR/server-test.log" || echo "[CI-LOCAL] server tests failed" | tee -a "$LOGDIR/ci.log"
 
   echo "[CI-LOCAL] 2) Build web" | tee -a "$LOGDIR/ci.log"
-  (cd web && npm run build --silent) 2>&1 | tee -a "$LOGDIR/web-build.log" || echo "[CI-LOCAL] web build failed" | tee -a "$LOGDIR/ci.log"
+  (cd web && yarn build --silent) 2>&1 | tee -a "$LOGDIR/web-build.log" || echo "[CI-LOCAL] web build failed" | tee -a "$LOGDIR/ci.log"
 
   echo "[CI-LOCAL] 3) Run integration (once)" | tee -a "$LOGDIR/ci.log"
-  (cd server && npm run integration --silent) 2>&1 | tee -a "$LOGDIR/integration.log" || echo "[CI-LOCAL] integration failed" | tee -a "$LOGDIR/ci.log"
+  (cd server && yarn integration --silent) 2>&1 | tee -a "$LOGDIR/integration.log" || echo "[CI-LOCAL] integration failed" | tee -a "$LOGDIR/ci.log"
 
   echo "[CI-LOCAL] Sleeping 10s before next run" | tee -a "$LOGDIR/ci.log"
   sleep 10

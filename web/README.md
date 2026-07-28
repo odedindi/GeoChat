@@ -3,35 +3,33 @@
 The new client. Vite + React 19 + TypeScript 5 + Tailwind v4, with React Router 7,
 Zustand, Socket.IO, Leaflet, react-hook-form, zod, Framer Motion and a PWA shell.
 
-The legacy app under `../client` (Ionic + CRA) is left in place for now.
-
 ## Quick start
 
 ```bash
 cd web
 npm install
 cp .env.example .env       # adjust VITE_SERVER_URL if backend is elsewhere
-npm run dev                # http://localhost:5180 (proxies /api + /socket.io to backend)
+yarn dev                # http://localhost:5180 (proxies /api + /socket.io to backend)
 ```
 
 Set the dev port via `VITE_PORT` (defaults in `vite.config.ts`). Example:
 
 ```bash
-VITE_PORT=5180 npm run dev
+VITE_PORT=5180 yarn dev
 ```
 
 Backend is expected on `http://localhost:4000` by default (see `vite.config.ts`).
 
 ## Scripts
 
-| Command           | What it does                            |
-| ----------------- | --------------------------------------- |
-| `npm run dev`     | Vite dev server with HMR                |
-| `npm run build`   | Type-check + production build to `dist` |
-| `npm run preview` | Preview the production build            |
-| `npm run lint`    | ESLint flat config                      |
-| `npm run typecheck` | TS only, no emit                      |
-| `npm test` | Run unit tests (Vitest) |
+| Command          | What it does                            |
+| ---------------- | --------------------------------------- |
+| `yarn dev`       | Vite dev server with HMR                |
+| `yarn build`     | Type-check + production build to `dist` |
+| `yarn preview`   | Preview the production build            |
+| `yarn lint`      | ESLint flat config                      |
+| `yarn typecheck` | TS only, no emit                        |
+| `yarn test`      | Run unit tests (Vitest)                 |
 
 ## Project layout
 
