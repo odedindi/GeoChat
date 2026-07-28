@@ -1,0 +1,162 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgis/postgis:16-3.4-alpine
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_USER: pg
+          POSTGRES_PASSWORD: password
+          POSTGRES_DB: geochatci
+        options: >-
+          --health-cmd "pg_isready -U pg -d geochatci" \
+          --health-interval=5s --health-timeout=5s --health-retries=20
+
+    env:
+      DATABASE_URL: postgresql://pg:password@localhost:5432/geochatci?schema=public
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install root deps
+        run: npm ci
+
+      - name: Generate Prisma Client (server)
+        working-directory: ./server
+        run: |
+          npm ci
+          npx prisma generate
+
+      - name: Apply migrations (server)
+        working-directory: ./server
+        run: |
+          npx prisma migrate deploy
+
+      - name: Run server unit tests
+        working-directory: ./server
+        run: npm test --silent
+
+      - name: Build server
+        working-directory: ./server
+        run: npm run build
+
+      - name: Start server (background)
+        working-directory: ./server
+        run: |
+          node ./dist/src/main.js &
+          for i in {1..30}; do
+            if curl -sS "http://localhost:4000/v2" >/dev/null; then
+              echo "server up" && break
+            fi
+            sleep 1
+          done
+
+      - name: Run integration script (retry up to 3 times)
+        working-directory: ./server
+        run: |
+          set -e
+          for i in 1 2 3; do
+            echo "Integration attempt $i"
+            if npm run integration --silent; then
+              echo "Integration succeeded" && break
+            fi
+            if [ "$i" = 3 ]; then
+              echo "Integration failed after 3 attempts" && exit 1
+            fi
+            sleep 2
+          done
+
+      - name: Run web tests
+        working-directory: ./web
+        run: |
+          npm ci
+          npm test --silent
+
+      - name: Upload test artifacts
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-logs
+          path: |
+            server/coverage
+            web/coverage
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install root deps
+        run: npm install
+
+      - name: Server: install & generate prisma
+        working-directory: server
+        run: |
+          npm install
+          npx prisma generate
+
+      - name: Server: run unit tests
+        working-directory: server
+        run: npm test --silent
+
+      - name: Web: install & test
+        working-directory: web
+        run: |
+          npm install
+          npm test --silent
+
+      - name: Build web
+        working-directory: web
+        run: npm run build --silent
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  web-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Install web deps
+        working-directory: ./web
+        run: npm ci
+      - name: Run unit tests
+        working-directory: ./web
+        run: npm test --silent

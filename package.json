@@ -1,22 +1,37 @@
 {
-  "name": "geochat_prototype",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "geochat",
+  "version": "2.0.0",
+  "private": true,
   "repository": "git@github.com:odedindi/GeoChat.git",
   "author": "Oded Winberger <odedindi@gmail.com>",
-  "scripts": {
-    "build:client": "cd client && yarn build",
-    "install:client": "cd client && yarn install",
-    "install:server": "cd server && yarn install",
-    "start:client": "cd client && ionic serve",
-    "start:server": "cd server && yarn start",
-    "dev": "concurrently \"yarn start:server\" \"yarn start:client\"",
-    "install:": "concurrently \"yarn install:server\" \"yarn install:client\"",
-    "format": "concurrently \"cd client && yarn format\" \"cd server && yarn format\""
-  },
   "license": "MIT",
-  "dependencies": {
-    "concurrently": "^6.3.0",
-    "observable-hooks": "^4.1.2"
+  "scripts": {
+    "install:all": "concurrently -n server,web -c blue,magenta \"npm:install:server\" \"npm:install:web\"",
+    "install:web": "cd web && npm install --force",
+    "install:server": "cd server && npm install --force",
+    "install:legacy-client": "cd client && yarn install",
+    "dev": "concurrently -n server,web -c blue,magenta \"npm:dev:server\" \"npm:dev:web\"",
+    "dev:web": "cd web && npm run dev",
+    "dev:server": "cd server && npm run start:dev",
+    "build": "concurrently -n server,web -c blue,magenta \"npm:build:server\" \"npm:build:web\"",
+    "build:web": "cd web && npm run build",
+    "build:server": "cd server && npm run build",
+    "start:web": "cd web && npm run preview",
+    "start:server": "cd server && npm run start:prod",
+    "dev:custom": "concurrently -n server,web -c blue,magenta \"bash -lc 'SERVER_PORT=${SERVER_PORT:-4000} cd server && npm run start:dev'\" \"bash -lc 'VITE_PORT=${VITE_PORT:-5180} cd web && npm run dev'\"",
+    "start:local": "bash -lc 'SERVER_PORT=${SERVER_PORT:-4000} cd server && npm run start:prod &'; bash -lc 'VITE_PORT=${VITE_PORT:-5180} cd web && npm run preview'",
+    "lint:web": "cd web && npm run lint",
+    "typecheck:web": "cd web && npm run typecheck",
+    "format:server": "cd server && npm run format",
+    "db:migrate": "cd server && npx prisma migrate dev",
+    "db:reset": "cd server && npx prisma migrate reset",
+    "db:seed": "cd server && npx prisma db seed",
+    "db:studio": "cd server && npx prisma studio"
+    ,"test:server": "cd server && npm test",
+    "test:web": "cd web && npm test",
+    "prisma:generate": "cd server && npx prisma generate"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
   }
 }
