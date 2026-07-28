@@ -25,7 +25,7 @@ async function bootstrap() {
   );
   app.enableShutdownHooks();
 
-  const port = Number(process.env.SERVER_PORT) || 4000;
+  const port = Number(process.env.SERVER_PORT) || Number(process.env.PORT) || 4000;
   try {
     await app.listen(port, '0.0.0.0');
     logger.log(`🚀 GeoChat server listening on http://localhost:${port}/v2`);
