@@ -4,9 +4,13 @@ import userEvent from '@testing-library/user-event';
 import { Chat } from './Chat';
 
 // Mock hooks
-const handlers: Record<string, Function> = {};
+// oxlint-disable-next-line @typescript-eslint/no-explicit-any
+const handlers: Record<string, (...args: any[]) => void> = {};
 const mockSocket = {
-  on: (ev: string, fn: Function) => { handlers[ev] = fn; },
+  // oxlint-disable-next-line @typescript-eslint/no-explicit-any
+  on: (ev: string, fn: (...args: any[]) => void) => {
+    handlers[ev] = fn;
+  },
   off: vi.fn(),
   emit: vi.fn(),
   id: 'socket-1',
@@ -18,7 +22,18 @@ vi.mock('@/hooks/useSocket', () => ({
 }));
 
 vi.mock('@/store/auth', () => ({
-  useAuth: () => ({ user: { username: 'me', userID: '1', avatar: '', socketID: '', room: 'geoChat', geo: { coord: { lat: 0, lng: 0 }, preferedDistance: 10 }, beSeenBeyondRange: false }, patchUser: vi.fn() }),
+  useAuth: () => ({
+    user: {
+      username: 'me',
+      userID: '1',
+      avatar: '',
+      socketID: '',
+      room: 'geoChat',
+      geo: { coord: { lat: 0, lng: 0 }, preferedDistance: 10 },
+      beSeenBeyondRange: false,
+    },
+    patchUser: vi.fn(),
+  }),
 }));
 
 vi.mock('@/hooks/usePosition', () => ({ usePosition: () => ({ pos: { lat: 0, lng: 0 } }) }));

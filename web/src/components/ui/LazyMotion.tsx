@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
-type Props = { children?: React.ReactNode } & { [key: string]: any };
+// oxlint-disable-next-line @typescript-eslint/no-explicit-any
+type Props = { children?: React.ReactNode } & Record<string, any>;
 
 export function LazyMotion(props: Props) {
   const { children, ...rest } = props;
+  // oxlint-disable-next-line @typescript-eslint/no-explicit-any
   const [Motion, setMotion] = useState<any>(null);
 
   useEffect(() => {

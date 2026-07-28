@@ -80,7 +80,11 @@ describe('ChatService (unit)', () => {
 
     const socket: any = { id: 's1', emit: jest.fn(), data: {} };
 
-    const payload: MessageFromUser = { content: 'hello', coord: { lat: 0, lng: 0 }, mentions: [{ userID: 'target-uid', username: 'target' }] };
+    const payload: MessageFromUser = {
+      content: 'hello',
+      coord: { lat: 0, lng: 0 },
+      mentions: [{ userID: 'target-uid', username: 'target' }],
+    };
 
     await service.handleMessage(server as any, socket as any, payload);
 
@@ -91,10 +95,19 @@ describe('ChatService (unit)', () => {
     expect(emitMocks['s-target'].emit).toHaveBeenCalledWith('youGotMentioned', 'alice', 'hello');
     // Broadcast delivered to carol and bob (bob via beSeenBeyondRange)
     expect(emitMocks['s-carol']).toBeDefined();
-    expect(emitMocks['s-carol'].emit).toHaveBeenCalledWith('message', expect.objectContaining({ messageID: 'm1' }));
+    expect(emitMocks['s-carol'].emit).toHaveBeenCalledWith(
+      'message',
+      expect.objectContaining({ messageID: 'm1' }),
+    );
     expect(emitMocks['s-bob']).toBeDefined();
-    expect(emitMocks['s-bob'].emit).toHaveBeenCalledWith('message', expect.objectContaining({ messageID: 'm1' }));
+    expect(emitMocks['s-bob'].emit).toHaveBeenCalledWith(
+      'message',
+      expect.objectContaining({ messageID: 'm1' }),
+    );
     // Author receives message
-    expect(socket.emit).toHaveBeenCalledWith('message', expect.objectContaining({ messageID: 'm1' }));
+    expect(socket.emit).toHaveBeenCalledWith(
+      'message',
+      expect.objectContaining({ messageID: 'm1' }),
+    );
   });
 });

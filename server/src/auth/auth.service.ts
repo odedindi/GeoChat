@@ -8,6 +8,7 @@ import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
 import * as bcrypt from 'bcryptjs';
 import { v4 as uuid } from 'uuid';
+
 import { PrismaService } from '../prisma/prisma.service';
 import type { LoginDto, RegisterDto } from './dto';
 
@@ -75,8 +76,7 @@ export class AuthService {
     const existing = await this.prisma.user.findFirst({
       where: { OR: [{ username: dto.username }, { email: dto.email }] },
     });
-    if (existing)
-      throw new ConflictException('Username or email already in use');
+    if (existing) throw new ConflictException('Username or email already in use');
 
     const passwordHash = await bcrypt.hash(dto.password, SALT_ROUNDS);
     const userID = uuid();
@@ -103,8 +103,7 @@ export class AuthService {
     const user = await this.prisma.user.findFirst({
       where: { OR: [{ username: dto.identifier }, { email: dto.identifier }] },
     });
-    if (!user || !user.passwordHash)
-      throw new UnauthorizedException('Invalid credentials');
+    if (!user || !user.passwordHash) throw new UnauthorizedException('Invalid credentials');
     const ok = await bcrypt.compare(dto.password, user.passwordHash);
     if (!ok) throw new UnauthorizedException('Invalid credentials');
 

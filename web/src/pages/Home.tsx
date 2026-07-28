@@ -20,7 +20,7 @@ export function Home() {
   // Keep distance in sync once user exists in store
   useEffect(() => {
     if (user) patchUser({ geo: { ...user.geo, preferedDistance: distance } });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // oxlint-disable-next-line react-hooks/exhaustive-deps
   }, [distance]);
 
   const canContinue = Boolean(username.trim()) && !!pos;
@@ -39,12 +39,8 @@ export function Home() {
         transition={{ duration: 0.4, ease: [0.2, 0.8, 0.2, 1] }}
       >
         <div className="mb-8 text-center">
-          <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">
-            Hey there 👋
-          </h1>
-          <p className="mt-2 text-fg-muted">
-            Choose a name and set how far you want to chat.
-          </p>
+          <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">Hey there 👋</h1>
+          <p className="mt-2 text-fg-muted">Choose a name and set how far you want to chat.</p>
         </div>
 
         <Card>
@@ -65,10 +61,7 @@ export function Home() {
             </div>
 
             <div className="space-y-2">
-              <Label
-                htmlFor="distance"
-                hint={<span className="tabular-nums">{distance} km</span>}
-              >
+              <Label htmlFor="distance" hint={<span className="tabular-nums">{distance} km</span>}>
                 Conversation radius
               </Label>
               <Slider

@@ -1,7 +1,8 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import type { User } from '@/lib/types';
+
 import { avatarUrl, randomId } from '@/lib/geo';
+import type { User } from '@/lib/types';
 
 type AuthState = {
   user: User | null;
@@ -20,8 +21,7 @@ export const useAuth = create<AuthState>()(
       user: null,
       token: null,
       setUser: (user) => set({ user }),
-      patchUser: (patch) =>
-        set((s) => (s.user ? { user: { ...s.user, ...patch } } : s)),
+      patchUser: (patch) => set((s) => (s.user ? { user: { ...s.user, ...patch } } : s)),
       setToken: (token) => {
         if (token) localStorage.setItem('token', token);
         else localStorage.removeItem('token');

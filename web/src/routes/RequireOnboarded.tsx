@@ -8,9 +8,7 @@ import { useAuth } from '@/store/auth';
  * `/home` to complete onboarding/local bootstrap.
  */
 export function RequireOnboarded() {
-  const { user, token } = useAuth(
-    useShallow((s) => ({ user: s.user, token: s.token })),
-  );
+  const { user, token } = useAuth(useShallow((s) => ({ user: s.user, token: s.token })));
   if (!token && !user) return <Navigate to="/auth/login" replace />;
   if (!user) return <Navigate to="/home" replace />;
   return <Outlet />;

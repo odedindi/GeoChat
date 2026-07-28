@@ -41,7 +41,10 @@ describe('ChatService (unit)', () => {
       geolocation_lng: 2,
     };
     prisma.message.create.mockResolvedValue(fake);
-    const res = await svc.addMessage('alice', 'hello', { lat: 1, lng: 2 } as Coord);
+    const res = await svc.addMessage('alice', 'hello', {
+      lat: 1,
+      lng: 2,
+    } as Coord);
     expect(res.messageID).toBe('m1');
     expect(res.content).toBe('hello');
   });
@@ -79,8 +82,15 @@ describe('ChatService (unit)', () => {
       mentions: [],
     } as any;
     // call with a fake server
-    await svc.handleMessage({ to: () => ({ emit: jest.fn() }) } as any, socket as any, payload as any);
-    expect(socket.emit).toHaveBeenCalledWith('raiseToast', expect.stringContaining('Please rejoin'));
+    await svc.handleMessage(
+      { to: () => ({ emit: jest.fn() }) } as any,
+      socket as any,
+      payload as any,
+    );
+    expect(socket.emit).toHaveBeenCalledWith(
+      'raiseToast',
+      expect.stringContaining('Please rejoin'),
+    );
   });
 
   test('getMessagesInRange delegates to $queryRaw', async () => {

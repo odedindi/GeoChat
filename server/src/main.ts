@@ -1,7 +1,8 @@
 import 'reflect-metadata';
-import { NestFactory } from '@nestjs/core';
 import { ValidationPipe, Logger } from '@nestjs/common';
+import { NestFactory } from '@nestjs/core';
 import helmet from 'helmet';
+
 import { AppModule } from './app/app.module';
 
 async function bootstrap() {
@@ -32,7 +33,9 @@ async function bootstrap() {
     // More descriptive startup failure logging (e.g. port in use)
     logger.error(`Failed to start server: ${err?.code || err?.message || err}`);
     if (err?.code === 'EADDRINUSE') {
-      logger.error(`Port ${port} already in use. Set SERVER_PORT to a different port or kill the process using it.`);
+      logger.error(
+        `Port ${port} already in use. Set SERVER_PORT to a different port or kill the process using it.`,
+      );
     }
     // Re-throw so the process exits non-zero as before, but with logs produced.
     throw err;

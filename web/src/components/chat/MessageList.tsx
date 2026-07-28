@@ -40,7 +40,12 @@ export function MessageList({
         const prev = messages[i - 1];
         const showAuthor = !prev || prev.fromuser !== m.fromuser;
         return (
-          <MessageBubble key={m.messageID} msg={m} isOwn={m.fromuser === currentUser} showAuthor={showAuthor} />
+          <MessageBubble
+            key={m.messageID}
+            msg={m}
+            isOwn={m.fromuser === currentUser}
+            showAuthor={showAuthor}
+          />
         );
       })}
     </div>

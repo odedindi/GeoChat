@@ -16,9 +16,7 @@ export const Input = forwardRef<HTMLInputElement, Props>(function Input(
         'h-11 w-full rounded-lg border bg-bg-elevated px-3.5 text-sm text-fg placeholder:text-fg-subtle',
         'transition-colors outline-none',
         'focus:border-brand/60 focus:ring-2 focus:ring-brand/20',
-        invalid
-          ? 'border-danger/60 focus:border-danger focus:ring-danger/20'
-          : 'border-border',
+        invalid ? 'border-danger/60 focus:border-danger focus:ring-danger/20' : 'border-border',
         className,
       )}
       {...rest}

@@ -14,18 +14,22 @@ type AuthGetter = string | null | (() => string | null);
  * handshake differs from the previous one, the socket is recreated.
  */
 export function getSocket(getAuth?: AuthGetter): Socket {
-  const getAuthFn = typeof getAuth === 'function' ? getAuth : () => (typeof getAuth !== 'undefined' ? getAuth : (typeof localStorage !== 'undefined' ? localStorage.getItem('token') : null));
+  const getAuthFn =
+    typeof getAuth === 'function'
+      ? getAuth
+      : () =>
+          typeof getAuth !== 'undefined'
+            ? getAuth
+            : typeof localStorage !== 'undefined'
+              ? localStorage.getItem('token')
+              : null;
   const tokenToUse = getAuthFn();
 
   // If socket exists and token unchanged, reuse but ensure auth getter is applied for reconnects
   if (socket && currentAuthToken === tokenToUse) {
     // update auth before any reconnect attempt
-    try {
-      // @ts-ignore - socket.auth is supported by socket.io-client runtime
-      socket.auth = tokenToUse ? { token: tokenToUse } : {};
-    } catch (e) {
-      // ignore
-    }
+    // socket.auth is supported by socket.io-client runtime
+    (socket as unknown as { auth: unknown }).auth = tokenToUse ? { token: tokenToUse } : {};
     return socket;
   }
 
@@ -50,12 +54,9 @@ export function getSocket(getAuth?: AuthGetter): Socket {
   // Before a reconnect attempt, refresh the auth payload from the getter so
   // the latest token is used without needing to recreate the socket.
   socket.on('reconnect_attempt', () => {
-    try {
-      const t = getAuthFn();
-      // @ts-ignore
-      socket && (socket.auth = t ? { token: t } : {});
-    } catch (e) {
-      // ignore
+    const t = getAuthFn();
+    if (socket) {
+      (socket as unknown as { auth: unknown }).auth = t ? { token: t } : {};
     }
   });
 

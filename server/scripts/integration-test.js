@@ -15,12 +15,8 @@ async function run() {
     if (finished) return;
     finished = true;
     console.error(msg);
-    try {
-      await prisma.$disconnect();
-    } catch (e) {}
-    try {
-      socket.disconnect();
-    } catch (e) {}
+    await prisma.$disconnect().catch(() => {});
+    socket.disconnect();
     process.exit(code);
   };
 
@@ -55,7 +51,11 @@ async function run() {
     console.log('joined, sending message');
     // wait briefly to allow the server's DB upsert to complete
     setTimeout(() => {
-      socket.emit('messageFromUser', { content: 'integration test ' + Date.now(), coord: { lat: 0, lng: 0 }, mentions: [] });
+      socket.emit('messageFromUser', {
+        content: 'integration test ' + Date.now(),
+        coord: { lat: 0, lng: 0 },
+        mentions: [],
+      });
     }, 300);
   });
 
@@ -75,12 +75,8 @@ async function run() {
     } catch (err) {
       return await fail(2, 'verification error: ' + (err && err.message));
     } finally {
-      try {
-        await prisma.$disconnect();
-      } catch (e) {}
-      try {
-        socket.disconnect();
-      } catch (e) {}
+      await prisma.$disconnect().catch(() => {});
+      socket.disconnect();
       if (!finished) {
         finished = true;
         process.exit(0);

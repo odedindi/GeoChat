@@ -11,7 +11,7 @@ import { useAuth } from '../store/auth';
 test('redirects to /auth/login when no token/user', () => {
   useAuth.mockReturnValue({ user: null, token: null });
   const { container } = render(
-    <MemoryRouter initialEntries={["/chat"]}>
+    <MemoryRouter initialEntries={['/chat']}>
       <Routes>
         <Route path="/" element={<RequireOnboarded />}>
           <Route path="chat" element={<div>chat</div>} />
@@ -26,7 +26,7 @@ test('redirects to /auth/login when no token/user', () => {
 test('redirects to /home when token present but no user', () => {
   useAuth.mockReturnValue({ user: null, token: 'tok' });
   const { container } = render(
-    <MemoryRouter initialEntries={["/chat"]}>
+    <MemoryRouter initialEntries={['/chat']}>
       <Routes>
         <Route path="/" element={<RequireOnboarded />}>
           <Route path="chat" element={<div>chat</div>} />
@@ -41,7 +41,7 @@ test('redirects to /home when token present but no user', () => {
 test('renders children when user present', () => {
   useAuth.mockReturnValue({ user: { username: 'u', userID: '1' }, token: 'tok' });
   const { container } = render(
-    <MemoryRouter initialEntries={["/chat"]}>
+    <MemoryRouter initialEntries={['/chat']}>
       <Routes>
         <Route path="/" element={<RequireOnboarded />}>
           <Route path="chat" element={<div>chat</div>} />

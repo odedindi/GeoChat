@@ -4,7 +4,21 @@ import { vi } from 'vitest';
 
 const patchUser = vi.fn();
 const logout = vi.fn();
-vi.mock('@/store/auth', () => ({ useAuth: () => ({ user: { userID: '1', username: 'me', avatar: 'a.png', socketID: '', room: 'geoChat', geo: { coord: { lat: 0, lng: 0 }, preferedDistance: 40 }, beSeenBeyondRange: false }, patchUser, logout }) }));
+vi.mock('@/store/auth', () => ({
+  useAuth: () => ({
+    user: {
+      userID: '1',
+      username: 'me',
+      avatar: 'a.png',
+      socketID: '',
+      room: 'geoChat',
+      geo: { coord: { lat: 0, lng: 0 }, preferedDistance: 40 },
+      beSeenBeyondRange: false,
+    },
+    patchUser,
+    logout,
+  }),
+}));
 vi.mock('@/store/theme', () => ({ useTheme: () => ({ mode: 'light', setMode: vi.fn() }) }));
 
 import { Settings } from '@/pages/Settings';

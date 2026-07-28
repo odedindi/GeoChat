@@ -1,5 +1,13 @@
 import { useEffect, useMemo, useState } from 'react';
-import { CircleMarker, Circle, MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet';
+import {
+  CircleMarker,
+  Circle,
+  MapContainer,
+  Marker,
+  Popup,
+  TileLayer,
+  useMap,
+} from 'react-leaflet';
 import L from 'leaflet';
 import LazyMotion from '@/components/ui/LazyMotion';
 import { format } from 'date-fns';
@@ -95,7 +103,8 @@ export function MapPage() {
       socket.emit('getMessages');
     }
     socket.on('connect', join);
-    const onProximity = (msgs: Message[]) => setMessages(msgs.filter((m) => m.geolocation_lat && m.geolocation_lng));
+    const onProximity = (msgs: Message[]) =>
+      setMessages(msgs.filter((m) => m.geolocation_lat && m.geolocation_lng));
     socket.on('messagesInProximity', onProximity);
     return () => {
       socket.off('connect', join);
@@ -114,13 +123,7 @@ export function MapPage() {
 
   return (
     <div className="relative h-full pb-16 md:pb-0">
-      <MapContainer
-        center={center}
-        zoom={zoom}
-        scrollWheelZoom
-        zoomControl
-        className="size-full"
-      >
+      <MapContainer center={center} zoom={zoom} scrollWheelZoom zoomControl className="size-full">
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -149,7 +152,12 @@ export function MapPage() {
                   <div className="font-medium">{c.messages[0].fromuser}</div>
                   <div className="mt-1">{c.messages[0].content}</div>
                   <div className="mt-1 text-xs text-fg-subtle">
-                    {format(new Date(Number(c.messages[0].createdat) || Date.parse(c.messages[0].createdat)), 'PPp')}
+                    {format(
+                      new Date(
+                        Number(c.messages[0].createdat) || Date.parse(c.messages[0].createdat),
+                      ),
+                      'PPp',
+                    )}
                   </div>
                 </div>
               </Popup>
@@ -176,8 +184,8 @@ export function MapPage() {
       </MapContainer>
 
       <LazyMotion
-        initial={{ opacity: 0, y: -8 } as any}
-        animate={{ opacity: 1, y: 0 } as any}
+        initial={{ opacity: 0, y: -8 }}
+        animate={{ opacity: 1, y: 0 }}
         className="pointer-events-none absolute inset-x-0 top-3 z-[400] flex justify-center"
       >
         <div className="pointer-events-auto rounded-full border border-border bg-bg-elevated/95 px-4 py-1.5 text-xs text-fg-muted shadow-soft backdrop-blur">

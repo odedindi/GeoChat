@@ -1,3 +1,4 @@
+import { Logger } from '@nestjs/common';
 import {
   OnGatewayConnection,
   OnGatewayDisconnect,
@@ -8,22 +9,16 @@ import {
   ConnectedSocket,
   MessageBody,
 } from '@nestjs/websockets';
-import { Logger } from '@nestjs/common';
 import type { Server, Socket } from 'socket.io';
-import {
-  ChatService,
-  type MessageFromUser,
-  type UserDTO,
-} from './chat.service';
+
+import { ChatService, type MessageFromUser, type UserDTO } from './chat.service';
 
 @WebSocketGateway({
   cors: {
     origin: (process.env.CORS_ORIGIN || '*').split(',').map((s) => s.trim()),
   },
 })
-export class ChatGateway
-  implements OnGatewayInit, OnGatewayConnection, OnGatewayDisconnect
-{
+export class ChatGateway implements OnGatewayInit, OnGatewayConnection, OnGatewayDisconnect {
   @WebSocketServer() server!: Server;
   private readonly logger = new Logger(ChatGateway.name);
 
@@ -42,18 +37,12 @@ export class ChatGateway
   }
 
   @SubscribeMessage('join')
-  async onJoin(
-    @ConnectedSocket() socket: Socket,
-    @MessageBody() payload: { user: UserDTO },
-  ) {
+  async onJoin(@ConnectedSocket() socket: Socket, @MessageBody() payload: { user: UserDTO }) {
     await this.chat.handleJoin(this.server, socket, payload.user);
   }
 
   @SubscribeMessage('messageFromUser')
-  async onMessage(
-    @ConnectedSocket() socket: Socket,
-    @MessageBody() payload: MessageFromUser,
-  ) {
+  async onMessage(@ConnectedSocket() socket: Socket, @MessageBody() payload: MessageFromUser) {
     await this.chat.handleMessage(this.server, socket, payload);
   }
 

@@ -96,23 +96,46 @@ export function Signup() {
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
           <div className="space-y-1.5">
             <Label htmlFor="username">Username</Label>
-            <Input id="username" autoComplete="username" invalid={!!errors.username} {...register('username')} />
+            <Input
+              id="username"
+              autoComplete="username"
+              invalid={!!errors.username}
+              {...register('username')}
+            />
             <FieldError>{errors.username?.message}</FieldError>
           </div>
           <div className="space-y-1.5">
             <Label htmlFor="email">Email</Label>
-            <Input id="email" type="email" autoComplete="email" invalid={!!errors.email} {...register('email')} />
+            <Input
+              id="email"
+              type="email"
+              autoComplete="email"
+              invalid={!!errors.email}
+              {...register('email')}
+            />
             <FieldError>{errors.email?.message}</FieldError>
           </div>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div className="space-y-1.5">
               <Label htmlFor="password">Password</Label>
-              <Input id="password" type="password" autoComplete="new-password" invalid={!!errors.password} {...register('password')} />
+              <Input
+                id="password"
+                type="password"
+                autoComplete="new-password"
+                invalid={!!errors.password}
+                {...register('password')}
+              />
               <FieldError>{errors.password?.message}</FieldError>
             </div>
             <div className="space-y-1.5">
               <Label htmlFor="confirm">Confirm</Label>
-              <Input id="confirm" type="password" autoComplete="new-password" invalid={!!errors.confirm} {...register('confirm')} />
+              <Input
+                id="confirm"
+                type="password"
+                autoComplete="new-password"
+                invalid={!!errors.confirm}
+                {...register('confirm')}
+              />
               <FieldError>{errors.confirm?.message}</FieldError>
             </div>
           </div>

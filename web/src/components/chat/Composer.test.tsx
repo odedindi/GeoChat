@@ -1,11 +1,17 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Composer } from './Composer';
 
 test('typing and sending invokes onSubmit with parsed mentions', async () => {
   const onSubmit = vi.fn();
   const onMentionTrigger = vi.fn();
-  render(<Composer nearbyUsers={[{ userID: '1', username: 'alice' }]} onMentionTrigger={onMentionTrigger} onSubmit={onSubmit} />);
+  render(
+    <Composer
+      nearbyUsers={[{ userID: '1', username: 'alice' }]}
+      onMentionTrigger={onMentionTrigger}
+      onSubmit={onSubmit}
+    />,
+  );
 
   const ta = screen.getByPlaceholderText('Message nearby people…');
   await userEvent.type(ta, 'hello');
@@ -20,8 +26,6 @@ test('typing and sending invokes onSubmit with parsed mentions', async () => {
   // mention is stored as @alice and mentions contains alice
   expect(onSubmit.mock.calls[1][0]).toContain('@alice');
 });
-import { render, screen, fireEvent } from '@testing-library/react';
-import { Composer } from './Composer';
 
 test('Composer renders and sends message', () => {
   const onSubmit = vi.fn();

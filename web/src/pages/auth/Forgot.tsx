@@ -35,7 +35,13 @@ export function Forgot() {
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
           <div className="space-y-1.5">
             <Label htmlFor="email">Email</Label>
-            <Input id="email" type="email" autoComplete="email" invalid={!!errors.email} {...register('email')} />
+            <Input
+              id="email"
+              type="email"
+              autoComplete="email"
+              invalid={!!errors.email}
+              {...register('email')}
+            />
             <FieldError>{errors.email?.message}</FieldError>
           </div>
           <Button type="submit" size="lg" loading={isSubmitting} className="w-full">

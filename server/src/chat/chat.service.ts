@@ -1,6 +1,7 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { v4 as uuid } from 'uuid';
 import type { Server, Socket } from 'socket.io';
+import { v4 as uuid } from 'uuid';
+
 import { PrismaService } from '../prisma/prisma.service';
 import { haversineKm } from '../utils/haversine';
 
@@ -52,17 +53,19 @@ export class ChatService {
     socket.join(merged.room);
     // Keep the merged user on the socket immediately so other handlers
     // can use it before the DB write completes (prevents transient races).
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (socket as any).data = { ...(socket as any).data, user: merged };
+    socket.data = { ...socket.data, user: merged };
     // Let the client know it may proceed; DB upsert follows.
     try {
       socket.emit('joined');
     } catch (err) {
       this.logger.debug('failed to emit joined event');
+      console.error('failed to emit joined event', { cause: err });
     }
 
     // Try find by userID first. If not found, check username collision and update that record.
-    const existing = await this.prisma.user.findUnique({ where: { userID: merged.userID } });
+    const existing = await this.prisma.user.findUnique({
+      where: { userID: merged.userID },
+    });
     if (existing) {
       await this.prisma.user.update({
         where: { userID: merged.userID },
@@ -78,7 +81,9 @@ export class ChatService {
         },
       });
     } else {
-      const byName = await this.prisma.user.findUnique({ where: { username: merged.username } });
+      const byName = await this.prisma.user.findUnique({
+        where: { username: merged.username },
+      });
       if (byName) {
         // Username exists for another record — update it to attach this socket and userID.
         await this.prisma.user.update({
@@ -116,11 +121,7 @@ export class ChatService {
     return merged;
   }
 
-  async getMessagesInRange(
-    lat: number,
-    lng: number,
-    radiusKm: number,
-  ): Promise<MessageDTO[]> {
+  async getMessagesInRange(lat: number, lng: number, radiusKm: number): Promise<MessageDTO[]> {
     const rows = await this.prisma.$queryRaw<MessageDTO[]>`
       SELECT "messageID", "fromuser", "content", "createdat",
              "geolocation_lat", "geolocation_lng"
@@ -154,11 +155,7 @@ export class ChatService {
     return this.prisma.user.findUnique({ where: { socketID } });
   }
 
-  async addMessage(
-    username: string,
-    content: string,
-    coord: Coord,
-  ): Promise<MessageDTO> {
+  async addMessage(username: string, content: string, coord: Coord): Promise<MessageDTO> {
     const msg = await this.prisma.message.create({
       data: {
         messageID: uuid(),
@@ -190,16 +187,11 @@ export class ChatService {
     for (const m of msgs) socket.emit('message', m);
   }
 
-  async handleMessage(
-    server: Server,
-    socket: Socket,
-    payload: MessageFromUser,
-  ) {
-
+  async handleMessage(server: Server, socket: Socket, payload: MessageFromUser) {
     let author: any = await this.getUserBySocket(socket.id);
     if (!author) {
       // Try to upsert user again if socket.data.user exists (race condition fix)
-      const suser = (socket as any).data?.user as UserDTO | undefined;
+      const suser = socket.data?.user as UserDTO | undefined;
       if (suser) {
         await this.upsertUserOnJoin(socket, suser);
         author = await this.getUserBySocket(socket.id);
@@ -210,11 +202,7 @@ export class ChatService {
       return;
     }
 
-    const message = await this.addMessage(
-      author.username,
-      payload.content,
-      payload.coord,
-    );
+    const message = await this.addMessage(author.username, payload.content, payload.coord);
 
     // Mention DMs
     if (payload.mentions?.length) {
@@ -223,9 +211,7 @@ export class ChatService {
           where: { userID: m.userID },
         });
         if (target?.socketID) {
-          server
-            .to(target.socketID)
-            .emit('youGotMentioned', author.username, payload.content);
+          server.to(target.socketID).emit('youGotMentioned', author.username, payload.content);
         }
       }
     }
@@ -239,10 +225,7 @@ export class ChatService {
     );
     for (const u of nearby as UserDTO[]) {
       if (u.socketID === socket.id) continue;
-      const dist = haversineKm(
-        { lat: u.geolocation_lat, lng: u.geolocation_lng },
-        payload.coord,
-      );
+      const dist = haversineKm({ lat: u.geolocation_lat, lng: u.geolocation_lng }, payload.coord);
       if (u.beSeenBeyondRange || u.preferedDistance >= dist) {
         server.to(u.socketID).emit('message', message);
       }
@@ -253,8 +236,7 @@ export class ChatService {
   async sendMessagesInProximity(socket: Socket) {
     let author: any = await this.getUserBySocket(socket.id);
     if (!author) {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      author = (socket as any).data?.user as UserDTO | undefined;
+      author = socket.data?.user as UserDTO | undefined;
     }
     if (!author) return;
     const msgs = await this.getMessagesInRange(
@@ -268,8 +250,7 @@ export class ChatService {
   async sendUsersAroundMe(socket: Socket) {
     let author: any = await this.getUserBySocket(socket.id);
     if (!author) {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      author = (socket as any).data?.user as UserDTO | undefined;
+      author = socket.data?.user as UserDTO | undefined;
     }
     if (!author) return;
     const others = (
@@ -283,9 +264,8 @@ export class ChatService {
   }
 
   async handleDisconnect(socket: Socket) {
-    const user = (await this.getUserBySocket(socket.id)) ??
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      ((socket as any).data?.user as UserDTO | undefined);
+    const user =
+      (await this.getUserBySocket(socket.id)) ?? (socket.data?.user as UserDTO | undefined);
     if (user) this.logger.log(`${user.username} disconnected`);
   }
 }

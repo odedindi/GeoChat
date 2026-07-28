@@ -44,9 +44,7 @@ export function Composer({ nearbyUsers, onMentionTrigger, onSubmit, disabled }: 
 
   const filtered = useMemo(() => {
     const q = query.toLowerCase();
-    return nearbyUsers
-      .filter((u) => u.username.toLowerCase().includes(q))
-      .slice(0, 6);
+    return nearbyUsers.filter((u) => u.username.toLowerCase().includes(q)).slice(0, 6);
   }, [query, nearbyUsers]);
 
   const detectMention = (value: string, caret: number) => {

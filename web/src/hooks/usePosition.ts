@@ -35,8 +35,7 @@ export function usePosition(): State {
             timestamp: p.timestamp,
           },
         }),
-      (err) =>
-        setState((s) => ({ ...s, loading: false, error: humanize(err) })),
+      (err) => setState((s) => ({ ...s, loading: false, error: humanize(err) })),
       { enableHighAccuracy: true, maximumAge: 5_000, timeout: 30_000 },
     );
 

@@ -5,8 +5,12 @@ import { vi } from 'vitest';
 const mockBootstrap = vi.fn();
 const navigate = vi.fn();
 
-vi.mock('@/hooks/usePosition', () => ({ usePosition: () => ({ pos: { lat: 10, lng: 20 }, error: null, loading: false }) }));
-vi.mock('@/store/auth', () => ({ useAuth: () => ({ user: null, bootstrapLocalUser: mockBootstrap, patchUser: vi.fn() }) }));
+vi.mock('@/hooks/usePosition', () => ({
+  usePosition: () => ({ pos: { lat: 10, lng: 20 }, error: null, loading: false }),
+}));
+vi.mock('@/store/auth', () => ({
+  useAuth: () => ({ user: null, bootstrapLocalUser: mockBootstrap, patchUser: vi.fn() }),
+}));
 vi.mock('react-router-dom', async () => {
   const actual = await vi.importActual('react-router-dom');
   return { ...actual, useNavigate: () => navigate };

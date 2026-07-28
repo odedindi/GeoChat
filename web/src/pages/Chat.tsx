@@ -1,9 +1,19 @@
 import { useEffect, useMemo, useState, Suspense, lazy } from 'react';
 import { Wifi, WifiOff } from 'lucide-react';
 import { toast } from 'sonner';
+import type { ComponentType } from 'react';
 import { MessageList } from '@/components/chat/MessageList';
-const Composer = lazy(() => import('@/components/chat/Composer').then((m) => ({ default: (m as any).Composer })));
-const ComposerAny: any = Composer;
+const Composer = lazy(() =>
+  import('@/components/chat/Composer').then((m) => ({
+    default: (m as unknown as Record<string, ComponentType>).Composer,
+  })),
+);
+const ComposerAny = Composer as unknown as ComponentType<{
+  nearbyUsers: { userID: string; username: string }[];
+  onMentionTrigger: () => void;
+  onSubmit: (content: string, mentions: Mention[]) => void;
+  disabled?: boolean;
+}>;
 import { useAuth } from '@/store/auth';
 import { useSocket } from '@/hooks/useSocket';
 import { usePosition } from '@/hooks/usePosition';
@@ -23,7 +33,7 @@ export function Chat() {
     if (user && pos && (user.geo.coord.lat !== pos.lat || user.geo.coord.lng !== pos.lng)) {
       patchUser({ geo: { ...user.geo, coord: { lat: pos.lat, lng: pos.lng } } });
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // oxlint-disable-next-line react-hooks/exhaustive-deps
   }, [pos?.lat, pos?.lng]);
 
   // Listeners: attach once per socket, stay attached across pos/user changes.
@@ -64,6 +74,8 @@ export function Chat() {
         socketID: socket.id || '',
       }),
     });
+    // Intentionally shallow: only re-emit when these specific fields change
+    // oxlint-disable-next-line react-hooks/exhaustive-deps
   }, [socket, connected, user?.userID, user?.username, pos?.lat, pos?.lng]);
 
   const onSubmit = (content: string, mentions: Mention[]) => {

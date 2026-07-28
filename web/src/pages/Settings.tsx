@@ -77,7 +77,14 @@ export function Settings() {
             <Label htmlFor="distance" hint={<span className="tabular-nums">{distance} km</span>}>
               Conversation radius
             </Label>
-            <Slider ariaLabel="Distance" value={distance} min={1} max={500} step={1} onChange={setDistance} />
+            <Slider
+              ariaLabel="Distance"
+              value={distance}
+              min={1}
+              max={500}
+              step={1}
+              onChange={setDistance}
+            />
           </div>
 
           <div className="flex items-start justify-between gap-4">
@@ -98,11 +105,13 @@ export function Settings() {
         </CardHeader>
         <CardBody>
           <div className="grid grid-cols-3 gap-2">
-            {([
-              ['light', Sun, 'Light'],
-              ['dark', Moon, 'Dark'],
-              ['system', Monitor, 'System'],
-            ] as const).map(([key, Icon, label]) => (
+            {(
+              [
+                ['light', Sun, 'Light'],
+                ['dark', Moon, 'Dark'],
+                ['system', Monitor, 'System'],
+              ] as const
+            ).map(([key, Icon, label]) => (
               <button
                 key={key}
                 onClick={() => setMode(key)}

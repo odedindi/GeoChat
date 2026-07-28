@@ -11,15 +11,21 @@ describe('ChatGateway (unit)', () => {
     };
     const gateway = new ChatGateway(chatMock);
 
-    const server: any = { /* not used directly in gateway methods */ };
+    const server: any = {/* not used directly in gateway methods */};
     // inject server
     (gateway as any).server = server;
 
     const socket: any = { id: 's1' };
     await gateway.onJoin(socket, { user: { userID: 'u1' } } as any);
-    expect(chatMock.handleJoin).toHaveBeenCalledWith(server, socket, { userID: 'u1' });
+    expect(chatMock.handleJoin).toHaveBeenCalledWith(server, socket, {
+      userID: 'u1',
+    });
 
-    await gateway.onMessage(socket, { content: 'x', coord: { lat: 0, lng: 0 }, mentions: [] });
+    await gateway.onMessage(socket, {
+      content: 'x',
+      coord: { lat: 0, lng: 0 },
+      mentions: [],
+    });
     expect(chatMock.handleMessage).toHaveBeenCalledWith(server, socket, expect.any(Object));
 
     await gateway.onGetMessages(socket);

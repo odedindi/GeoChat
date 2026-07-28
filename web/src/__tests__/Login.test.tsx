@@ -11,7 +11,11 @@ vi.mock('react-router-dom', async () => {
 
 // Mock api
 const mockApi = vi.fn();
-vi.mock('@/lib/api', () => ({ api: (p: string, i: any) => mockApi(p, i), ApiError: class ApiError extends Error {} }));
+// oxlint-disable-next-line @typescript-eslint/no-explicit-any
+vi.mock('@/lib/api', () => ({
+  api: (p: string, i: any) => mockApi(p, i),
+  ApiError: class ApiError extends Error {},
+}));
 
 // Mock auth store
 const setToken = vi.fn();

@@ -14,16 +14,17 @@ vi.mock('socket.io-client', async () => {
   };
 });
 
-import { getSocket, resetSocket } from './socket';
 import { io } from 'socket.io-client';
+
+import { getSocket, resetSocket } from './socket';
 
 describe('socket client', () => {
   it('passes auth token when provided', () => {
     (io as unknown as vi.Mock).mockClear();
-    const s1 = getSocket(() => 'tkn');
+    getSocket(() => 'tkn');
     expect(io).toHaveBeenCalled();
     resetSocket();
-    const s2 = getSocket(() => null);
+    getSocket(() => null);
     expect(io).toHaveBeenCalled();
   });
 });

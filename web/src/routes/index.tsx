@@ -2,8 +2,16 @@ import { Suspense, lazy } from 'react';
 import { createBrowserRouter, Navigate } from 'react-router-dom';
 import { AppShell } from '@/components/layout/AppShell';
 import { Home } from '@/pages/Home';
-const Chat = lazy(() => import('@/pages/Chat').then((m) => ({ default: (m as any).Chat })));
-const MapPage = lazy(() => import('@/pages/Map').then((m) => ({ default: (m as any).MapPage })));
+const Chat = lazy(() =>
+  import('@/pages/Chat').then((m) => ({
+    default: (m as Record<string, unknown>).Chat as import('react').ComponentType,
+  })),
+);
+const MapPage = lazy(() =>
+  import('@/pages/Map').then((m) => ({
+    default: (m as Record<string, unknown>).MapPage as import('react').ComponentType,
+  })),
+);
 import { Settings } from '@/pages/Settings';
 import { Login } from '@/pages/auth/Login';
 import { Signup } from '@/pages/auth/Signup';

@@ -1,7 +1,10 @@
 const BASE = import.meta.env.DEV ? '/api' : `${import.meta.env.VITE_SERVER_URL || ''}/v2`;
 
 export class ApiError extends Error {
-  constructor(public status: number, message: string) {
+  constructor(
+    public status: number,
+    message: string,
+  ) {
     super(message);
   }
 }
