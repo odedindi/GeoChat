@@ -1,7 +1,9 @@
 import * as React from 'react';
+
 import { useLocation } from 'react-router-dom';
 import Loading from 'src/components/Spinner/Loading';
-import { useDidMount, useSocket } from 'src/hooks';
+import { useDidMount } from 'src/hooks';
+import { useSocket } from 'src/hooks/useSocket';
 
 import LeafletMap from './LeafletMap';
 

@@ -7,7 +7,6 @@ import useKeyboardListener from './useKeyboardListener';
 import useMapCenter from './useMapCenter';
 import useObservable from './useObservable';
 import usePosition from './usePosition';
-import useSocket from './useSocket';
 import useStorage from './useStorage';
 import useStore from './useStore';
 import useToast from './useToast';
@@ -23,7 +22,6 @@ export {
 	useMapCenter,
 	useObservable,
 	usePosition,
-	useSocket,
 	useStorage,
 	useStore,
 	useToast,

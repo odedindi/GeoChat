@@ -10,31 +10,30 @@ import { useHistory } from 'react-router-dom';
 import * as Action from 'src/Store/action';
 import Map from 'src/components/Map';
 import Loading from 'src/components/Spinner/Loading';
-import {
-	useDidMount,
-	useIsSocketConnected,
-	useSocket,
-	useStorage,
-	useStore,
+  useDidMount,
+  useIsSocketConnected,
+  useStorage,
+  useStore,
 } from 'src/hooks';
+import { useSocket } from 'src/hooks/useSocket';
 import userMap from 'src/utils/Mapper/UserMap';
 import { getLogger } from 'src/utils/logger';
 
 const log = getLogger('Map page');
 
 const MapPage: React.FC = () => {
-	const history = useHistory();
-	const { didMount } = useDidMount();
-	const { storage } = useStorage();
-	const { socket } = useSocket();
+  const history = useHistory();
+  const { didMount } = useDidMount();
+  const { storage } = useStorage();
+  const { socket } = useSocket();
 
-	const { IsConnected, setIsConnected } = useIsSocketConnected();
-	const [isLoading, setIsLoading] = React.useState(false);
+  const { IsConnected, setIsConnected } = useIsSocketConnected();
+  const [isLoading, setIsLoading] = React.useState(false);
 
-	const {
-		storeState: { user },
-		storeDispatch,
-	} = useStore();
+  const {
+    storeState: { user },
+    storeDispatch,
+  } = useStore();
 
 	React.useEffect(() => {
 		const getUserFromStorage = async () => {

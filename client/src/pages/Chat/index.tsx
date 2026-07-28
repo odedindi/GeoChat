@@ -5,6 +5,7 @@ import * as Action from 'src/Store/action';
 import { MessageList, InputFieldWithMention } from 'src/components/Chat';
 import Loading from 'src/components/Spinner/Loading';
 import * as Hook from 'src/hooks';
+import { useSocket } from 'src/hooks/useSocket';
 // useToast,
 import userMap from 'src/utils/Mapper/UserMap';
 import { mentioningTrigger } from 'src/utils/constants';
@@ -17,16 +18,16 @@ import Toolbar from './Toolbar';
 const log = getLogger('Chat Page');
 
 const Chat: React.FC = () => {
-	const history = useHistory();
-	const [isLoading, setIsLoading] = React.useState(false);
-	const { Toast, raiseToast } = Hook.useToast();
-	const { socket } = Hook.useSocket();
-	const { geoPos } = Hook.usePosition();
-	const { storage } = Hook.useStorage();
-	const {
-		storeState: { user },
-		storeDispatch,
-	} = Hook.useStore();
+  const history = useHistory();
+  const [isLoading, setIsLoading] = React.useState(false);
+  const { Toast, raiseToast } = Hook.useToast();
+  const { socket } = useSocket();
+  const { geoPos } = Hook.usePosition();
+  const { storage } = Hook.useStorage();
+  const {
+    storeState: { user },
+    storeDispatch,
+  } = Hook.useStore();
 	// get user if is not in store
 	React.useEffect(() => {
 		const getUserFromStorage = async () => {
