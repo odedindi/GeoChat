@@ -1,0 +1,38 @@
+echo '🔨👷🔨 Styling, testing and building your project before committing 🔨👷🔨'
+
+# Check Format standards
+yarn check:format ||
+(
+    echo '❌🤢🤮❌ Format Check Failed. ❌🤮🤢❌
+            Run yarn format, add changes and try commit again.';
+    false;
+)
+
+# Check Lint Standards
+yarn check:lint ||
+(
+        echo '❌😤👋❌ Lint Check Failed ❌👋😤❌ 
+                Lint Check Failed. Make the required changes listed, add them and commit again.'
+        false; 
+)
+
+# Check tsconfig standards
+yarn check:types ||
+(
+    echo '❌🤡😂🤡❌ Failed Type check. ❌🤡😂🤡❌
+            Make the required changes.'
+    false;
+)
+
+# echo '🤔🤔🤔🤔 ... Code looks good ... Trying to build ... 🤔🤔🤔🤔'
+
+# yarn build ||
+# (
+#     echo '❌👷🔨❌ Next build failed ❌🔨👷❌
+#             View the errors above. 
+#     '
+#     false;
+# )
+
+# If everything passes... Now we can commit
+echo '✅👷🔨✅ ... pushin ... ✅👷🔨✅'
