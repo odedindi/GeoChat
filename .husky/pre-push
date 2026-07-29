@@ -24,6 +24,17 @@ yarn check:types ||
     false;
 )
 
+# Check tests
+echo '🤔🤔🤔🤔 ... so far so good ... Running tests ... 🤔🤔🤔🤔'
+
+yarn test ||
+(
+    echo '❌👷🔨❌ Running tests failed ❌🔨👷❌
+            View the errors above. 
+    '
+    false;
+)
+
 # echo '🤔🤔🤔🤔 ... Code looks good ... Trying to build ... 🤔🤔🤔🤔'
 
 # yarn build ||
