@@ -1,0 +1,90 @@
+@import 'tailwindcss';
+@import 'leaflet/dist/leaflet.css';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Neutrals — minimal palette inspired by zinc */
+  --color-bg: oklch(99% 0 0);
+  --color-bg-elevated: oklch(98% 0 0);
+  --color-fg: oklch(20% 0 0);
+  --color-fg-muted: oklch(45% 0 0);
+  --color-fg-subtle: oklch(60% 0 0);
+  --color-border: oklch(92% 0 0);
+  --color-border-strong: oklch(85% 0 0);
+
+  /* Brand: cool cyan→indigo */
+  --color-brand: oklch(70% 0.16 220);
+  --color-brand-fg: oklch(99% 0 0);
+  --color-brand-soft: oklch(95% 0.04 220);
+
+  --color-danger: oklch(63% 0.22 25);
+  --color-success: oklch(70% 0.17 155);
+  --color-warning: oklch(80% 0.16 80);
+
+  /* Outgoing / incoming chat bubbles */
+  --color-bubble-out: oklch(70% 0.16 220);
+  --color-bubble-out-fg: oklch(99% 0 0);
+  --color-bubble-in: oklch(96% 0 0);
+  --color-bubble-in-fg: oklch(20% 0 0);
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  --font-sans:
+    'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 24px -8px rgba(0, 0, 0, 0.08);
+}
+
+.dark {
+  --color-bg: oklch(14% 0 0);
+  --color-bg-elevated: oklch(18% 0 0);
+  --color-fg: oklch(98% 0 0);
+  --color-fg-muted: oklch(70% 0 0);
+  --color-fg-subtle: oklch(55% 0 0);
+  --color-border: oklch(25% 0 0);
+  --color-border-strong: oklch(32% 0 0);
+  --color-brand-soft: oklch(28% 0.06 220);
+  --color-bubble-in: oklch(22% 0 0);
+  --color-bubble-in-fg: oklch(98% 0 0);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  background: var(--color-bg);
+  color: var(--color-fg);
+}
+
+/* Subtle map styling for clean look */
+.leaflet-container {
+  background: var(--color-bg-elevated);
+  font-family: inherit;
+}
+.dark .leaflet-tile {
+  filter: brightness(0.85) contrast(1.05) invert(0.92) hue-rotate(180deg);
+}
+
+/* Scrollbar polish */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border-strong) transparent;
+}
+
+/* Reduce motion respect */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

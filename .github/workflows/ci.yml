@@ -1,0 +1,100 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgis/postgis:16-3.4-alpine
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_USER: pg
+          POSTGRES_PASSWORD: password
+          POSTGRES_DB: geochatci
+        options: >-
+          --health-cmd "pg_isready -U pg -d geochatci"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+
+    env:
+      DATABASE_URL: postgresql://pg:password@localhost:5432/geochatci?schema=public
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        run: |
+          corepack enable
+          yarn install --immutable
+
+      - name: Generate Prisma Client
+        run: yarn workspace geochat-server prisma generate
+
+      - name: Apply migrations
+        run: yarn workspace geochat-server prisma migrate deploy
+
+      - name: Server unit tests
+        run: yarn workspace geochat-server test --silent
+
+      - name: Server typecheck
+        run: yarn workspace geochat-server typecheck
+
+      - name: Build server
+        run: yarn workspace geochat-server build
+
+      - name: Start server (background)
+        run: |
+          node server/dist/main.js &
+          for i in $(seq 1 30); do
+            if curl -sS "http://localhost:4000/v2" >/dev/null 2>&1; then
+              echo "server up" && break
+            fi
+            sleep 1
+          done
+
+      - name: Integration test (retry up to 3x)
+        run: |
+          set -e
+          for i in 1 2 3; do
+            echo "Integration attempt $i"
+            if yarn workspace geochat-server integration --silent; then
+              echo "Integration succeeded" && break
+            fi
+            if [ "$i" = 3 ]; then
+              echo "Integration failed after 3 attempts" && exit 1
+            fi
+            sleep 2
+          done
+
+      - name: Web typecheck
+        run: yarn workspace geochat-web typecheck
+
+      - name: Web unit tests
+        run: yarn workspace geochat-web test --silent
+
+      - name: Web lint
+        run: yarn workspace geochat-web lint
+
+      - name: Build web
+        run: yarn workspace geochat-web build
+
+      - name: Upload test artifacts
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-logs
+          path: |
+            server/coverage
+            web/coverage

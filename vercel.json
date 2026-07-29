@@ -1,0 +1,6 @@
+{
+  "buildCommand": "yarn workspace geochat-web build",
+  "installCommand": "corepack enable && corepack yarn install",
+  "outputDirectory": "web/dist",
+  "framework": "vite"
+}

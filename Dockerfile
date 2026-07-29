@@ -1,17 +1,28 @@
-FROM node:slim
-
+FROM node:22-slim AS build
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
+RUN apt-get update -y && apt-get install -y openssl && rm -rf /var/lib/apt/lists/*
+WORKDIR /app
 
-RUN npm install -g yarn --force
+RUN corepack enable
+COPY .yarnrc.yml package.json yarn.lock ./
+COPY server/package.json ./server/
 
-WORKDIR /usr/src/app
+RUN yarn install
 
-RUN mkdir -p /server
+COPY server/ ./server/
+RUN yarn workspace geochat-server prisma generate
+RUN yarn workspace geochat-server build
 
-COPY ./server /server
+FROM node:22-slim AS runtime
+ENV NODE_ENV=production LANG=C.UTF-8 LC_ALL=C.UTF-8
+RUN apt-get update -y && apt-get install -y openssl && rm -rf /var/lib/apt/lists/*
+WORKDIR /app
 
-WORKDIR /server
+COPY --from=build /app/server/package.json ./
+COPY --from=build /app/server/dist ./dist
+COPY --from=build /app/server/prisma.config.ts ./
+COPY --from=build /app/server/prisma ./prisma
+COPY --from=build /app/node_modules ./node_modules
 
-RUN yarn install && yarn build 
-
-CMD [ "yarn", "start" ]
+EXPOSE 4000
+CMD ["sh", "-c", "npx prisma migrate deploy && node dist/src/main.js"]

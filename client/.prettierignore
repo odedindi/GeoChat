@@ -1,7 +1,0 @@
-# Ignore artifacts:
-android
-build
-node_modules
-
-yarn.lock
-react-app-env.dts

@@ -1,23 +1,11 @@
-export const getAerialDistance = (
-  point1: { lat: number; lng: number },
-  point2: { lat: number; lng: number },
-): number => {
-  const { lat: lat1, lng: lng1 } = point1;
-  const { lat: lat2, lng: lng2 } = point2;
-  if (lat1 === lat2 && lng1 === lng2) return 0;
-
-  const deg2rad = (deg: number) => deg * (Math.PI / 180);
-
-  const R = 6371; // Earth's radius(km)
-  const dLat = deg2rad(lat2 - lat1);
-  const dLng = deg2rad(lng2 - lng1);
-  const a =
-    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-    Math.cos(deg2rad(lat1)) *
-      Math.cos(deg2rad(lat2)) *
-      Math.sin(dLng / 2) *
-      Math.sin(dLng / 2);
-  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-  const d = R * c; // Distance in km
-  return d;
-};
+export function haversineKm(a: { lat: number; lng: number }, b: { lat: number; lng: number }) {
+  if (a.lat === b.lat && a.lng === b.lng) return 0;
+  const R = 6371;
+  const toRad = (d: number) => (d * Math.PI) / 180;
+  const dLat = toRad(b.lat - a.lat);
+  const dLng = toRad(b.lng - a.lng);
+  const lat1 = toRad(a.lat);
+  const lat2 = toRad(b.lat);
+  const h = Math.sin(dLat / 2) ** 2 + Math.sin(dLng / 2) ** 2 * Math.cos(lat1) * Math.cos(lat2);
+  return 2 * R * Math.asin(Math.sqrt(h));
+}

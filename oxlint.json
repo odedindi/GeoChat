@@ -1,0 +1,60 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": [
+    "eslint",
+    "react",
+    "unicorn",
+    "typescript",
+    "oxc",
+    "import",
+    "jsdoc",
+    "jest",
+    "vitest",
+    "jsx-a11y",
+    "nextjs",
+    "react-perf",
+    "promise",
+    "node",
+    "vue"
+  ],
+  "env": {
+    "node": true,
+    "browser": true,
+    "vitest": true
+  },
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn",
+    "perf": "warn",
+    "pedantic": "warn",
+    "style": "warn",
+    "restriction": "warn",
+    "nursery": "warn"
+  },
+  "rules": {
+    "no-console": "warn",
+    "no-debugger": "error",
+    "no-unused-vars": "off",
+    "eqeqeq": "error",
+    "react/jsx-no-target-blank": "error",
+    "react-refresh/only-export-components": [
+      "warn",
+      {
+        "allowConstantExport": true
+      }
+    ],
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^_",
+        "destructuredArrayIgnorePattern": "^_"
+      }
+    ],
+    "typescript/no-explicit-any": "warn",
+    "unicorn/no-useless-spread": "warn"
+  },
+  "ignorePatterns": ["dist", "dev-dist", "node_modules", "coverage", "*.config.*"]
+}

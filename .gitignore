@@ -1,4 +1,15 @@
 node_modules
 yarn-error.log
-yarn.lock
 server_old
+.local-ci-logs/
+.env
+
+tsconfig.tsbuildinfo
+
+# Yarn Berry
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
