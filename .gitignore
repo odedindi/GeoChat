@@ -4,6 +4,8 @@ server_old
 .local-ci-logs/
 .env
 
+tsconfig.tsbuildinfo
+
 # Yarn Berry
 .yarn/*
 !.yarn/patches
