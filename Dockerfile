@@ -7,7 +7,7 @@ RUN corepack enable
 COPY .yarnrc.yml package.json yarn.lock ./
 COPY server/package.json ./server/
 
-RUN yarn install --immutable
+RUN yarn install
 
 COPY server/ ./server/
 RUN yarn workspace geochat-server prisma generate
