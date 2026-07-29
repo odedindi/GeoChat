@@ -20,6 +20,7 @@ WORKDIR /app
 
 COPY --from=build /app/server/package.json ./
 COPY --from=build /app/server/dist ./dist
+COPY --from=build /app/server/prisma.config.ts ./
 COPY --from=build /app/server/prisma ./prisma
 COPY --from=build /app/node_modules ./node_modules
 
